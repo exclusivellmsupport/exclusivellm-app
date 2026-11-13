@@ -2,202 +2,278 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Exclusive LLM — Mobile Games & Apps</title>
-  <meta name="description" content="Exclusive LLM: Android games and apps — puzzles, casual games and tools on Google Play.">
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Exclusive LLM — Relaxing Mobile Games & Apps</title>
+  <meta name="description" content="Exclusive LLM builds calm, user-friendly mobile games and apps for Android — measured ads, clean design and respect for your privacy.">
   <link rel="canonical" href="https://exclusivellm.app/">
-  <meta property="og:title" content="Exclusive LLM">
-  <meta property="og:description" content="Android games and apps on Google Play.">
-  <meta property="og:image" content="https://exclusivellm.app/img/logo.png">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <meta name="theme-color" content="#040814">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Exclusive LLM — Relaxing Mobile Games & Apps">
+  <meta property="og:description" content="Calm, user-friendly Android games — no ad overload, clean design, privacy first.">
+  <meta property="og:image" content="https://exclusivellm.app/img/blockfour-feature.jpg">
   <meta property="og:url" content="https://exclusivellm.app/">
-  <meta name="theme-color" content="#060b1a">
-  <style>
-    :root {
-      --bg: #060b1a;
-      --bg2: #0b1430;
-      --card: rgba(255,255,255,.04);
-      --card-border: rgba(120,160,255,.16);
-      --text: #e9eefc;
-      --muted: #9aa7c7;
-      --accent: #2f7bff;
-      --accent2: #6fb4ff;
-      --glow: rgba(47,123,255,.35);
-    }
-    @media (prefers-color-scheme: light) {
-      :root:not([data-theme="dark"]) {
-        --bg: #f4f7ff; --bg2: #e6eeff; --card: #ffffff; --card-border: rgba(30,70,170,.14);
-        --text: #0d1630; --muted: #55627f; --accent: #1f63e6; --accent2: #2f7bff; --glow: rgba(31,99,230,.18);
-      }
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0; color: var(--text);
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(1200px 600px at 50% -10%, var(--bg2), var(--bg)) fixed, var(--bg);
-      line-height: 1.6; -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--accent2); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
-
-    header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(12px);
-      background: color-mix(in srgb, var(--bg) 75%, transparent); border-bottom: 1px solid var(--card-border); }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
-    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; letter-spacing: .2px; }
-    .brand img { width: 34px; height: 34px; border-radius: 9px; }
-    .brand:hover { text-decoration: none; }
-    .nav-links { display: flex; align-items: center; gap: 20px; font-size: 15px; }
-    .nav-links a { color: var(--muted); }
-    .nav-links a:hover { color: var(--text); text-decoration: none; }
-    .lang { display: flex; border: 1px solid var(--card-border); border-radius: 999px; overflow: hidden; }
-    .lang button { background: none; border: 0; color: var(--muted); padding: 5px 11px; font: inherit; font-size: 13px; cursor: pointer; }
-    .lang button.on { background: var(--accent); color: #fff; }
-
-    .hero { padding: 88px 0 64px; text-align: center; }
-    .hero-logo { width: 140px; height: 140px; border-radius: 32px; box-shadow: 0 0 60px var(--glow); }
-    .hero h1 { font-size: clamp(32px, 6vw, 54px); line-height: 1.1; margin: 28px 0 14px; letter-spacing: -.5px; }
-    .hero h1 span { background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .hero p { color: var(--muted); font-size: clamp(16px, 2.4vw, 19px); max-width: 620px; margin: 0 auto 32px; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 12px; font-weight: 600;
-      background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; box-shadow: 0 8px 24px var(--glow); }
-    .btn:hover { text-decoration: none; filter: brightness(1.08); }
-    .btn.ghost { background: none; color: var(--text); border: 1px solid var(--card-border); box-shadow: none; }
-
-    section { padding: 56px 0; }
-    h2 { font-size: clamp(24px, 4vw, 32px); margin: 0 0 8px; }
-    .sub { color: var(--muted); margin: 0 0 32px; }
-
-    .apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
-    .app { background: var(--card); border: 1px solid var(--card-border); border-radius: 20px; padding: 22px;
-      display: flex; flex-direction: column; gap: 14px; transition: transform .2s, box-shadow .2s; }
-    .app:hover { transform: translateY(-3px); box-shadow: 0 14px 40px var(--glow); }
-    .app-head { display: flex; gap: 14px; align-items: center; }
-    .app-head img { width: 64px; height: 64px; border-radius: 16px; flex-shrink: 0; }
-    .app-head h3 { margin: 0; font-size: 19px; }
-    .tag { display: inline-block; font-size: 12px; color: var(--accent2); border: 1px solid var(--card-border); border-radius: 999px; padding: 1px 9px; margin-top: 4px; }
-    .app p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
-    .play { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: #000; color: #fff;
-      border: 1px solid #333; border-radius: 10px; padding: 8px 14px; font-size: 14px; font-weight: 600; }
-    .play:hover { text-decoration: none; border-color: var(--accent2); }
-    .play svg { width: 18px; height: 18px; }
-
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-    .feature { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 20px; }
-    .feature .ico { font-size: 26px; }
-    .feature h3 { margin: 8px 0 6px; font-size: 17px; }
-    .feature p { margin: 0; color: var(--muted); font-size: 14.5px; }
-
-    .contact { text-align: center; background: var(--card); border: 1px solid var(--card-border); border-radius: 24px; padding: 40px 20px; }
-    .contact p { color: var(--muted); margin: 0 0 22px; }
-
-    footer { border-top: 1px solid var(--card-border); margin-top: 40px; padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
-    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
-    .foot nav { display: flex; flex-wrap: wrap; gap: 16px; }
-    .foot a { color: var(--muted); }
-
-    [data-lang="en"] .tr, [data-lang="tr"] .en { display: none !important; }
-    @media (max-width: 640px) {
-      .nav-links a.hide-sm { display: none; }
-      .hero { padding: 56px 0 40px; }
-      .hero-logo { width: 112px; height: 112px; border-radius: 26px; }
-    }
-  </style>
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css?v=2">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Exclusive LLM","url":"https://exclusivellm.app/","logo":"https://exclusivellm.app/img/logo.png","email":"support@exclusivellm.app"}
+  </script>
 </head>
 <body data-lang="tr">
-  <header>
+  <div class="aurora" aria-hidden="true"></div>
+  <canvas id="neural" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="spot" aria-hidden="true"></div>
+
+  <header class="top">
     <div class="wrap nav">
       <a class="brand" href="#top"><img src="img/favicon.png" alt=""> Exclusive LLM</a>
-      <div class="nav-links">
-        <a class="hide-sm" href="#apps"><span class="tr">Uygulamalar</span><span class="en">Apps</span></a>
-        <a class="hide-sm" href="#contact"><span class="tr">İletişim</span><span class="en">Contact</span></a>
+      <nav class="links">
+        <a href="#promise"><span class="tr">Felsefemiz</span><span class="en">Our promise</span></a>
+        <a href="#apps"><span class="tr">Oyunlar</span><span class="en">Games</span></a>
+        <a href="#contact"><span class="tr">İletişim</span><span class="en">Contact</span></a>
         <div class="lang" role="group" aria-label="Language">
           <button type="button" data-set="tr">TR</button>
           <button type="button" data-set="en">EN</button>
         </div>
-      </div>
+      </nav>
     </div>
   </header>
 
   <main id="top">
-    <div class="wrap hero">
-      <img class="hero-logo" src="img/logo.png" alt="Exclusive LLM logo">
-      <h1>
-        <span class="tr">Keyifli <span>oyunlar</span> ve akıllı <span>uygulamalar</span></span>
-        <span class="en">Delightful <span>games</span> and smart <span>apps</span></span>
-      </h1>
-      <p>
-        <span class="tr">Exclusive LLM, Android için bulmaca, rahatlatıcı oyunlar ve kullanışlı araçlar geliştiren bağımsız bir stüdyodur.</span>
-        <span class="en">Exclusive LLM is an independent studio building puzzles, relaxing games and handy tools for Android.</span>
-      </p>
-      <a class="btn" href="#apps"><span class="tr">Uygulamaları keşfet</span><span class="en">Explore our apps</span> →</a>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="chip rv"><span class="dot"></span>
+            <span class="tr">Bağımsız mobil oyun stüdyosu</span><span class="en">Independent mobile game studio</span>
+          </span>
+          <h1 class="rv" style="--d:.08s">
+            <span class="tr">Oyun oynamak<br><span class="rotator tr"><span>rahatlatmalı.</span><span>keyif vermeli.</span><span>sade olmalı.</span><span>saygılı olmalı.</span></span></span>
+            <span class="en">Games should<br><span class="rotator en"><span>help you relax.</span><span>feel delightful.</span><span>stay simple.</span><span>respect you.</span></span></span>
+          </h1>
+          <p class="lead rv" style="--d:.16s">
+            <span class="tr">Ekranı reklamlarla doldurmayan, ilk dokunuşta anlaşılan ve günün yorgunluğunu alan oyunlar tasarlıyoruz. Sadece sen ve oyunun.</span>
+            <span class="en">We design games that don't bury the screen in ads, make sense from the very first tap and help you unwind. Just you and the game.</span>
+          </p>
+          <div class="cta rv" style="--d:.24s">
+            <a class="btn primary" href="#apps">
+              <span class="tr">Oyunlarımızı keşfet</span><span class="en">Explore our games</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn ghost" href="#promise"><span class="tr">Neden farklıyız?</span><span class="en">Why we're different</span></a>
+          </div>
+          <div class="trust rv" style="--d:.32s">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="tr">Ölçülü reklam</span><span class="en">Measured ads</span></span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="tr">Kayıt gerekmez</span><span class="en">No sign-up</span></span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="tr">Ücretsiz</span><span class="en">Free to play</span></span>
+          </div>
+        </div>
+
+        <div class="stage rv" style="--d:.2s" aria-hidden="true">
+          <div class="ring r2"></div><div class="ring r1"></div>
+          <div class="cube c1"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="cube c2"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="cube c3"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="cube c4"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="phone">
+            <div class="screen">
+              <div class="notch"></div>
+              <div class="hud">
+                <div class="pill"><span class="tr">SKOR</span><span class="en">SCORE</span><b id="score">0</b></div>
+                <div class="pill"><span class="tr">EN İYİ</span><span class="en">BEST</span><b id="best">0</b></div>
+              </div>
+              <canvas id="board"></canvas>
+              <div class="tray"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+              <div class="combo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#promise" aria-label="Scroll"></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="track tr">
+        <span>Reklam yağmuru yok</span><span>Sade ve anlaşılır arayüz</span><span>Rahatlatan oynanış</span><span>Gizliliğe saygı</span><span>Kayıt gerektirmez</span><span>Hafif ve hızlı</span><span>Ücretsiz</span>
+        <span>Reklam yağmuru yok</span><span>Sade ve anlaşılır arayüz</span><span>Rahatlatan oynanış</span><span>Gizliliğe saygı</span><span>Kayıt gerektirmez</span><span>Hafif ve hızlı</span><span>Ücretsiz</span>
+      </div>
+      <div class="track en">
+        <span>No ad overload</span><span>Clean, intuitive interface</span><span>Relaxing gameplay</span><span>Privacy first</span><span>No sign-up needed</span><span>Light and fast</span><span>Free to play</span>
+        <span>No ad overload</span><span>Clean, intuitive interface</span><span>Relaxing gameplay</span><span>Privacy first</span><span>No sign-up needed</span><span>Light and fast</span><span>Free to play</span>
+      </div>
     </div>
 
-    <section id="apps">
+    <!-- PROMISE -->
+    <section id="promise">
       <div class="wrap">
-        <h2><span class="tr">Uygulamalarımız</span><span class="en">Our apps</span></h2>
-        <p class="sub"><span class="tr">Google Play'de ücretsiz indirebilirsiniz.</span><span class="en">Free to download on Google Play.</span></p>
-        <div class="apps">
-          <article class="app">
-            <div class="app-head">
-              <img src="img/blocknest.png" alt="BlockNest">
-              <div><h3>BlockNest</h3><span class="tag"><span class="tr">Bulmaca</span><span class="en">Puzzle</span></span></div>
+        <div class="head rv">
+          <span class="eyebrow"><span class="tr">Felsefemiz</span><span class="en">Our promise</span></span>
+          <h2 class="title"><span class="tr">Oyuncuya saygı, <span class="grad">tasarımın ta kendisi.</span></span><span class="en">Respect for players <span class="grad">is the design.</span></span></h2>
+          <p class="sub"><span class="tr">Birçok ücretsiz oyun, her iki hamlede bir reklamla oyuncuyu bezdiriyor. Biz tam tersini seçtik.</span><span class="en">Many free games interrupt you with an ad every couple of moves. We chose the opposite.</span></p>
+        </div>
+
+        <div class="promise">
+          <article class="card big rv">
+            <div>
+              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#7fb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8M4 4l16 14"/></svg></div>
+              <h3><span class="tr">Reklamlara boğmuyoruz</span><span class="en">We don't drown you in ads</span></h3>
+              <p><span class="tr">Reklamlar oyunun ortasına sıkıştırılmaz; tam ekran reklamlar yalnızca oyunlar arasında ve sıklık sınırıyla çıkar. Ödüllü reklamlar ise tamamen isteğe bağlıdır: izlemek isteyen izler, istemeyen hiçbir şey kaybetmez.</span><span class="en">Ads never interrupt a round; full-screen ads only appear between games, with a strict frequency cap. Rewarded ads are fully optional: watch one if you want a bonus, skip it and lose nothing.</span></p>
             </div>
-            <p>
-              <span class="tr">Ahşap blokları yerleştir, satır ve sütunları temizle. Sakin, sade ve bağımlılık yapan bir blok bulmacası.</span>
-              <span class="en">Place wooden blocks and clear rows and columns. A calm, clean and addictive block puzzle.</span>
-            </p>
-            <a class="play" href="https://play.google.com/store/apps/details?id=com.exclusivellm.blocknest" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z"/><path fill="#EA4335" d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z"/><path fill="#4285F4" d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z"/></svg>
-              Google Play
-            </a>
+            <div class="meter" aria-hidden="true">
+              <div class="row them"><span class="tr">Tipik oyun</span><span class="en">Typical game</span><div class="bar"><div class="fill"></div></div></div>
+              <div class="row us"><span>Exclusive LLM</span><div class="bar"><div class="fill"></div></div></div>
+              <small><span class="tr">Oyun sırasında karşılaşılan reklam yoğunluğu (temsili)</span><span class="en">Ad pressure during play (illustrative)</span></small>
+            </div>
           </article>
-          <article class="app">
-            <div class="app-head">
-              <img src="img/blockfour.png" alt="Block Four">
-              <div><h3>Block Four</h3><span class="tag"><span class="tr">4 oyun bir arada</span><span class="en">4 games in 1</span></span></div>
-            </div>
-            <p>
-              <span class="tr">Blok bulmaca, 2048, renk sıralama ve daha fazlası tek uygulamada. Her ruh haline uygun bir oyun.</span>
-              <span class="en">Block puzzle, 2048, color sort and more in a single app. A game for every mood.</span>
-            </p>
-            <a class="play" href="https://play.google.com/store/apps/details?id=com.firat.blokrota" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z"/><path fill="#EA4335" d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z"/><path fill="#4285F4" d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z"/></svg>
-              Google Play
-            </a>
+
+          <article class="card rv" style="--d:.1s">
+            <div class="icon g"><div class="breath"><span></span><span></span><span></span></div></div>
+            <h3><span class="tr">Rahatlatmak için tasarlandı</span><span class="en">Designed to help you relax</span></h3>
+            <p><span class="tr">Sakin renkler, yumuşak animasyonlar ve acele ettirmeyen bir tempo. Kısa bir mola ya da uzun bir akşam için.</span><span class="en">Calm colours, soft animations and a pace that never rushes you. Perfect for a short break or a long evening.</span></p>
+          </article>
+
+          <article class="card rv">
+            <div class="icon v"><svg viewBox="0 0 24 24" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M9 12l2 2 4-4"/><path d="M21 3v6h-6"/></svg></div>
+            <h3><span class="tr">İlk dokunuşta anlaşılır</span><span class="en">Clear from the first tap</span></h3>
+            <p><span class="tr">Karmaşık menüler yok. Büyük, net düğmeler ve okunaklı yazılarla her yaşa uygun bir arayüz.</span><span class="en">No maze of menus. Large, clear buttons and readable text — friendly for every age.</span></p>
+          </article>
+
+          <article class="card rv" style="--d:.1s">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#7fb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3><span class="tr">Gizliliğe saygı</span><span class="en">Privacy first</span></h3>
+            <p><span class="tr">Hesap açmak gerekmez, gereksiz izin istemeyiz. Reklam tercihlerini uygulama içinden her an değiştirebilirsin.</span><span class="en">No account required and no unnecessary permissions. Change your ad-privacy choices any time inside the app.</span></p>
+          </article>
+
+          <article class="card rv" style="--d:.2s">
+            <div class="icon a"><svg viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+            <h3><span class="tr">Hafif ve hızlı</span><span class="en">Light and fast</span></h3>
+            <p><span class="tr">Küçük indirme boyutu, hızlı açılış ve pili yormayan akıcı performans.</span><span class="en">Small downloads, quick launches and smooth performance that's easy on your battery.</span></p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- COMPARE -->
     <section>
       <div class="wrap">
-        <h2><span class="tr">Neden Exclusive LLM?</span><span class="en">Why Exclusive LLM?</span></h2>
-        <p class="sub"><span class="tr">Her uygulamada aynı özen.</span><span class="en">The same care in every app.</span></p>
-        <div class="features">
-          <div class="feature"><div class="ico">🎮</div>
-            <h3><span class="tr">Akıcı oynanış</span><span class="en">Smooth gameplay</span></h3>
-            <p><span class="tr">Hafif, hızlı ve her telefonda rahat çalışan oyunlar.</span><span class="en">Light, fast games that run well on any phone.</span></p></div>
-          <div class="feature"><div class="ico">🔒</div>
-            <h3><span class="tr">Gizliliğe saygı</span><span class="en">Privacy first</span></h3>
-            <p><span class="tr">Gereksiz izin yok; her uygulamanın açık bir gizlilik politikası var.</span><span class="en">No unnecessary permissions; every app has a clear privacy policy.</span></p></div>
-          <div class="feature"><div class="ico">🌍</div>
-            <h3><span class="tr">Çok dilli</span><span class="en">Multilingual</span></h3>
-            <p><span class="tr">Dünyanın her yerinden oyuncular için hazırlanır.</span><span class="en">Built for players all around the world.</span></p></div>
-          <div class="feature"><div class="ico">✨</div>
-            <h3><span class="tr">Düzenli güncelleme</span><span class="en">Regular updates</span></h3>
-            <p><span class="tr">Geri bildirimlerinizle sürekli gelişir.</span><span class="en">Constantly improving with your feedback.</span></p></div>
+        <div class="head center rv">
+          <span class="eyebrow"><span class="tr">Fark</span><span class="en">The difference</span></span>
+          <h2 class="title"><span class="tr">Oyun keyfi, <span class="grad">reklam molası değil.</span></span><span class="en">Playtime, <span class="grad">not ad time.</span></span></h2>
+        </div>
+        <div class="compare">
+          <div class="col bad rv">
+            <h3>😩 <span class="tr">Alışılmış ücretsiz oyunlar</span><span class="en">The usual free game</span></h3>
+            <ul>
+              <li><span class="tr">Her birkaç hamlede bir tam ekran reklam</span><span class="en">A full-screen ad every few moves</span></li>
+              <li><span class="tr">Kapat düğmesi saklanan reklamlar</span><span class="en">Ads with hidden close buttons</span></li>
+              <li><span class="tr">Karmaşık menüler ve sürekli açılan pencereler</span><span class="en">Cluttered menus and endless pop-ups</span></li>
+              <li><span class="tr">Oynamak için hesap açma zorunluluğu</span><span class="en">Forced account sign-up just to play</span></li>
+            </ul>
+          </div>
+          <div class="col good rv" style="--d:.12s">
+            <h3>😌 Exclusive LLM</h3>
+            <ul>
+              <li><span class="tr">Oyun sırasında reklam yok; aralarda ölçülü ve sınırlı</span><span class="en">No ads mid-round; measured and capped between games</span></li>
+              <li><span class="tr">İsteğe bağlı ödüllü reklamlar — seçim senin</span><span class="en">Optional rewarded ads — your choice</span></li>
+              <li><span class="tr">Sade, ferah ve anlaşılır arayüz</span><span class="en">A clean, spacious, intuitive interface</span></li>
+              <li><span class="tr">İndir ve hemen oyna — kayıt yok</span><span class="en">Download and play instantly — no sign-up</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- APPS -->
+    <section id="apps">
+      <div class="wrap">
+        <div class="head rv">
+          <span class="eyebrow"><span class="tr">Oyunlarımız</span><span class="en">Our games</span></span>
+          <h2 class="title"><span class="tr">Google Play'de <span class="grad">şimdi ücretsiz.</span></span><span class="en">Free on <span class="grad">Google Play now.</span></span></h2>
+          <p class="sub"><span class="tr">Her biri aynı özenle: sakin, sade ve oyuncuya saygılı.</span><span class="en">Each one made with the same care: calm, simple and respectful.</span></p>
+        </div>
+
+        <div class="apps">
+          <article class="app rv">
+            <div class="media"><img src="img/blockfour-feature.jpg" alt="Block Four" loading="lazy" width="1024" height="500"></div>
+            <div class="info">
+              <div class="head-row"><img src="img/blockfour.png" alt="" width="72" height="72"><div><h3>Block Four</h3><div class="tags"><span class="tag"><span class="tr">Bulmaca</span><span class="en">Puzzle</span></span><span class="tag"><span class="tr">4 oyun bir arada</span><span class="en">4 games in 1</span></span></div></div></div>
+              <p><span class="tr">Dört klasik bulmaca tek uygulamada: blok bulmaca, düşen bloklar, 2048 ve renk sıralama. Her ruh haline göre bir oyun.</span><span class="en">Four classic puzzles in one app: block puzzle, falling blocks, 2048 and colour sort. A game for every mood.</span></p>
+              <ul class="perks">
+                <li><span class="tr">Tek indirmede 4 oyun</span><span class="en">4 games, one download</span></li>
+                <li><span class="tr">Rekor takibi</span><span class="en">Personal best tracking</span></li>
+                <li><span class="tr">Sade ve renkli tasarım</span><span class="en">Clean, colourful design</span></li>
+                <li><span class="tr">Kısa molalara ideal</span><span class="en">Perfect for short breaks</span></li>
+              </ul>
+              <a class="play" href="https://play.google.com/store/apps/details?id=com.firat.blokrota" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z"/><path fill="#EA4335" d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z"/><path fill="#4285F4" d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z"/></svg>
+                <span><small><span class="tr">HEMEN İNDİR</span><span class="en">GET IT ON</span></small><b>Google Play</b></span>
+              </a>
+            </div>
+          </article>
+
+          <article class="app rev rv">
+            <div class="media"><img src="img/blocknest-feature.jpg" alt="BlockNest" loading="lazy" width="1024" height="500"></div>
+            <div class="info">
+              <div class="head-row"><img src="img/blocknest.png" alt="" width="72" height="72"><div><h3>BlockNest</h3><div class="tags"><span class="tag"><span class="tr">Ahşap blok bulmaca</span><span class="en">Wood block puzzle</span></span><span class="tag"><span class="tr">Rahatlatıcı</span><span class="en">Relaxing</span></span></div></div></div>
+              <p><span class="tr">Sıcak ahşap tonlarında, sakin bir blok bulmacası. Blokları yerleştir, satır ve sütunları temizle, zihnini dinlendir.</span><span class="en">A calm block puzzle in warm wooden tones. Place blocks, clear rows and columns, and let your mind rest.</span></p>
+              <ul class="perks">
+                <li><span class="tr">Süre baskısı yok</span><span class="en">No time pressure</span></li>
+                <li><span class="tr">Göz yormayan sıcak tasarım</span><span class="en">Warm, easy-on-the-eyes look</span></li>
+                <li><span class="tr">Tek elle rahat oyun</span><span class="en">Comfortable one-hand play</span></li>
+                <li><span class="tr">Her yaşa uygun</span><span class="en">Great for all ages</span></li>
+              </ul>
+              <a class="play" href="https://play.google.com/store/apps/details?id=com.exclusivellm.blocknest" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z"/><path fill="#EA4335" d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z"/><path fill="#4285F4" d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z"/></svg>
+                <span><small><span class="tr">HEMEN İNDİR</span><span class="en">GET IT ON</span></small><b>Google Play</b></span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section style="padding-top:20px">
+      <div class="wrap stats">
+        <div class="stat rv"><b class="grad" data-count="2">0</b><span class="tr">Yayındaki oyun</span><span class="en">Games live</span></div>
+        <div class="stat rv" style="--d:.08s"><b class="grad" data-count="4">0</b><span class="tr">Bulmaca modu tek uygulamada</span><span class="en">Puzzle modes in one app</span></div>
+        <div class="stat rv" style="--d:.16s"><b class="grad" data-count="0">0</b><span class="tr">Zorunlu hesap</span><span class="en">Accounts required</span></div>
+        <div class="stat rv" style="--d:.24s"><b class="grad" data-count="100" data-pct>0</b><span class="tr">Ücretsiz indirme</span><span class="en">Free to download</span></div>
+      </div>
+    </section>
+
+    <!-- SOON -->
+    <section>
+      <div class="wrap">
+        <div class="head center rv">
+          <span class="eyebrow"><span class="tr">Yakında</span><span class="en">Coming soon</span></span>
+          <h2 class="title"><span class="tr">Yeni oyunlar <span class="grad">yolda.</span></span><span class="en">New games <span class="grad">on the way.</span></span></h2>
+          <p class="sub"><span class="tr">Bulmacalar, stratejiler ve yaratıcı araçlar üzerinde çalışıyoruz. Aynı söz, aynı özen.</span><span class="en">We're working on puzzles, strategy games and creative tools. Same promise, same care.</span></p>
+        </div>
+        <div class="soon">
+          <div class="ghostcard rv"><span class="q">?</span></div>
+          <div class="ghostcard rv" style="--d:.1s"><span class="q">?</span></div>
+          <div class="ghostcard rv" style="--d:.2s"><span class="q">?</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact">
       <div class="wrap">
-        <div class="contact">
-          <h2><span class="tr">Bize ulaşın</span><span class="en">Get in touch</span></h2>
-          <p><span class="tr">Soru, öneri veya destek talepleriniz için bize e-posta gönderin.</span><span class="en">Questions, feedback or support requests? Send us an email.</span></p>
-          <a class="btn" href="mailto:support@exclusivellm.app">✉ support@exclusivellm.app</a>
+        <div class="contact rv">
+          <span class="eyebrow"><span class="tr">İletişim</span><span class="en">Contact</span></span>
+          <h2 class="title"><span class="tr">Fikrin mi var? <span class="grad">Dinliyoruz.</span></span><span class="en">Got an idea? <span class="grad">We're listening.</span></span></h2>
+          <p class="sub"><span class="tr">Öneri, hata bildirimi ya da sadece bir merhaba — her mesajı okuyoruz.</span><span class="en">Suggestions, bug reports or just a hello — we read every message.</span></p>
+          <a class="btn primary" href="mailto:support@exclusivellm.app">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+            support@exclusivellm.app
+          </a>
         </div>
       </div>
     </section>
@@ -205,29 +281,16 @@
 
   <footer>
     <div class="wrap foot">
-      <span>© <span id="yr">2026</span> Exclusive LLM</span>
+      <a class="brand" href="#top"><img src="img/favicon.png" alt=""> Exclusive LLM</a>
       <nav>
-        <a href="#apps"><span class="tr">Uygulamalar</span><span class="en">Apps</span></a>
+        <a href="#promise"><span class="tr">Felsefemiz</span><span class="en">Our promise</span></a>
+        <a href="#apps"><span class="tr">Oyunlar</span><span class="en">Games</span></a>
         <a href="mailto:support@exclusivellm.app"><span class="tr">Destek</span><span class="en">Support</span></a>
       </nav>
+      <span>© <span id="yr">2026</span> Exclusive LLM</span>
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var saved = null;
-      try { saved = localStorage.getItem("lang"); } catch (e) {}
-      var lang = saved || ((navigator.language || "en").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
-      function set(l) {
-        document.body.setAttribute("data-lang", l);
-        document.documentElement.lang = l;
-        document.querySelectorAll(".lang button").forEach(function (b) { b.classList.toggle("on", b.dataset.set === l); });
-        try { localStorage.setItem("lang", l); } catch (e) {}
-      }
-      document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { set(b.dataset.set); }); });
-      set(lang);
-      document.getElementById("yr").textContent = new Date().getFullYear();
-    })();
-  </script>
+  <script src="assets/app.js?v=2" defer></script>
 </body>
 </html>
