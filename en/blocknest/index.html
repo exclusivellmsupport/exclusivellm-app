@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+  <title>BlockNest: Wood Block Puzzle, Play Offline | Exclusive LLM</title>
+  <meta content="A relaxing wood block puzzle. Clear lines on a 10×10 board, chain combos and play offline. No timer, no account. Free on Google Play." name="description"/>
+  <link href="https://exclusivellm.app/en/blocknest/" rel="canonical"/>
+  <link href="https://exclusivellm.app/blocknest/" hreflang="tr" rel="alternate"/>
+  <link href="https://exclusivellm.app/en/blocknest/" hreflang="en" rel="alternate"/>
+  <link href="https://exclusivellm.app/en/blocknest/" hreflang="x-default" rel="alternate"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Exclusive LLM" property="og:site_name"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="BlockNest: Wood Block Puzzle, Play Offline | Exclusive LLM" property="og:title"/>
+  <meta content="A relaxing wood block puzzle. Clear lines on a 10×10 board, chain combos and play offline. No timer, no account. Free on Google Play." property="og:description"/>
+  <meta content="https://exclusivellm.app/img/blocknest-feature.jpg" property="og:image"/>
+  <meta content="https://exclusivellm.app/en/blocknest/" property="og:url"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+  <link href="/img/favicon.png" rel="icon" type="image/png"/>
+  <meta content="#040814" name="theme-color"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="/assets/style.css?v=10" rel="stylesheet"/>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BlockNest", "url": "https://exclusivellm.app/en/blocknest/", "description": "A relaxing wood block puzzle. Clear lines on a 10×10 board, chain combos and play offline. No timer, no account. Free on Google Play.", "applicationCategory": "GameApplication", "applicationSubCategory": "PuzzleGame", "operatingSystem": "Android", "inLanguage": ["tr", "en", "es", "ar"], "image": "https://exclusivellm.app/img/blocknest-feature.jpg", "screenshot": ["https://exclusivellm.app/img/shots/blocknest-1.webp", "https://exclusivellm.app/img/shots/blocknest-2.webp", "https://exclusivellm.app/img/shots/blocknest-3.webp"], "installUrl": "https://play.google.com/store/apps/details?id=com.exclusivellm.blocknest", "downloadUrl": "https://play.google.com/store/apps/details?id=com.exclusivellm.blocknest", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Exclusive LLM", "url": "https://exclusivellm.app/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is BlockNest free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, it is free to download on Google Play. The app contains ads; watching an ad to undo a move or continue a game is optional."}}, {"@type": "Question", "name": "Can I play offline?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. No account and no internet connection are needed."}}, {"@type": "Question", "name": "Is there a timer?", "acceptedAnswer": {"@type": "Answer", "text": "No. There is no rush; take your time with every move."}}, {"@type": "Question", "name": "Which languages are supported?", "acceptedAnswer": {"@type": "Answer", "text": "English, Turkish, Spanish and Arabic."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://exclusivellm.app/en/"}, {"@type": "ListItem", "position": 2, "name": "BlockNest", "item": "https://exclusivellm.app/en/blocknest/"}]}</script>
+</head>
+<body data-lang="en">
+<div aria-hidden="true" class="aurora"></div>
+<canvas aria-hidden="true" id="neural"></canvas>
+<div aria-hidden="true" class="grain"></div>
+<div aria-hidden="true" class="spot"></div>
+<header class="top">
+<div class="wrap nav">
+<a class="brand" href="/en/#top"><img alt="" src="/img/favicon.png"/> Exclusive LLM</a>
+<nav class="links">
+<a href="/en/#promise"><span class="en">Our promise</span></a>
+<a href="/en/#apps"><span class="en">Games</span></a>
+<a href="/en/#contact"><span class="en">Contact</span></a>
+<a aria-label="Instagram" class="soc" href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r=".6"></circle></svg></a>
+<a aria-label="TikTok" class="soc" href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.7 2.3 4.5 5 4.7"></path></svg></a>
+<a aria-label="YouTube" class="soc" href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="4.5" width="19" x="2.5" y="5"></rect><path d="m10 9 5 3-5 3z" fill="currentColor"></path></svg></a>
+<div aria-label="Language" class="lang" role="group"><a href="/blocknest/" hreflang="tr" lang="tr">TR</a><a aria-current="page" class="on" href="/en/blocknest/" hreflang="en" lang="en">EN</a></div>
+</nav>
+</div>
+</header>
+
+<main class="gp" id="top">
+<section class="gp-hero">
+<div class="wrap gp-grid">
+<div>
+<nav aria-label="breadcrumb" class="crumb"><a href="/en/">Home</a><span>›</span><a href="/en/#apps">Games</a><span>›</span><span>BlockNest</span></nav>
+<div class="head-row"><img alt="BlockNest" height="84" src="/img/blocknest.png" width="84"/><div><h1>BlockNest</h1><div class="tags"><span class="tag">Wood block puzzle</span><span class="tag">Relaxing</span><span class="tag">Offline</span></div></div></div>
+<p class="lead">A calm block puzzle in warm wooden tones.</p>
+<p class="intro">BlockNest is a relaxing wood block puzzle with a warm, handcrafted look. Place wooden blocks on the 10×10 board, clear full rows and columns, chain combos and beat your best score. No timer, no pressure: just a calm brain game you can play offline, anytime.</p>
+<div class="cta-row"><a class="play" href="https://play.google.com/store/apps/details?id=com.exclusivellm.blocknest" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z" fill="#34A853"></path><path d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z" fill="#FBBC04"></path><path d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z" fill="#EA4335"></path><path d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z" fill="#4285F4"></path></svg>
+<span><small><span class="en">GET IT ON</span></small><b>Google Play</b></span>
+</a></div>
+</div>
+<div class="gp-media"><img alt="BlockNest" height="500" src="/img/blocknest-feature.jpg" width="1024"/></div>
+</div>
+</section>
+<section class="gp-sec">
+<div class="wrap">
+<div class="head"><span class="eyebrow">In the game</span><h2 class="title">Screenshots</h2></div>
+<div class="shots"><img alt="BlockNest screenshots 1" height="1096" loading="lazy" src="/img/shots/blocknest-1.webp" width="540"/><img alt="BlockNest screenshots 2" height="1096" loading="lazy" src="/img/shots/blocknest-2.webp" width="540"/><img alt="BlockNest screenshots 3" height="1096" loading="lazy" src="/img/shots/blocknest-3.webp" width="540"/></div>
+</div>
+</section>
+<section class="gp-sec">
+<div class="wrap">
+<div class="head center"><span class="eyebrow">Gameplay</span><h2 class="title">Trailer</h2></div>
+<div aria-label="Play video" class="yt" data-id="2Z5_TzVcI34" data-title="BlockNest" role="button" tabindex="0">
+<img alt="BlockNest trailer" loading="lazy" src="https://i.ytimg.com/vi/2Z5_TzVcI34/hqdefault.jpg"/>
+<button aria-label="Play video" type="button"><svg viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></button>
+</div>
+</div>
+</section>
+<section class="gp-sec">
+<div class="wrap">
+<div class="head"><span class="eyebrow">BlockNest</span><h2 class="title">Features</h2></div>
+<div class="feats"><div class="col"><h3>How to play</h3><ul><li>Drag the three wooden blocks from the tray onto the 10×10 grid.</li><li>Fill a whole row or column to clear it and free up space.</li><li>Clear several lines in one move for big bonuses.</li><li>Clear lines move after move to build a combo multiplier up to x5.</li><li>The game ends when no block fits on the board, so plan ahead.</li></ul></div><div class="col"><h3>Features</h3><ul><li>Four wood themes: Classic Walnut, Crimson Mahogany, Nordic Pine and Dark Ebony</li><li>18 achievement badges to unlock</li><li>Undo a move or continue a lost game with an optional ad</li><li>Gentle flower and butterfly effects when you clear lines</li><li>Auto-save: continue exactly where you stopped</li><li>Wooden sound effects, haptic feedback and a reduced motion option</li><li>English, Turkish, Spanish and Arabic</li></ul></div></div>
+</div>
+</section>
+<section class="gp-sec">
+<div class="wrap">
+<div class="head center"><span class="eyebrow">Questions</span><h2 class="title">Frequently asked questions</h2></div>
+<div class="faq"><details><summary>Is BlockNest free?</summary><p>Yes, it is free to download on Google Play. The app contains ads; watching an ad to undo a move or continue a game is optional.</p></details><details><summary>Can I play offline?</summary><p>Yes. No account and no internet connection are needed.</p></details><details><summary>Is there a timer?</summary><p>No. There is no rush; take your time with every move.</p></details><details><summary>Which languages are supported?</summary><p>English, Turkish, Spanish and Arabic.</p></details></div>
+</div>
+</section>
+<section class="gp-sec">
+<div class="wrap">
+<div class="head"><span class="eyebrow">Exclusive LLM</span><h2 class="title">More of our games</h2></div>
+<div class="others"><a class="other" href="/en/block-four/"><img alt="" height="56" loading="lazy" src="/img/blockfour.png" width="56"/><span><b>Block Four</b><small>Four puzzle games, one app.</small></span></a><a class="other" href="/en/#apps"><img alt="" height="56" loading="lazy" src="/img/favicon.png" width="56"/><span><b>Games</b><small>exclusivellm.app</small></span></a></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap foot">
+<a class="brand" href="/en/#top"><img alt="" src="/img/favicon.png"/> Exclusive LLM</a>
+<nav>
+<a href="/en/#promise"><span class="en">Our promise</span></a>
+<a href="/en/#apps"><span class="en">Games</span></a>
+<a href="mailto:support@exclusivellm.app"><span class="en">Support</span></a>
+<a href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank">TikTok</a>
+<a href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank">YouTube</a>
+</nav>
+<span>© <span id="yr">2026</span> Exclusive LLM</span>
+</div>
+</footer>
+<script defer="" src="/assets/app.js?v=3"></script>
+</body>
+</html>

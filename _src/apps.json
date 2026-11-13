@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "block-four",
+    "name": "Block Four",
+    "package": "com.firat.blokrota",
+    "category": "PuzzleGame",
+    "icon": "blockfour.png",
+    "feature": "blockfour-feature.jpg",
+    "shots": ["blockfour-1.webp", "blockfour-2.webp", "blockfour-3.webp", "blockfour-4.webp", "blockfour-5.webp"],
+    "video": {"tr": "K0Yd5hiRS-E", "en": "K0Yd5hiRS-E"},
+    "languages": ["tr", "en", "es"],
+    "tr": {
+      "title": "Block Four: Blok Bulmaca, 2048 ve Renk Sıralama | Exclusive LLM",
+      "description": "Blok bulmaca, düşen bloklar, 2048 ve renk sıralama: 4 zekâ oyunu tek uygulamada. Üyelik yok, internetsiz oynanır. Google Play'de ücretsiz.",
+      "tagline": "Dört bulmaca oyunu, tek uygulama.",
+      "intro": "Block Four, dört klasik bulmaca oyununu tek uygulamada buluşturuyor: Blok Rota, Düşen Bloklar, Sayı Birleştirme ve Renk Sıralama. İki dakikalık bir molada da, uzun bir akşamda da ruh haline uygun bir bulmaca seni bekliyor. Üyelik yok, kayıt yok; tüm oyunlar internetsiz oynanabilir.",
+      "tags": ["Bulmaca", "4 oyun bir arada", "İnternetsiz"],
+      "sections": [
+        {"h": "Blok Rota: 8×8 blok bulmaca", "items": ["Blokları 8×8 tahtaya sürükle, dolu satır ve sütunları temizle.", "Aynı anda birden fazla çizgi temizleyerek kombo ve büyük bonuslar kazan.", "Üç mod: süre sınırı olmayan Klasik, zamana karşı 120 Saniye ve her gün yenilenen 30 hamlelik Günlük Rota."]},
+        {"h": "Düşen Bloklar: 10×20", "items": ["Düşen blokları döndür, yerleştir, çizgileri tamamla ve seviye atla.", "Her seviyede bloklar biraz daha hızlı düşer; anında düşürme ile hız kazan.", "Ekrandaki tuşları istediğin yere taşı, boyutunu ayarla, sağ ya da sol el düzenini seç."]},
+        {"h": "Sayı Birleştirme: 4×4 2048", "items": ["Taşları kaydır, aynı sayıları birleştir ve 2048 taşına ulaş.", "Her oyunda 3 ücretsiz geri alma hakkı.", "2048'e ulaştıktan sonra daha büyük sayılar için devam et."]},
+        {"h": "Renk Sıralama: 50 seviye", "items": ["Renkli sıvıları tüpler arasında aktar, her tüpte tek bir renk topla.", "Adım adım zorlaşan 50 seviye; geri alma ve yeniden başlatma seçenekleri."]}
+      ],
+      "features": ["Üç görsel tema: Pastel, Gece ve Ahşap", "Her oyun için ayrı rekorlar", "Otomatik kayıt: kaldığın yerden devam et", "Ses efektleri, titreşim ve azaltılmış hareket seçeneği", "Türkçe, İngilizce ve İspanyolca", "Üyelik ya da hesap gerekmez"],
+      "faq": [
+        {"q": "Block Four ücretsiz mi?", "a": "Evet, Google Play'den ücretsiz indirilir. Uygulama reklam içerir; Klasik modda oyun bittiğinde devam etmek için izlenen reklam isteğe bağlıdır."},
+        {"q": "İnternet olmadan oynanır mı?", "a": "Evet. Dört oyunun tamamı internet bağlantısı olmadan oynanabilir."},
+        {"q": "Üye olmam gerekiyor mu?", "a": "Hayır. Hesap açmadan, kayıt olmadan hemen oynamaya başlarsın."},
+        {"q": "Hangi dilleri destekliyor?", "a": "Türkçe, İngilizce ve İspanyolca."}
+      ]
+    },
+    "en": {
+      "title": "Block Four: Block Puzzle, 2048 & Color Sort | Exclusive LLM",
+      "description": "Block puzzle, falling blocks, 2048 and color sort: 4 brain games in one app. No account, play offline. Free on Google Play.",
+      "tagline": "Four puzzle games, one app.",
+      "intro": "Block Four brings four classic puzzle games together in one app: Block Route, Falling Blocks, Number Merge and Color Sort. Whether you have two minutes or a whole evening, there is always a puzzle that fits your mood. No account, no sign-up, and every game can be played offline.",
+      "tags": ["Puzzle", "4 games in 1", "Offline"],
+      "sections": [
+        {"h": "Block Route: 8×8 block puzzle", "items": ["Drag blocks onto the 8×8 board and clear full rows and columns.", "Clear several lines at once for combos and big bonuses.", "Three modes: Classic with no time limit, 120 Seconds against the clock, and Daily Route, a new 30-move challenge every day."]},
+        {"h": "Falling Blocks: 10×20", "items": ["Rotate and place falling blocks, complete lines and level up.", "Blocks fall a little faster at every level; use hard drop to keep up.", "Move and resize the on-screen buttons and choose a left- or right-handed layout."]},
+        {"h": "Number Merge: 4×4 2048", "items": ["Swipe tiles, merge matching numbers and reach the 2048 tile.", "3 free undos in every game.", "Keep going after 2048 for an even bigger tile."]},
+        {"h": "Color Sort: 50 levels", "items": ["Pour colored liquids between tubes until each tube holds a single color.", "50 levels that get harder step by step, with undo and restart."]}
+      ],
+      "features": ["Three visual themes: Pastel, Night and Wood", "Separate records for every game", "Auto-save: continue right where you left off", "Sound effects, vibration and a reduced motion option", "English, Turkish and Spanish", "No account or registration needed"],
+      "faq": [
+        {"q": "Is Block Four free?", "a": "Yes, it is free to download on Google Play. The app contains ads; watching an ad to continue after a Classic game over is optional."},
+        {"q": "Can I play offline?", "a": "Yes. All four games work without an internet connection."},
+        {"q": "Do I need an account?", "a": "No. Start playing right away, with no sign-up."},
+        {"q": "Which languages are supported?", "a": "English, Turkish and Spanish."}
+      ]
+    }
+  },
+  {
+    "slug": "blocknest",
+    "name": "BlockNest",
+    "package": "com.exclusivellm.blocknest",
+    "category": "PuzzleGame",
+    "icon": "blocknest.png",
+    "feature": "blocknest-feature.jpg",
+    "shots": ["blocknest-1.webp", "blocknest-2.webp", "blocknest-3.webp"],
+    "video": {"tr": "xZOWLNhrnRI", "en": "2Z5_TzVcI34"},
+    "languages": ["tr", "en", "es", "ar"],
+    "tr": {
+      "title": "BlockNest: Ahşap Blok Bulmaca, İnternetsiz | Exclusive LLM",
+      "description": "Rahatlatıcı ahşap blok bulmaca. 10×10 tahtada satır temizle, kombo yap, internetsiz oyna. Süre yok, üyelik yok. Google Play'de ücretsiz.",
+      "tagline": "Sıcak ahşap tonlarında sakin bir blok bulmacası.",
+      "intro": "BlockNest, sıcak ahşap görünümlü, rahatlatıcı bir blok bulmaca oyunu. Ahşap blokları 10×10 tahtaya yerleştir, dolu satır ve sütunları temizle, kombolar yap ve rekorunu kır. Süre yok, acele yok: istediğin an internetsiz oynayabileceğin sakin bir zekâ oyunu.",
+      "tags": ["Ahşap blok bulmaca", "Rahatlatıcı", "İnternetsiz"],
+      "sections": [
+        {"h": "Nasıl oynanır?", "items": ["Raftaki üç ahşap bloğu sürükleyip 10×10 tahtaya bırak.", "Bir satırı ya da sütunu tamamen doldur, temizlensin ve yer açılsın.", "Tek hamlede birden fazla çizgi temizleyerek büyük bonuslar kazan.", "Art arda çizgi temizleyerek kombo çarpanını x5'e kadar çıkar.", "Hiçbir blok sığmadığında oyun biter, bu yüzden önceden planla."]}
+      ],
+      "features": ["Dört ahşap tema: Klasik Ceviz, Kızıl Maun, Kuzey Çamı ve Koyu Abanoz", "Geliştikçe açılan 18 başarım rozeti", "İsteğe bağlı reklamla hamleni geri al ya da oyuna devam et", "Çizgi temizlerken çiçek ve kelebek efektleri", "Otomatik kayıt: kaldığın yerden devam et", "Ahşap ses efektleri, titreşim ve azaltılmış hareket seçeneği", "Türkçe, İngilizce, İspanyolca ve Arapça"],
+      "faq": [
+        {"q": "BlockNest ücretsiz mi?", "a": "Evet, Google Play'den ücretsiz indirilir. Uygulama reklam içerir; hamle geri alma ve oyuna devam etme için izlenen reklamlar isteğe bağlıdır."},
+        {"q": "İnternet olmadan oynanır mı?", "a": "Evet. Üyelik ve internet bağlantısı gerekmez."},
+        {"q": "Süre sınırı var mı?", "a": "Hayır. Acele yok; her hamleyi düşünerek oynayabilirsin."},
+        {"q": "Hangi dilleri destekliyor?", "a": "Türkçe, İngilizce, İspanyolca ve Arapça."}
+      ]
+    },
+    "en": {
+      "title": "BlockNest: Wood Block Puzzle, Play Offline | Exclusive LLM",
+      "description": "A relaxing wood block puzzle. Clear lines on a 10×10 board, chain combos and play offline. No timer, no account. Free on Google Play.",
+      "tagline": "A calm block puzzle in warm wooden tones.",
+      "intro": "BlockNest is a relaxing wood block puzzle with a warm, handcrafted look. Place wooden blocks on the 10×10 board, clear full rows and columns, chain combos and beat your best score. No timer, no pressure: just a calm brain game you can play offline, anytime.",
+      "tags": ["Wood block puzzle", "Relaxing", "Offline"],
+      "sections": [
+        {"h": "How to play", "items": ["Drag the three wooden blocks from the tray onto the 10×10 grid.", "Fill a whole row or column to clear it and free up space.", "Clear several lines in one move for big bonuses.", "Clear lines move after move to build a combo multiplier up to x5.", "The game ends when no block fits on the board, so plan ahead."]}
+      ],
+      "features": ["Four wood themes: Classic Walnut, Crimson Mahogany, Nordic Pine and Dark Ebony", "18 achievement badges to unlock", "Undo a move or continue a lost game with an optional ad", "Gentle flower and butterfly effects when you clear lines", "Auto-save: continue exactly where you stopped", "Wooden sound effects, haptic feedback and a reduced motion option", "English, Turkish, Spanish and Arabic"],
+      "faq": [
+        {"q": "Is BlockNest free?", "a": "Yes, it is free to download on Google Play. The app contains ads; watching an ad to undo a move or continue a game is optional."},
+        {"q": "Can I play offline?", "a": "Yes. No account and no internet connection are needed."},
+        {"q": "Is there a timer?", "a": "No. There is no rush; take your time with every move."},
+        {"q": "Which languages are supported?", "a": "English, Turkish, Spanish and Arabic."}
+      ]
+    }
+  }
+]

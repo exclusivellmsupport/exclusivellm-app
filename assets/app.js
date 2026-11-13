@@ -4,18 +4,10 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
-  /* ---------- language ---------- */
-  const setLang = (l) => {
-    document.body.dataset.lang = l;
-    document.documentElement.lang = l;
-    $$(".lang button").forEach((b) => b.classList.toggle("on", b.dataset.set === l));
-    try { localStorage.setItem("lang", l); } catch (e) {}
-    restartRotator();
-  };
-  let saved = null;
-  try { saved = localStorage.getItem("lang"); } catch (e) {}
-  const initial = saved || ((navigator.language || "en").toLowerCase().startsWith("tr") ? "tr" : "en");
-  $$(".lang button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.set)));
+  /* ---------- language: each page is TR or EN (separate URLs) ---------- */
+  const setLang = (l) => { document.body.dataset.lang = l; restartRotator(); };
+  const initial = document.body.dataset.lang || "tr";
+  $$(".lang a").forEach((a) => a.addEventListener("click", () => { try { localStorage.setItem("lang", a.getAttribute("hreflang")); } catch (e) {} }));
 
   /* ---------- rotating headline word ---------- */
   let rotTimer = null;
@@ -42,7 +34,7 @@
   const header = $("header.top");
   const onScroll = () => header.classList.toggle("scrolled", scrollY > 20);
   addEventListener("scroll", onScroll, { passive: true }); onScroll();
-  $("#yr").textContent = new Date().getFullYear();
+  const yr = $("#yr"); if (yr) yr.textContent = new Date().getFullYear();
 
   /* ---------- cursor spotlight + card glow ---------- */
   const spot = $(".spot");
@@ -69,12 +61,12 @@
       el.addEventListener("pointerleave", () => { el.style.transform = ""; });
     });
     const stage = $(".stage"), phone = $(".phone");
-    stage.addEventListener("pointermove", (e) => {
+    if (stage && phone) stage.addEventListener("pointermove", (e) => {
       const r = stage.getBoundingClientRect();
       const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
       phone.style.transform = `rotateY(${-14 + x * 22}deg) rotateX(${6 - y * 16}deg)`;
     });
-    stage.addEventListener("pointerleave", () => { phone.style.transform = ""; });
+    if (stage && phone) stage.addEventListener("pointerleave", () => { phone.style.transform = ""; });
   }
 
   /* ---------- reveal on scroll + counters + meter ---------- */
@@ -101,6 +93,14 @@
     };
     requestAnimationFrame(step);
   }
+
+  /* ---------- YouTube: load the player only on click ---------- */
+  $$(".yt").forEach((el) => el.addEventListener("click", () => {
+    const f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + el.dataset.id + "?autoplay=1&rel=0";
+    f.allow = "autoplay; encrypted-media; picture-in-picture"; f.allowFullScreen = true; f.title = el.dataset.title || "Video";
+    el.replaceChildren(f);
+  }, { once: true }));
 
   /* ---------- neural network background ---------- */
   const pointer = { x: -1e4, y: -1e4, active: false };
@@ -166,7 +166,9 @@
   requestAnimationFrame(tick);
 
   /* ---------- self-playing block puzzle ---------- */
-  const board = $("#board"), bctx = board.getContext("2d");
+  const board = $("#board");
+  if (!board) return;
+  const bctx = board.getContext("2d");
   const N = 8;
   const COLORS = [["#4f8dff", "#2f5fe0"], ["#38d6ff", "#1aa3d1"], ["#8b5cf6", "#6d3fe0"], ["#f472b6", "#d9468f"], ["#fbbf24", "#e0950b"], ["#34d399", "#13a874"]];
   const SHAPES = [

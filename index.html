@@ -1,338 +1,321 @@
 <!doctype html>
 <html lang="tr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Exclusive LLM — Relaxing Mobile Games & Apps</title>
-  <meta name="description" content="Exclusive LLM builds calm, user-friendly mobile games and apps for Android — measured ads, clean design and respect for your privacy.">
-  <link rel="canonical" href="https://exclusivellm.app/">
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <meta name="theme-color" content="#040814">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Exclusive LLM — Relaxing Mobile Games & Apps">
-  <meta property="og:description" content="Calm, user-friendly Android games — no ad overload, clean design, privacy first.">
-  <meta property="og:image" content="https://exclusivellm.app/img/blockfour-feature.jpg">
-  <meta property="og:url" content="https://exclusivellm.app/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=8">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Exclusive LLM","url":"https://exclusivellm.app/","logo":"https://exclusivellm.app/img/logo.png","email":"support@exclusivellm.app"}
-  </script>
+<head><meta charset="utf-8"/>
+  <title>Exclusive LLM Oyunları: Rahatlatıcı Mobil Oyunlar ve Uygulamalar</title>
+  <meta content="Exclusive LLM, Android için sakin ve kullanıcı dostu oyunlar ve uygulamalar geliştirir: ölçülü reklam, sade tasarım, gizliliğe saygı. Block Four ve BlockNest Google Play'de ücretsiz." name="description"/>
+  <link href="https://exclusivellm.app/" rel="canonical"/>
+  <link href="https://exclusivellm.app/" hreflang="tr" rel="alternate"/>
+  <link href="https://exclusivellm.app/en/" hreflang="en" rel="alternate"/>
+  <link href="https://exclusivellm.app/en/" hreflang="x-default" rel="alternate"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Exclusive LLM" property="og:site_name"/>
+  <meta content="tr_TR" property="og:locale"/>
+  <meta content="Exclusive LLM Oyunları: Rahatlatıcı Mobil Oyunlar ve Uygulamalar" property="og:title"/>
+  <meta content="Exclusive LLM, Android için sakin ve kullanıcı dostu oyunlar ve uygulamalar geliştirir: ölçülü reklam, sade tasarım, gizliliğe saygı. Block Four ve BlockNest Google Play'de ücretsiz." property="og:description"/>
+  <meta content="https://exclusivellm.app/img/blockfour-feature.jpg" property="og:image"/>
+  <meta content="https://exclusivellm.app/" property="og:url"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+  <link href="/img/favicon.png" rel="icon" type="image/png"/>
+  <meta content="#040814" name="theme-color"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="/assets/style.css?v=10" rel="stylesheet"/>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Exclusive LLM", "url": "https://exclusivellm.app/", "logo": "https://exclusivellm.app/img/logo.png", "email": "support@exclusivellm.app", "sameAs": ["https://www.instagram.com/exclusive.llm/", "https://www.tiktok.com/@exclusivellm", "https://www.youtube.com/@Exclusivellm"]}</script>
 </head>
 <body data-lang="tr">
-  <div class="aurora" aria-hidden="true"></div>
-  <canvas id="neural" aria-hidden="true"></canvas>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="spot" aria-hidden="true"></div>
+<div aria-hidden="true" class="aurora"></div>
+<canvas aria-hidden="true" id="neural"></canvas>
+<div aria-hidden="true" class="grain"></div>
+<div aria-hidden="true" class="spot"></div>
+<header class="top">
+<div class="wrap nav">
+<a class="brand" href="#top"><img alt="" src="/img/favicon.png"/> Exclusive LLM</a>
+<nav class="links">
+<a href="#promise"><span class="tr">Felsefemiz</span></a>
+<a href="#apps"><span class="tr">Oyunlar</span></a>
+<a href="#contact"><span class="tr">İletişim</span></a>
+<a aria-label="Instagram" class="soc" href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r=".6"></circle></svg></a>
+<a aria-label="TikTok" class="soc" href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.7 2.3 4.5 5 4.7"></path></svg></a>
+<a aria-label="YouTube" class="soc" href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="4.5" width="19" x="2.5" y="5"></rect><path d="m10 9 5 3-5 3z" fill="currentColor"></path></svg></a>
+<div aria-label="Language" class="lang" role="group"><a aria-current="page" class="on" href="/" hreflang="tr" lang="tr">TR</a><a href="/en/" hreflang="en" lang="en">EN</a></div>
+</nav>
+</div>
+</header>
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="hero-logo rv"><img alt="Exclusive LLM" height="132" src="/img/logo.png" width="132"/></span>
+<span class="chip rv"><span class="dot"></span>
+<span class="tr">Bağımsız mobil oyun ve uygulama stüdyosu</span>
+</span>
+<h1 class="rv" style="--d:.08s">
+<span class="tr">Oyun oynamak<br/><span class="rotator tr"><span>rahatlatmalı.</span><span>keyif vermeli.</span><span>sade olmalı.</span><span>saygılı olmalı.</span></span></span>
 
-  <header class="top">
-    <div class="wrap nav">
-      <a class="brand" href="#top"><img src="img/favicon.png" alt=""> Exclusive LLM</a>
-      <nav class="links">
-        <a href="#promise"><span class="tr">Felsefemiz</span><span class="en">Our promise</span></a>
-        <a href="#apps"><span class="tr">Oyunlar</span><span class="en">Games</span></a>
-        <a href="#contact"><span class="tr">İletişim</span><span class="en">Contact</span></a>
-        <a class="soc" href="https://www.instagram.com/exclusive.llm/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
-        <a class="soc" href="https://www.tiktok.com/@exclusivellm" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.7 2.3 4.5 5 4.7"/></svg></a>
-        <a class="soc" href="https://www.youtube.com/@Exclusivellm" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4.5"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a>
-        <div class="lang" role="group" aria-label="Language">
-          <button type="button" data-set="tr">TR</button>
-          <button type="button" data-set="en">EN</button>
-        </div>
-      </nav>
-    </div>
-  </header>
+</h1>
+<p class="lead rv" style="--d:.16s">
+<span class="tr">Ekranı reklamlarla doldurmayan, ilk dokunuşta anlaşılan ve günün yorgunluğunu alan oyunlar tasarlıyoruz. Sadece sen ve oyunun.</span>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <span class="hero-logo rv"><img src="img/logo.png" alt="Exclusive LLM" width="132" height="132"></span>
-          <span class="chip rv"><span class="dot"></span>
-            <span class="tr">Bağımsız mobil oyun ve uygulama stüdyosu</span><span class="en">Independent mobile game &amp; app studio</span>
-          </span>
-          <h1 class="rv" style="--d:.08s">
-            <span class="tr">Oyun oynamak<br><span class="rotator tr"><span>rahatlatmalı.</span><span>keyif vermeli.</span><span>sade olmalı.</span><span>saygılı olmalı.</span></span></span>
-            <span class="en">Games should<br><span class="rotator en"><span>help you relax.</span><span>feel delightful.</span><span>stay simple.</span><span>respect you.</span></span></span>
-          </h1>
-          <p class="lead rv" style="--d:.16s">
-            <span class="tr">Ekranı reklamlarla doldurmayan, ilk dokunuşta anlaşılan ve günün yorgunluğunu alan oyunlar tasarlıyoruz. Sadece sen ve oyunun.</span>
-            <span class="en">We design games that don't bury the screen in ads, make sense from the very first tap and help you unwind. Just you and the game.</span>
-          </p>
-          <div class="cta rv" style="--d:.24s">
-            <a class="btn primary" href="#apps">
-              <span class="tr">Oyunlarımızı keşfet</span><span class="en">Explore our games</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a class="btn ghost" href="#promise"><span class="tr">Neden farklıyız?</span><span class="en">Why we're different</span></a>
-          </div>
-          <div class="trust rv" style="--d:.32s">
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="tr">Ölçülü reklam</span><span class="en">Measured ads</span></span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="tr">Kayıt gerekmez</span><span class="en">No sign-up</span></span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="tr">Ücretsiz</span><span class="en">Free to play</span></span>
-          </div>
-        </div>
+</p>
+<div class="cta rv" style="--d:.24s">
+<a class="btn primary" href="#apps">
+<span class="tr">Oyunlarımızı keşfet</span>
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</a>
+<a class="btn ghost" href="#promise"><span class="tr">Neden farklıyız?</span></a>
+</div>
+<div class="trust rv" style="--d:.32s">
+<span><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg><span class="tr">Ölçülü reklam</span></span>
+<span><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg><span class="tr">Kayıt gerekmez</span></span>
+<span><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg><span class="tr">Ücretsiz</span></span>
+</div>
+</div>
+<div aria-hidden="true" class="stage rv" style="--d:.2s">
+<div class="ring r2"></div><div class="ring r1"></div>
+<div class="cube c1"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="cube c2"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="cube c3"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="cube c4"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="phone">
+<div class="screen">
+<div class="notch"></div>
+<div class="hud">
+<div class="pill"><span class="tr">SKOR</span><b id="score">0</b></div>
+<div class="pill"><span class="tr">EN İYİ</span><b id="best">0</b></div>
+</div>
+<canvas id="board"></canvas>
+<div class="tray"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+<div class="combo"></div>
+</div>
+</div>
+</div>
+</div>
+<a aria-label="Scroll" class="scroll-cue" href="#promise"></a>
+</section>
+<!-- MARQUEE -->
+<div aria-hidden="true" class="marquee">
+<div class="track tr">
+<span>Reklam yağmuru yok</span><span>Sade ve anlaşılır arayüz</span><span>Rahatlatan oynanış</span><span>Gizliliğe saygı</span><span>Kayıt gerektirmez</span><span>Hafif ve hızlı</span><span>Ücretsiz</span>
+<span>Reklam yağmuru yok</span><span>Sade ve anlaşılır arayüz</span><span>Rahatlatan oynanış</span><span>Gizliliğe saygı</span><span>Kayıt gerektirmez</span><span>Hafif ve hızlı</span><span>Ücretsiz</span>
+</div>
 
-        <div class="stage rv" style="--d:.2s" aria-hidden="true">
-          <div class="ring r2"></div><div class="ring r1"></div>
-          <div class="cube c1"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="cube c2"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="cube c3"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="cube c4"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="phone">
-            <div class="screen">
-              <div class="notch"></div>
-              <div class="hud">
-                <div class="pill"><span class="tr">SKOR</span><span class="en">SCORE</span><b id="score">0</b></div>
-                <div class="pill"><span class="tr">EN İYİ</span><span class="en">BEST</span><b id="best">0</b></div>
-              </div>
-              <canvas id="board"></canvas>
-              <div class="tray"><canvas></canvas><canvas></canvas><canvas></canvas></div>
-              <div class="combo"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="scroll-cue" href="#promise" aria-label="Scroll"></a>
-    </section>
-
-    <!-- MARQUEE -->
-    <div class="marquee" aria-hidden="true">
-      <div class="track tr">
-        <span>Reklam yağmuru yok</span><span>Sade ve anlaşılır arayüz</span><span>Rahatlatan oynanış</span><span>Gizliliğe saygı</span><span>Kayıt gerektirmez</span><span>Hafif ve hızlı</span><span>Ücretsiz</span>
-        <span>Reklam yağmuru yok</span><span>Sade ve anlaşılır arayüz</span><span>Rahatlatan oynanış</span><span>Gizliliğe saygı</span><span>Kayıt gerektirmez</span><span>Hafif ve hızlı</span><span>Ücretsiz</span>
-      </div>
-      <div class="track en">
-        <span>No ad overload</span><span>Clean, intuitive interface</span><span>Relaxing gameplay</span><span>Privacy first</span><span>No sign-up needed</span><span>Light and fast</span><span>Free to play</span>
-        <span>No ad overload</span><span>Clean, intuitive interface</span><span>Relaxing gameplay</span><span>Privacy first</span><span>No sign-up needed</span><span>Light and fast</span><span>Free to play</span>
-      </div>
-    </div>
-
-    <!-- PROMISE -->
-    <section id="promise">
-      <div class="wrap">
-        <div class="head rv">
-          <span class="eyebrow"><span class="tr">Felsefemiz</span><span class="en">Our promise</span></span>
-          <h2 class="title"><span class="tr">Oyuncuya saygı, <span class="grad">tasarımın ta kendisi.</span></span><span class="en">Respect for players <span class="grad">is the design.</span></span></h2>
-          <p class="sub"><span class="tr">Birçok ücretsiz oyun, her iki hamlede bir reklamla oyuncuyu bezdiriyor. Biz tam tersini seçtik.</span><span class="en">Many free games interrupt you with an ad every couple of moves. We chose the opposite.</span></p>
-        </div>
-
-        <div class="promise">
-          <article class="card big rv">
-            <div>
-              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#7fb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8M4 4l16 14"/></svg></div>
-              <h3><span class="tr">Reklamlara boğmuyoruz</span><span class="en">We don't drown you in ads</span></h3>
-              <p><span class="tr">Reklamlar oyunun ortasına sıkıştırılmaz; tam ekran reklamlar yalnızca oyunlar arasında ve sıklık sınırıyla çıkar. Ödüllü reklamlar ise tamamen isteğe bağlıdır: izlemek isteyen izler, istemeyen hiçbir şey kaybetmez.</span><span class="en">Ads never interrupt a round; full-screen ads only appear between games, with a strict frequency cap. Rewarded ads are fully optional: watch one if you want a bonus, skip it and lose nothing.</span></p>
-            </div>
-            <div class="meter" aria-hidden="true">
-              <div class="row them"><span class="tr">Tipik oyun</span><span class="en">Typical game</span><div class="bar"><div class="fill"></div></div></div>
-              <div class="row us"><span>Exclusive LLM</span><div class="bar"><div class="fill"></div></div></div>            </div>
-          </article>
-
-          <article class="card rv" style="--d:.1s">
-            <div class="icon g"><div class="breath"><span></span><span></span><span></span></div></div>
-            <h3><span class="tr">Rahatlatmak için tasarlandı</span><span class="en">Designed to help you relax</span></h3>
-            <p><span class="tr">Sakin renkler, yumuşak animasyonlar ve acele ettirmeyen bir tempo. Kısa bir mola ya da uzun bir akşam için.</span><span class="en">Calm colours, soft animations and a pace that never rushes you. Perfect for a short break or a long evening.</span></p>
-          </article>
-
-          <article class="card rv">
-            <div class="icon v"><svg viewBox="0 0 24 24" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M9 12l2 2 4-4"/><path d="M21 3v6h-6"/></svg></div>
-            <h3><span class="tr">İlk dokunuşta anlaşılır</span><span class="en">Clear from the first tap</span></h3>
-            <p><span class="tr">Karmaşık menüler yok. Büyük, net düğmeler ve okunaklı yazılarla her yaşa uygun bir arayüz.</span><span class="en">No maze of menus. Large, clear buttons and readable text — friendly for every age.</span></p>
-          </article>
-
-          <article class="card rv" style="--d:.1s">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#7fb2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
-            <h3><span class="tr">Gizliliğe saygı</span><span class="en">Privacy first</span></h3>
-            <p><span class="tr">Hesap açmak gerekmez, gereksiz izin istemeyiz. Reklam tercihlerini uygulama içinden her an değiştirebilirsin.</span><span class="en">No account required and no unnecessary permissions. Change your ad-privacy choices any time inside the app.</span></p>
-          </article>
-
-          <article class="card rv" style="--d:.2s">
-            <div class="icon a"><svg viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
-            <h3><span class="tr">Hafif ve hızlı</span><span class="en">Light and fast</span></h3>
-            <p><span class="tr">Küçük indirme boyutu, hızlı açılış ve pili yormayan akıcı performans.</span><span class="en">Small downloads, quick launches and smooth performance that's easy on your battery.</span></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMPARE -->
-    <section>
-      <div class="wrap">
-        <div class="head center rv">
-          <span class="eyebrow"><span class="tr">Fark</span><span class="en">The difference</span></span>
-          <h2 class="title"><span class="tr">Oyun keyfi, <span class="grad">reklam molası değil.</span></span><span class="en">Playtime, <span class="grad">not ad time.</span></span></h2>
-        </div>
-        <div class="compare">
-          <div class="col bad rv">
-            <h3>😩 <span class="tr">Alışılmış ücretsiz oyunlar</span><span class="en">The usual free game</span></h3>
-            <ul>
-              <li><span class="tr">Her birkaç hamlede bir tam ekran reklam</span><span class="en">A full-screen ad every few moves</span></li>
-              <li><span class="tr">Kapat düğmesi saklanan reklamlar</span><span class="en">Ads with hidden close buttons</span></li>
-              <li><span class="tr">Karmaşık menüler ve sürekli açılan pencereler</span><span class="en">Cluttered menus and endless pop-ups</span></li>
-              <li><span class="tr">Oynamak için hesap açma zorunluluğu</span><span class="en">Forced account sign-up just to play</span></li>
-            </ul>
-          </div>
-          <div class="col good rv" style="--d:.12s">
-            <h3>😌 Exclusive LLM</h3>
-            <ul>
-              <li><span class="tr">Oyun sırasında reklam yok; aralarda ölçülü ve sınırlı</span><span class="en">No ads mid-round; measured and capped between games</span></li>
-              <li><span class="tr">İsteğe bağlı ödüllü reklamlar — seçim senin</span><span class="en">Optional rewarded ads — your choice</span></li>
-              <li><span class="tr">Sade, ferah ve anlaşılır arayüz</span><span class="en">A clean, spacious, intuitive interface</span></li>
-              <li><span class="tr">İndir ve hemen oyna — kayıt yok</span><span class="en">Download and play instantly — no sign-up</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- APPS -->
-    <section id="apps">
-      <div class="wrap">
-        <div class="head rv">
-          <span class="eyebrow"><span class="tr">Oyunlarımız</span><span class="en">Our games</span></span>
-          <h2 class="title"><span class="tr">Google Play'de <span class="grad">şimdi ücretsiz.</span></span><span class="en">Free on <span class="grad">Google Play now.</span></span></h2>
-          <p class="sub"><span class="tr">Her biri aynı özenle: sakin, sade ve oyuncuya saygılı.</span><span class="en">Each one made with the same care: calm, simple and respectful.</span></p>
-        </div>
-
-        <div class="apps">
-          <article class="app rv">
-            <div class="media"><img src="img/blockfour-feature.jpg" alt="Block Four" loading="lazy" width="1024" height="500"></div>
-            <div class="info">
-              <div class="head-row"><img src="img/blockfour.png" alt="" width="72" height="72"><div><h3>Block Four</h3><div class="tags"><span class="tag"><span class="tr">Bulmaca</span><span class="en">Puzzle</span></span><span class="tag"><span class="tr">4 oyun bir arada</span><span class="en">4 games in 1</span></span></div></div></div>
-              <p><span class="tr">Dört klasik bulmaca tek uygulamada: blok bulmaca, düşen bloklar, 2048 ve renk sıralama. Her ruh haline göre bir oyun.</span><span class="en">Four classic puzzles in one app: block puzzle, falling blocks, 2048 and colour sort. A game for every mood.</span></p>
-              <ul class="perks">
-                <li><span class="tr">Tek indirmede 4 oyun</span><span class="en">4 games, one download</span></li>
-                <li><span class="tr">Rekor takibi</span><span class="en">Personal best tracking</span></li>
-                <li><span class="tr">Sade ve renkli tasarım</span><span class="en">Clean, colourful design</span></li>
-                <li><span class="tr">Kısa molalara ideal</span><span class="en">Perfect for short breaks</span></li>
-              </ul>
-              <a class="play" href="https://play.google.com/store/apps/details?id=com.firat.blokrota" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z"/><path fill="#EA4335" d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z"/><path fill="#4285F4" d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z"/></svg>
-                <span><small><span class="tr">HEMEN İNDİR</span><span class="en">GET IT ON</span></small><b>Google Play</b></span>
-              </a>
-            </div>
-          </article>
-
-          <article class="app rev rv">
-            <div class="media"><img src="img/blocknest-feature.jpg" alt="BlockNest" loading="lazy" width="1024" height="500"></div>
-            <div class="info">
-              <div class="head-row"><img src="img/blocknest.png" alt="" width="72" height="72"><div><h3>BlockNest</h3><div class="tags"><span class="tag"><span class="tr">Ahşap blok bulmaca</span><span class="en">Wood block puzzle</span></span><span class="tag"><span class="tr">Rahatlatıcı</span><span class="en">Relaxing</span></span></div></div></div>
-              <p><span class="tr">Sıcak ahşap tonlarında, sakin bir blok bulmacası. Blokları yerleştir, satır ve sütunları temizle, zihnini dinlendir.</span><span class="en">A calm block puzzle in warm wooden tones. Place blocks, clear rows and columns, and let your mind rest.</span></p>
-              <ul class="perks">
-                <li><span class="tr">Süre baskısı yok</span><span class="en">No time pressure</span></li>
-                <li><span class="tr">Göz yormayan sıcak tasarım</span><span class="en">Warm, easy-on-the-eyes look</span></li>
-                <li><span class="tr">Tek elle rahat oyun</span><span class="en">Comfortable one-hand play</span></li>
-                <li><span class="tr">Her yaşa uygun</span><span class="en">Great for all ages</span></li>
-              </ul>
-              <a class="play" href="https://play.google.com/store/apps/details?id=com.exclusivellm.blocknest" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z"/><path fill="#EA4335" d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z"/><path fill="#4285F4" d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z"/></svg>
-                <span><small><span class="tr">HEMEN İNDİR</span><span class="en">GET IT ON</span></small><b>Google Play</b></span>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- STATS -->
-    <section style="padding-top:20px">
-      <div class="wrap stats">
-        <div class="stat rv"><b class="grad" data-count="2">0</b><span class="tr">Yayındaki oyun</span><span class="en">Games live</span></div>
-        <div class="stat rv" style="--d:.08s"><b class="grad" data-count="4">0</b><span class="tr">Bulmaca modu tek uygulamada</span><span class="en">Puzzle modes in one app</span></div>
-        <div class="stat rv" style="--d:.16s"><b class="grad" data-count="0">0</b><span class="tr">Zorunlu hesap</span><span class="en">Accounts required</span></div>
-        <div class="stat rv" style="--d:.24s"><b class="grad" data-count="100" data-pct>0</b><span class="tr">Ücretsiz indirme</span><span class="en">Free to download</span></div>
-      </div>
-    </section>
-
-    <!-- SOON -->
-    <section>
-      <div class="wrap">
-        <div class="head center rv">
-          <span class="eyebrow"><span class="tr">Yakında</span><span class="en">Coming soon</span></span>
-          <h2 class="title"><span class="tr">Yeni uygulama ve oyunlar <span class="grad">yolda.</span></span><span class="en">New apps and games <span class="grad">on the way.</span></span></h2>
-          <p class="sub"><span class="tr">Strateji, birleştirme, bilgi yarışması, ahşap bulmaca ve bir medya stüdyosu. Aynı söz, aynı özen.</span><span class="en">Strategy, merging, trivia, a wooden puzzle and a media studio. Same promise, same care.</span></p>
-        </div>
-        <div class="soon">
-          <article class="testcard rv">
-            <div class="tmedia"><img src="img/legioncharge-feature.jpg" alt="Legion Charge" loading="lazy" width="1024" height="500"><span class="badge"><span class="tr">Yolda</span><span class="en">On the way</span></span></div>
-            <div class="tbody">
-              <div class="head-row"><img src="img/legioncharge.png" alt="" width="56" height="56"><div><h3>Legion Charge</h3><div class="tags"><span class="tag"><span class="tr">Strateji</span><span class="en">Strategy</span></span><span class="tag"><span class="tr">Ordu koşusu</span><span class="en">Army run</span></span></div></div></div>
-              <p><span class="tr">Doğru kapıları seç, ordunu büyüt, devleri devir. 50 bölümlük, her seçimin önemli olduğu bir ordu koşusu.</span><span class="en">Pick the right gates, grow your army and topple giants. A 50-level army run where every choice counts.</span></p>
-            </div>
-          </article>
-          <article class="testcard rv" style="--d:.1s">
-            <div class="tmedia"><img src="img/neonecogrid-feature.jpg" alt="Neon Eco-Grid" loading="lazy" width="1024" height="500"><span class="badge"><span class="tr">Yolda</span><span class="en">On the way</span></span></div>
-            <div class="tbody">
-              <div class="head-row"><img src="img/neonecogrid.png" alt="" width="56" height="56"><div><h3>Neon Eco-Grid</h3><div class="tags"><span class="tag"><span class="tr">Birleştir</span><span class="en">Merge</span></span><span class="tag"><span class="tr">Boşta</span><span class="en">Idle</span></span></div></div></div>
-              <p><span class="tr">Enerji kaynaklarını birleştir, neon şehirleri temiz enerjiyle besle. Haftalarca oynanacak sakin bir birleştirme oyunu.</span><span class="en">Merge energy sources and power neon cities with clean energy. A calm merge game built for weeks of play.</span></p>
-            </div>
-          </article>
-          <article class="testcard rv" style="--d:.2s">
-            <div class="tmedia"><img src="img/quiz-feature.jpg" alt="Exclusive Quiz" loading="lazy" width="1024" height="500"><span class="badge"><span class="tr">Yolda</span><span class="en">On the way</span></span></div>
-            <div class="tbody">
-              <div class="head-row"><img src="img/quiz.png" alt="" width="56" height="56"><div><h3>Exclusive Quiz</h3><div class="tags"><span class="tag"><span class="tr">Bilgi yarışması</span><span class="en">Trivia</span></span><span class="tag"><span class="tr">10 kategori</span><span class="en">10 categories</span></span></div></div></div>
-              <p><span class="tr">10 kategoride genel kültür bilgi yarışması. Günlük, ani ölüm ve zamana karşı modlarla hızlı cevapla, rekorunu kır.</span><span class="en">General knowledge trivia in 10 categories. Answer fast and beat your record in Daily, Sudden Death and Time Attack modes.</span></p>
-            </div>
-          </article>
-          <article class="testcard rv" style="--d:.3s">
-            <div class="tmedia"><img src="img/woodoraclassic-feature.jpg" alt="Woodora Classic" loading="lazy" width="1024" height="500"><span class="badge"><span class="tr">Yolda</span><span class="en">On the way</span></span></div>
-            <div class="tbody">
-              <div class="head-row"><img src="img/woodoraclassic.png" alt="" width="56" height="56"><div><h3>Woodora Classic</h3><div class="tags"><span class="tag"><span class="tr">Ahşap bulmaca</span><span class="en">Wood puzzle</span></span><span class="tag"><span class="tr">Çevrimdışı</span><span class="en">Offline</span></span></div></div></div>
-              <p><span class="tr">Ahşap blokları 8×8 tahtaya yerleştir, sıraları temizle. Süre sınırı olmayan, sakin ve stratejik bir bulmaca.</span><span class="en">Place wooden blocks on an 8×8 board and clear the lines. A calm, strategic puzzle with no time limit.</span></p>
-            </div>
-          </article>
-          <article class="testcard rv" style="--d:.4s">
-            <div class="tmedia"><img src="img/exstudio-feature.jpg" alt="ExStudio" loading="lazy" width="1024" height="500"><span class="badge"><span class="tr">Yolda</span><span class="en">On the way</span></span></div>
-            <div class="tbody">
-              <div class="head-row"><img src="img/exstudio.png" alt="" width="56" height="56"><div><h3>ExStudio</h3><div class="tags"><span class="tag"><span class="tr">Video</span><span class="en">Video</span></span><span class="tag"><span class="tr">Ses ve fotoğraf</span><span class="en">Audio &amp; photo</span></span></div></div></div>
-              <p><span class="tr">Video düzenle, sesini değiştir, karaoke yap, fotoğraf arka planını sil. Hepsi telefonunda, hesap ve filigran olmadan.</span><span class="en">Edit videos, change your voice, sing karaoke and remove photo backgrounds. All on your phone, no account and no watermark.</span></p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="wrap">
-        <div class="contact rv">
-          <span class="eyebrow"><span class="tr">İletişim</span><span class="en">Contact</span></span>
-          <h2 class="title"><span class="tr">Fikrin mi var? <span class="grad">Dinliyoruz.</span></span><span class="en">Got an idea? <span class="grad">We're listening.</span></span></h2>
-          <p class="sub"><span class="tr">Öneri, hata bildirimi ya da sadece bir merhaba — her mesajı okuyoruz.</span><span class="en">Suggestions, bug reports or just a hello — we read every message.</span></p>
-          <a class="btn primary" href="mailto:support@exclusivellm.app">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+</div>
+<!-- PROMISE -->
+<section id="promise">
+<div class="wrap">
+<div class="head rv">
+<span class="eyebrow"><span class="tr">Felsefemiz</span></span>
+<h2 class="title"><span class="tr">Oyuncuya saygı, <span class="grad">tasarımın ta kendisi.</span></span></h2>
+<p class="sub"><span class="tr">Birçok ücretsiz oyun, her iki hamlede bir reklamla oyuncuyu bezdiriyor. Biz tam tersini seçtik.</span></p>
+</div>
+<div class="promise">
+<article class="card big rv">
+<div>
+<div class="icon"><svg fill="none" stroke="#7fb2ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="3" width="18" x="3" y="4"></rect><path d="M8 21h8M4 4l16 14"></path></svg></div>
+<h3><span class="tr">Reklamlara boğmuyoruz</span></h3>
+<p><span class="tr">Reklamlar oyunun ortasına sıkıştırılmaz; tam ekran reklamlar yalnızca oyunlar arasında ve sıklık sınırıyla çıkar. Ödüllü reklamlar ise tamamen isteğe bağlıdır: izlemek isteyen izler, istemeyen hiçbir şey kaybetmez.</span></p>
+</div>
+<div aria-hidden="true" class="meter">
+<div class="row them"><span class="tr">Tipik oyun</span><div class="bar"><div class="fill"></div></div></div>
+<div class="row us"><span>Exclusive LLM</span><div class="bar"><div class="fill"></div></div></div> </div>
+</article>
+<article class="card rv" style="--d:.1s">
+<div class="icon g"><div class="breath"><span></span><span></span><span></span></div></div>
+<h3><span class="tr">Rahatlatmak için tasarlandı</span></h3>
+<p><span class="tr">Sakin renkler, yumuşak animasyonlar ve acele ettirmeyen bir tempo. Kısa bir mola ya da uzun bir akşam için.</span></p>
+</article>
+<article class="card rv">
+<div class="icon v"><svg fill="none" stroke="#c4b5fd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M9 12l2 2 4-4"></path><path d="M21 3v6h-6"></path></svg></div>
+<h3><span class="tr">İlk dokunuşta anlaşılır</span></h3>
+<p><span class="tr">Karmaşık menüler yok. Büyük, net düğmeler ve okunaklı yazılarla her yaşa uygun bir arayüz.</span></p>
+</article>
+<article class="card rv" style="--d:.1s">
+<div class="icon"><svg fill="none" stroke="#7fb2ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
+<h3><span class="tr">Gizliliğe saygı</span></h3>
+<p><span class="tr">Hesap açmak gerekmez, gereksiz izin istemeyiz. Reklam tercihlerini uygulama içinden her an değiştirebilirsin.</span></p>
+</article>
+<article class="card rv" style="--d:.2s">
+<div class="icon a"><svg fill="none" stroke="#fcd34d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg></div>
+<h3><span class="tr">Hafif ve hızlı</span></h3>
+<p><span class="tr">Küçük indirme boyutu, hızlı açılış ve pili yormayan akıcı performans.</span></p>
+</article>
+</div>
+</div>
+</section>
+<!-- COMPARE -->
+<section>
+<div class="wrap">
+<div class="head center rv">
+<span class="eyebrow"><span class="tr">Fark</span></span>
+<h2 class="title"><span class="tr">Oyun keyfi, <span class="grad">reklam molası değil.</span></span></h2>
+</div>
+<div class="compare">
+<div class="col bad rv">
+<h3>😩 <span class="tr">Alışılmış ücretsiz oyunlar</span></h3>
+<ul>
+<li><span class="tr">Her birkaç hamlede bir tam ekran reklam</span></li>
+<li><span class="tr">Kapat düğmesi saklanan reklamlar</span></li>
+<li><span class="tr">Karmaşık menüler ve sürekli açılan pencereler</span></li>
+<li><span class="tr">Oynamak için hesap açma zorunluluğu</span></li>
+</ul>
+</div>
+<div class="col good rv" style="--d:.12s">
+<h3>😌 Exclusive LLM</h3>
+<ul>
+<li><span class="tr">Oyun sırasında reklam yok; aralarda ölçülü ve sınırlı</span></li>
+<li><span class="tr">İsteğe bağlı ödüllü reklamlar — seçim senin</span></li>
+<li><span class="tr">Sade, ferah ve anlaşılır arayüz</span></li>
+<li><span class="tr">İndir ve hemen oyna — kayıt yok</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- APPS -->
+<section id="apps">
+<div class="wrap">
+<div class="head rv">
+<span class="eyebrow"><span class="tr">Oyunlarımız</span></span>
+<h2 class="title"><span class="tr">Google Play'de <span class="grad">şimdi ücretsiz.</span></span></h2>
+<p class="sub"><span class="tr">Her biri aynı özenle: sakin, sade ve oyuncuya saygılı.</span></p>
+</div>
+<div class="apps">
+<article class="app rv">
+<div class="media"><img alt="Block Four" height="500" loading="lazy" src="/img/blockfour-feature.jpg" width="1024"/></div>
+<div class="info">
+<div class="head-row"><img alt="" height="72" src="/img/blockfour.png" width="72"/><div><h3>Block Four</h3><div class="tags"><span class="tag"><span class="tr">Bulmaca</span></span><span class="tag"><span class="tr">4 oyun bir arada</span></span></div></div></div>
+<p><span class="tr">Dört klasik bulmaca tek uygulamada: blok bulmaca, düşen bloklar, 2048 ve renk sıralama. Her ruh haline göre bir oyun.</span></p>
+<ul class="perks">
+<li><span class="tr">Tek indirmede 4 oyun</span></li>
+<li><span class="tr">Rekor takibi</span></li>
+<li><span class="tr">Sade ve renkli tasarım</span></li>
+<li><span class="tr">Kısa molalara ideal</span></li>
+</ul>
+<div class="cta-row">
+<a class="play" href="https://play.google.com/store/apps/details?id=com.firat.blokrota" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z" fill="#34A853"></path><path d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z" fill="#FBBC04"></path><path d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z" fill="#EA4335"></path><path d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z" fill="#4285F4"></path></svg>
+<span><small><span class="tr">HEMEN İNDİR</span></small><b>Google Play</b></span>
+</a>
+<a class="more" href="/block-four/"><span class="tr">Oyun hakkında</span> <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</article>
+<article class="app rev rv">
+<div class="media"><img alt="BlockNest" height="500" loading="lazy" src="/img/blocknest-feature.jpg" width="1024"/></div>
+<div class="info">
+<div class="head-row"><img alt="" height="72" src="/img/blocknest.png" width="72"/><div><h3>BlockNest</h3><div class="tags"><span class="tag"><span class="tr">Ahşap blok bulmaca</span></span><span class="tag"><span class="tr">Rahatlatıcı</span></span></div></div></div>
+<p><span class="tr">Sıcak ahşap tonlarında, sakin bir blok bulmacası. Blokları yerleştir, satır ve sütunları temizle, zihnini dinlendir.</span></p>
+<ul class="perks">
+<li><span class="tr">Süre baskısı yok</span></li>
+<li><span class="tr">Göz yormayan sıcak tasarım</span></li>
+<li><span class="tr">Tek elle rahat oyun</span></li>
+<li><span class="tr">Her yaşa uygun</span></li>
+</ul>
+<div class="cta-row">
+<a class="play" href="https://play.google.com/store/apps/details?id=com.exclusivellm.blocknest" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z" fill="#34A853"></path><path d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z" fill="#FBBC04"></path><path d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z" fill="#EA4335"></path><path d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z" fill="#4285F4"></path></svg>
+<span><small><span class="tr">HEMEN İNDİR</span></small><b>Google Play</b></span>
+</a>
+<a class="more" href="/blocknest/"><span class="tr">Oyun hakkında</span> <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- STATS -->
+<section style="padding-top:20px">
+<div class="wrap stats">
+<div class="stat rv"><b class="grad" data-count="2">0</b><span class="tr">Yayındaki oyun</span></div>
+<div class="stat rv" style="--d:.08s"><b class="grad" data-count="4">0</b><span class="tr">Bulmaca modu tek uygulamada</span></div>
+<div class="stat rv" style="--d:.16s"><b class="grad" data-count="0">0</b><span class="tr">Zorunlu hesap</span></div>
+<div class="stat rv" style="--d:.24s"><b class="grad" data-count="100" data-pct="">0</b><span class="tr">Ücretsiz indirme</span></div>
+</div>
+</section>
+<!-- SOON -->
+<section>
+<div class="wrap">
+<div class="head center rv">
+<span class="eyebrow"><span class="tr">Yakında</span></span>
+<h2 class="title"><span class="tr">Yeni uygulama ve oyunlar <span class="grad">yolda.</span></span></h2>
+<p class="sub"><span class="tr">Strateji, birleştirme, bilgi yarışması, ahşap bulmaca ve bir medya stüdyosu. Aynı söz, aynı özen.</span></p>
+</div>
+<div class="soon">
+<article class="testcard rv">
+<div class="tmedia"><img alt="Legion Charge" height="500" loading="lazy" src="/img/legioncharge-feature.jpg" width="1024"/><span class="badge"><span class="tr">Yolda</span></span></div>
+<div class="tbody">
+<div class="head-row"><img alt="" height="56" src="/img/legioncharge.png" width="56"/><div><h3>Legion Charge</h3><div class="tags"><span class="tag"><span class="tr">Strateji</span></span><span class="tag"><span class="tr">Ordu koşusu</span></span></div></div></div>
+<p><span class="tr">Doğru kapıları seç, ordunu büyüt, devleri devir. 50 bölümlük, her seçimin önemli olduğu bir ordu koşusu.</span></p>
+</div>
+</article>
+<article class="testcard rv" style="--d:.1s">
+<div class="tmedia"><img alt="Neon Eco-Grid" height="500" loading="lazy" src="/img/neonecogrid-feature.jpg" width="1024"/><span class="badge"><span class="tr">Yolda</span></span></div>
+<div class="tbody">
+<div class="head-row"><img alt="" height="56" src="/img/neonecogrid.png" width="56"/><div><h3>Neon Eco-Grid</h3><div class="tags"><span class="tag"><span class="tr">Birleştir</span></span><span class="tag"><span class="tr">Boşta</span></span></div></div></div>
+<p><span class="tr">Enerji kaynaklarını birleştir, neon şehirleri temiz enerjiyle besle. Haftalarca oynanacak sakin bir birleştirme oyunu.</span></p>
+</div>
+</article>
+<article class="testcard rv" style="--d:.2s">
+<div class="tmedia"><img alt="Exclusive Quiz" height="500" loading="lazy" src="/img/quiz-feature.jpg" width="1024"/><span class="badge"><span class="tr">Yolda</span></span></div>
+<div class="tbody">
+<div class="head-row"><img alt="" height="56" src="/img/quiz.png" width="56"/><div><h3>Exclusive Quiz</h3><div class="tags"><span class="tag"><span class="tr">Bilgi yarışması</span></span><span class="tag"><span class="tr">10 kategori</span></span></div></div></div>
+<p><span class="tr">10 kategoride genel kültür bilgi yarışması. Günlük, ani ölüm ve zamana karşı modlarla hızlı cevapla, rekorunu kır.</span></p>
+</div>
+</article>
+<article class="testcard rv" style="--d:.3s">
+<div class="tmedia"><img alt="Woodora Classic" height="500" loading="lazy" src="/img/woodoraclassic-feature.jpg" width="1024"/><span class="badge"><span class="tr">Yolda</span></span></div>
+<div class="tbody">
+<div class="head-row"><img alt="" height="56" src="/img/woodoraclassic.png" width="56"/><div><h3>Woodora Classic</h3><div class="tags"><span class="tag"><span class="tr">Ahşap bulmaca</span></span><span class="tag"><span class="tr">Çevrimdışı</span></span></div></div></div>
+<p><span class="tr">Ahşap blokları 8×8 tahtaya yerleştir, sıraları temizle. Süre sınırı olmayan, sakin ve stratejik bir bulmaca.</span></p>
+</div>
+</article>
+<article class="testcard rv" style="--d:.4s">
+<div class="tmedia"><img alt="ExStudio" height="500" loading="lazy" src="/img/exstudio-feature.jpg" width="1024"/><span class="badge"><span class="tr">Yolda</span></span></div>
+<div class="tbody">
+<div class="head-row"><img alt="" height="56" src="/img/exstudio.png" width="56"/><div><h3>ExStudio</h3><div class="tags"><span class="tag"><span class="tr">Video</span></span><span class="tag"><span class="tr">Ses ve fotoğraf</span></span></div></div></div>
+<p><span class="tr">Video düzenle, sesini değiştir, karaoke yap, fotoğraf arka planını sil. Hepsi telefonunda, hesap ve filigran olmadan.</span></p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+<div class="wrap">
+<div class="contact rv">
+<span class="eyebrow"><span class="tr">İletişim</span></span>
+<h2 class="title"><span class="tr">Fikrin mi var? <span class="grad">Dinliyoruz.</span></span></h2>
+<p class="sub"><span class="tr">Öneri, hata bildirimi ya da sadece bir merhaba — her mesajı okuyoruz.</span></p>
+<a class="btn primary" href="mailto:support@exclusivellm.app">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="3" width="18" x="3" y="5"></rect><path d="m3 7 9 6 9-6"></path></svg>
             support@exclusivellm.app
           </a>
-          <div class="socials">
-            <a class="btn ghost" href="https://www.instagram.com/exclusive.llm/" target="_blank" rel="noopener" aria-label="Instagram @exclusive.llm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg> @exclusive.llm</a>
-            <a class="btn ghost" href="https://www.tiktok.com/@exclusivellm" target="_blank" rel="noopener" aria-label="TikTok @exclusivellm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.7 2.3 4.5 5 4.7"/></svg> @exclusivellm</a>
-            <a class="btn ghost" href="https://www.youtube.com/@Exclusivellm" target="_blank" rel="noopener" aria-label="YouTube @Exclusivellm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4.5"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg> YouTube</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap foot">
-      <a class="brand" href="#top"><img src="img/favicon.png" alt=""> Exclusive LLM</a>
-      <nav>
-        <a href="#promise"><span class="tr">Felsefemiz</span><span class="en">Our promise</span></a>
-        <a href="#apps"><span class="tr">Oyunlar</span><span class="en">Games</span></a>
-        <a href="mailto:support@exclusivellm.app"><span class="tr">Destek</span><span class="en">Support</span></a>
-        <a href="https://www.instagram.com/exclusive.llm/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.tiktok.com/@exclusivellm" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://www.youtube.com/@Exclusivellm" target="_blank" rel="noopener">YouTube</a>
-      </nav>
-      <span>© <span id="yr">2026</span> Exclusive LLM</span>
-    </div>
-  </footer>
-
-  <script src="assets/app.js?v=2" defer></script>
+<div class="socials">
+<a aria-label="Instagram @exclusive.llm" class="btn ghost" href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r=".6"></circle></svg> @exclusive.llm</a>
+<a aria-label="TikTok @exclusivellm" class="btn ghost" href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.7 2.3 4.5 5 4.7"></path></svg> @exclusivellm</a>
+<a aria-label="YouTube @Exclusivellm" class="btn ghost" href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="4.5" width="19" x="2.5" y="5"></rect><path d="m10 9 5 3-5 3z" fill="currentColor"></path></svg> YouTube</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap foot">
+<a class="brand" href="#top"><img alt="" src="/img/favicon.png"/> Exclusive LLM</a>
+<nav>
+<a href="#promise"><span class="tr">Felsefemiz</span></a>
+<a href="#apps"><span class="tr">Oyunlar</span></a>
+<a href="mailto:support@exclusivellm.app"><span class="tr">Destek</span></a>
+<a href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank">TikTok</a>
+<a href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank">YouTube</a>
+</nav>
+<span>© <span id="yr">2026</span> Exclusive LLM</span>
+</div>
+</footer>
+<script defer="" src="/assets/app.js?v=3"></script>
 </body>
 </html>
