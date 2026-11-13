@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exclusive LLM — Mobile Games & Apps</title>
+  <meta name="description" content="Exclusive LLM: Android games and apps — puzzles, casual games and tools on Google Play.">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="canonical" href="https://exclusivellm.app/">
+  <meta property="og:title" content="Exclusive LLM">
+  <meta property="og:description" content="Android games and apps on Google Play.">
+  <meta property="og:image" content="https://exclusivellm.app/img/logo.png">
+  <meta property="og:url" content="https://exclusivellm.app/">
+  <meta name="theme-color" content="#060b1a">
+  <style>
+    :root {
+      --bg: #060b1a;
+      --bg2: #0b1430;
+      --card: rgba(255,255,255,.04);
+      --card-border: rgba(120,160,255,.16);
+      --text: #e9eefc;
+      --muted: #9aa7c7;
+      --accent: #2f7bff;
+      --accent2: #6fb4ff;
+      --glow: rgba(47,123,255,.35);
+    }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) {
+        --bg: #f4f7ff; --bg2: #e6eeff; --card: #ffffff; --card-border: rgba(30,70,170,.14);
+        --text: #0d1630; --muted: #55627f; --accent: #1f63e6; --accent2: #2f7bff; --glow: rgba(31,99,230,.18);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, var(--bg2), var(--bg)) fixed, var(--bg);
+      line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+    header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(12px);
+      background: color-mix(in srgb, var(--bg) 75%, transparent); border-bottom: 1px solid var(--card-border); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; letter-spacing: .2px; }
+    .brand img { width: 34px; height: 34px; border-radius: 9px; }
+    .brand:hover { text-decoration: none; }
+    .nav-links { display: flex; align-items: center; gap: 20px; font-size: 15px; }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+    .lang { display: flex; border: 1px solid var(--card-border); border-radius: 999px; overflow: hidden; }
+    .lang button { background: none; border: 0; color: var(--muted); padding: 5px 11px; font: inherit; font-size: 13px; cursor: pointer; }
+    .lang button.on { background: var(--accent); color: #fff; }
+
+    .hero { padding: 88px 0 64px; text-align: center; }
+    .hero-logo { width: 140px; height: 140px; border-radius: 32px; box-shadow: 0 0 60px var(--glow); }
+    .hero h1 { font-size: clamp(32px, 6vw, 54px); line-height: 1.1; margin: 28px 0 14px; letter-spacing: -.5px; }
+    .hero h1 span { background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero p { color: var(--muted); font-size: clamp(16px, 2.4vw, 19px); max-width: 620px; margin: 0 auto 32px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 12px; font-weight: 600;
+      background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; box-shadow: 0 8px 24px var(--glow); }
+    .btn:hover { text-decoration: none; filter: brightness(1.08); }
+    .btn.ghost { background: none; color: var(--text); border: 1px solid var(--card-border); box-shadow: none; }
+
+    section { padding: 56px 0; }
+    h2 { font-size: clamp(24px, 4vw, 32px); margin: 0 0 8px; }
+    .sub { color: var(--muted); margin: 0 0 32px; }
+
+    .apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+    .app { background: var(--card); border: 1px solid var(--card-border); border-radius: 20px; padding: 22px;
+      display: flex; flex-direction: column; gap: 14px; transition: transform .2s, box-shadow .2s; }
+    .app:hover { transform: translateY(-3px); box-shadow: 0 14px 40px var(--glow); }
+    .app-head { display: flex; gap: 14px; align-items: center; }
+    .app-head img { width: 64px; height: 64px; border-radius: 16px; flex-shrink: 0; }
+    .app-head h3 { margin: 0; font-size: 19px; }
+    .tag { display: inline-block; font-size: 12px; color: var(--accent2); border: 1px solid var(--card-border); border-radius: 999px; padding: 1px 9px; margin-top: 4px; }
+    .app p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
+    .play { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: #000; color: #fff;
+      border: 1px solid #333; border-radius: 10px; padding: 8px 14px; font-size: 14px; font-weight: 600; }
+    .play:hover { text-decoration: none; border-color: var(--accent2); }
+    .play svg { width: 18px; height: 18px; }
+
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .feature { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 20px; }
+    .feature .ico { font-size: 26px; }
+    .feature h3 { margin: 8px 0 6px; font-size: 17px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+    .contact { text-align: center; background: var(--card); border: 1px solid var(--card-border); border-radius: 24px; padding: 40px 20px; }
+    .contact p { color: var(--muted); margin: 0 0 22px; }
+
+    footer { border-top: 1px solid var(--card-border); margin-top: 40px; padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    .foot nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    .foot a { color: var(--muted); }
+
+    [data-lang="en"] .tr, [data-lang="tr"] .en { display: none !important; }
+    @media (max-width: 640px) {
+      .nav-links a.hide-sm { display: none; }
+      .hero { padding: 56px 0 40px; }
+      .hero-logo { width: 112px; height: 112px; border-radius: 26px; }
+    }
+  </style>
+</head>
+<body data-lang="tr">
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top"><img src="img/favicon.png" alt=""> Exclusive LLM</a>
+      <div class="nav-links">
+        <a class="hide-sm" href="#apps"><span class="tr">Uygulamalar</span><span class="en">Apps</span></a>
+        <a class="hide-sm" href="#contact"><span class="tr">İletişim</span><span class="en">Contact</span></a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-set="tr">TR</button>
+          <button type="button" data-set="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <img class="hero-logo" src="img/logo.png" alt="Exclusive LLM logo">
+      <h1>
+        <span class="tr">Keyifli <span>oyunlar</span> ve akıllı <span>uygulamalar</span></span>
+        <span class="en">Delightful <span>games</span> and smart <span>apps</span></span>
+      </h1>
+      <p>
+        <span class="tr">Exclusive LLM, Android için bulmaca, rahatlatıcı oyunlar ve kullanışlı araçlar geliştiren bağımsız bir stüdyodur.</span>
+        <span class="en">Exclusive LLM is an independent studio building puzzles, relaxing games and handy tools for Android.</span>
+      </p>
+      <a class="btn" href="#apps"><span class="tr">Uygulamaları keşfet</span><span class="en">Explore our apps</span> →</a>
+    </div>
+
+    <section id="apps">
+      <div class="wrap">
+        <h2><span class="tr">Uygulamalarımız</span><span class="en">Our apps</span></h2>
+        <p class="sub"><span class="tr">Google Play'de ücretsiz indirebilirsiniz.</span><span class="en">Free to download on Google Play.</span></p>
+        <div class="apps">
+          <article class="app">
+            <div class="app-head">
+              <img src="img/blocknest.png" alt="BlockNest">
+              <div><h3>BlockNest</h3><span class="tag"><span class="tr">Bulmaca</span><span class="en">Puzzle</span></span></div>
+            </div>
+            <p>
+              <span class="tr">Ahşap blokları yerleştir, satır ve sütunları temizle. Sakin, sade ve bağımlılık yapan bir blok bulmacası.</span>
+              <span class="en">Place wooden blocks and clear rows and columns. A calm, clean and addictive block puzzle.</span>
+            </p>
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.exclusivellm.blocknest" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z"/><path fill="#EA4335" d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z"/><path fill="#4285F4" d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z"/></svg>
+              Google Play
+            </a>
+          </article>
+          <article class="app">
+            <div class="app-head">
+              <img src="img/blockfour.png" alt="Block Four">
+              <div><h3>Block Four</h3><span class="tag"><span class="tr">4 oyun bir arada</span><span class="en">4 games in 1</span></span></div>
+            </div>
+            <p>
+              <span class="tr">Blok bulmaca, 2048, renk sıralama ve daha fazlası tek uygulamada. Her ruh haline uygun bir oyun.</span>
+              <span class="en">Block puzzle, 2048, color sort and more in a single app. A game for every mood.</span>
+            </p>
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.firat.blokrota" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z"/><path fill="#EA4335" d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z"/><path fill="#4285F4" d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z"/></svg>
+              Google Play
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2><span class="tr">Neden Exclusive LLM?</span><span class="en">Why Exclusive LLM?</span></h2>
+        <p class="sub"><span class="tr">Her uygulamada aynı özen.</span><span class="en">The same care in every app.</span></p>
+        <div class="features">
+          <div class="feature"><div class="ico">🎮</div>
+            <h3><span class="tr">Akıcı oynanış</span><span class="en">Smooth gameplay</span></h3>
+            <p><span class="tr">Hafif, hızlı ve her telefonda rahat çalışan oyunlar.</span><span class="en">Light, fast games that run well on any phone.</span></p></div>
+          <div class="feature"><div class="ico">🔒</div>
+            <h3><span class="tr">Gizliliğe saygı</span><span class="en">Privacy first</span></h3>
+            <p><span class="tr">Gereksiz izin yok; her uygulamanın açık bir gizlilik politikası var.</span><span class="en">No unnecessary permissions; every app has a clear privacy policy.</span></p></div>
+          <div class="feature"><div class="ico">🌍</div>
+            <h3><span class="tr">Çok dilli</span><span class="en">Multilingual</span></h3>
+            <p><span class="tr">Dünyanın her yerinden oyuncular için hazırlanır.</span><span class="en">Built for players all around the world.</span></p></div>
+          <div class="feature"><div class="ico">✨</div>
+            <h3><span class="tr">Düzenli güncelleme</span><span class="en">Regular updates</span></h3>
+            <p><span class="tr">Geri bildirimlerinizle sürekli gelişir.</span><span class="en">Constantly improving with your feedback.</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <h2><span class="tr">Bize ulaşın</span><span class="en">Get in touch</span></h2>
+          <p><span class="tr">Soru, öneri veya destek talepleriniz için bize e-posta gönderin.</span><span class="en">Questions, feedback or support requests? Send us an email.</span></p>
+          <a class="btn" href="mailto:support@exclusivellm.app">✉ support@exclusivellm.app</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© <span id="yr">2026</span> Exclusive LLM</span>
+      <nav>
+        <a href="#apps"><span class="tr">Uygulamalar</span><span class="en">Apps</span></a>
+        <a href="mailto:support@exclusivellm.app"><span class="tr">Destek</span><span class="en">Support</span></a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("lang"); } catch (e) {}
+      var lang = saved || ((navigator.language || "en").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+      function set(l) {
+        document.body.setAttribute("data-lang", l);
+        document.documentElement.lang = l;
+        document.querySelectorAll(".lang button").forEach(function (b) { b.classList.toggle("on", b.dataset.set === l); });
+        try { localStorage.setItem("lang", l); } catch (e) {}
+      }
+      document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { set(b.dataset.set); }); });
+      set(lang);
+      document.getElementById("yr").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
