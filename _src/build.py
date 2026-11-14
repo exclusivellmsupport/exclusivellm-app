@@ -27,11 +27,11 @@ OG_LOCALE = {"tr": "tr_TR", "en": "en_US"}
 HOME = {
     "tr": {
         "title": "Exclusive LLM Oyunları: Rahatlatıcı Mobil Oyunlar ve Uygulamalar",
-        "description": "Exclusive LLM, Android için sakin ve kullanıcı dostu oyunlar ve uygulamalar geliştirir: ölçülü reklam, sade tasarım, gizliliğe saygı. Block Four ve BlockNest Google Play'de ücretsiz.",
+        "description": "Exclusive LLM, Android için sakin ve kullanıcı dostu oyunlar ve uygulamalar geliştirir: ölçülü reklam, sade tasarım, gizliliğe saygı. Block Four, BlockNest ve Woodora Classic Google Play'de ücretsiz.",
     },
     "en": {
         "title": "Exclusive LLM Games: Relaxing Mobile Games & Apps",
-        "description": "Exclusive LLM builds calm, user-friendly Android games and apps with measured ads, clean design and respect for your privacy. Block Four and BlockNest are free on Google Play.",
+        "description": "Exclusive LLM builds calm, user-friendly Android games and apps with measured ads, clean design and respect for your privacy. Block Four, BlockNest and Woodora Classic are free on Google Play.",
     },
 }
 UI = {

@@ -94,5 +94,50 @@
         {"q": "Which languages are supported?", "a": "English, Turkish, Spanish and Arabic."}
       ]
     }
+  },
+  {
+    "slug": "woodora-classic",
+    "name": "Woodora Classic",
+    "package": "com.exclusivellm.woodoraclassic",
+    "category": "PuzzleGame",
+    "icon": "woodoraclassic.png",
+    "feature": "woodoraclassic-feature.jpg",
+    "shots": ["woodoraclassic-1.webp", "woodoraclassic-2.webp"],
+    "video": {},
+    "languages": ["tr", "en", "es", "ar"],
+    "tr": {
+      "title": "Woodora Classic: 8×8 Ahşap Blok Bulmaca | Exclusive LLM",
+      "description": "Klasik ahşap blok bulmaca. Üç bloğu 8×8 tahtaya yerleştir, satır ve sütunları temizle. Süre yok, üyelik yok, internetsiz. Google Play'de ücretsiz.",
+      "tagline": "Düşün, yerleştir, rahatla.",
+      "intro": "Woodora Classic, sade ahşap görünümlü klasik bir blok bulmacası. Sana verilen üç ahşap bloğu 8×8 tahtaya yerleştir, dolan satır ve sütunları temizle, rekorunu geliştir. Bloklar döndürülemez; süre sınırı da yok. Doğru parçayı doğru yere koymak için acele etmeden planla.",
+      "tags": ["Ahşap blok bulmaca", "Strateji", "İnternetsiz"],
+      "sections": [
+        {"h": "Nasıl oynanır?", "items": ["Üç ahşap bloğu sürükleyip 8×8 tahtaya bırak ya da bloğu seçip yerleştireceğin hücreye dokun.", "Dolan satır ve sütunlar birlikte temizlenir; bloklar döndürülemez.", "Üç bloğu da kullandığında yeni bloklar gelir.", "Kare başına 10, sıra başına 100 puan; birden fazla sıra ve ardışık temizlemeler ek puan getirir.", "Kalan bloklar için tahtada yer kalmadığında oyun biter, bu yüzden önceden planla."]}
+      ],
+      "features": ["Klasik ahşap tasarım ve 8×8 tahta", "Bırakmadan önce kaç sıra temizleneceğini gösteren önizleme", "Sürükle-bırak ya da dokunarak yerleştirme", "Çoklu temizleme ve seri bonusları", "Otomatik kayıt: kaldığın oyuna devam et", "İsteğe bağlı reklamla her oyunda bir kez son hamleyi geri al", "Kapatılabilen ses ve titreşim", "Türkçe, İngilizce, İspanyolca ve Arapça"],
+      "faq": [
+        {"q": "Woodora Classic ücretsiz mi?", "a": "Evet, Google Play'den ücretsiz indirilir. Uygulama reklam içerir; son hamleyi geri almak için reklam izlemek isteğe bağlıdır."},
+        {"q": "İnternet olmadan oynanır mı?", "a": "Evet. Oyun internetsiz oynanır ve üyelik gerektirmez."},
+        {"q": "Süre sınırı var mı?", "a": "Hayır. Her hamleyi düşünerek oynayabilirsin."},
+        {"q": "Bloklar döndürülebilir mi?", "a": "Hayır. Bloklar döndürülemez; bu yüzden yerleştirmeyi planlamak önemlidir."}
+      ]
+    },
+    "en": {
+      "title": "Woodora Classic: 8×8 Wood Block Puzzle | Exclusive LLM",
+      "description": "A classic wood block puzzle. Place three blocks on an 8×8 board and clear rows and columns. No timer, no account, plays offline. Free on Google Play.",
+      "tagline": "Think. Place. Unwind.",
+      "intro": "Woodora Classic is a classic block puzzle with a clean wooden look. Place the three wooden blocks you are given on the 8×8 board, clear full rows and columns and improve your best score. Blocks cannot rotate and there is no time limit, so plan where each piece goes without any rush.",
+      "tags": ["Wood block puzzle", "Strategy", "Offline"],
+      "sections": [
+        {"h": "How to play", "items": ["Drag the three wooden blocks onto the 8×8 board, or select a block and tap its destination cell.", "Full rows and columns clear together; blocks cannot rotate.", "Use all three blocks to receive new ones.", "Earn 10 points per square and 100 per line; multiple lines and consecutive clears earn bonuses.", "The game ends when the remaining blocks no longer fit, so plan ahead."]}
+      ],
+      "features": ["Classic wooden design and an 8×8 board", "A preview that shows how many lines a placement will clear", "Drag and drop or tap to place", "Multi-line and streak bonuses", "Auto-save: continue where you left off", "Undo your last move once per game with an optional ad", "Sound and vibration you can switch off", "English, Turkish, Spanish and Arabic"],
+      "faq": [
+        {"q": "Is Woodora Classic free?", "a": "Yes, it is free to download on Google Play. The app contains ads; watching an ad to undo your last move is optional."},
+        {"q": "Can I play offline?", "a": "Yes. The game plays without internet and needs no account."},
+        {"q": "Is there a timer?", "a": "No. Take your time with every move."},
+        {"q": "Can blocks be rotated?", "a": "No. Blocks cannot rotate, so planning your placements matters."}
+      ]
+    }
   }
 ]
