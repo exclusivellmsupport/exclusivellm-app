@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=10">
+  <link rel="stylesheet" href="assets/style.css?v=11">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Exclusive LLM","url":"https://exclusivellm.app/","logo":"https://exclusivellm.app/img/logo.png","email":"support@exclusivellm.app"}
   </script>
@@ -87,14 +87,99 @@
           <div class="phone">
             <div class="screen">
               <div class="notch"></div>
-              <div class="hud">
-                <div class="pill"><span class="tr">SKOR</span><span class="en">SCORE</span><b id="score">0</b></div>
-                <div class="pill"><span class="tr">EN İYİ</span><span class="en">BEST</span><b id="best">0</b></div>
+              <!-- 1 · Block Four: blok bulmaca (mücevher) -->
+              <div class="scene sc-gem on" data-k="gem">
+                <div class="hud">
+                  <div class="pill"><span class="tr">SKOR</span><span class="en">SCORE</span><b class="sc">0</b></div>
+                  <div class="pill"><span class="tr">EN İYİ</span><span class="en">BEST</span><b class="bs">0</b></div>
+                </div>
+                <canvas class="board"></canvas>
+                <div class="tray"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+                <div class="combo"></div>
               </div>
-              <canvas id="board"></canvas>
-              <div class="tray"><canvas></canvas><canvas></canvas><canvas></canvas></div>
-              <div class="combo"></div>
+              <!-- 2 · Neon Eco-Grid: birleştir + boşta -->
+              <div class="scene sc-neon" data-k="neon">
+                <div class="hud">
+                  <div class="pill"><span class="tr">ENERJİ</span><span class="en">ENERGY</span><b class="nv-e">0</b></div>
+                  <div class="pill"><span class="tr">SANİYEDE</span><span class="en">PER SEC</span><b class="nv-r">0</b></div>
+                </div>
+                <canvas class="full"></canvas>
+              </div>
+              <!-- 3 · BlockNest: ahşap blok -->
+              <div class="scene sc-wood sc-bn" data-k="bn">
+                <div class="hud">
+                  <div class="pill"><span class="tr">SKOR</span><span class="en">SCORE</span><b class="sc">0</b></div>
+                  <div class="pill"><span class="tr">EN İYİ</span><span class="en">BEST</span><b class="bs">0</b></div>
+                </div>
+                <div class="wframe"><canvas class="board"></canvas></div>
+                <div class="tray"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+                <div class="combo"></div>
+              </div>
+              <!-- 4 · Exclusive Quiz -->
+              <div class="scene sc-quiz" data-k="quiz">
+                <div class="hud">
+                  <div class="pill"><span class="tr">SKOR</span><span class="en">SCORE</span><b class="sc">0</b></div>
+                  <div class="pill"><span class="tr">SERİ</span><span class="en">STREAK</span><b class="st">0</b></div>
+                </div>
+                <div class="q-mark">?</div>
+                <div class="q-card">
+                  <span class="q-cat"></span>
+                  <div class="q-bar"><i></i></div>
+                  <p class="q-text"></p>
+                </div>
+                <div class="q-opts"><span class="q-opt"></span><span class="q-opt"></span><span class="q-opt"></span><span class="q-opt"></span></div>
+              </div>
+              <!-- 5 · Block Four: sayı birleştirme -->
+              <div class="scene sc-merge" data-k="merge">
+                <div class="hud">
+                  <div class="pill"><span class="tr">SKOR</span><span class="en">SCORE</span><b class="sc">0</b></div>
+                  <div class="pill"><span class="tr">EN İYİ</span><span class="en">BEST</span><b class="bs">0</b></div>
+                </div>
+                <div class="mgrid"></div>
+                <div class="mhint"><span class="tr">Kaydır, aynı sayılar birleşsin</span><span class="en">Swipe and matching numbers merge</span></div>
+              </div>
+              <!-- 6 · Legion Charge: ordu koşusu -->
+              <div class="scene sc-army" data-k="army">
+                <canvas class="full"></canvas>
+                <div class="hud">
+                  <div class="pill"><span class="tr">BÖLÜM</span><span class="en">LEVEL</span><b class="lv">1</b></div>
+                  <div class="pill"><span class="tr">ORDU</span><span class="en">ARMY</span><b class="ar">0</b></div>
+                </div>
+              </div>
+              <!-- 7 · Woodora Classic: klasik ahşap -->
+              <div class="scene sc-wood sc-wd" data-k="wd">
+                <div class="hud">
+                  <div class="pill"><span class="tr">SKOR</span><span class="en">SCORE</span><b class="sc">0</b></div>
+                  <div class="pill"><span class="tr">EN İYİ</span><span class="en">BEST</span><b class="bs">0</b></div>
+                </div>
+                <div class="wframe"><canvas class="board"></canvas></div>
+                <div class="tray"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+                <div class="combo"></div>
+              </div>
+              <!-- 8 · ExStudio: video, ses, fotoğraf -->
+              <div class="scene sc-studio" data-k="studio">
+                <div class="st-top"><span class="st-proj"><span class="tr">Proje 07</span><span class="en">Project 07</span></span><span class="st-exp"><span class="tr">Dışa aktar</span><span class="en">Export</span></span></div>
+                <div class="st-prev"><canvas></canvas><span class="st-fx"></span><span class="st-time">00:00</span></div>
+                <div class="st-tools">
+                  <span class="st-tool"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg><em><span class="tr">Kes</span><span class="en">Trim</span></em></span>
+                  <span class="st-tool"><svg viewBox="0 0 24 24"><path d="M3 12h2M7 8v8M11 5v14M15 9v6M19 7v10M21 12h0"/></svg><em><span class="tr">Ses</span><span class="en">Voice</span></em></span>
+                  <span class="st-tool"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><em>Karaoke</em></span>
+                  <span class="st-tool"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0"/></svg><em><span class="tr">Arka plan</span><span class="en">Backdrop</span></em></span>
+                </div>
+                <canvas class="st-tl"></canvas>
+              </div>
+              <div class="slit"></div>
             </div>
+          </div>
+          <div class="now">
+            <img class="now-ic" src="img/blockfour.png" alt="" width="40" height="40">
+            <div class="now-tx">
+              <small><span class="tr">Şimdi ekranda</span><span class="en">Now on screen</span></small>
+              <b class="now-name">Block Four</b>
+              <span class="now-genre"></span>
+            </div>
+            <span class="now-badge"></span>
+            <div class="now-seg"></div>
           </div>
         </div>
       </div>
@@ -356,6 +441,6 @@
     </div>
   </footer>
 
-  <script src="assets/app.js?v=3" defer></script>
+  <script src="assets/app.js?v=4" defer></script>
 </body>
 </html>
