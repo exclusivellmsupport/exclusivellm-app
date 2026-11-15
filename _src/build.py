@@ -139,7 +139,7 @@ def org_ld() -> dict:
     return {"@context": "https://schema.org", "@type": "Organization", "name": "Exclusive LLM", "url": DOMAIN + "/",
             "logo": DOMAIN + "/img/logo.png", "email": "support@exclusivellm.app",
             "sameAs": ["https://www.instagram.com/exclusive.llm/", "https://www.tiktok.com/@exclusivellm",
-                       "https://www.youtube.com/@Exclusivellm"]}
+                       "https://www.youtube.com/@Exclusivellm", "https://x.com/exclusivellm"]}
 
 
 def write(path: Path, soup: BeautifulSoup) -> None:
