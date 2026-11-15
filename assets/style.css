@@ -79,15 +79,38 @@ header.top.scrolled { background: rgba(4,8,20,.72); backdrop-filter: blur(16px) 
 .links a.soc + a.soc { margin-left: -16px; }
 .socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 16px; }
 .socials .btn { gap: 10px; }
-/* Orijinal marka renkleri */
-.b-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%) !important; }
-.b-tt, .b-x { background: #000 !important; }
-.b-yt { background: #ff0000 !important; }
-.links a.soc.b-ig, .links a.soc.b-yt { border-color: transparent; }
-.links a.soc:hover { border-color: rgba(255,255,255,.45); box-shadow: 0 6px 18px rgba(0,0,0,.35); }
-.bico { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; flex: none; }
-.bico svg { width: 15px; height: 15px; }
-.bico.b-tt, .bico.b-x { box-shadow: inset 0 0 0 1px rgba(255,255,255,.18); }
+/* Orijinal marka renkleri — premium cam karo */
+.b-ig { --g: 214,36,159; background: radial-gradient(circle at 28% 108%, #fdf497 0%, #fdf497 6%, #fd5949 42%, #d6249f 62%, #285aeb 96%) !important; }
+.b-tt { --g: 37,244,238; background: radial-gradient(120% 120% at 30% 0%, #2a2d33 0%, #0b0b0d 55%, #000 100%) !important; }
+.b-yt { --g: 255,30,30; background: linear-gradient(160deg, #ff5a4f 0%, #ff1a1a 45%, #c80000 100%) !important; }
+.b-x  { --g: 190,205,230; background: radial-gradient(120% 120% at 30% 0%, #34373d 0%, #101114 55%, #000 100%) !important; }
+.links a.soc.b-ig, .links a.soc.b-tt, .links a.soc.b-yt, .links a.soc.b-x, .bico {
+  position: relative; overflow: hidden; isolation: isolate; border: 0;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.38), inset 0 0 0 1px rgba(255,255,255,.12), inset 0 -3px 8px rgba(0,0,0,.28),
+              0 8px 18px -8px rgba(var(--g), .75), 0 2px 5px rgba(0,0,0,.45);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), filter .35s;
+}
+.links a.soc.b-ig::before, .links a.soc.b-tt::before, .links a.soc.b-yt::before, .links a.soc.b-x::before, .bico::before {
+  content: ""; position: absolute; inset: 0 0 48% 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,0));
+  border-radius: inherit; border-bottom-left-radius: 50% 18%; border-bottom-right-radius: 50% 18%;
+}
+.links a.soc svg, .bico svg { filter: drop-shadow(0 1px 1.5px rgba(0,0,0,.35)); }
+.links a.soc.b-ig:hover, .links a.soc.b-tt:hover, .links a.soc.b-yt:hover, .links a.soc.b-x:hover {
+  transform: translateY(-3px) scale(1.07);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 0 0 1px rgba(255,255,255,.18), inset 0 -3px 8px rgba(0,0,0,.28),
+              0 14px 26px -8px rgba(var(--g), .95), 0 0 0 4px rgba(var(--g), .14);
+}
+.links a.soc:active { transform: translateY(-1px) scale(.97); }
+.bico { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 9px; flex: none; }
+.bico svg { width: 16px; height: 16px; }
+.socials .btn { transition: border-color .3s, box-shadow .3s, transform .3s var(--ease); }
+.socials .btn:has(.bico):hover { transform: translateY(-2px); }
+.socials .btn:has(.b-ig):hover { border-color: rgba(214,36,159,.55); box-shadow: 0 10px 30px -12px rgba(214,36,159,.8); }
+.socials .btn:has(.b-tt):hover { border-color: rgba(37,244,238,.45); box-shadow: 0 10px 30px -12px rgba(254,44,85,.7); }
+.socials .btn:has(.b-yt):hover { border-color: rgba(255,40,40,.55); box-shadow: 0 10px 30px -12px rgba(255,30,30,.8); }
+.socials .btn:has(.b-x):hover  { border-color: rgba(220,228,245,.45); box-shadow: 0 10px 30px -12px rgba(190,205,230,.55); }
+.socials .btn:has(.bico):hover .bico { transform: scale(1.08) rotate(-4deg); }
 .lang { display: flex; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
 .lang button { border: 0; background: none; color: var(--muted); font: 600 12px/1 "Inter", sans-serif; padding: 7px 11px; border-radius: 999px; cursor: pointer; transition: .2s; }
 .lang button.on { background: linear-gradient(135deg, var(--blue), var(--cyan)); color: #fff; }
