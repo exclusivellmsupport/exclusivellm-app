@@ -165,7 +165,7 @@
   }
   requestAnimationFrame(tick);
 
-  /* ---------- hero phone: rotating app scenes (≈8.5 s each) ----------
+  /* ---------- hero phone: rotating app scenes (≈10 s each) ----------
      Stylised, original mini-scenes inspired by our apps (not screenshots). */
   const screen = $(".phone .screen");
   if (!screen) return;
@@ -501,7 +501,7 @@
     const L2 = (v) => (Array.isArray(v) ? v[EN ? 1 : 0] : v);
     const cat = $(".q-cat", root), qt = $(".q-text", root), opts = $$(".q-opt", root), bar = $(".q-bar i", root), scEl = $(".sc", root), stEl = $(".st", root);
     let qi = rnd(Q.length), t = 0, stage = -1, score = 1200 + rnd(8) * 100, streak = 2, asked = 0, pick = 0;
-    const CYC = 4250;
+    const CYC = 5000;
     function show() {
       const q = Q[qi];
       cat.textContent = L2(q[0]); qt.textContent = L2(q[1]);
@@ -514,13 +514,13 @@
       const cy = t % CYC;
       if (cy < dt && t > dt) { qi = (qi + 1) % Q.length; stage = -1; }
       if (stage < 0) { show(); stage = 0; }
-      if (stage === 0) bar.style.transform = `scaleX(${(1 - clamp(cy / 1700)).toFixed(3)})`;
-      if (stage === 0 && cy >= 1700) {
+      if (stage === 0) bar.style.transform = `scaleX(${(1 - clamp(cy / 2000)).toFixed(3)})`;
+      if (stage === 0 && cy >= 2000) {
         asked++; const ans = Q[qi][3];
         pick = asked % 4 === 3 ? (ans + 1 + rnd(3)) % 4 : ans;
         opts[pick].classList.add("pick"); stage = 1;
       }
-      if (stage === 1 && cy >= 2450) {
+      if (stage === 1 && cy >= 2800) {
         const ans = Q[qi][3]; opts[pick].classList.remove("pick");
         opts[ans].classList.add("ok");
         if (pick !== ans) { opts[pick].classList.add("no"); streak = 0; } else { streak++; score += 100 + streak * 10; }
@@ -589,11 +589,11 @@
   function armyGame(root) {
     const cv = $("canvas", root), c = cv.getContext("2d"), lvEl = $(".lv", root), arEl = $(".ar", root);
     let t = 0, level = 6 + rnd(6), army, shown, cx, gates, boss, pops, fightFrom;
-    const GT = 2300, BOSS_AT = 5000, ARRIVE = 6600, FIGHT = 1200;
+    const GT = 2600, BOSS_AT = 5900, ARRIVE = 7700, FIGHT = 1300;
     function setup() {
       t = 0; army = 10 + rnd(5); shown = army; cx = 0; pops = []; fightFrom = 0; level++;
       const g1 = [{ op: "+", v: 8 + rnd(7) }, { op: "−", v: 4 + rnd(5) }], g2 = [{ op: "−", v: 5 + rnd(5) }, { op: "×", v: 2 }];
-      gates = [{ at: 250, opts: Math.random() < 0.5 ? g1 : g1.reverse() }, { at: 2650, opts: Math.random() < 0.5 ? g2 : g2.reverse() }];
+      gates = [{ at: 300, opts: Math.random() < 0.5 ? g1 : g1.reverse() }, { at: 3100, opts: Math.random() < 0.5 ? g2 : g2.reverse() }];
       gates.forEach((g) => { g.pick = g.opts[0].op === "−" ? 1 : 0; g.done = false; });
       boss = { hp: 1, dead: 0 };
       lvEl.textContent = level; arEl.textContent = army;
@@ -736,7 +736,7 @@
   function studioApp(root) {
     const pc = $(".st-prev canvas", root), p = pc.getContext("2d"), tl = $(".st-tl", root), q = tl.getContext("2d");
     const fxEl = $(".st-fx", root), tmEl = $(".st-time", root), tools = $$(".st-tool", root);
-    const PH = 2833, CLIP = 12;
+    const PH = 3333, CLIP = 12;
     const FX = [[tx("Kes · 00:03.4", "Trim · 00:03.4"), 0], [tx("Ses efekti: Robot", "Voice effect: Robot"), 1], [tx("Arka planı sil", "Remove background"), 3]];
     const wave = Array.from({ length: 90 }, (_, i) => 0.25 + 0.75 * Math.abs(Math.sin(i * 0.7) * Math.cos(i * 0.23) + 0.3 * Math.sin(i * 2.1)));
     let t = 0, ph = -1;
@@ -746,7 +746,7 @@
       const W = pc.width, H = pc.height, k = ph, lt = t - k * PH;
       const sky = p.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, "#ff5fd2"); sky.addColorStop(0.5, "#8b3cf0"); sky.addColorStop(1, "#24164f");
       p.fillStyle = sky; p.fillRect(0, 0, W, H);
-      const sy = H * 0.5 - (t / 8500) * H * 0.12;
+      const sy = H * 0.5 - (t / 10000) * H * 0.12;
       p.fillStyle = "rgba(255,214,140,.95)"; p.beginPath(); p.arc(W * 0.7, sy, W * 0.12, 0, 7); p.fill();
       p.fillStyle = "#5b2aa8"; p.beginPath(); p.moveTo(0, H * 0.7); p.lineTo(W * 0.3, H * 0.5); p.lineTo(W * 0.55, H * 0.66); p.lineTo(W * 0.8, H * 0.46); p.lineTo(W, H * 0.6); p.lineTo(W, H); p.lineTo(0, H); p.fill();
       p.fillStyle = "#3a1a78"; p.beginPath(); p.moveTo(0, H * 0.82); p.lineTo(W * 0.4, H * 0.68); p.lineTo(W, H * 0.84); p.lineTo(W, H); p.lineTo(0, H); p.fill();
@@ -775,7 +775,7 @@
       if (k === 0 && lt > 700 && lt < 950) { p.fillStyle = `rgba(255,255,255,${0.5 * (1 - (lt - 700) / 250)})`; p.fillRect(0, 0, W, H); }
     }
     function timeline(now, d) {
-      const W = tl.width, H = tl.height, L0 = 14 * d, R0 = W - 14 * d, span = R0 - L0, ph2 = clamp(t / 8500);
+      const W = tl.width, H = tl.height, L0 = 14 * d, R0 = W - 14 * d, span = R0 - L0, ph2 = clamp(t / 10000);
       q.clearRect(0, 0, W, H);
       q.fillStyle = "rgba(255,255,255,.35)"; q.font = `600 ${8.5 * d}px Inter, sans-serif`; q.textAlign = "center"; q.textBaseline = "top";
       for (let s = 0; s <= CLIP; s++) { const x = L0 + (s / CLIP) * span; q.fillRect(x, 4 * d, 1 * d, s % 2 ? 3 * d : 6 * d); if (s % 4 === 0) q.fillText(s + "s", x, 12 * d); }
@@ -822,7 +822,7 @@
     gem: (el) => blockGame(el, GEM, 8), neon: neonGame, bn: (el) => blockGame(el, BN_WOOD, 8), quiz: quizGame,
     merge: mergeGame, army: armyGame, wd: (el) => blockGame(el, WD_WOOD, 9), studio: studioApp,
   };
-  const DUR = 8500;
+  const DUR = 10000;
   const scenes = $$(".scene", screen), ctl = scenes.map((el) => MAKE[el.dataset.k](el));
   const card = $(".now"), icon = $(".now-ic", card), segBox = $(".now-seg", card);
   const imgBase = icon.getAttribute("src").replace(/blockfour\.png$/, "");
