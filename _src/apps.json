@@ -103,7 +103,7 @@
     "icon": "woodoraclassic.png",
     "feature": "woodoraclassic-feature.jpg",
     "shots": ["woodoraclassic-1.webp", "woodoraclassic-2.webp"],
-    "video": {},
+    "video": {"tr": "AzVPlzILJhI", "en": "hbLUW06rmUM"},
     "languages": ["tr", "en", "es", "ar"],
     "tr": {
       "title": "Woodora Classic: 8×8 Ahşap Blok Bulmaca | Exclusive LLM",
