@@ -102,7 +102,7 @@
     "category": "PuzzleGame",
     "icon": "woodoraclassic.png",
     "feature": "woodoraclassic-feature.jpg",
-    "shots": ["woodoraclassic-1.webp", "woodoraclassic-2.webp"],
+    "shots": {"tr": ["woodoraclassic-tr-1.webp", "woodoraclassic-tr-2.webp", "woodoraclassic-tr-3.webp", "woodoraclassic-tr-4.webp", "woodoraclassic-tr-5.webp", "woodoraclassic-tr-6.webp"], "en": ["woodoraclassic-en-1.webp", "woodoraclassic-en-2.webp", "woodoraclassic-en-3.webp", "woodoraclassic-en-4.webp", "woodoraclassic-en-5.webp", "woodoraclassic-en-6.webp"]},
     "video": {"tr": "AzVPlzILJhI", "en": "hbLUW06rmUM"},
     "languages": ["tr", "en", "es", "ar"],
     "tr": {

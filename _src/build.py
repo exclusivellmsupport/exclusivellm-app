@@ -155,13 +155,29 @@ def play_button(soup: BeautifulSoup, pkg: str):
     return btn
 
 
+def shot_size(name: str) -> tuple[int, int]:
+    """Real pixel size of img/shots/<name> (avoids layout shift); falls back to 540x960."""
+    try:
+        from PIL import Image
+        with Image.open(ROOT / "img" / "shots" / name) as im:
+            return im.size
+    except Exception:
+        return 540, 960
+
+
+def shots_for(app: dict, lang: str) -> list[str]:
+    """shots is a list (same for every language) or a dict {"tr": [...], "en": [...]}."""
+    s = app["shots"]
+    return s.get(lang) or s.get("tr") or [] if isinstance(s, dict) else s
+
+
 def game_main(app: dict, lang: str, apps: list[dict]) -> str:
     t, ui, base = app[lang], UI[lang], BASE[lang]
     name = esc(app["name"])
     tags = "".join(f'<span class="tag">{esc(x)}</span>' for x in t["tags"])
     shots = "".join(
-        f'<img src="/img/shots/{s}" alt="{name} {esc(ui["shots"].lower())} {i + 1}" loading="lazy" width="540" height="1096">'
-        for i, s in enumerate(app["shots"]))
+        f'<img src="/img/shots/{s}" alt="{name} {esc(ui["shots"].lower())} {i + 1}" loading="lazy" width="{shot_size(s)[0]}" height="{shot_size(s)[1]}">'
+        for i, s in enumerate(shots_for(app, lang)))
     vid = app.get("video", {}).get(lang)
     video = ""
     if vid:
@@ -235,7 +251,7 @@ def game_ld(app: dict, lang: str) -> list[dict]:
         {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": app["name"], "url": url,
          "description": t["description"], "applicationCategory": "GameApplication", "applicationSubCategory": app["category"],
          "operatingSystem": "Android", "inLanguage": app["languages"], "image": DOMAIN + "/img/" + app["feature"],
-         "screenshot": [DOMAIN + "/img/shots/" + s for s in app["shots"]], "installUrl": play, "downloadUrl": play,
+         "screenshot": [DOMAIN + "/img/shots/" + s for s in shots_for(app, lang)], "installUrl": play, "downloadUrl": play,
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
          "publisher": {"@type": "Organization", "name": "Exclusive LLM", "url": DOMAIN + "/"}},
         {"@context": "https://schema.org", "@type": "FAQPage",
