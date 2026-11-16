@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"/>
+  <title>Juegos de Exclusive LLM: juegos y apps móviles relajantes</title>
+  <meta content="Exclusive LLM crea juegos y apps para Android tranquilos y fáciles de usar: anuncios moderados, diseño limpio y respeto por tu privacidad. Block Four, BlockNest y Woodora Classic, gratis en Google Play." name="description"/>
+  <link href="https://exclusivellm.app/es/" rel="canonical"/>
+  <link href="https://exclusivellm.app/" hreflang="tr" rel="alternate"/>
+  <link href="https://exclusivellm.app/en/" hreflang="en" rel="alternate"/>
+  <link href="https://exclusivellm.app/es/" hreflang="es" rel="alternate"/>
+  <link href="https://exclusivellm.app/en/" hreflang="x-default" rel="alternate"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Exclusive LLM" property="og:site_name"/>
+  <meta content="es_ES" property="og:locale"/>
+  <meta content="Juegos de Exclusive LLM: juegos y apps móviles relajantes" property="og:title"/>
+  <meta content="Exclusive LLM crea juegos y apps para Android tranquilos y fáciles de usar: anuncios moderados, diseño limpio y respeto por tu privacidad. Block Four, BlockNest y Woodora Classic, gratis en Google Play." property="og:description"/>
+  <meta content="https://exclusivellm.app/img/blockfour-feature.jpg" property="og:image"/>
+  <meta content="https://exclusivellm.app/es/" property="og:url"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+  <link href="/img/favicon.png" rel="icon" type="image/png"/>
+  <meta content="#040814" name="theme-color"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="/assets/style.css?v=12" rel="stylesheet"/>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Exclusive LLM", "url": "https://exclusivellm.app/", "logo": "https://exclusivellm.app/img/logo.png", "email": "support@exclusivellm.app", "sameAs": ["https://www.instagram.com/exclusive.llm/", "https://www.tiktok.com/@exclusivellm", "https://www.youtube.com/@Exclusivellm", "https://x.com/exclusivellm"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Exclusive LLM", "alternateName": ["Exclusive LLM Games", "exclusivellm.app"], "url": "https://exclusivellm.app/", "inLanguage": "es"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Juegos", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Block Four", "url": "https://exclusivellm.app/es/block-four/"}, {"@type": "ListItem", "position": 2, "name": "BlockNest", "url": "https://exclusivellm.app/es/blocknest/"}, {"@type": "ListItem", "position": 3, "name": "Woodora Classic", "url": "https://exclusivellm.app/es/woodora-classic/"}]}</script>
+</head>
+<body data-lang="es">
+<div aria-hidden="true" class="aurora"></div>
+<canvas aria-hidden="true" id="neural"></canvas>
+<div aria-hidden="true" class="grain"></div>
+<div aria-hidden="true" class="spot"></div>
+<header class="top">
+<div class="wrap nav">
+<a class="brand" href="#top"><img alt="" src="/img/favicon.png"/> Exclusive LLM</a>
+<nav class="links">
+<a href="#promise"><span class="es">Nuestra promesa</span></a>
+<a href="#apps"><span class="es">Juegos</span></a>
+<a href="#contact"><span class="es">Contacto</span></a>
+<a aria-label="Instagram" class="soc b-ig" href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" fill="#fff"></path></svg></a>
+<a aria-label="TikTok" class="soc b-tt" href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#25F4EE" transform="translate(-.8 -.6)"></path><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#FE2C55" transform="translate(.8 .6)"></path><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#fff"></path></svg></a>
+<a aria-label="YouTube" class="soc b-yt" href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M9.6 7.4v9.2l7.8-4.6z" fill="#fff"></path></svg></a>
+<a aria-label="X" class="soc b-x" href="https://x.com/exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" fill="#fff"></path></svg></a>
+<div aria-label="Language" class="lang" role="group"><a href="/" hreflang="tr" lang="tr">TR</a><a href="/en/" hreflang="en" lang="en">EN</a><a aria-current="page" class="on" href="/es/" hreflang="es" lang="es">ES</a></div>
+</nav>
+</div>
+</header>
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="hero-logo rv"><img alt="Exclusive LLM" height="132" src="/img/logo.png" width="132"/></span>
+<span class="chip rv"><span class="dot"></span>
+<span class="es">Estudio independiente de juegos y apps para móviles</span>
+</span>
+<h1 class="rv" style="--d:.08s">
+
+<span class="es">Los juegos deben<br/><span class="rotator es"><span>ayudarte a relajarte.</span><span>ser un placer.</span><span>ser sencillos.</span><span>respetarte.</span></span></span>
+</h1>
+<p class="lead rv" style="--d:.16s">
+
+<span class="es">Diseñamos juegos que no llenan la pantalla de anuncios, se entienden desde el primer toque y te ayudan a desconectar. Solo tú y el juego.</span>
+</p>
+<div class="cta rv" style="--d:.24s">
+<a class="btn primary" href="#apps">
+<span class="es">Descubre nuestros juegos</span>
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</a>
+<a class="btn ghost" href="#promise"><span class="es">Por qué somos diferentes</span></a>
+</div>
+<div class="trust rv" style="--d:.32s">
+<span><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg><span class="es">Anuncios moderados</span></span>
+<span><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg><span class="es">Sin registro</span></span>
+<span><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg><span class="es">Gratis</span></span>
+</div>
+</div>
+<div aria-hidden="true" class="stage rv" style="--d:.2s">
+<div class="ring r2"></div><div class="ring r1"></div>
+<div class="cube c1"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="cube c2"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="cube c3"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="cube c4"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="phone">
+<div class="screen">
+<div class="notch"></div>
+<!-- 1 · Block Four: blok bulmaca (mücevher) -->
+<div class="scene sc-gem on" data-k="gem">
+<div class="hud">
+<div class="pill"><span class="es">PUNTOS</span><b class="sc">0</b></div>
+<div class="pill"><span class="es">RÉCORD</span><b class="bs">0</b></div>
+</div>
+<canvas class="board"></canvas>
+<div class="tray"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+<div class="combo"></div>
+</div>
+<!-- 2 · Neon Eco-Grid: birleştir + boşta -->
+<div class="scene sc-neon" data-k="neon">
+<div class="hud">
+<div class="pill"><span class="es">ENERGÍA</span><b class="nv-e">0</b></div>
+<div class="pill"><span class="es">POR SEG</span><b class="nv-r">0</b></div>
+</div>
+<canvas class="full"></canvas>
+</div>
+<!-- 3 · BlockNest: ahşap blok -->
+<div class="scene sc-wood sc-bn" data-k="bn">
+<div class="hud">
+<div class="pill"><span class="es">PUNTOS</span><b class="sc">0</b></div>
+<div class="pill"><span class="es">RÉCORD</span><b class="bs">0</b></div>
+</div>
+<div class="wframe"><canvas class="board"></canvas></div>
+<div class="tray"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+<div class="combo"></div>
+</div>
+<!-- 4 · Exclusive Quiz -->
+<div class="scene sc-quiz" data-k="quiz">
+<div class="hud">
+<div class="pill"><span class="es">PUNTOS</span><b class="sc">0</b></div>
+<div class="pill"><span class="es">RACHA</span><b class="st">0</b></div>
+</div>
+<div class="q-mark">?</div>
+<div class="q-card">
+<span class="q-cat"></span>
+<div class="q-bar"><i></i></div>
+<p class="q-text"></p>
+</div>
+<div class="q-opts"><span class="q-opt"></span><span class="q-opt"></span><span class="q-opt"></span><span class="q-opt"></span></div>
+</div>
+<!-- 5 · Block Four: sayı birleştirme -->
+<div class="scene sc-merge" data-k="merge">
+<div class="hud">
+<div class="pill"><span class="es">PUNTOS</span><b class="sc">0</b></div>
+<div class="pill"><span class="es">RÉCORD</span><b class="bs">0</b></div>
+</div>
+<div class="mgrid"></div>
+<div class="mhint"><span class="es">Desliza y los números iguales se unen</span></div>
+</div>
+<!-- 6 · Legion Charge: ordu koşusu -->
+<div class="scene sc-army" data-k="army">
+<canvas class="full"></canvas>
+<div class="hud">
+<div class="pill"><span class="es">NIVEL</span><b class="lv">1</b></div>
+<div class="pill"><span class="es">EJÉRCITO</span><b class="ar">0</b></div>
+</div>
+</div>
+<!-- 7 · Woodora Classic: klasik ahşap -->
+<div class="scene sc-wood sc-wd" data-k="wd">
+<div class="hud">
+<div class="pill"><span class="es">PUNTOS</span><b class="sc">0</b></div>
+<div class="pill"><span class="es">RÉCORD</span><b class="bs">0</b></div>
+</div>
+<div class="wframe"><canvas class="board"></canvas></div>
+<div class="tray"><canvas></canvas><canvas></canvas><canvas></canvas></div>
+<div class="combo"></div>
+</div>
+<!-- 8 · ExStudio: video, ses, fotoğraf -->
+<div class="scene sc-studio" data-k="studio">
+<div class="st-top"><span class="st-proj"><span class="es">Proyecto 07</span></span><span class="st-exp"><span class="es">Exportar</span></span></div>
+<div class="st-prev"><canvas></canvas><span class="st-fx"></span><span class="st-time">00:00</span></div>
+<div class="st-tools">
+<span class="st-tool"><svg viewbox="0 0 24 24"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"></path></svg><em><span class="es">Recortar</span></em></span>
+<span class="st-tool"><svg viewbox="0 0 24 24"><path d="M3 12h2M7 8v8M11 5v14M15 9v6M19 7v10M21 12h0"></path></svg><em><span class="es">Voz</span></em></span>
+<span class="st-tool"><svg viewbox="0 0 24 24"><rect height="11" rx="3" width="6" x="9" y="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg><em>Karaoke</em></span>
+<span class="st-tool"><svg viewbox="0 0 24 24"><rect height="16" rx="3" width="18" x="3" y="4"></rect><circle cx="12" cy="10" r="3"></circle><path d="M6.5 20a5.5 5.5 0 0 1 11 0"></path></svg><em><span class="es">Fondo</span></em></span>
+</div>
+<canvas class="st-tl"></canvas>
+</div>
+<div class="slit"></div>
+</div>
+</div>
+<div class="now">
+<img alt="" class="now-ic" height="40" src="/img/blockfour.png" width="40"/>
+<div class="now-tx">
+<small><span class="es">Ahora en pantalla</span></small>
+<b class="now-name">Block Four</b>
+<span class="now-genre"></span>
+</div>
+<span class="now-badge"></span>
+<div class="now-seg"></div>
+</div>
+</div>
+</div>
+<a aria-label="Scroll" class="scroll-cue" href="#promise"></a>
+</section>
+<!-- MARQUEE -->
+<div aria-hidden="true" class="marquee">
+
+<div class="track es">
+<span>Sin lluvia de anuncios</span><span>Interfaz clara e intuitiva</span><span>Juego relajante</span><span>Privacidad ante todo</span><span>Sin registro</span><span>Ligero y rápido</span><span>Gratis</span>
+<span>Sin lluvia de anuncios</span><span>Interfaz clara e intuitiva</span><span>Juego relajante</span><span>Privacidad ante todo</span><span>Sin registro</span><span>Ligero y rápido</span><span>Gratis</span>
+</div>
+</div>
+<!-- PROMISE -->
+<section id="promise">
+<div class="wrap">
+<div class="head rv">
+<span class="eyebrow"><span class="es">Nuestra promesa</span></span>
+<h2 class="title"><span class="es">El respeto al jugador <span class="grad">es el diseño.</span></span></h2>
+<p class="sub"><span class="es">Muchos juegos gratis te interrumpen con un anuncio cada par de jugadas. Nosotros elegimos lo contrario.</span></p>
+</div>
+<div class="promise">
+<article class="card big rv">
+<div>
+<div class="icon"><svg fill="none" stroke="#7fb2ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="3" width="18" x="3" y="4"></rect><path d="M8 21h8M4 4l16 14"></path></svg></div>
+<h3><span class="es">No te ahogamos en anuncios</span></h3>
+<p><span class="es">Los anuncios nunca interrumpen una partida; los anuncios a pantalla completa solo aparecen entre partidas y con un límite de frecuencia estricto. Los anuncios con recompensa son totalmente opcionales: mira uno si quieres un bonus; si lo saltas, no pierdes nada.</span></p>
+</div>
+<div aria-hidden="true" class="meter">
+<div class="row them"><span class="es">Juego típico</span><div class="bar"><div class="fill"></div></div></div>
+<div class="row us"><span>Exclusive LLM</span><div class="bar"><div class="fill"></div></div></div> </div>
+</article>
+<article class="card rv" style="--d:.1s">
+<div class="icon g"><div class="breath"><span></span><span></span><span></span></div></div>
+<h3><span class="es">Diseñados para ayudarte a relajarte</span></h3>
+<p><span class="es">Colores tranquilos, animaciones suaves y un ritmo que nunca te mete prisa. Perfectos para un descanso corto o una tarde larga.</span></p>
+</article>
+<article class="card rv">
+<div class="icon v"><svg fill="none" stroke="#c4b5fd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M9 12l2 2 4-4"></path><path d="M21 3v6h-6"></path></svg></div>
+<h3><span class="es">Claros desde el primer toque</span></h3>
+<p><span class="es">Nada de laberintos de menús. Botones grandes y claros y textos legibles — para todas las edades.</span></p>
+</article>
+<article class="card rv" style="--d:.1s">
+<div class="icon"><svg fill="none" stroke="#7fb2ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
+<h3><span class="es">Privacidad ante todo</span></h3>
+<p><span class="es">No necesitas cuenta ni permisos innecesarios. Cambia tus opciones de privacidad de anuncios cuando quieras dentro de la app.</span></p>
+</article>
+<article class="card rv" style="--d:.2s">
+<div class="icon a"><svg fill="none" stroke="#fcd34d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg></div>
+<h3><span class="es">Ligeros y rápidos</span></h3>
+<p><span class="es">Descargas pequeñas, aperturas rápidas y un rendimiento fluido que cuida tu batería.</span></p>
+</article>
+</div>
+</div>
+</section>
+<!-- COMPARE -->
+<section>
+<div class="wrap">
+<div class="head center rv">
+<span class="eyebrow"><span class="es">La diferencia</span></span>
+<h2 class="title"><span class="es">Tiempo de juego, <span class="grad">no de anuncios.</span></span></h2>
+</div>
+<div class="compare">
+<div class="col bad rv">
+<h3>😩 <span class="es">El típico juego gratis</span></h3>
+<ul>
+<li><span class="es">Un anuncio a pantalla completa cada pocas jugadas</span></li>
+<li><span class="es">Anuncios con el botón de cerrar escondido</span></li>
+<li><span class="es">Menús recargados y ventanas emergentes sin fin</span></li>
+<li><span class="es">Registro obligatorio solo para jugar</span></li>
+</ul>
+</div>
+<div class="col good rv" style="--d:.12s">
+<h3>😌 Exclusive LLM</h3>
+<ul>
+<li><span class="es">Sin anuncios en plena partida; moderados y limitados entre partidas</span></li>
+<li><span class="es">Anuncios con recompensa opcionales — tú decides</span></li>
+<li><span class="es">Una interfaz limpia, espaciosa e intuitiva</span></li>
+<li><span class="es">Descarga y juega al instante — sin registro</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- APPS -->
+<section id="apps">
+<div class="wrap">
+<div class="head rv">
+<span class="eyebrow"><span class="es">Nuestros juegos</span></span>
+<h2 class="title"><span class="es">Gratis en <span class="grad">Google Play ya.</span></span></h2>
+<p class="sub"><span class="es">Cada uno hecho con el mismo cuidado: tranquilo, sencillo y respetuoso.</span></p>
+</div>
+<div class="apps">
+<article class="app rv">
+<div class="media"><img alt="Block Four" height="500" loading="lazy" src="/img/blockfour-feature.jpg" width="1024"/></div>
+<div class="info">
+<div class="head-row"><img alt="" height="72" src="/img/blockfour.png" width="72"/><div><h3>Block Four</h3><div class="tags"><span class="tag"><span class="es">Puzzle</span></span><span class="tag"><span class="es">4 juegos en 1</span></span></div></div></div>
+<p><span class="es">Cuatro puzzles clásicos en una app: puzzle de bloques, bloques que caen, 2048 y ordenar colores. Un juego para cada estado de ánimo.</span></p>
+<ul class="perks">
+<li><span class="es">4 juegos, una sola descarga</span></li>
+<li><span class="es">Seguimiento de tus récords</span></li>
+<li><span class="es">Diseño limpio y colorido</span></li>
+<li><span class="es">Ideal para descansos cortos</span></li>
+</ul>
+<div class="cta-row">
+<a class="play" data-page="home" data-play="com.firat.blokrota" href="https://play.google.com/store/apps/details?id=com.firat.blokrota&amp;utm_source=exclusivellm_site&amp;utm_medium=website&amp;utm_campaign=site_home&amp;utm_content=es" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z" fill="#34A853"></path><path d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z" fill="#FBBC04"></path><path d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z" fill="#EA4335"></path><path d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z" fill="#4285F4"></path></svg>
+<span><small><span class="es">DISPONIBLE EN</span></small><b>Google Play</b></span>
+</a>
+<a class="more" href="/es/block-four/"><span class="es">Sobre el juego</span> <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</article>
+<article class="app rev rv">
+<div class="media"><img alt="BlockNest" height="500" loading="lazy" src="/img/blocknest-feature.jpg" width="1024"/></div>
+<div class="info">
+<div class="head-row"><img alt="" height="72" src="/img/blocknest.png" width="72"/><div><h3>BlockNest</h3><div class="tags"><span class="tag"><span class="es">Puzzle de bloques de madera</span></span><span class="tag"><span class="es">Relajante</span></span></div></div></div>
+<p><span class="es">Un puzzle de bloques tranquilo en cálidos tonos de madera. Coloca bloques, elimina filas y columnas y deja descansar tu mente.</span></p>
+<ul class="perks">
+<li><span class="es">Sin presión de tiempo</span></li>
+<li><span class="es">Aspecto cálido que no cansa la vista</span></li>
+<li><span class="es">Cómodo de jugar con una mano</span></li>
+<li><span class="es">Ideal para todas las edades</span></li>
+</ul>
+<div class="cta-row">
+<a class="play" data-page="home" data-play="com.exclusivellm.blocknest" href="https://play.google.com/store/apps/details?id=com.exclusivellm.blocknest&amp;utm_source=exclusivellm_site&amp;utm_medium=website&amp;utm_campaign=site_home&amp;utm_content=es" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z" fill="#34A853"></path><path d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z" fill="#FBBC04"></path><path d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z" fill="#EA4335"></path><path d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z" fill="#4285F4"></path></svg>
+<span><small><span class="es">DISPONIBLE EN</span></small><b>Google Play</b></span>
+</a>
+<a class="more" href="/es/blocknest/"><span class="es">Sobre el juego</span> <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</article>
+<article class="app rv">
+<div class="media"><img alt="Woodora Classic" height="500" loading="lazy" src="/img/woodoraclassic-feature.jpg" width="1024"/></div>
+<div class="info">
+<div class="head-row"><img alt="" height="72" src="/img/woodoraclassic.png" width="72"/><div><h3>Woodora Classic</h3><div class="tags"><span class="tag"><span class="es">Puzzle de bloques de madera</span></span><span class="tag"><span class="es">Sin conexión</span></span></div></div></div>
+<p><span class="es">Un puzzle de bloques clásico de 8×8 con aspecto de madera. Coloca tres bloques, elimina filas y columnas y mejora tu récord.</span></p>
+<ul class="perks">
+<li><span class="es">Sin límite de tiempo</span></li>
+<li><span class="es">Vista previa de colocación</span></li>
+<li><span class="es">Guardado automático</span></li>
+<li><span class="es">Sin cuenta, juega sin conexión</span></li>
+</ul>
+<div class="cta-row">
+<a class="play" data-page="home" data-play="com.exclusivellm.woodoraclassic" href="https://play.google.com/store/apps/details?id=com.exclusivellm.woodoraclassic&amp;utm_source=exclusivellm_site&amp;utm_medium=website&amp;utm_campaign=site_home&amp;utm_content=es" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z" fill="#34A853"></path><path d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z" fill="#FBBC04"></path><path d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z" fill="#EA4335"></path><path d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z" fill="#4285F4"></path></svg>
+<span><small><span class="es">DISPONIBLE EN</span></small><b>Google Play</b></span>
+</a>
+<a class="more" href="/es/woodora-classic/"><span class="es">Sobre el juego</span> <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- STATS -->
+<section style="padding-top:20px">
+<div class="wrap stats">
+<div class="stat rv"><b class="grad" data-count="3">0</b><span class="es">Juegos publicados</span></div>
+<div class="stat rv" style="--d:.08s"><b class="grad" data-count="4">0</b><span class="es">Modos de puzzle en una app</span></div>
+<div class="stat rv" style="--d:.16s"><b class="grad" data-count="0">0</b><span class="es">Cuentas obligatorias</span></div>
+<div class="stat rv" style="--d:.24s"><b class="grad" data-count="100" data-pct="">0</b><span class="es">Descarga gratuita</span></div>
+</div>
+</section>
+<!-- SOON -->
+<section>
+<div class="wrap">
+<div class="head center rv">
+<span class="eyebrow"><span class="es">Próximamente</span></span>
+<h2 class="title"><span class="es">Nuevas apps y juegos <span class="grad">en camino.</span></span></h2>
+<p class="sub"><span class="es">Estrategia, fusión, trivia y un estudio multimedia. La misma promesa, el mismo cuidado.</span></p>
+</div>
+<div class="soon">
+<article class="testcard rv">
+<div class="tmedia"><img alt="Legion Charge" height="500" loading="lazy" src="/img/legioncharge-feature.jpg" width="1024"/><span class="badge"><span class="es">En camino</span></span></div>
+<div class="tbody">
+<div class="head-row"><img alt="" height="56" src="/img/legioncharge.png" width="56"/><div><h3>Legion Charge</h3><div class="tags"><span class="tag"><span class="es">Estrategia</span></span><span class="tag"><span class="es">Carrera de ejércitos</span></span></div></div></div>
+<p><span class="es">Elige las puertas correctas, haz crecer tu ejército y derriba gigantes. Una carrera de ejércitos de 50 niveles donde cada decisión cuenta.</span></p>
+</div>
+</article>
+<article class="testcard rv" style="--d:.1s">
+<div class="tmedia"><img alt="Neon Eco-Grid" height="500" loading="lazy" src="/img/neonecogrid-feature.jpg" width="1024"/><span class="badge"><span class="es">En camino</span></span></div>
+<div class="tbody">
+<div class="head-row"><img alt="" height="56" src="/img/neonecogrid.png" width="56"/><div><h3>Neon Eco-Grid</h3><div class="tags"><span class="tag"><span class="es">Fusión</span></span><span class="tag"><span class="es">Idle</span></span></div></div></div>
+<p><span class="es">Fusiona fuentes de energía y abastece ciudades de neón con energía limpia. Un juego de fusión tranquilo pensado para semanas de juego.</span></p>
+</div>
+</article>
+<article class="testcard rv" style="--d:.2s">
+<div class="tmedia"><img alt="Exclusive Quiz" height="500" loading="lazy" src="/img/quiz-feature.jpg" width="1024"/><span class="badge"><span class="es">En camino</span></span></div>
+<div class="tbody">
+<div class="head-row"><img alt="" height="56" src="/img/quiz.png" width="56"/><div><h3>Exclusive Quiz</h3><div class="tags"><span class="tag"><span class="es">Trivia</span></span><span class="tag"><span class="es">10 categorías</span></span></div></div></div>
+<p><span class="es">Trivia de cultura general en 10 categorías. Responde rápido y bate tu récord en los modos Diario, Muerte súbita y Contrarreloj.</span></p>
+</div>
+</article>
+<article class="testcard rv" style="--d:.3s">
+<div class="tmedia"><img alt="ExStudio" height="500" loading="lazy" src="/img/exstudio-feature.jpg" width="1024"/><span class="badge"><span class="es">En camino</span></span></div>
+<div class="tbody">
+<div class="head-row"><img alt="" height="56" src="/img/exstudio.png" width="56"/><div><h3>ExStudio</h3><div class="tags"><span class="tag"><span class="es">Video</span></span><span class="tag"><span class="es">Audio y foto</span></span></div></div></div>
+<p><span class="es">Edita videos, cambia tu voz, canta karaoke y quita el fondo de tus fotos. Todo en tu teléfono, sin cuenta y sin marca de agua.</span></p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+<div class="wrap">
+<div class="contact rv">
+<span class="eyebrow"><span class="es">Contacto</span></span>
+<h2 class="title"><span class="es">¿Tienes una idea? <span class="grad">Te escuchamos.</span></span></h2>
+<p class="sub"><span class="es">Sugerencias, reportes de errores o simplemente un hola — leemos todos los mensajes.</span></p>
+<a class="btn primary" href="mailto:support@exclusivellm.app">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="3" width="18" x="3" y="5"></rect><path d="m3 7 9 6 9-6"></path></svg>
+            support@exclusivellm.app
+          </a>
+<div class="socials">
+<a aria-label="Instagram @exclusive.llm" class="btn ghost" href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank"><span class="bico b-ig"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" fill="#fff"></path></svg></span> @exclusive.llm</a>
+<a aria-label="TikTok @exclusivellm" class="btn ghost" href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank"><span class="bico b-tt"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#25F4EE" transform="translate(-.8 -.6)"></path><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#FE2C55" transform="translate(.8 .6)"></path><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#fff"></path></svg></span> @exclusivellm</a>
+<a aria-label="YouTube @Exclusivellm" class="btn ghost" href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank"><span class="bico b-yt"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M9.6 7.4v9.2l7.8-4.6z" fill="#fff"></path></svg></span> YouTube</a>
+<a aria-label="X @exclusivellm" class="btn ghost" href="https://x.com/exclusivellm" rel="noopener" target="_blank"><span class="bico b-x"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" fill="#fff"></path></svg></span> X</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap foot">
+<a class="brand" href="#top"><img alt="" src="/img/favicon.png"/> Exclusive LLM</a>
+<nav>
+<a href="#promise"><span class="es">Nuestra promesa</span></a>
+<a href="#apps"><span class="es">Juegos</span></a>
+<a href="/es/block-puzzle-games/"><span class="es">Juegos de puzzle de bloques</span></a>
+<a href="/es/press/"><span class="es">Kit de prensa</span></a>
+<a href="mailto:support@exclusivellm.app"><span class="es">Soporte</span></a>
+<a href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank">TikTok</a>
+<a href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank">YouTube</a>
+<a href="https://x.com/exclusivellm" rel="noopener" target="_blank">X</a>
+</nav>
+<span>© <span id="yr">2026</span> Exclusive LLM</span>
+</div>
+</footer>
+<script defer="" src="/assets/app.js?v=8"></script>
+<script data-cf-beacon='{"token": "077ef39b685d4709a8f59845f57dfc06"}' defer src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+ "version": 1,
+ "updated": "2026-11-16",
+ "site": "https://exclusivellm.app/",
+ "games": [
+  {
+   "slug": "block-four",
+   "name": "Block Four",
+   "package": "com.firat.blokrota",
+   "icon": "https://exclusivellm.app/img/blockfour.png",
+   "icon512": "https://exclusivellm.app/img/press/blockfour-icon-512.png",
+   "feature": "https://exclusivellm.app/img/blockfour-feature.jpg",
+   "tagline": {
+    "tr": "Dört bulmaca oyunu, tek uygulama.",
+    "en": "Four puzzle games, one app.",
+    "es": "Cuatro juegos de puzzle, una sola app."
+   },
+   "page": {
+    "tr": "https://exclusivellm.app/block-four/",
+    "en": "https://exclusivellm.app/en/block-four/",
+    "es": "https://exclusivellm.app/es/block-four/"
+   }
+  },
+  {
+   "slug": "blocknest",
+   "name": "BlockNest",
+   "package": "com.exclusivellm.blocknest",
+   "icon": "https://exclusivellm.app/img/blocknest.png",
+   "icon512": "https://exclusivellm.app/img/press/blocknest-icon-512.png",
+   "feature": "https://exclusivellm.app/img/blocknest-feature.jpg",
+   "tagline": {
+    "tr": "Sıcak ahşap tonlarında sakin bir blok bulmacası.",
+    "en": "A calm block puzzle in warm wooden tones.",
+    "es": "Un puzzle de bloques tranquilo en cálidos tonos de madera."
+   },
+   "page": {
+    "tr": "https://exclusivellm.app/blocknest/",
+    "en": "https://exclusivellm.app/en/blocknest/",
+    "es": "https://exclusivellm.app/es/blocknest/"
+   }
+  },
+  {
+   "slug": "woodora-classic",
+   "name": "Woodora Classic",
+   "package": "com.exclusivellm.woodoraclassic",
+   "icon": "https://exclusivellm.app/img/woodoraclassic.png",
+   "icon512": "https://exclusivellm.app/img/press/woodoraclassic-icon-512.png",
+   "feature": "https://exclusivellm.app/img/woodoraclassic-feature.jpg",
+   "tagline": {
+    "tr": "Düşün, yerleştir, rahatla.",
+    "en": "Think. Place. Unwind.",
+    "es": "Piensa. Coloca. Relájate."
+   },
+   "page": {
+    "tr": "https://exclusivellm.app/woodora-classic/",
+    "en": "https://exclusivellm.app/en/woodora-classic/",
+    "es": "https://exclusivellm.app/es/woodora-classic/"
+   }
+  }
+ ]
+}

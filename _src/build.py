@@ -20,9 +20,9 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "_src"
 DOMAIN = "https://exclusivellm.app"
-LANGS = ("tr", "en")
-BASE = {"tr": "/", "en": "/en/"}
-OG_LOCALE = {"tr": "tr_TR", "en": "en_US"}
+LANGS = ("tr", "en", "es")
+BASE = {"tr": "/", "en": "/en/", "es": "/es/"}
+OG_LOCALE = {"tr": "tr_TR", "en": "en_US", "es": "es_ES"}
 
 HOME = {
     "tr": {
@@ -32,6 +32,10 @@ HOME = {
     "en": {
         "title": "Exclusive LLM Games: Relaxing Mobile Games & Apps",
         "description": "Exclusive LLM builds calm, user-friendly Android games and apps with measured ads, clean design and respect for your privacy. Block Four, BlockNest and Woodora Classic are free on Google Play.",
+    },
+    "es": {
+        "title": "Juegos de Exclusive LLM: juegos y apps móviles relajantes",
+        "description": "Exclusive LLM crea juegos y apps para Android tranquilos y fáciles de usar: anuncios moderados, diseño limpio y respeto por tu privacidad. Block Four, BlockNest y Woodora Classic, gratis en Google Play.",
     },
 }
 UI = {
@@ -43,6 +47,10 @@ UI = {
            "watch": "Play video", "features": "Features", "faq": "Frequently asked questions", "others": "More of our games",
            "eyebrow_media": "In the game", "eyebrow_play": "Gameplay", "eyebrow_faq": "Questions", "eyebrow_more": "Exclusive LLM",
            "free": "Free on Google Play"},
+    "es": {"home": "Inicio", "games": "Juegos", "shots": "Capturas de pantalla", "video": "Tráiler",
+           "watch": "Reproducir video", "features": "Características", "faq": "Preguntas frecuentes", "others": "Más juegos nuestros",
+           "eyebrow_media": "En el juego", "eyebrow_play": "Jugabilidad", "eyebrow_faq": "Preguntas", "eyebrow_more": "Exclusive LLM",
+           "free": "Gratis en Google Play"},
 }
 
 
@@ -54,13 +62,42 @@ def esc(s: str) -> str:
     return html.escape(s, quote=True)
 
 
+_ES_MAP: dict[str, str] | None = None
+
+
+def es_map() -> dict[str, str]:
+    """_src/i18n_es.json: şablondaki her .en öğesinin iç HTML'i -> İspanyolcası."""
+    global _ES_MAP
+    if _ES_MAP is None:
+        items = json.loads((SRC / "i18n_es.json").read_text(encoding="utf-8"))
+        _ES_MAP = {BeautifulSoup(i["en"], "html.parser").decode(): i["es"] for i in items}
+    return _ES_MAP
+
+
 def page_soup(lang: str) -> BeautifulSoup:
-    """Şablonu tek dile indirger, yolları köke göre mutlak yapar."""
+    """Şablonu tek dile indirger, yolları köke göre mutlak yapar.
+    Şablon TR/EN yazılır; ES sürümü .en öğelerinin _src/i18n_es.json ile çevrilmesiyle üretilir."""
     raw = (SRC / "index.html").read_text(encoding="utf-8").replace("{{base}}", BASE[lang])
     soup = BeautifulSoup(raw, "html.parser")
-    other = "en" if lang == "tr" else "tr"
-    for el in soup.select(f".{other}"):
-        el.decompose()
+    if lang == "es":
+        for el in soup.select(".tr"):
+            el.decompose()
+        m, missing = es_map(), []
+        for el in soup.select(".en"):
+            key = el.decode_contents()
+            if key in m:
+                el.clear()
+                el.append(BeautifulSoup(m[key], "html.parser"))
+            elif el.parent is not None:
+                missing.append(key[:60])
+        for el in soup.select(".en"):
+            el["class"] = ["es" if c == "en" else c for c in el["class"]]
+        if missing:
+            print("UYARI: İspanyolcası olmayan metinler:", missing)
+    else:
+        for el in soup.select(".tr, .en, .es"):
+            if not el.decomposed and lang not in el.get("class", []):
+                el.decompose()
     soup.html["lang"] = lang
     soup.body["data-lang"] = lang
     for tag, attr in (("img", "src"), ("link", "href"), ("script", "src"), ("a", "href")):
@@ -172,7 +209,19 @@ def tag_play_links(soup: BeautifulSoup, page: str, lang: str) -> None:
         a["data-page"] = page
 
 
+CF_TOKEN = "077ef39b685d4709a8f59845f57dfc06"  # Cloudflare Web Analytics (çerezsiz), hesap: dash.cloudflare.com
+
+
+def add_beacon(soup: BeautifulSoup) -> None:
+    s = soup.new_tag("script", defer=None, src="https://static.cloudflareinsights.com/beacon.min.js")
+    s["data-cf-beacon"] = json.dumps({"token": CF_TOKEN})
+    soup.body.append(s)
+    soup.body.append("\n")
+
+
 def write(path: Path, soup: BeautifulSoup) -> None:
+    if CF_TOKEN and not soup.select_one("script[data-cf-beacon]"):
+        add_beacon(soup)
     path.parent.mkdir(parents=True, exist_ok=True)
     text = "<!doctype html>\n" + str(soup).replace("<!DOCTYPE html>", "").replace("<!doctype html>", "").lstrip()
     path.write_text(text, encoding="utf-8")
@@ -201,9 +250,11 @@ def shots_for(app: dict, lang: str) -> list[str]:
     return s.get(lang) or s.get("tr") or [] if isinstance(s, dict) else s
 
 
-def game_main(app: dict, lang: str, apps: list[dict]) -> str:
+def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False) -> str:
     t, ui, base = app[lang], UI[lang], BASE[lang]
     name = esc(app["name"])
+    guide_link = (f'<a class="more" href="{base}{app["slug"]}/guide/">{esc(PAGE_UI[lang]["guide"])} <span aria-hidden="true">→</span></a>'
+                  if has_guide else "")
     tags = "".join(f'<span class="tag">{esc(x)}</span>' for x in t["tags"])
     shots = "".join(
         f'<img src="/img/shots/{s}" alt="{name} {esc(ui["shots"].lower())} {i + 1}" loading="lazy" width="{shot_size(s)[0]}" height="{shot_size(s)[1]}">'
@@ -241,7 +292,7 @@ def game_main(app: dict, lang: str, apps: list[dict]) -> str:
           <div class="head-row"><img src="/img/{app["icon"]}" alt="{name}" width="84" height="84"><div><h1>{name}</h1><div class="tags">{tags}</div></div></div>
           <p class="lead">{esc(t["tagline"])}</p>
           <p class="intro">{esc(t["intro"])}</p>
-          <div class="cta-row" id="play-slot"></div>
+          <div class="cta-row" id="play-slot">{guide_link}</div>
         </div>
         <div class="gp-media"><img src="/img/{app["feature"]}" alt="{name}" width="1024" height="500"></div>
       </div>
@@ -294,11 +345,182 @@ def game_ld(app: dict, lang: str) -> list[dict]:
     ]
 
 
+PAGE_UI = {
+    "tr": {"guide": "İpuçları ve rehber", "about": "Oyun hakkında", "download": "İndir", "faq": "Sık sorulan sorular"},
+    "en": {"guide": "Tips and guide", "about": "About the game", "download": "Download", "faq": "Frequently asked questions"},
+    "es": {"guide": "Consejos y guía", "about": "Sobre el juego", "download": "Descargar", "faq": "Preguntas frecuentes"},
+}
+
+
+def section_cols(sections: list[dict]) -> str:
+    out = []
+    for sec in sections:
+        body = "".join(f"<p>{esc(p)}</p>" for p in sec.get("p", []))
+        if sec.get("items"):
+            body += "<ul>" + "".join(f"<li>{esc(i)}</li>" for i in sec["items"]) + "</ul>"
+        out.append(f'<div class="col"><h3>{esc(sec["h"])}</h3>{body}</div>')
+    return "".join(out)
+
+
+def sec(eyebrow: str, title: str, inner: str, center: bool = False) -> str:
+    c = " center" if center else ""
+    return (f'\n    <section class="gp-sec">\n      <div class="wrap">\n        <div class="head{c}"><span class="eyebrow">{esc(eyebrow)}</span>'
+            f'<h2 class="title">{esc(title)}</h2></div>\n        {inner}\n      </div>\n    </section>')
+
+
+def page_hero(t: dict, lang: str, crumbs: list[tuple[str, str]], image: str, cta: str = "") -> str:
+    base = BASE[lang]
+    trail = f'<a href="{base}">{esc(UI[lang]["home"])}</a>' + "".join(
+        f'<span>›</span><a href="{href}">{esc(label)}</a>' if href else f"<span>›</span><span>{esc(label)}</span>"
+        for label, href in crumbs)
+    return f'''
+    <section class="gp-hero">
+      <div class="wrap gp-grid">
+        <div>
+          <nav class="crumb" aria-label="breadcrumb">{trail}</nav>
+          <span class="eyebrow">{esc(t["eyebrow"])}</span>
+          <h1>{esc(t["h1"])}</h1>
+          <p class="lead">{esc(t["lead"])}</p>
+          <p class="intro">{esc(t["intro"])}</p>
+          {f'<div class="cta-row">{cta}</div>' if cta else ""}
+        </div>
+        <div class="gp-media"><img src="/img/{image}" alt="" width="1024" height="500"></div>
+      </div>
+    </section>'''
+
+
+def app_cards(apps: list[dict], lang: str, play_html: dict[str, str]) -> str:
+    base, pu = BASE[lang], PAGE_UI[lang]
+    cards = []
+    for a in apps:
+        cards.append(
+            f'<div class="card-game"><a class="other" href="{base}{a["slug"]}/"><img src="/img/{a["icon"]}" alt="" width="56" height="56" loading="lazy">'
+            f'<span><b>{esc(a["name"])}</b><small>{esc(a[lang]["tagline"])}</small></span></a>'
+            f'<div class="cta-row">{play_html[a["package"]]}<a class="more" href="{base}{a["slug"]}/guide/">{esc(pu["guide"])} <span aria-hidden="true">→</span></a></div></div>')
+    return f'<div class="game-cards">{"".join(cards)}</div>'
+
+
+def faq_html(faq: list[dict]) -> str:
+    return '<div class="faq">' + "".join(
+        f'<details><summary>{esc(q["q"])}</summary><p>{esc(q["a"])}</p></details>' for q in faq) + "</div>"
+
+
+def faq_ld(faq: list[dict]) -> dict:
+    return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q["q"], "acceptedAnswer": {"@type": "Answer", "text": q["a"]}} for q in faq]}
+
+
+def crumbs_ld(lang: str, items: list[tuple[str, str]]) -> dict:
+    full = [(UI[lang]["home"], DOMAIN + BASE[lang])] + items
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(full)]}
+
+
+def play_html_map(soup: BeautifulSoup, apps: list[dict]) -> dict[str, str]:
+    return {a["package"]: str(play_button(soup, a["package"])) for a in apps}
+
+
+def hub_main(p: dict, lang: str, apps: list[dict], play: dict[str, str]) -> str:
+    t = p[lang]
+    chosen = [next(a for a in apps if a["slug"] == s) for s in p["apps"]]
+    cmp = t["compare"]
+    table = ('<div class="cmp-wrap"><table class="cmp"><thead><tr>' + "".join(f"<th>{esc(h)}</th>" for h in cmp["head"]) + "</tr></thead><tbody>"
+             + "".join("<tr>" + "".join(f"<td>{esc(c)}</td>" for c in row) + "</tr>" for row in cmp["rows"]) + "</tbody></table></div>")
+    return ('\n  <main id="top" class="gp">' + page_hero(t, lang, [(t["crumb"], "")], p["image"])
+            + sec(UI[lang]["eyebrow_more"], UI[lang]["games"], app_cards(chosen, lang, play))
+            + sec(t["eyebrow"], cmp["title"], table)
+            + sec(t["eyebrow"], t["h1"], f'<div class="feats">{section_cols(t["sections"])}</div>')
+            + sec(UI[lang]["eyebrow_faq"], PAGE_UI[lang]["faq"], faq_html(t["faq"]), True) + "\n  </main>\n")
+
+
+def press_main(p: dict, lang: str, apps: list[dict], play: dict[str, str]) -> str:
+    t = p[lang]
+    assets = '<div class="assets">' + "".join(
+        f'<a class="asset" href="/img/{a["file"]}" download><img src="/img/{a["file"]}" alt="{esc(a["label"])}" loading="lazy">'
+        f'<span><b>{esc(a["label"])}</b><small>{esc(a["size"])} · {esc(PAGE_UI[lang]["download"])}</small></span></a>'
+        for a in p["assets"]) + "</div>"
+    games = '<div class="feats">' + "".join(
+        f'<div class="col"><h3>{esc(a["name"])}</h3><p>{esc(a[lang]["intro"])}</p><ul>'
+        f'<li><a href="{BASE[lang]}{a["slug"]}/">exclusivellm.app{BASE[lang]}{a["slug"]}/</a></li>'
+        f'<li><a href="{PLAY_PREFIX}{a["package"]}" target="_blank" rel="noopener">Google Play: {a["package"]}</a></li></ul></div>'
+        for a in apps) + "</div>"
+    contact = f'<p class="intro">{esc(t["contact"])}</p><p><a class="btn ghost" href="mailto:support@exclusivellm.app">support@exclusivellm.app</a></p>'
+    return ('\n  <main id="top" class="gp">' + page_hero(t, lang, [(t["crumb"], "")], p["image"])
+            + sec(t["eyebrow"], t["h1"], f'<div class="feats">{section_cols(t["sections"])}</div>')
+            + sec(t["eyebrow"], t["assets_title"], assets)
+            + sec(t["eyebrow"], t["games_title"], games)
+            + sec(t["eyebrow"], t["contact_title"], contact) + "\n  </main>\n")
+
+
+def guide_main(g: dict, lang: str, apps: list[dict], play: dict[str, str]) -> str:
+    t, app = g[lang], next(a for a in apps if a["slug"] == g["app"])
+    base = BASE[lang]
+    cta = play[app["package"]] + f'<a class="more" href="{base}{app["slug"]}/">{esc(PAGE_UI[lang]["about"])} <span aria-hidden="true">→</span></a>'
+    others = [a for a in apps if a["slug"] != app["slug"]]
+    return ('\n  <main id="top" class="gp">' + page_hero(t, lang, [(app["name"], f'{base}{app["slug"]}/'), (t["crumb"], "")], app["feature"], cta)
+            + sec(t["eyebrow"], t["crumb"], f'<div class="feats">{section_cols(t["sections"])}</div>')
+            + sec(UI[lang]["eyebrow_more"], UI[lang]["others"], app_cards(others, lang, play)) + "\n  </main>\n")
+
+
+def article_ld(t: dict, url: str, image: str) -> dict:
+    return {"@context": "https://schema.org", "@type": "Article", "headline": t["h1"], "description": t["description"],
+            "image": DOMAIN + "/img/" + image, "url": url, "datePublished": "2026-11-16", "dateModified": date.today().isoformat(),
+            "author": {"@type": "Organization", "name": "Exclusive LLM", "url": DOMAIN + "/"},
+            "publisher": {"@type": "Organization", "name": "Exclusive LLM", "logo": {"@type": "ImageObject", "url": DOMAIN + "/img/logo.png"}}}
+
+
+def build_content_pages(apps: list[dict], pages: dict, lang: str, out_dir: Path) -> list[str]:
+    urls = []
+    specs = [("hub", pages["hub"], hub_main), ("press", pages["press"], press_main)] + [("guide", g, guide_main) for g in pages["guides"]]
+    for kind, p, fn in specs:
+        soup = page_soup(lang)
+        path, t = p["path"], p[lang]
+        set_lang_switch(soup, lang, path)
+        for a in soup.select("header a[href^='#'], footer a[href^='#']"):
+            a["href"] = BASE[lang] + a["href"]
+        play = play_html_map(soup, apps)
+        soup.find("main").replace_with(BeautifulSoup(fn(p, lang, apps, play), "html.parser"))
+        url = DOMAIN + BASE[lang] + path
+        if kind == "hub":
+            ld = [faq_ld(t["faq"]), crumbs_ld(lang, [(t["crumb"], url)]), games_ld([a for s in p["apps"] for a in apps if a["slug"] == s], lang)]
+            image = p["image"]
+        elif kind == "press":
+            ld = [org_ld(), crumbs_ld(lang, [(t["crumb"], url)])]
+            image = p["image"]
+        else:
+            app = next(a for a in apps if a["slug"] == p["app"])
+            image = app["feature"]
+            ld = [article_ld(t, url, image), crumbs_ld(lang, [(app["name"], DOMAIN + BASE[lang] + app["slug"] + "/"), (t["crumb"], url)])]
+        set_head(soup, lang, path, t["title"], t["description"], image, ld)
+        tag_play_links(soup, kind if kind != "guide" else p["app"] + "_guide", lang)
+        write(out_dir / path / "index.html", soup)
+        urls.append(BASE[lang] + path)
+    return urls
+
+
+def games_json(apps: list[dict]) -> None:
+    """Oyun içi 'Diğer oyunlarımız' ekranı bu dosyayı okur (yalnızca üretimdeki oyunlar)."""
+    data = {"version": 1, "updated": date.today().isoformat(), "site": DOMAIN + "/", "games": [
+        {"slug": a["slug"], "name": a["name"], "package": a["package"], "icon": f"{DOMAIN}/img/{a['icon']}",
+         "icon512": f"{DOMAIN}/img/press/{a['icon'].rsplit('.', 1)[0]}-icon-512.png" if (ROOT / "img" / "press" / f"{a['icon'].rsplit('.', 1)[0]}-icon-512.png").exists() else f"{DOMAIN}/img/{a['icon']}",
+         "feature": f"{DOMAIN}/img/{a['feature']}",
+         "tagline": {l: a[l]["tagline"] for l in LANGS if l in a},
+         "page": {l: DOMAIN + BASE[l] + a["slug"] + "/" for l in LANGS}} for a in apps]}
+    (ROOT / "games.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
 def build() -> list[str]:
     apps = json.loads((SRC / "apps.json").read_text(encoding="utf-8"))
+    pages = json.loads((SRC / "pages.json").read_text(encoding="utf-8"))
+    # Bir dilin metni yoksa İngilizcesi kullanılır (yeni oyun eklerken "es" bloğunu unutma)
+    for obj in apps + [pages["hub"], pages["press"]] + pages["guides"]:
+        for l in LANGS:
+            if l not in obj:
+                print(f"UYARI: {obj.get('slug') or obj.get('path')} için '{l}' metni yok, İngilizcesi kullanıldı")
+                obj[l] = obj["en"]
     urls: list[str] = []
     for lang in LANGS:
-        out_dir = ROOT if lang == "tr" else ROOT / "en"
+        out_dir = ROOT / BASE[lang].strip("/") if BASE[lang] != "/" else ROOT
         # ana sayfa
         soup = page_soup(lang)
         set_lang_switch(soup, lang, "")
@@ -315,18 +537,21 @@ def build() -> list[str]:
                 a["href"] = BASE[lang] + a["href"]
             btn = play_button(soup, app["package"])
             main = soup.find("main")
-            main.replace_with(BeautifulSoup(game_main(app, lang, apps), "html.parser"))
-            soup.select_one("#play-slot").append(btn)
+            has_guide = any(g["app"] == app["slug"] for g in pages["guides"])
+            main.replace_with(BeautifulSoup(game_main(app, lang, apps, has_guide), "html.parser"))
+            soup.select_one("#play-slot").insert(0, btn)
             del soup.select_one("#play-slot")["id"]
             set_head(soup, lang, app["slug"] + "/", app[lang]["title"], app[lang]["description"], app["feature"], game_ld(app, lang))
             tag_play_links(soup, app["slug"], lang)
             write(out_dir / app["slug"] / "index.html", soup)
             urls.append(BASE[lang] + app["slug"] + "/")
+        urls += build_content_pages(apps, pages, lang, out_dir)
+    games_json(apps)
     # sitemap + robots
     today = date.today().isoformat()
     groups: dict[str, list[str]] = {}
     for u in urls:
-        key = u[len("/en"):] if u.startswith("/en/") else u
+        key = next((u[len(BASE[l]) - 1:] for l in LANGS if BASE[l] != "/" and u.startswith(BASE[l])), u)
         groups.setdefault(key, []).append(u)
     items = []
     for key, us in groups.items():

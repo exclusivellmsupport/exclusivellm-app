@@ -587,3 +587,27 @@ body[data-lang="en"] .tr, body[data-lang="tr"] .en { display: none !important; }
 /* lang links must stay visible on phones and skip the nav underline */
 .links .lang a { display: inline-block; }
 .links .lang a::after { display: none; }
+
+/* ---------- content pages: hub, guides, press kit ---------- */
+.gp-hero .eyebrow { display: block; }
+.game-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+.card-game { display: grid; gap: 14px; padding: 16px; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); }
+.card-game .other { border: 0; background: none; padding: 0; }
+.card-game .other:hover { transform: none; }
+.card-game .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.cmp-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.cmp { width: 100%; border-collapse: collapse; min-width: 620px; font-size: 15.5px; }
+.cmp th, .cmp td { text-align: left; padding: 16px 18px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.cmp th { font: 700 12.5px "Inter", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--cyan); }
+.cmp td { color: var(--muted); }
+.cmp td:first-child { color: var(--text); font-weight: 700; white-space: nowrap; }
+.cmp tr:last-child td { border-bottom: 0; }
+.feats .col p { color: var(--muted); margin: 0 0 12px; }
+.feats .col a { color: var(--cyan); }
+.assets { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+.asset { display: grid; gap: 12px; padding: 14px; border-radius: 20px; border: 1px solid var(--line); background: var(--surface); transition: border-color .2s, transform .2s; }
+.asset:hover { border-color: rgba(56,214,255,.45); transform: translateY(-3px); }
+.asset img { width: 100%; aspect-ratio: 1024 / 500; object-fit: contain; border-radius: 12px; background: rgba(255,255,255,.04); }
+.asset span { display: grid; gap: 2px; }
+.asset small { color: var(--muted); }
+@media (max-width: 640px) { .game-cards, .assets { grid-template-columns: 1fr; } }
