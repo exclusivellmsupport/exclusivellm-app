@@ -46,6 +46,10 @@ UI = {
 }
 
 
+GENRE = {"PuzzleGame": "Puzzle", "StrategyGame": "Strategy", "ArcadeGame": "Arcade", "TriviaGame": "Trivia",
+         "CasualGame": "Casual", "ActionGame": "Action", "BoardGame": "Board"}
+
+
 def esc(s: str) -> str:
     return html.escape(s, quote=True)
 
@@ -140,6 +144,32 @@ def org_ld() -> dict:
             "logo": DOMAIN + "/img/logo.png", "email": "support@exclusivellm.app",
             "sameAs": ["https://www.instagram.com/exclusive.llm/", "https://www.tiktok.com/@exclusivellm",
                        "https://www.youtube.com/@Exclusivellm", "https://x.com/exclusivellm"]}
+
+
+def website_ld(lang: str) -> dict:
+    """Google bu işaretlemeyi arama sonuçlarındaki site adı için kullanır."""
+    return {"@context": "https://schema.org", "@type": "WebSite", "name": "Exclusive LLM",
+            "alternateName": ["Exclusive LLM Games", "exclusivellm.app"], "url": DOMAIN + "/", "inLanguage": lang}
+
+
+def games_ld(apps: list[dict], lang: str) -> dict:
+    return {"@context": "https://schema.org", "@type": "ItemList", "name": UI[lang]["games"],
+            "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": a["name"],
+                                 "url": DOMAIN + BASE[lang] + a["slug"] + "/"} for i, a in enumerate(apps)]}
+
+
+PLAY_PREFIX = "https://play.google.com/store/apps/details?id="
+
+
+def tag_play_links(soup: BeautifulSoup, page: str, lang: str) -> None:
+    """Play linklerine UTM ekler (Play Console > Mağaza girişi edinme raporunda 'exclusivellm_site' olarak görünür)
+    ve app.js'in tıklama ölçümü için data-play / data-page özniteliklerini koyar."""
+    for a in soup.select(f'a[href^="{PLAY_PREFIX}"]'):
+        pkg = a["href"][len(PLAY_PREFIX):].split("&")[0]
+        a["href"] = (f"{PLAY_PREFIX}{pkg}&utm_source=exclusivellm_site&utm_medium=website"
+                     f"&utm_campaign=site_{page}&utm_content={lang}")
+        a["data-play"] = pkg
+        a["data-page"] = page
 
 
 def write(path: Path, soup: BeautifulSoup) -> None:
@@ -248,9 +278,11 @@ def game_ld(app: dict, lang: str) -> list[dict]:
     t, url = app[lang], DOMAIN + BASE[lang] + app["slug"] + "/"
     play = f"https://play.google.com/store/apps/details?id={app['package']}"
     return [
-        {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": app["name"], "url": url,
+        # Google: oyunlar VideoGame + SoftwareApplication birlikte işaretlenir
+        {"@context": "https://schema.org", "@type": ["VideoGame", "SoftwareApplication"], "name": app["name"], "url": url,
          "description": t["description"], "applicationCategory": "GameApplication", "applicationSubCategory": app["category"],
-         "operatingSystem": "Android", "inLanguage": app["languages"], "image": DOMAIN + "/img/" + app["feature"],
+         "operatingSystem": "Android", "gamePlatform": "Android", "genre": GENRE.get(app["category"], app["category"]),
+         "inLanguage": app["languages"], "image": DOMAIN + "/img/" + app["feature"],
          "screenshot": [DOMAIN + "/img/shots/" + s for s in shots_for(app, lang)], "installUrl": play, "downloadUrl": play,
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
          "publisher": {"@type": "Organization", "name": "Exclusive LLM", "url": DOMAIN + "/"}},
@@ -270,7 +302,9 @@ def build() -> list[str]:
         # ana sayfa
         soup = page_soup(lang)
         set_lang_switch(soup, lang, "")
-        set_head(soup, lang, "", HOME[lang]["title"], HOME[lang]["description"], "blockfour-feature.jpg", [org_ld()])
+        set_head(soup, lang, "", HOME[lang]["title"], HOME[lang]["description"], "blockfour-feature.jpg",
+                 [org_ld(), website_ld(lang), games_ld(apps, lang)])
+        tag_play_links(soup, "home", lang)
         write(out_dir / "index.html", soup)
         urls.append(BASE[lang])
         # oyun sayfaları
@@ -285,6 +319,7 @@ def build() -> list[str]:
             soup.select_one("#play-slot").append(btn)
             del soup.select_one("#play-slot")["id"]
             set_head(soup, lang, app["slug"] + "/", app[lang]["title"], app[lang]["description"], app["feature"], game_ld(app, lang))
+            tag_play_links(soup, app["slug"], lang)
             write(out_dir / app["slug"] / "index.html", soup)
             urls.append(BASE[lang] + app["slug"] + "/")
     # sitemap + robots

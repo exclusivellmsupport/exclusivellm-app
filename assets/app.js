@@ -94,6 +94,22 @@
     requestAnimationFrame(step);
   }
 
+  /* ---------- measurement: Play / social clicks (works with whichever analytics is installed) ---------- */
+  const track = (name, params) => {
+    try {
+      if (typeof window.gtag === "function") window.gtag("event", name, params);
+      if (window.goatcounter && window.goatcounter.count)
+        window.goatcounter.count({ path: name + "/" + Object.values(params).join("/"), title: name, event: true });
+    } catch (e) {}
+  };
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    const lang = document.body.dataset.lang || "tr";
+    if (a.dataset.play) track("play_click", { app: a.dataset.play, page: a.dataset.page || "", lang });
+    else if (/instagram\.com|tiktok\.com|youtube\.com|x\.com/.test(a.hostname)) track("social_click", { network: a.hostname.replace(/^www\./, ""), lang });
+  });
+
   /* ---------- YouTube: load the player only on click ---------- */
   $$(".yt").forEach((el) => el.addEventListener("click", () => {
     const f = document.createElement("iframe");
