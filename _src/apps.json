@@ -240,11 +240,11 @@
     "category": "PuzzleGame",
     "icon": "blocknest.png",
     "feature": "blocknest-feature.jpg",
-    "shots": [
-      "blocknest-1.webp",
-      "blocknest-2.webp",
-      "blocknest-3.webp"
-    ],
+    "shots": {
+      "tr": ["blocknest-tr-1.webp", "blocknest-tr-2.webp", "blocknest-tr-3.webp", "blocknest-tr-4.webp", "blocknest-tr-5.webp", "blocknest-tr-6.webp"],
+      "en": ["blocknest-en-1.webp", "blocknest-en-2.webp", "blocknest-en-3.webp", "blocknest-en-4.webp", "blocknest-en-5.webp", "blocknest-en-6.webp"],
+      "es": ["blocknest-es-1.webp", "blocknest-es-2.webp", "blocknest-es-3.webp", "blocknest-es-4.webp", "blocknest-es-5.webp", "blocknest-es-6.webp"]
+    },
     "video": {
       "tr": "xZOWLNhrnRI",
       "en": "2Z5_TzVcI34"
