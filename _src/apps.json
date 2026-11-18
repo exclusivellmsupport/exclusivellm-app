@@ -271,8 +271,8 @@
           "items": [
             "Raftaki üç ahşap bloğu sürükleyip 10×10 tahtaya bırak.",
             "Bir satırı ya da sütunu tamamen doldur, temizlensin ve yer açılsın.",
-            "Tek hamlede birden fazla çizgi temizleyerek büyük bonuslar kazan.",
-            "Art arda çizgi temizleyerek kombo çarpanını x5'e kadar çıkar.",
+            "Tek hamlede birden fazla çizgi temizleyerek ek puan kazan.",
+            "Art arda çizgi temizleyerek kombo yap, puanını artır.",
             "Hiçbir blok sığmadığında oyun biter, bu yüzden önceden planla."
           ]
         }
@@ -321,8 +321,8 @@
           "items": [
             "Drag the three wooden blocks from the tray onto the 10×10 grid.",
             "Fill a whole row or column to clear it and free up space.",
-            "Clear several lines in one move for big bonuses.",
-            "Clear lines move after move to build a combo multiplier up to x5.",
+            "Clear several lines in one move for bonus points.",
+            "Clear lines move after move to chain combos and score more.",
             "The game ends when no block fits on the board, so plan ahead."
           ]
         }
@@ -371,8 +371,8 @@
           "items": [
             "Arrastra los tres bloques de madera de la bandeja a la cuadrícula de 10×10.",
             "Completa una fila o columna entera para eliminarla y liberar espacio.",
-            "Elimina varias líneas en una sola jugada para ganar grandes bonus.",
-            "Elimina líneas jugada tras jugada para lograr un multiplicador de combo de hasta ×5.",
+            "Elimina varias líneas en una sola jugada para ganar puntos extra.",
+            "Elimina líneas jugada tras jugada para encadenar combos y sumar más puntos.",
             "La partida termina cuando ningún bloque cabe en el tablero, así que planifica con antelación."
           ]
         }
