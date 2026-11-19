@@ -29,7 +29,7 @@ OG_LOCALE = {"tr": "tr_TR", "en": "en_US", "es": "es_ES"}
 # JSON-LD, games.json) o kullanılır. Yazılı grafik her dilde o dilin yazısıyla görünmeli: denetim aşağıda.
 FEATURE_BASE_LANG = {"woodoraclassic-feature.jpg": "tr", "blockfour-feature.jpg": "tr"}  # belirtilmeyen: "en"
 FEATURE_ONE_FOR_ALL = {  # yalnızca logo/marka yazısı olan, her dilde aynı kalabilen grafikler
-    "toppleisles-feature.jpg": "yalnızca oyun logosu (TOPPLE ISLES · CANNON SMASH)",
+    # toppleisles-feature.jpg 20.11.2026'dan beri dil başına yazılı (Top ile Yık / Cannon Smash / Cañón y Torres)
 }
 FEATURE_MISSING_OK = {  # (grafik, dil): uygulamada o dil yok, İngilizcesi gösterilir
     ("wordsky-feature.jpg", "es"): "Wordsky yalnızca TR/EN",
