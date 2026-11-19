@@ -5,11 +5,16 @@
  "games": [
   {
    "slug": "block-four",
-   "name": "Block Four",
+   "name": "BlockFour",
    "package": "com.firat.blokrota",
    "icon": "https://exclusivellm.app/img/blockfour.png",
    "icon512": "https://exclusivellm.app/img/press/blockfour-icon-512.png",
    "feature": "https://exclusivellm.app/img/blockfour-feature.jpg",
+   "features": {
+    "tr": "https://exclusivellm.app/img/blockfour-feature.jpg",
+    "en": "https://exclusivellm.app/img/blockfour-feature-en.jpg",
+    "es": "https://exclusivellm.app/img/blockfour-feature-es.jpg"
+   },
    "tagline": {
     "tr": "Dört bulmaca oyunu, tek uygulama.",
     "en": "Four puzzle games, one app.",
@@ -28,6 +33,11 @@
    "icon": "https://exclusivellm.app/img/blocknest.png",
    "icon512": "https://exclusivellm.app/img/press/blocknest-icon-512.png",
    "feature": "https://exclusivellm.app/img/blocknest-feature.jpg",
+   "features": {
+    "tr": "https://exclusivellm.app/img/blocknest-feature.jpg",
+    "en": "https://exclusivellm.app/img/blocknest-feature.jpg",
+    "es": "https://exclusivellm.app/img/blocknest-feature.jpg"
+   },
    "tagline": {
     "tr": "Sıcak ahşap tonlarında sakin bir blok bulmacası.",
     "en": "A calm block puzzle in warm wooden tones.",
@@ -46,6 +56,11 @@
    "icon": "https://exclusivellm.app/img/woodoraclassic.png",
    "icon512": "https://exclusivellm.app/img/press/woodoraclassic-icon-512.png",
    "feature": "https://exclusivellm.app/img/woodoraclassic-feature.jpg",
+   "features": {
+    "tr": "https://exclusivellm.app/img/woodoraclassic-feature.jpg",
+    "en": "https://exclusivellm.app/img/woodoraclassic-feature-en.jpg",
+    "es": "https://exclusivellm.app/img/woodoraclassic-feature-es.jpg"
+   },
    "tagline": {
     "tr": "Düşün, yerleştir, rahatla.",
     "en": "Think. Place. Unwind.",

@@ -1,7 +1,7 @@
 [
   {
     "slug": "block-four",
-    "name": "Block Four",
+    "name": "BlockFour",
     "package": "com.firat.blokrota",
     "category": "PuzzleGame",
     "icon": "blockfour.png",
@@ -23,10 +23,10 @@
       "es"
     ],
     "tr": {
-      "title": "Block Four: Blok Bulmaca, 2048 ve Renk Sıralama | Exclusive LLM",
+      "title": "BlockFour: Blok Bulmaca, 2048 ve Renk Sıralama | Exclusive LLM",
       "description": "Blok bulmaca, düşen bloklar, 2048 ve renk sıralama: 4 zekâ oyunu tek uygulamada. Üyelik yok, internetsiz oynanır. Google Play'de ücretsiz.",
       "tagline": "Dört bulmaca oyunu, tek uygulama.",
-      "intro": "Block Four, dört klasik bulmaca oyununu tek uygulamada buluşturuyor: Blok Rota, Düşen Bloklar, Sayı Birleştirme ve Renk Sıralama. İki dakikalık bir molada da, uzun bir akşamda da ruh haline uygun bir bulmaca seni bekliyor. Üyelik yok, kayıt yok; tüm oyunlar internetsiz oynanabilir.",
+      "intro": "BlockFour, dört klasik bulmaca oyununu tek uygulamada buluşturuyor: Blok Rota, Düşen Bloklar, Sayı Birleştirme ve Renk Sıralama. İki dakikalık bir molada da, uzun bir akşamda da ruh haline uygun bir bulmaca seni bekliyor. Üyelik yok, kayıt yok; tüm oyunlar internetsiz oynanabilir.",
       "tags": [
         "Bulmaca",
         "4 oyun bir arada",
@@ -75,7 +75,7 @@
       ],
       "faq": [
         {
-          "q": "Block Four ücretsiz mi?",
+          "q": "BlockFour ücretsiz mi?",
           "a": "Evet, Google Play'den ücretsiz indirilir. Uygulama reklam içerir; Klasik modda oyun bittiğinde devam etmek için izlenen reklam isteğe bağlıdır."
         },
         {
@@ -93,10 +93,10 @@
       ]
     },
     "en": {
-      "title": "Block Four: Block Puzzle, 2048 & Color Sort | Exclusive LLM",
+      "title": "BlockFour: Block Puzzle, 2048 & Color Sort | Exclusive LLM",
       "description": "Block puzzle, falling blocks, 2048 and color sort: 4 brain games in one app. No account, play offline. Free on Google Play.",
       "tagline": "Four puzzle games, one app.",
-      "intro": "Block Four brings four classic puzzle games together in one app: Block Route, Falling Blocks, Number Merge and Color Sort. Whether you have two minutes or a whole evening, there is always a puzzle that fits your mood. No account, no sign-up, and every game can be played offline.",
+      "intro": "BlockFour brings four classic puzzle games together in one app: Block Route, Falling Blocks, Number Merge and Color Sort. Whether you have two minutes or a whole evening, there is always a puzzle that fits your mood. No account, no sign-up, and every game can be played offline.",
       "tags": [
         "Puzzle",
         "4 games in 1",
@@ -145,7 +145,7 @@
       ],
       "faq": [
         {
-          "q": "Is Block Four free?",
+          "q": "Is BlockFour free?",
           "a": "Yes, it is free to download on Google Play. The app contains ads; watching an ad to continue after a Classic game over is optional."
         },
         {
@@ -163,10 +163,10 @@
       ]
     },
     "es": {
-      "title": "Block Four: Bloques, 2048 y ordenar colores | Exclusive LLM",
+      "title": "BlockFour: Bloques, 2048 y ordenar colores | Exclusive LLM",
       "description": "Puzzle de bloques, bloques que caen, 2048 y ordenar colores: 4 juegos de lógica en una app. Sin cuenta, sin conexión. Gratis en Google Play.",
       "tagline": "Cuatro juegos de puzzle, una sola app.",
-      "intro": "Block Four reúne cuatro juegos de puzzle clásicos en una sola app: Ruta de bloques, Bloques en caída, Fusionar números y Ordenar colores. Tengas dos minutos o toda la tarde, siempre hay un puzzle que encaja con tu estado de ánimo. Sin cuenta, sin registro, y todos los juegos se pueden jugar sin conexión.",
+      "intro": "BlockFour reúne cuatro juegos de puzzle clásicos en una sola app: Ruta de bloques, Bloques en caída, Fusionar números y Ordenar colores. Tengas dos minutos o toda la tarde, siempre hay un puzzle que encaja con tu estado de ánimo. Sin cuenta, sin registro, y todos los juegos se pueden jugar sin conexión.",
       "tags": [
         "Puzzle",
         "4 juegos en 1",
@@ -215,7 +215,7 @@
       ],
       "faq": [
         {
-          "q": "¿Block Four es gratis?",
+          "q": "¿BlockFour es gratis?",
           "a": "Sí, se descarga gratis en Google Play. La app contiene anuncios; ver un anuncio para continuar tras perder una partida en el modo Clásico es opcional."
         },
         {

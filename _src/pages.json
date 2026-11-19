@@ -14,7 +14,7 @@
       "eyebrow": "Oyun rehberi",
       "h1": "Blok bulmaca oyunları",
       "lead": "Hangi blok bulmacası sana göre? Üç oyunumuzu yan yana koyduk.",
-      "intro": "Blok bulmacada amaç basit: verilen parçaları tahtaya yerleştir, dolan satır ve sütunları temizle, yer açık kaldıkça devam et. Ama tahtanın boyutu, parça sayısı ve bonus kuralları oyunun hissini tamamen değiştirir. Aşağıda BlockNest, Woodora Classic ve Block Four'u karşılaştırdık; üçü de Google Play'de ücretsiz, internetsiz oynanır ve üyelik istemez.",
+      "intro": "Blok bulmacada amaç basit: verilen parçaları tahtaya yerleştir, dolan satır ve sütunları temizle, yer açık kaldıkça devam et. Ama tahtanın boyutu, parça sayısı ve bonus kuralları oyunun hissini tamamen değiştirir. Aşağıda BlockNest, Woodora Classic ve BlockFour'u karşılaştırdık; üçü de Google Play'de ücretsiz, internetsiz oynanır ve üyelik istemez.",
       "compare": {
         "title": "Karşılaştırma",
         "head": [
@@ -37,7 +37,7 @@
             "Klasik kurallarla planlama yapmayı sevenler"
           ],
           [
-            "Block Four",
+            "BlockFour",
             "8×8 + 3 oyun",
             "Blok Rota, Düşen Bloklar, 2048 ve Renk Sıralama tek uygulamada; Günlük Rota",
             "Çeşitlilik isteyenler"
@@ -75,7 +75,7 @@
         },
         {
           "q": "Yeni başlayan biri hangisiyle başlamalı?",
-          "a": "Daha geniş tahta hata payı bıraktığı için BlockNest iyi bir başlangıçtır. Daha klasik ve planlama isteyen bir deneyim için Woodora Classic'i, farklı bulmaca türlerini denemek için Block Four'u seç."
+          "a": "Daha geniş tahta hata payı bıraktığı için BlockNest iyi bir başlangıçtır. Daha klasik ve planlama isteyen bir deneyim için Woodora Classic'i, farklı bulmaca türlerini denemek için BlockFour'u seç."
         }
       ]
     },
@@ -86,7 +86,7 @@
       "eyebrow": "Game guide",
       "h1": "Block puzzle games",
       "lead": "Which block puzzle suits you? We put our three games side by side.",
-      "intro": "The goal of a block puzzle is simple: place the pieces you are given on the board, clear full rows and columns, and keep going while there is space. Board size, the number of pieces and the bonus rules change how a game feels, though. Below we compare BlockNest, Woodora Classic and Block Four. All three are free on Google Play, play offline and need no account.",
+      "intro": "The goal of a block puzzle is simple: place the pieces you are given on the board, clear full rows and columns, and keep going while there is space. Board size, the number of pieces and the bonus rules change how a game feels, though. Below we compare BlockNest, Woodora Classic and BlockFour. All three are free on Google Play, play offline and need no account.",
       "compare": {
         "title": "Comparison",
         "head": [
@@ -109,7 +109,7 @@
             "Players who love planning with classic rules"
           ],
           [
-            "Block Four",
+            "BlockFour",
             "8×8 + 3 games",
             "Block Route, Falling Blocks, 2048 and Color Sort in one app; Daily Route",
             "Players who want variety"
@@ -147,7 +147,7 @@
         },
         {
           "q": "Which one should a beginner start with?",
-          "a": "BlockNest is a good start because its larger board is more forgiving. Pick Woodora Classic for a classic experience that rewards planning, or Block Four to try different kinds of puzzles."
+          "a": "BlockNest is a good start because its larger board is more forgiving. Pick Woodora Classic for a classic experience that rewards planning, or BlockFour to try different kinds of puzzles."
         }
       ]
     },
@@ -158,7 +158,7 @@
       "eyebrow": "Guía de juegos",
       "h1": "Juegos de puzzle de bloques",
       "lead": "¿Qué puzzle de bloques va contigo? Comparamos nuestros tres juegos.",
-      "intro": "El objetivo de un puzzle de bloques es sencillo: coloca las piezas que recibes en el tablero, elimina filas y columnas completas y sigue jugando mientras quede espacio. Aun así, el tamaño del tablero, el número de piezas y las reglas de bonus cambian la sensación de cada juego. A continuación comparamos BlockNest, Woodora Classic y Block Four. Los tres son gratis en Google Play, funcionan sin conexión y no necesitan cuenta.",
+      "intro": "El objetivo de un puzzle de bloques es sencillo: coloca las piezas que recibes en el tablero, elimina filas y columnas completas y sigue jugando mientras quede espacio. Aun así, el tamaño del tablero, el número de piezas y las reglas de bonus cambian la sensación de cada juego. A continuación comparamos BlockNest, Woodora Classic y BlockFour. Los tres son gratis en Google Play, funcionan sin conexión y no necesitan cuenta.",
       "compare": {
         "title": "Comparativa",
         "head": [
@@ -181,7 +181,7 @@
             "Quienes disfrutan planificando con reglas clásicas"
           ],
           [
-            "Block Four",
+            "BlockFour",
             "8×8 + 3 juegos",
             "Ruta de bloques, Bloques en caída, 2048 y Ordenar colores en una app; Ruta diaria",
             "Quienes buscan variedad"
@@ -219,7 +219,7 @@
         },
         {
           "q": "¿Con cuál debería empezar un principiante?",
-          "a": "BlockNest es un buen comienzo porque su tablero más grande perdona más los errores. Elige Woodora Classic para una experiencia clásica que premia la planificación, o Block Four para probar distintos tipos de puzzles."
+          "a": "BlockNest es un buen comienzo porque su tablero más grande perdona más los errores. Elige Woodora Classic para una experiencia clásica que premia la planificación, o BlockFour para probar distintos tipos de puzzles."
         }
       ]
     }
@@ -303,7 +303,7 @@
       },
       {
         "file": "press/blockfour-icon-512.png",
-        "label": "Block Four icon",
+        "label": "BlockFour icon",
         "size": "512×512 PNG"
       },
       {
@@ -318,7 +318,7 @@
       },
       {
         "file": "blockfour-feature.jpg",
-        "label": "Block Four feature graphic",
+        "label": "BlockFour feature graphic",
         "size": "1024×500 JPG"
       },
       {
@@ -635,13 +635,13 @@
       "app": "block-four",
       "path": "block-four/guide/",
       "tr": {
-        "title": "Block Four İpuçları: Blok Rota, 2048 ve Renk Sıralama | Exclusive LLM",
-        "description": "Block Four'daki dört oyun için ipuçları: Blok Rota'da yüksek skor, Düşen Bloklar'da hız, 2048'e ulaşma ve Renk Sıralama seviyelerini geçme.",
+        "title": "BlockFour İpuçları: Blok Rota, 2048 ve Renk Sıralama | Exclusive LLM",
+        "description": "BlockFour'daki dört oyun için ipuçları: Blok Rota'da yüksek skor, Düşen Bloklar'da hız, 2048'e ulaşma ve Renk Sıralama seviyelerini geçme.",
         "crumb": "İpuçları",
-        "eyebrow": "Block Four rehberi",
-        "h1": "Block Four ipuçları: dört oyun için rehber",
+        "eyebrow": "BlockFour rehberi",
+        "h1": "BlockFour ipuçları: dört oyun için rehber",
         "lead": "Her oyunun kendi stratejisi var; işte en işe yarayanlar.",
-        "intro": "Block Four dört farklı bulmacayı tek uygulamada toplar: Blok Rota, Düşen Bloklar, Sayı Birleştirme (2048) ve Renk Sıralama. Her birinin kuralları farklı olduğu için en iyi taktikler de farklı. Bu rehberde her oyun için kısa ve uygulanabilir ipuçları bulacaksın.",
+        "intro": "BlockFour dört farklı bulmacayı tek uygulamada toplar: Blok Rota, Düşen Bloklar, Sayı Birleştirme (2048) ve Renk Sıralama. Her birinin kuralları farklı olduğu için en iyi taktikler de farklı. Bu rehberde her oyun için kısa ve uygulanabilir ipuçları bulacaksın.",
         "sections": [
           {
             "h": "Blok Rota (8×8)",
@@ -682,13 +682,13 @@
         ]
       },
       "en": {
-        "title": "Block Four Tips: Block Route, 2048 and Color Sort | Exclusive LLM",
-        "description": "Tips for all four games in Block Four: high scores in Block Route, speed in Falling Blocks, reaching 2048 and beating Color Sort levels.",
+        "title": "BlockFour Tips: Block Route, 2048 and Color Sort | Exclusive LLM",
+        "description": "Tips for all four games in BlockFour: high scores in Block Route, speed in Falling Blocks, reaching 2048 and beating Color Sort levels.",
         "crumb": "Tips",
-        "eyebrow": "Block Four guide",
-        "h1": "Block Four tips: a guide to all four games",
+        "eyebrow": "BlockFour guide",
+        "h1": "BlockFour tips: a guide to all four games",
         "lead": "Every game has its own strategy; here is what works best.",
-        "intro": "Block Four brings four different puzzles together in one app: Block Route, Falling Blocks, Number Merge (2048) and Color Sort. Their rules differ, so the best tactics differ too. In this guide you will find short, practical tips for each game.",
+        "intro": "BlockFour brings four different puzzles together in one app: Block Route, Falling Blocks, Number Merge (2048) and Color Sort. Their rules differ, so the best tactics differ too. In this guide you will find short, practical tips for each game.",
         "sections": [
           {
             "h": "Block Route (8×8)",
@@ -729,13 +729,13 @@
         ]
       },
       "es": {
-        "title": "Consejos de Block Four: bloques, 2048 y colores | Exclusive LLM",
-        "description": "Consejos para los cuatro juegos de Block Four: récords en Ruta de bloques, velocidad en Bloques en caída, llegar a 2048 y superar Ordenar colores.",
+        "title": "Consejos de BlockFour: bloques, 2048 y colores | Exclusive LLM",
+        "description": "Consejos para los cuatro juegos de BlockFour: récords en Ruta de bloques, velocidad en Bloques en caída, llegar a 2048 y superar Ordenar colores.",
         "crumb": "Consejos",
-        "eyebrow": "Guía de Block Four",
-        "h1": "Consejos de Block Four: guía de los cuatro juegos",
+        "eyebrow": "Guía de BlockFour",
+        "h1": "Consejos de BlockFour: guía de los cuatro juegos",
         "lead": "Cada juego tiene su propia estrategia; esto es lo que mejor funciona.",
-        "intro": "Block Four reúne cuatro puzzles distintos en una sola app: Ruta de bloques, Bloques en caída, Fusionar números (2048) y Ordenar colores. Sus reglas son diferentes, así que las mejores tácticas también lo son. En esta guía encontrarás consejos breves y prácticos para cada juego.",
+        "intro": "BlockFour reúne cuatro puzzles distintos en una sola app: Ruta de bloques, Bloques en caída, Fusionar números (2048) y Ordenar colores. Sus reglas son diferentes, así que las mejores tácticas también lo son. En esta guía encontrarás consejos breves y prácticos para cada juego.",
         "sections": [
           {
             "h": "Ruta de bloques (8×8)",

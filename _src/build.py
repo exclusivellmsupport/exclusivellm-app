@@ -24,18 +24,100 @@ LANGS = ("tr", "en", "es")
 BASE = {"tr": "/", "en": "/en/", "es": "/es/"}
 OG_LOCALE = {"tr": "tr_TR", "en": "en_US", "es": "es_ES"}
 
+# --- Dil başına öne çıkan grafik (19.11.2026) ----------------------------------------------------------
+# img/<ad>-feature.jpg temel dosyadır; img/<ad>-feature-<dil>.jpg varsa o dilin sayfalarında (görsel, og:image,
+# JSON-LD, games.json) o kullanılır. Yazılı grafik her dilde o dilin yazısıyla görünmeli: denetim aşağıda.
+FEATURE_BASE_LANG = {"woodoraclassic-feature.jpg": "tr", "blockfour-feature.jpg": "tr"}  # belirtilmeyen: "en"
+FEATURE_ONE_FOR_ALL = {  # yalnızca logo/marka yazısı olan, her dilde aynı kalabilen grafikler
+    "blocknest-feature.jpg": "yalnızca marka adı + 'Wood Block Puzzle' alt başlığı (Play'de de tüm dillerde aynı)",
+    "toppleisles-feature.jpg": "yalnızca oyun logosu (TOPPLE ISLES · CANNON SMASH)",
+}
+FEATURE_MISSING_OK = {  # (grafik, dil): uygulamada o dil yok, İngilizcesi gösterilir
+    ("wordsky-feature.jpg", "es"): "Wordsky yalnızca TR/EN",
+    ("quiz-feature.jpg", "es"): "Exclusive Quiz yalnızca TR/EN",
+}
+_FEATURE_RE = re.compile(r"([\w-]+-feature)\.jpg")
+
+
+def feature_for(name: str, lang: str) -> str:
+    stem = name.rsplit(".", 1)[0]
+    cand = f"{stem}-{lang}.jpg"
+    return cand if (ROOT / "img" / cand).exists() else name
+
+
+def localize_features(text: str, lang: str) -> str:
+    return _FEATURE_RE.sub(lambda m: feature_for(m.group(0), lang), text)
+
+
+def check_features() -> list[str]:
+    """Sitede kullanılan her yazılı grafiğin her dilde doğru yazılı sürümü var mı?"""
+    used = set(_FEATURE_RE.findall((SRC / "index.html").read_text(encoding="utf-8")))
+    used |= {a["feature"].rsplit(".", 1)[0] for a in json.loads((SRC / "apps.json").read_text(encoding="utf-8"))}
+    errors = []
+    for stem in sorted(used):
+        base = stem + ".jpg"
+        if base in FEATURE_ONE_FOR_ALL:
+            continue
+        for lang in LANGS:
+            if (ROOT / "img" / f"{stem}-{lang}.jpg").exists() or FEATURE_BASE_LANG.get(base, "en") == lang \
+                    or (base, lang) in FEATURE_MISSING_OK:
+                continue
+            errors.append(f"{base}: '{lang}' sayfası için img/{stem}-{lang}.jpg yok (temel dosya '{FEATURE_BASE_LANG.get(base, 'en')}' yazılı)")
+    return errors
+
+
+# --- Uygulama adı = canlı Play adı (19.11.2026) -----------------------------------------------------------
+# apps.json'daki "name", Play başlığının ":"'dan önceki kısmıyla harfi harfine aynı olmalı (ör. BlockFour tek kelime,
+# iki kelime değil). Ağ yoksa uyarı verilir, site yine üretilir; uyuşmazlık varsa site üretilmez.
+def play_titles(pkg: str) -> dict[str, str]:
+    import urllib.request
+    out = {}
+    for hl in LANGS:
+        req = urllib.request.Request(f"https://play.google.com/store/apps/details?id={pkg}&hl={hl}&gl=US",
+                                     headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            m = re.search(r'<title id="main-title">([^<]*)', r.read().decode("utf-8", "replace"))
+        if m:
+            out[hl] = html.unescape(m.group(1)).rsplit(" - ", 1)[0].strip()
+    return out
+
+
+def check_names(apps: list[dict]) -> list[str]:
+    errors = []
+    texts = "\n".join((SRC / f).read_text(encoding="utf-8") for f in ("apps.json", "pages.json", "index.html", "build.py", "i18n_es.json")
+                      if (SRC / f).exists())
+    texts += "\n".join(f.read_text(encoding="utf-8") for f in ROOT.glob("*-privacy.html"))  # elle yazılan gizlilik sayfaları
+    for a in apps:
+        name = a["name"]
+        try:
+            titles = play_titles(a["package"])
+        except Exception as e:  # ağ yok
+            print(f"UYARI: {name} için Play başlığı okunamadı ({e}); ad denetimi atlandı")
+            titles = {}
+        for hl, t in titles.items():
+            if t.split(":")[0].strip() != name:
+                errors.append(f"{a['slug']}: apps.json adı '{name}', Play ({hl}) başlığı '{t}'")
+        # aynı adın boşluklu/boşluksuz başka yazımı (ör. iki kelimeli yazım)
+        squashed = name.replace(" ", "")
+        pat = re.compile(r"\b" + r"\s*".join(map(re.escape, squashed)) + r"\b")
+        wrong = sorted({m.group(0) for m in pat.finditer(texts) if m.group(0) != name})
+        if wrong:
+            errors.append(f"{a['slug']}: kaynaklarda yanlış yazım {wrong} (doğrusu '{name}')")
+    return errors
+
+
 HOME = {
     "tr": {
         "title": "Exclusive LLM Oyunları: Rahatlatıcı Mobil Oyunlar ve Uygulamalar",
-        "description": "Exclusive LLM, Android için sakin ve kullanıcı dostu oyunlar ve uygulamalar geliştirir: ölçülü reklam, sade tasarım, gizliliğe saygı. Block Four, BlockNest ve Woodora Classic Google Play'de ücretsiz.",
+        "description": "Exclusive LLM, Android için sakin ve kullanıcı dostu oyunlar ve uygulamalar geliştirir: ölçülü reklam, sade tasarım, gizliliğe saygı. BlockFour, BlockNest ve Woodora Classic Google Play'de ücretsiz.",
     },
     "en": {
         "title": "Exclusive LLM Games: Relaxing Mobile Games & Apps",
-        "description": "Exclusive LLM builds calm, user-friendly Android games and apps with measured ads, clean design and respect for your privacy. Block Four, BlockNest and Woodora Classic are free on Google Play.",
+        "description": "Exclusive LLM builds calm, user-friendly Android games and apps with measured ads, clean design and respect for your privacy. BlockFour, BlockNest and Woodora Classic are free on Google Play.",
     },
     "es": {
         "title": "Juegos de Exclusive LLM: juegos y apps móviles relajantes",
-        "description": "Exclusive LLM crea juegos y apps para Android tranquilos y fáciles de usar: anuncios moderados, diseño limpio y respeto por tu privacidad. Block Four, BlockNest y Woodora Classic, gratis en Google Play.",
+        "description": "Exclusive LLM crea juegos y apps para Android tranquilos y fáciles de usar: anuncios moderados, diseño limpio y respeto por tu privacidad. BlockFour, BlockNest y Woodora Classic, gratis en Google Play.",
     },
 }
 UI = {
@@ -123,6 +205,12 @@ def set_lang_switch(soup: BeautifulSoup, lang: str, path: str) -> None:
 
 
 def set_head(soup: BeautifulSoup, lang: str, path: str, title: str, desc: str, image: str, ld: list[dict]) -> None:
+    image = feature_for(image, lang)
+    # sayfadaki öne çıkan grafikler o dilin sürümüne (img src, style="--img:url(...)")
+    for el in soup.select("img[src*='-feature'], [style*='-feature']"):
+        for attr in ("src", "style"):
+            if el.get(attr):
+                el[attr] = localize_features(el[attr], lang)
     head = soup.head
     keep_tags = []
     for el in list(head.children):
@@ -171,7 +259,7 @@ def set_head(soup: BeautifulSoup, lang: str, path: str, title: str, desc: str, i
         head.append("\n  ")
     for obj in ld:
         s = soup.new_tag("script", type="application/ld+json")
-        s.string = json.dumps(obj, ensure_ascii=False)
+        s.string = localize_features(json.dumps(obj, ensure_ascii=False), lang)
         head.append(s)
         head.append("\n")
 
@@ -504,6 +592,7 @@ def games_json(apps: list[dict]) -> None:
         {"slug": a["slug"], "name": a["name"], "package": a["package"], "icon": f"{DOMAIN}/img/{a['icon']}",
          "icon512": f"{DOMAIN}/img/press/{a['icon'].rsplit('.', 1)[0]}-icon-512.png" if (ROOT / "img" / "press" / f"{a['icon'].rsplit('.', 1)[0]}-icon-512.png").exists() else f"{DOMAIN}/img/{a['icon']}",
          "feature": f"{DOMAIN}/img/{a['feature']}",
+         "features": {l: f"{DOMAIN}/img/{feature_for(a['feature'], l)}" for l in LANGS},
          "tagline": {l: a[l]["tagline"] for l in LANGS if l in a},
          "page": {l: DOMAIN + BASE[l] + a["slug"] + "/" for l in LANGS}} for a in apps]}
     (ROOT / "games.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
@@ -512,6 +601,9 @@ def games_json(apps: list[dict]) -> None:
 def build() -> list[str]:
     apps = json.loads((SRC / "apps.json").read_text(encoding="utf-8"))
     pages = json.loads((SRC / "pages.json").read_text(encoding="utf-8"))
+    errors = check_features() + check_names(apps)
+    if errors:
+        raise SystemExit("SİTE ÜRETİLMEDİ — düzeltilmesi gerekenler:\n  - " + "\n  - ".join(errors))
     # Bir dilin metni yoksa İngilizcesi kullanılır (yeni oyun eklerken "es" bloğunu unutma)
     for obj in apps + [pages["hub"], pages["press"]] + pages["guides"]:
         for l in LANGS:
