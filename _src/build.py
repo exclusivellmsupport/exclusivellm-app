@@ -9,6 +9,7 @@ Kullanım:  python _src/build.py
 from __future__ import annotations
 
 import copy
+import hashlib
 import html
 import json
 import re
@@ -19,6 +20,23 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "_src"
+
+# --- Kararlı tarihler (20.11.2026) ------------------------------------------------------------------
+# sitemap <lastmod>, rehberlerin JSON-LD dateModified'i ve games.json "updated" yalnızca sayfanın içeriği
+# (tarihler çıkarılarak) gerçekten değişince bugüne ilerler; aksi hâlde _src/lastmod.json'daki tarih kalır.
+LASTMOD_FILE = SRC / "lastmod.json"
+_DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
+_lastmod: dict = json.loads(LASTMOD_FILE.read_text(encoding="utf-8")) if LASTMOD_FILE.exists() else {}
+
+
+def stable_date(key: str, text: str) -> str:
+    h = hashlib.sha1(_DATE_RE.sub("", text).encode("utf-8")).hexdigest()
+    rec = _lastmod.get(key)
+    if rec and rec.get("hash") == h:
+        return rec["date"]
+    d = date.today().isoformat()
+    _lastmod[key] = {"hash": h, "date": d}
+    return d
 DOMAIN = "https://exclusivellm.app"
 LANGS = ("tr", "en", "es")
 BASE = {"tr": "/", "en": "/en/", "es": "/es/"}
@@ -108,15 +126,15 @@ def check_names(apps: list[dict]) -> list[str]:
 HOME = {
     "tr": {
         "title": "Exclusive LLM Oyunları: Rahatlatıcı Mobil Oyunlar ve Uygulamalar",
-        "description": "Exclusive LLM, Android için sakin ve kullanıcı dostu oyunlar ve uygulamalar geliştirir: ölçülü reklam, sade tasarım, gizliliğe saygı. BlockFour, BlockNest ve Woodora Classic Google Play'de ücretsiz.",
+        "description": "Exclusive LLM, Android için sakin oyunlar ve uygulamalar yapar: ölçülü reklam, sade tasarım. BlockFour, BlockNest ve Woodora Classic Google Play'de ücretsiz.",
     },
     "en": {
         "title": "Exclusive LLM Games: Relaxing Mobile Games & Apps",
-        "description": "Exclusive LLM builds calm, user-friendly Android games and apps with measured ads, clean design and respect for your privacy. BlockFour, BlockNest and Woodora Classic are free on Google Play.",
+        "description": "Exclusive LLM makes calm Android games and apps with measured ads and clean design. BlockFour, BlockNest and Woodora Classic are free on Google Play.",
     },
     "es": {
         "title": "Juegos de Exclusive LLM: juegos y apps móviles relajantes",
-        "description": "Exclusive LLM crea juegos y apps para Android tranquilos y fáciles de usar: anuncios moderados, diseño limpio y respeto por tu privacidad. BlockFour, BlockNest y Woodora Classic, gratis en Google Play.",
+        "description": "Exclusive LLM crea juegos y apps tranquilos para Android, con anuncios moderados y diseño limpio. BlockFour, BlockNest y Woodora Classic, gratis en Google Play.",
     },
 }
 UI = {
@@ -311,6 +329,8 @@ def write(path: Path, soup: BeautifulSoup) -> None:
         add_beacon(soup)
     path.parent.mkdir(parents=True, exist_ok=True)
     text = "<!doctype html>\n" + str(soup).replace("<!DOCTYPE html>", "").replace("<!doctype html>", "").lstrip()
+    d = stable_date(path.relative_to(ROOT).as_posix(), text)
+    text = text.replace(f'"dateModified": "{date.today().isoformat()}"', f'"dateModified": "{d}"')
     path.write_text(text, encoding="utf-8")
 
 
@@ -594,6 +614,7 @@ def games_json(apps: list[dict]) -> None:
          "features": {l: f"{DOMAIN}/img/{feature_for(a['feature'], l)}" for l in LANGS},
          "tagline": {l: a[l]["tagline"] for l in LANGS if l in a},
          "page": {l: DOMAIN + BASE[l] + a["slug"] + "/" for l in LANGS}} for a in apps]}
+    data["updated"] = stable_date("games.json", json.dumps(data, ensure_ascii=False))
     (ROOT / "games.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
@@ -650,12 +671,15 @@ def build() -> list[str]:
             alts = "".join(
                 f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="{DOMAIN}{BASE[l]}{key.lstrip("/")}"/>' for l in LANGS)
             alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{DOMAIN}/en/{key.lstrip("/")}"/>'
-            items.append(f"  <url>\n    <loc>{DOMAIN}{u}</loc>\n    <lastmod>{today}</lastmod>{alts}\n  </url>")
+            page = (u.lstrip("/") + "index.html")
+            lm = _lastmod.get(page, {}).get("date", today)
+            items.append(f"  <url>\n    <loc>{DOMAIN}{u}</loc>\n    <lastmod>{lm}</lastmod>{alts}\n  </url>")
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
         'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(items) + "\n</urlset>\n", encoding="utf-8")
     (ROOT / "robots.txt").write_text(
-        f"User-agent: *\nAllow: /\nDisallow: /_src/\n\nSitemap: {DOMAIN}/sitemap.xml\n", encoding="utf-8")
+        f"User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n", encoding="utf-8")  # _src is not published (_config.yml)
+    LASTMOD_FILE.write_text(json.dumps(_lastmod, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     return urls
 
 

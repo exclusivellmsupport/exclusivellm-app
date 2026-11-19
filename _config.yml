@@ -1,0 +1,6 @@
+# GitHub Pages runs Jekyll only to copy this already-built site (no page has front matter, so nothing is
+# templated). Folders starting with "_" (the _src generator) are skipped by Jekyll itself; these stay off the site too.
+# Added 20.11.2026 instead of .nojekyll so /_src/ and README.md are no longer public.
+exclude:
+  - README.md
+  - .gitignore

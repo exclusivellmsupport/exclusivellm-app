@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /_src/
 
 Sitemap: https://exclusivellm.app/sitemap.xml
