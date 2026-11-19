@@ -29,7 +29,6 @@ OG_LOCALE = {"tr": "tr_TR", "en": "en_US", "es": "es_ES"}
 # JSON-LD, games.json) o kullanılır. Yazılı grafik her dilde o dilin yazısıyla görünmeli: denetim aşağıda.
 FEATURE_BASE_LANG = {"woodoraclassic-feature.jpg": "tr", "blockfour-feature.jpg": "tr"}  # belirtilmeyen: "en"
 FEATURE_ONE_FOR_ALL = {  # yalnızca logo/marka yazısı olan, her dilde aynı kalabilen grafikler
-    "blocknest-feature.jpg": "yalnızca marka adı + 'Wood Block Puzzle' alt başlığı (Play'de de tüm dillerde aynı)",
     "toppleisles-feature.jpg": "yalnızca oyun logosu (TOPPLE ISLES · CANNON SMASH)",
 }
 FEATURE_MISSING_OK = {  # (grafik, dil): uygulamada o dil yok, İngilizcesi gösterilir
