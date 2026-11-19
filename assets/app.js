@@ -185,8 +185,9 @@
      Stylised, original mini-scenes inspired by our apps (not screenshots). */
   const screen = $(".phone .screen");
   if (!screen) return;
-  const EN = document.body.dataset.lang === "en";
-  const tx = (tr, en) => (EN ? en : tr);
+  const LANG = document.body.dataset.lang || "tr", EN = LANG === "en", ES = LANG === "es";
+  const LI = ES ? 2 : EN ? 1 : 0; // tr / en / es; a missing es entry falls back to en
+  const tx = (tr, en, es) => (ES ? es ?? en : EN ? en : tr);
   const pr = () => Math.min(devicePixelRatio || 1, 2);
   const clamp = (v, a = 0, b = 1) => (v < a ? a : v > b ? b : v);
   const eo = (p) => 1 - Math.pow(1 - p, 3);
@@ -198,7 +199,7 @@
     if (w && h && (c.width !== w || c.height !== h)) { c.width = w; c.height = h; }
     return d;
   }
-  const fmt = (n) => (n >= 1e6 ? (n / 1e6).toFixed(2) + "M" : n >= 1e4 ? (n / 1e3).toFixed(1) + "K" : Math.round(n).toLocaleString(EN ? "en" : "tr"));
+  const fmt = (n) => (n >= 1e6 ? (n / 1e6).toFixed(2) + "M" : n >= 1e4 ? (n / 1e3).toFixed(1) + "K" : Math.round(n).toLocaleString(LANG));
 
   /* ===== block puzzle engine (gem + wood skins) ===== */
   const SHAPES = [
@@ -506,15 +507,15 @@
   /* ===== Exclusive Quiz ===== */
   function quizGame(root) {
     const Q = [
-      [["Coğrafya", "Geography"], ["Dünyanın en büyük okyanusu hangisi?", "Which is the largest ocean on Earth?"], [["Atlas", "Atlantic"], ["Hint", "Indian"], ["Pasifik", "Pacific"], ["Arktik", "Arctic"]], 2],
-      [["Genel kültür", "General knowledge"], ["Bir haftada kaç saat vardır?", "How many hours are there in a week?"], ["144", "168", "172", "186"], 1],
-      [["Uzay", "Space"], ["Hangisi “Kızıl Gezegen” olarak bilinir?", "Which one is known as the “Red Planet”?"], [["Venüs", "Venus"], "Mars", ["Jüpiter", "Jupiter"], ["Merkür", "Mercury"]], 1],
-      [["Spor", "Sports"], ["Satrançta her oyuncu kaç piyonla başlar?", "How many pawns does each chess player start with?"], ["6", "8", "10", "12"], 1],
-      [["Bilim", "Science"], ["Su, deniz seviyesinde kaç °C'de kaynar?", "At sea level, water boils at how many °C?"], ["90", "100", "110", "120"], 1],
-      [["Müzik", "Music"], ["Bir oktavda kaç beyaz piyano tuşu vardır?", "How many white piano keys are in one octave?"], ["5", "7", "8", "12"], 1],
-      [["Tarih", "History"], ["Hangisi bir antik dünya harikasıdır?", "Which one is an ancient wonder of the world?"], [["Eyfel Kulesi", "Eiffel Tower"], ["Büyük Piramit", "Great Pyramid"], ["Big Ben", "Big Ben"], ["Kremlin", "Kremlin"]], 1],
+      [["Coğrafya", "Geography", "Geografía"], ["Dünyanın en büyük okyanusu hangisi?", "Which is the largest ocean on Earth?", "¿Cuál es el océano más grande de la Tierra?"], [["Atlas", "Atlantic", "Atlántico"], ["Hint", "Indian", "Índico"], ["Pasifik", "Pacific", "Pacífico"], ["Arktik", "Arctic", "Ártico"]], 2],
+      [["Genel kültür", "General knowledge", "Cultura general"], ["Bir haftada kaç saat vardır?", "How many hours are there in a week?", "¿Cuántas horas tiene una semana?"], ["144", "168", "172", "186"], 1],
+      [["Uzay", "Space", "Espacio"], ["Hangisi “Kızıl Gezegen” olarak bilinir?", "Which one is known as the “Red Planet”?", "¿Cuál se conoce como el «Planeta Rojo»?"], [["Venüs", "Venus", "Venus"], ["Mars", "Mars", "Marte"], ["Jüpiter", "Jupiter", "Júpiter"], ["Merkür", "Mercury", "Mercurio"]], 1],
+      [["Spor", "Sports", "Deportes"], ["Satrançta her oyuncu kaç piyonla başlar?", "How many pawns does each chess player start with?", "¿Con cuántos peones empieza cada jugador de ajedrez?"], ["6", "8", "10", "12"], 1],
+      [["Bilim", "Science", "Ciencia"], ["Su, deniz seviyesinde kaç °C'de kaynar?", "At sea level, water boils at how many °C?", "Al nivel del mar, ¿a cuántos °C hierve el agua?"], ["90", "100", "110", "120"], 1],
+      [["Müzik", "Music", "Música"], ["Bir oktavda kaç beyaz piyano tuşu vardır?", "How many white piano keys are in one octave?", "¿Cuántas teclas blancas de piano hay en una octava?"], ["5", "7", "8", "12"], 1],
+      [["Tarih", "History", "Historia"], ["Hangisi bir antik dünya harikasıdır?", "Which one is an ancient wonder of the world?", "¿Cuál es una maravilla del mundo antiguo?"], [["Eyfel Kulesi", "Eiffel Tower", "Torre Eiffel"], ["Büyük Piramit", "Great Pyramid", "Gran Pirámide"], ["Big Ben", "Big Ben"], ["Kremlin", "Kremlin"]], 1],
     ];
-    const L2 = (v) => (Array.isArray(v) ? v[EN ? 1 : 0] : v);
+    const L2 = (v) => (Array.isArray(v) ? v[LI] ?? v[1] : v);
     const cat = $(".q-cat", root), qt = $(".q-text", root), opts = $$(".q-opt", root), bar = $(".q-bar i", root), scEl = $(".sc", root), stEl = $(".st", root);
     let qi = rnd(Q.length), t = 0, stage = -1, score = 1200 + rnd(8) * 100, streak = 2, asked = 0, pick = 0;
     const CYC = 5000;
@@ -546,7 +547,7 @@
     return { enter() { t = 0; stage = -1; qi = (qi + 1) % Q.length; }, update };
   }
 
-  /* ===== Block Four: number merge ===== */
+  /* ===== BlockFour: number merge ===== */
   function mergeGame(root) {
     const box = $(".mgrid", root), scEl = $(".sc", root), bsEl = $(".bs", root);
     for (let i = 0; i < 16; i++) box.appendChild(document.createElement("span"));
@@ -943,7 +944,7 @@
       if (boss.st >= 1 && !(boss.st === 2 && t - boss.dead > 600)) {
         const by2 = 136 * d, bw = W * 0.74, bx = (W - bw) / 2;
         c.font = `800 ${10.5 * d}px Sora, sans-serif`; c.textBaseline = "middle";
-        c.fillStyle = "#ffe2b8"; c.textAlign = "left"; c.fillText(tx("DEV", "GIANT"), bx + 16 * d, by2 - 9 * d);
+        c.fillStyle = "#ffe2b8"; c.textAlign = "left"; c.fillText(tx("DEV", "GIANT", "GIGANTE"), bx + 16 * d, by2 - 9 * d);
         c.textAlign = "right"; c.fillText(Math.ceil(boss.hp * boss.max), bx + bw, by2 - 9 * d);
         icon(3, bx + 6 * d, by2 - 9 * d, 10 * d);
         c.fillStyle = "rgba(10,8,30,.6)"; rr(c, bx, by2, bw, 7 * d, 3.5 * d); c.fill();
@@ -963,8 +964,8 @@
       c.fillStyle = rg; rr(c, -bw / 2, -bh2 / 2, bw, bh2, 8 * d); c.fill();
       c.strokeStyle = "#ffd76a"; c.lineWidth = 2.5 * d; c.stroke();
       c.font = `800 ${23 * d}px Sora, sans-serif`; c.textAlign = "center"; c.textBaseline = "middle";
-      c.lineWidth = 5 * d; c.strokeStyle = "#7e1320"; c.strokeText(tx("ZAFER!", "VICTORY!"), 0, 1 * d);
-      c.fillStyle = "#fff6d8"; c.fillText(tx("ZAFER!", "VICTORY!"), 0, 1 * d);
+      c.lineWidth = 5 * d; c.strokeStyle = "#7e1320"; c.strokeText(tx("ZAFER!", "VICTORY!", "¡VICTORIA!"), 0, 1 * d);
+      c.fillStyle = "#fff6d8"; c.fillText(tx("ZAFER!", "VICTORY!", "¡VICTORIA!"), 0, 1 * d);
       for (let k = 0; k < 3; k++) {
         const sq = clamp((e - 500 - k * 140) / 260); if (sq <= 0) continue;
         const ss = (k === 1 ? 17 : 13) * d * (0.3 + 0.7 * (1 + 2.6 * Math.pow(sq - 1, 3) + 1.6 * Math.pow(sq - 1, 2)));
@@ -1064,7 +1065,7 @@
     const pc = $(".st-prev canvas", root), p = pc.getContext("2d"), tl = $(".st-tl", root), q = tl.getContext("2d");
     const fxEl = $(".st-fx", root), tmEl = $(".st-time", root), tools = $$(".st-tool", root);
     const PH = 3333, CLIP = 12;
-    const FX = [[tx("Kes · 00:03.4", "Trim · 00:03.4"), 0], [tx("Ses efekti: Robot", "Voice effect: Robot"), 1], [tx("Arka planı sil", "Remove background"), 3]];
+    const FX = [[tx("Kes · 00:03.4", "Trim · 00:03.4", "Recortar · 00:03.4"), 0], [tx("Ses efekti: Robot", "Voice effect: Robot", "Efecto de voz: Robot"), 1], [tx("Arka planı sil", "Remove background", "Quitar fondo"), 3]];
     const wave = Array.from({ length: 90 }, (_, i) => 0.25 + 0.75 * Math.abs(Math.sin(i * 0.7) * Math.cos(i * 0.23) + 0.3 * Math.sin(i * 2.1)));
     let t = 0, ph = -1;
     function setPhase(k) { ph = k; fxEl.textContent = FX[k][0]; tools.forEach((el, i) => el.classList.toggle("on", i === FX[k][1])); fxEl.animate([{ opacity: 0, transform: "translateY(-4px)" }, { opacity: 1, transform: "none" }], { duration: 350 }); }
@@ -1136,14 +1137,14 @@
 
   /* ===== scene rotation ===== */
   const META = {
-    gem: ["Block Four", "blockfour", ["Blok bulmaca", "Block puzzle"], 1],
-    neon: ["Neon Eco-Grid", "neonecogrid", ["Birleştir ve boşta", "Merge & idle"], 0],
-    bn: ["BlockNest", "blocknest", ["Ahşap blok bulmaca", "Wood block puzzle"], 1],
-    quiz: ["Exclusive Quiz", "quiz", ["Bilgi yarışması", "Trivia"], 0],
-    merge: ["Block Four", "blockfour", ["Sayı birleştirme", "Number merge"], 1],
-    army: ["Legion Charge", "legioncharge", ["Ordu koşusu", "Army run"], 0],
-    wd: ["Woodora Classic", "woodoraclassic", ["Klasik ahşap bulmaca", "Classic wood puzzle"], 1],
-    studio: ["ExStudio", "exstudio", ["Video, ses ve fotoğraf", "Video, audio & photo"], 0],
+    gem: ["BlockFour", "blockfour", ["Blok bulmaca", "Block puzzle", "Puzle de bloques"], 1],
+    neon: ["Neon Eco-Grid", "neonecogrid", ["Birleştir ve boşta", "Merge & idle", "Fusión e idle"], 0],
+    bn: ["BlockNest", "blocknest", ["Ahşap blok bulmaca", "Wood block puzzle", "Puzle de bloques de madera"], 1],
+    quiz: ["Exclusive Quiz", "quiz", ["Bilgi yarışması", "Trivia", "Trivia"], 0],
+    merge: ["BlockFour", "blockfour", ["Sayı birleştirme", "Number merge", "Fusión de números"], 1],
+    army: ["Legion Charge", "legioncharge", ["Ordu koşusu", "Army run", "Carrera de ejército"], 0],
+    wd: ["Woodora Classic", "woodoraclassic", ["Klasik ahşap bulmaca", "Classic wood puzzle", "Puzle clásico de madera"], 1],
+    studio: ["ExStudio", "exstudio", ["Video, ses ve fotoğraf", "Video, audio & photo", "Vídeo, audio y foto"], 0],
   };
   const MAKE = {
     gem: (el) => blockGame(el, GEM, 8), neon: neonGame, bn: (el) => blockGame(el, BN_WOOD, 8), quiz: quizGame,
@@ -1159,8 +1160,8 @@
     const [name, ic, genre, live] = META[scenes[cur].dataset.k];
     icon.src = imgBase + ic + ".png"; icon.alt = "";
     $(".now-name", card).textContent = name;
-    $(".now-genre", card).textContent = genre[EN ? 1 : 0];
-    const b = $(".now-badge", card); b.className = "now-badge " + (live ? "b-live" : "b-soon"); b.textContent = live ? "Google Play" : tx("Yolda", "On the way");
+    $(".now-genre", card).textContent = genre[LI] ?? genre[1];
+    const b = $(".now-badge", card); b.className = "now-badge " + (live ? "b-live" : "b-soon"); b.textContent = live ? "Google Play" : tx("Yolda", "On the way", "En camino");
     card.classList.remove("flip"); void card.offsetWidth; card.classList.add("flip");
     segs.forEach((s, i) => { s.classList.toggle("done", i < cur); s.style.removeProperty("--p"); });
   }
