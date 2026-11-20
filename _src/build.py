@@ -646,10 +646,87 @@ def games_json(apps: list[dict]) -> None:
     (ROOT / "games.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
+# --- Paylaşım başına kısa linkler: /go/<kod>/ (21.11.2026) ----------------------------------------
+# Amaç: sosyal medyadan siteye / Play'e kaç kişinin tıkladığını paylaşım başına ölçmek. Cloudflare Web Analytics
+# sorgu dizgesini (utm_…) kaydetmez, yalnızca yolu kaydeder; bu yüzden her paylaşımın kendi yolu var.
+# Sayfa açılır → Cloudflare sayar → hedefe yönlenir (Play hedefinde UTM'li link: Play Console edinme raporu da görür).
+# Kaynak _src/links.json: {"<kod>": {"package": "...", "platform": "youtube|x|instagram|tiktok",
+#                                     "hedef": "play|site", "dil": "tr|en", "not": "..."}}
+# Kod yayına girdikten sonra silinmez/değiştirilmez (eski paylaşımlardaki link kırılır); sayfa da silinmez.
+GO_PLATFORMS = {"youtube", "x", "instagram", "tiktok", "deneme"}
+GO_TEXT = {"tr": ("Google Play açılıyor…", "Site açılıyor…", "Açılmazsa dokun"),
+           "en": ("Opening Google Play…", "Opening the site…", "Tap if nothing happens")}
+
+
+def go_targets(apps: list[dict]) -> tuple[dict[str, dict], list[str]]:
+    path = SRC / "links.json"
+    links = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    by_pkg = {a["package"]: a for a in apps}
+    out: dict[str, dict] = {}
+    errors: list[str] = []
+    for code, l in links.items():
+        if code.startswith("_"):
+            continue  # açıklama satırları
+        if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", code) or len(code) > 48:
+            errors.append(f"links.json '{code}': kod yalnızca küçük harf, rakam ve tire olmalı (≤48)")
+            continue
+        plat, hedef, lang, pkg = l.get("platform"), l.get("hedef", "play"), l.get("dil", "tr"), l.get("package")
+        if plat not in GO_PLATFORMS or hedef not in ("play", "site") or lang not in GO_TEXT:
+            errors.append(f"links.json '{code}': platform/hedef/dil geçersiz")
+            continue
+        app = by_pkg.get(pkg)
+        if hedef == "play":
+            if not app:
+                errors.append(f"links.json '{code}': {pkg} üretimde değil (apps.json'da yok); kapalı testteki uygulamada hedef 'site' olmalı")
+                continue
+            target = (f"https://play.google.com/store/apps/details?id={pkg}"
+                      f"&utm_source={plat}&utm_medium=social&utm_campaign={code}")
+        else:
+            base = "/" if lang == "tr" else f"/{lang}/"
+            target = DOMAIN + base + (app["slug"] + "/" if app else "")
+        # Önizleme kartı (X/WhatsApp/Telegram linki açınca görünen): canlı Play adı + o dilin öne çıkan grafiği
+        title = app["name"] if app else "Exclusive LLM"
+        image = f"{DOMAIN}/img/{feature_for(app['feature'], lang)}" if app else f"{DOMAIN}/img/blockfour-feature.jpg"
+        desc = app[lang]["description"] if app and lang in app else ""
+        out[code] = {"target": target, "lang": lang, "hedef": hedef, "title": title, "image": image, "desc": desc}
+    return out, errors
+
+
+def write_go_pages(targets: dict[str, dict]) -> None:
+    for code, t in targets.items():
+        url = html.escape(t["target"], quote=True)
+        js = json.dumps(t["target"])
+        msg_play, msg_site, tap = GO_TEXT[t["lang"]]
+        msg = msg_play if t["hedef"] == "play" else msg_site
+        page = f"""<!doctype html>
+<html lang="{t['lang']}"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta http-equiv="refresh" content="3;url={url}">
+<title>{html.escape(t['title'])}</title>
+<meta property="og:title" content="{html.escape(t['title'], quote=True)}">
+<meta property="og:description" content="{html.escape(t['desc'], quote=True)}">
+<meta property="og:image" content="{html.escape(t['image'], quote=True)}">
+<meta name="twitter:card" content="summary_large_image">
+<style>html,body{{margin:0;height:100%;background:#050B16;color:#e8eefc;font:16px/1.5 system-ui,sans-serif}}
+main{{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;text-align:center;padding:0 16px}}
+a{{color:#7cc4ff}}</style></head>
+<body><main><p>{msg}</p><a href="{url}">{tap}</a></main>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{json.dumps({"token": CF_TOKEN})}'></script>
+<script>(function(){{var u={js},g=function(){{location.replace(u)}};addEventListener("load",function(){{setTimeout(g,400)}});setTimeout(g,2000)}})();</script>
+</body></html>
+"""
+        p = ROOT / "go" / code / "index.html"
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(page, encoding="utf-8")
+
+
 def build() -> list[str]:
     apps = json.loads((SRC / "apps.json").read_text(encoding="utf-8"))
     pages = json.loads((SRC / "pages.json").read_text(encoding="utf-8"))
-    errors = check_features() + check_names(apps)
+    go, go_errors = go_targets(apps)
+    errors = check_features() + check_names(apps) + go_errors
     if errors:
         raise SystemExit("SİTE ÜRETİLMEDİ — düzeltilmesi gerekenler:\n  - " + "\n  - ".join(errors))
     # Bir dilin metni yoksa İngilizcesi kullanılır (yeni oyun eklerken "es" bloğunu unutma)
@@ -691,6 +768,7 @@ def build() -> list[str]:
             urls.append(BASE[lang] + app["slug"] + "/")
         urls += build_content_pages(apps, pages, lang, out_dir)
     games_json(apps)
+    write_go_pages(go)  # sitemap'e girmez; noindex (önizleme kartı için tarayıcı botlarına açık)
     # sitemap + robots
     today = date.today().isoformat()
     groups: dict[str, list[str]] = {}

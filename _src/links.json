@@ -1,0 +1,19 @@
+{
+ "_aciklama": "Paylaşım başına kısa linkler: exclusivellm.app/go/<kod>/ (build.py go_targets). Kod biçimi <platform>-<uygulama>[-<AAGG>][-en]: yt / x / ig / tt. Platform: youtube|x|instagram|tiktok. hedef: play (yalnız üretimdeki uygulama, apps.json) | site. dil: tr|en. Yayına giren kod SİLİNMEZ, DEĞİŞTİRİLMEZ. Yeni paylaşım = yeni kod + panel kaydında link_code; sonra python _src/build.py ve site deposuna gönder.",
+ "deneme": {"package": null, "platform": "deneme", "hedef": "site", "dil": "tr", "not": "ölçüm denemesi (21.11.2026); raporlarda sayılmaz"},
+ "yt-blocknest": {"package": "com.exclusivellm.blocknest", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel (uzun video açıklaması / sabit yorum)"},
+ "yt-woodoraclassic": {"package": "com.exclusivellm.woodoraclassic", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel"},
+ "yt-blockfour": {"package": "com.firat.blokrota", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel"},
+ "yt-blocknest-en": {"package": "com.exclusivellm.blocknest", "platform": "youtube", "hedef": "play", "dil": "en", "not": "YouTube genel, EN video"},
+ "yt-woodoraclassic-en": {"package": "com.exclusivellm.woodoraclassic", "platform": "youtube", "hedef": "play", "dil": "en", "not": "YouTube genel, EN video"},
+ "yt-blockfour-en": {"package": "com.firat.blokrota", "platform": "youtube", "hedef": "play", "dil": "en", "not": "YouTube genel, EN video"},
+ "x-blocknest": {"package": "com.exclusivellm.blocknest", "platform": "x", "hedef": "play", "dil": "tr", "not": "X genel (ilk yanıt)"},
+ "x-woodoraclassic": {"package": "com.exclusivellm.woodoraclassic", "platform": "x", "hedef": "play", "dil": "tr", "not": "X genel"},
+ "x-blockfour": {"package": "com.firat.blokrota", "platform": "x", "hedef": "play", "dil": "tr", "not": "X genel"},
+ "x-blocknest-en": {"package": "com.exclusivellm.blocknest", "platform": "x", "hedef": "play", "dil": "en", "not": "X genel, EN gönderi"},
+ "x-woodoraclassic-en": {"package": "com.exclusivellm.woodoraclassic", "platform": "x", "hedef": "play", "dil": "en", "not": "X genel, EN gönderi"},
+ "x-blockfour-en": {"package": "com.firat.blokrota", "platform": "x", "hedef": "play", "dil": "en", "not": "X genel, EN gönderi"},
+ "ig-blocknest": {"package": "com.exclusivellm.blocknest", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel)"},
+ "ig-woodoraclassic": {"package": "com.exclusivellm.woodoraclassic", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel)"},
+ "ig-blockfour": {"package": "com.firat.blokrota", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel)"}
+}
