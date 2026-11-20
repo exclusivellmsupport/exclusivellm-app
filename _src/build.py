@@ -650,6 +650,7 @@ def games_json(apps: list[dict]) -> None:
 # Amaç: sosyal medyadan siteye / Play'e kaç kişinin tıkladığını paylaşım başına ölçmek. Cloudflare Web Analytics
 # sorgu dizgesini (utm_…) kaydetmez, yalnızca yolu kaydeder; bu yüzden her paylaşımın kendi yolu var.
 # Sayfa açılır → Cloudflare sayar → hedefe yönlenir (Play hedefinde UTM'li link: Play Console edinme raporu da görür).
+# Yönlendirme, Cloudflare'in sayım isteği (XHR /cdn-cgi/rum, yüklemeden hemen sonra) bitince yapılır; engellenirse 2,5 sn.
 # Kaynak _src/links.json: {"<kod>": {"package": "...", "platform": "youtube|x|instagram|tiktok",
 #                                     "hedef": "play|site", "dil": "tr|en", "not": "..."}}
 # Kod yayına girdikten sonra silinmez/değiştirilmez (eski paylaşımlardaki link kırılır); sayfa da silinmez.
@@ -713,8 +714,10 @@ def write_go_pages(targets: dict[str, dict]) -> None:
 main{{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;text-align:center;padding:0 16px}}
 a{{color:#7cc4ff}}</style></head>
 <body><main><p>{msg}</p><a href="{url}">{tap}</a></main>
+<script>(function(){{var u={js},d=0,g=function(){{if(!d){{d=1;location.replace(u)}}}},X=XMLHttpRequest.prototype,o=X.open;
+X.open=function(m,a){{if(String(a).indexOf("/cdn-cgi/rum")>-1)this.addEventListener("loadend",function(){{setTimeout(g,50)}});return o.apply(this,arguments)}};
+setTimeout(g,2500)}})();</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{json.dumps({"token": CF_TOKEN})}'></script>
-<script>(function(){{var u={js},g=function(){{location.replace(u)}};addEventListener("load",function(){{setTimeout(g,400)}});setTimeout(g,2000)}})();</script>
 </body></html>
 """
         p = ROOT / "go" / code / "index.html"
