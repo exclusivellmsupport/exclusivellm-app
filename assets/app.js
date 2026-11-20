@@ -1197,3 +1197,18 @@
   }
   requestAnimationFrame(frame);
 })();
+
+/* 20.11.2026: Android ziyaretçiye oyun sayfasında "Google Play'de aç" alt bandı (oturum başına kapatılabilir) */
+(function () {
+  var bar = document.getElementById('getbar');
+  if (!bar || !/Android/i.test(navigator.userAgent || '')) return;
+  try { if (sessionStorage.getItem('getbar-closed') === '1') return; } catch (e) {}
+  bar.hidden = false;
+  document.body.classList.add('has-getbar');
+  var x = bar.querySelector('.getbar-x');
+  if (x) x.addEventListener('click', function () {
+    bar.hidden = true;
+    document.body.classList.remove('has-getbar');
+    try { sessionStorage.setItem('getbar-closed', '1'); } catch (e) {}
+  });
+})();

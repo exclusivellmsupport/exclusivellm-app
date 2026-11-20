@@ -1,780 +1,1007 @@
 {
-  "hub": {
-    "path": "block-puzzle-games/",
-    "image": "blocknest-feature.jpg",
-    "apps": [
-      "blocknest",
-      "woodora-classic",
-      "block-four"
+ "hub": {
+  "path": "block-puzzle-games/",
+  "image": "blocknest-feature.jpg",
+  "apps": [
+   "blocknest",
+   "woodora-classic",
+   "block-four"
+  ],
+  "tr": {
+   "title": "Blok Bulmaca Oyunları: Ücretsiz ve İnternetsiz | Exclusive LLM",
+   "description": "Ahşap blok bulmaca, 8×8 ve 10×10 tahtalar, 2048 ve renk sıralama. Exclusive LLM'in internetsiz, üyeliksiz blok bulmaca oyunlarını karşılaştır.",
+   "crumb": "Blok bulmaca oyunları",
+   "eyebrow": "Oyun rehberi",
+   "h1": "Blok bulmaca oyunları",
+   "lead": "Hangi blok bulmacası sana göre? Üç oyunumuzu yan yana koyduk.",
+   "intro": "Blok bulmacada amaç basit: verilen parçaları tahtaya yerleştir, dolan satır ve sütunları temizle, yer açık kaldıkça devam et. Ama tahtanın boyutu, parça sayısı ve bonus kuralları oyunun hissini tamamen değiştirir. Aşağıda BlockNest, Woodora Classic ve BlockFour'u karşılaştırdık; üçü de Google Play'de ücretsiz, internetsiz oynanır ve üyelik istemez.",
+   "compare": {
+    "title": "Karşılaştırma",
+    "head": [
+     "Oyun",
+     "Tahta",
+     "Öne çıkanlar",
+     "Kimler için?"
     ],
-    "tr": {
-      "title": "Blok Bulmaca Oyunları: Ücretsiz ve İnternetsiz | Exclusive LLM",
-      "description": "Ahşap blok bulmaca, 8×8 ve 10×10 tahtalar, 2048 ve renk sıralama. Exclusive LLM'in internetsiz, üyeliksiz blok bulmaca oyunlarını karşılaştır.",
-      "crumb": "Blok bulmaca oyunları",
-      "eyebrow": "Oyun rehberi",
-      "h1": "Blok bulmaca oyunları",
-      "lead": "Hangi blok bulmacası sana göre? Üç oyunumuzu yan yana koyduk.",
-      "intro": "Blok bulmacada amaç basit: verilen parçaları tahtaya yerleştir, dolan satır ve sütunları temizle, yer açık kaldıkça devam et. Ama tahtanın boyutu, parça sayısı ve bonus kuralları oyunun hissini tamamen değiştirir. Aşağıda BlockNest, Woodora Classic ve BlockFour'u karşılaştırdık; üçü de Google Play'de ücretsiz, internetsiz oynanır ve üyelik istemez.",
-      "compare": {
-        "title": "Karşılaştırma",
-        "head": [
-          "Oyun",
-          "Tahta",
-          "Öne çıkanlar",
-          "Kimler için?"
-        ],
-        "rows": [
-          [
-            "BlockNest",
-            "10×10",
-            "Art arda kombolar, 4 ahşap tema, 18 başarım rozeti",
-            "Geniş tahtada uzun ve sakin oyunlar sevenler"
-          ],
-          [
-            "Woodora Classic",
-            "8×8",
-            "Döndürülemeyen bloklar, temizleme önizlemesi, seri bonusları",
-            "Klasik kurallarla planlama yapmayı sevenler"
-          ],
-          [
-            "BlockFour",
-            "8×8 + 3 oyun",
-            "Blok Rota, Düşen Bloklar, 2048 ve Renk Sıralama tek uygulamada; Günlük Rota",
-            "Çeşitlilik isteyenler"
-          ]
-        ]
-      },
-      "sections": [
-        {
-          "h": "Blok bulmaca nasıl oynanır?",
-          "items": [
-            "Altta sana birkaç parça verilir; bunları sürükleyip tahtaya bırakırsın.",
-            "Bir satır ya da sütun tamamen dolunca temizlenir ve puan kazanırsın.",
-            "Aynı hamlede birden fazla çizgi temizlemek ekstra puan getirir.",
-            "Kalan parçalardan hiçbiri tahtaya sığmazsa oyun biter."
-          ]
-        },
-        {
-          "h": "Neden bu kadar rahatlatıcı?",
-          "items": [
-            "Süre baskısı yok: her hamleyi düşünerek yapabilirsin.",
-            "Kısa bir oyun birkaç dakika sürer; molalar için idealdir.",
-            "Dolan çizgilerin temizlenmesi küçük ama tatmin edici bir başarı hissi verir.",
-            "İnternet gerekmediği için yolda, uçakta, her yerde oynanır."
-          ]
-        }
-      ],
-      "faq": [
-        {
-          "q": "Bu oyunlar ücretsiz mi?",
-          "a": "Evet. Üçü de Google Play'den ücretsiz indirilir. Oyunlarda reklam vardır; geri alma ya da devam etme için izlenen reklamlar isteğe bağlıdır."
-        },
-        {
-          "q": "İnternet olmadan oynanır mı?",
-          "a": "Evet. Üç oyun da internet bağlantısı olmadan oynanabilir ve üyelik gerektirmez."
-        },
-        {
-          "q": "Yeni başlayan biri hangisiyle başlamalı?",
-          "a": "Daha geniş tahta hata payı bıraktığı için BlockNest iyi bir başlangıçtır. Daha klasik ve planlama isteyen bir deneyim için Woodora Classic'i, farklı bulmaca türlerini denemek için BlockFour'u seç."
-        }
-      ]
+    "rows": [
+     [
+      "BlockNest",
+      "10×10",
+      "Art arda kombolar, 4 ahşap tema, 18 başarım rozeti",
+      "Geniş tahtada uzun ve sakin oyunlar sevenler"
+     ],
+     [
+      "Woodora Classic",
+      "8×8",
+      "Döndürülemeyen bloklar, temizleme önizlemesi, seri bonusları",
+      "Klasik kurallarla planlama yapmayı sevenler"
+     ],
+     [
+      "BlockFour",
+      "8×8 + 3 oyun",
+      "Blok Rota, Düşen Bloklar, 2048 ve Renk Sıralama tek uygulamada; Günlük Rota",
+      "Çeşitlilik isteyenler"
+     ]
+    ]
+   },
+   "sections": [
+    {
+     "h": "Blok bulmaca nasıl oynanır?",
+     "items": [
+      "Altta sana birkaç parça verilir; bunları sürükleyip tahtaya bırakırsın.",
+      "Bir satır ya da sütun tamamen dolunca temizlenir ve puan kazanırsın.",
+      "Aynı hamlede birden fazla çizgi temizlemek ekstra puan getirir.",
+      "Kalan parçalardan hiçbiri tahtaya sığmazsa oyun biter."
+     ]
     },
-    "en": {
-      "title": "Block Puzzle Games: Free and Offline | Exclusive LLM",
-      "description": "Wood block puzzles, 8×8 and 10×10 boards, 2048 and color sort. Compare Exclusive LLM's free block puzzle games that play offline with no account.",
-      "crumb": "Block puzzle games",
-      "eyebrow": "Game guide",
-      "h1": "Block puzzle games",
-      "lead": "Which block puzzle suits you? We put our three games side by side.",
-      "intro": "The goal of a block puzzle is simple: place the pieces you are given on the board, clear full rows and columns, and keep going while there is space. Board size, the number of pieces and the bonus rules change how a game feels, though. Below we compare BlockNest, Woodora Classic and BlockFour. All three are free on Google Play, play offline and need no account.",
-      "compare": {
-        "title": "Comparison",
-        "head": [
-          "Game",
-          "Board",
-          "Highlights",
-          "Best for"
-        ],
-        "rows": [
-          [
-            "BlockNest",
-            "10×10",
-            "Back-to-back combos, 4 wood themes, 18 achievement badges",
-            "Long, calm sessions on a roomy board"
-          ],
-          [
-            "Woodora Classic",
-            "8×8",
-            "Blocks cannot rotate, clear preview, streak bonuses",
-            "Players who love planning with classic rules"
-          ],
-          [
-            "BlockFour",
-            "8×8 + 3 games",
-            "Block Route, Falling Blocks, 2048 and Color Sort in one app; Daily Route",
-            "Players who want variety"
-          ]
-        ]
-      },
-      "sections": [
-        {
-          "h": "How do block puzzles work?",
-          "items": [
-            "You get a few pieces at the bottom; drag them onto the board.",
-            "When a row or column is completely full, it clears and you score.",
-            "Clearing several lines in one move earns extra points.",
-            "The game ends when none of the remaining pieces fit."
-          ]
-        },
-        {
-          "h": "Why are they so relaxing?",
-          "items": [
-            "No time pressure: think every move through.",
-            "A game takes just a few minutes, perfect for short breaks.",
-            "Clearing a full line gives a small but satisfying sense of progress.",
-            "No internet needed, so you can play on the road, on a plane, anywhere."
-          ]
-        }
-      ],
-      "faq": [
-        {
-          "q": "Are these games free?",
-          "a": "Yes. All three are free to download on Google Play. The games contain ads; watching an ad to undo or continue is optional."
-        },
-        {
-          "q": "Can I play offline?",
-          "a": "Yes. All three games work without an internet connection and need no account."
-        },
-        {
-          "q": "Which one should a beginner start with?",
-          "a": "BlockNest is a good start because its larger board is more forgiving. Pick Woodora Classic for a classic experience that rewards planning, or BlockFour to try different kinds of puzzles."
-        }
-      ]
-    },
-    "es": {
-      "title": "Puzzles de bloques: gratis y sin conexión | Exclusive LLM",
-      "description": "Puzzles de bloques de madera, tableros de 8×8 y 10×10, 2048 y ordenar colores. Compara los puzzles gratis de Exclusive LLM: sin conexión y sin cuenta.",
-      "crumb": "Juegos de puzzle de bloques",
-      "eyebrow": "Guía de juegos",
-      "h1": "Juegos de puzzle de bloques",
-      "lead": "¿Qué puzzle de bloques va contigo? Comparamos nuestros tres juegos.",
-      "intro": "El objetivo de un puzzle de bloques es sencillo: coloca las piezas que recibes en el tablero, elimina filas y columnas completas y sigue jugando mientras quede espacio. Aun así, el tamaño del tablero, el número de piezas y las reglas de bonus cambian la sensación de cada juego. A continuación comparamos BlockNest, Woodora Classic y BlockFour. Los tres son gratis en Google Play, funcionan sin conexión y no necesitan cuenta.",
-      "compare": {
-        "title": "Comparativa",
-        "head": [
-          "Juego",
-          "Tablero",
-          "Lo más destacado",
-          "Ideal para"
-        ],
-        "rows": [
-          [
-            "BlockNest",
-            "10×10",
-            "Combos seguidos, 4 temas de madera, 18 insignias de logros",
-            "Partidas largas y tranquilas en un tablero amplio"
-          ],
-          [
-            "Woodora Classic",
-            "8×8",
-            "Los bloques no se pueden girar, vista previa de líneas, bonificaciones por racha",
-            "Quienes disfrutan planificando con reglas clásicas"
-          ],
-          [
-            "BlockFour",
-            "8×8 + 3 juegos",
-            "Ruta de bloques, Bloques en caída, 2048 y Ordenar colores en una app; Ruta diaria",
-            "Quienes buscan variedad"
-          ]
-        ]
-      },
-      "sections": [
-        {
-          "h": "¿Cómo funcionan los puzzles de bloques?",
-          "items": [
-            "Recibes unas cuantas piezas abajo; arrástralas al tablero.",
-            "Cuando una fila o columna se llena por completo, se elimina y sumas puntos.",
-            "Eliminar varias líneas en una sola jugada da puntos extra.",
-            "La partida termina cuando ninguna de las piezas restantes cabe."
-          ]
-        },
-        {
-          "h": "¿Por qué son tan relajantes?",
-          "items": [
-            "Sin presión de tiempo: piensa bien cada jugada.",
-            "Una partida dura solo unos minutos, ideal para descansos cortos.",
-            "Eliminar una línea completa da una pequeña pero satisfactoria sensación de avance.",
-            "No necesitas internet, así que puedes jugar de viaje, en un avión o donde sea."
-          ]
-        }
-      ],
-      "faq": [
-        {
-          "q": "¿Estos juegos son gratis?",
-          "a": "Sí. Los tres se descargan gratis en Google Play. Los juegos contienen anuncios; ver un anuncio para deshacer o continuar es opcional."
-        },
-        {
-          "q": "¿Puedo jugar sin conexión?",
-          "a": "Sí. Los tres juegos funcionan sin conexión a internet y no necesitan cuenta."
-        },
-        {
-          "q": "¿Con cuál debería empezar un principiante?",
-          "a": "BlockNest es un buen comienzo porque su tablero más grande perdona más los errores. Elige Woodora Classic para una experiencia clásica que premia la planificación, o BlockFour para probar distintos tipos de puzzles."
-        }
-      ]
+    {
+     "h": "Neden bu kadar rahatlatıcı?",
+     "items": [
+      "Süre baskısı yok: her hamleyi düşünerek yapabilirsin.",
+      "Kısa bir oyun birkaç dakika sürer; molalar için idealdir.",
+      "Dolan çizgilerin temizlenmesi küçük ama tatmin edici bir başarı hissi verir.",
+      "İnternet gerekmediği için yolda, uçakta, her yerde oynanır."
+     ]
     }
+   ],
+   "faq": [
+    {
+     "q": "Bu oyunlar ücretsiz mi?",
+     "a": "Evet. Üçü de Google Play'den ücretsiz indirilir. Oyunlarda reklam vardır; geri alma ya da devam etme için izlenen reklamlar isteğe bağlıdır."
+    },
+    {
+     "q": "İnternet olmadan oynanır mı?",
+     "a": "Evet. Üç oyun da internet bağlantısı olmadan oynanabilir ve üyelik gerektirmez."
+    },
+    {
+     "q": "Yeni başlayan biri hangisiyle başlamalı?",
+     "a": "Daha geniş tahta hata payı bıraktığı için BlockNest iyi bir başlangıçtır. Daha klasik ve planlama isteyen bir deneyim için Woodora Classic'i, farklı bulmaca türlerini denemek için BlockFour'u seç."
+    }
+   ]
   },
-  "press": {
-    "path": "press/",
-    "image": "blockfour-feature.jpg",
-    "tr": {
-      "title": "Basın Kiti: Logo, Görseller ve Oyun Bilgileri | Exclusive LLM",
-      "description": "Exclusive LLM basın kiti: stüdyo bilgisi, oyun açıklamaları, yüksek çözünürlüklü logo, simge, tanıtım görselleri ve iletişim.",
-      "crumb": "Basın kiti",
-      "eyebrow": "Basın ve içerik üreticileri",
-      "h1": "Basın kiti",
-      "lead": "Oyunlarımızı yazmak, incelemek ya da videoda göstermek için ihtiyacın olan her şey.",
-      "intro": "Exclusive LLM, Android için sakin ve kullanıcı dostu oyunlar ve uygulamalar geliştiren bağımsız bir stüdyodur. Sloganımız: Games & Apps Made With Care. Ölçülü reklam, sade tasarım ve gizliliğe saygı her oyunumuzun temelidir. Bu sayfadaki görselleri ve metinleri oyunlarımızdan bahseden yazı, inceleme ve videolarda serbestçe kullanabilirsin.",
-      "sections": [
-        {
-          "h": "Kısa bilgiler",
-          "items": [
-            "Stüdyo: Exclusive LLM (bağımsız geliştirici)",
-            "Platform: Android (Google Play)",
-            "Odak: rahatlatıcı bulmaca ve beceri oyunları",
-            "Web sitesi: exclusivellm.app",
-            "İletişim: support@exclusivellm.app"
-          ]
-        },
-        {
-          "h": "Kullanım koşulları",
-          "items": [
-            "Görseller oyunlarımızı tanıtan haber, inceleme, liste ve videolarda kullanılabilir.",
-            "Logoyu ve simgeleri yeniden renklendirme, kırpma ya da değiştirme.",
-            "Mümkünse oyunun Google Play sayfasına ya da exclusivellm.app'e bağlantı ver.",
-            "İnceleme kodu, ek görsel ya da röportaj için bize e-posta gönder."
-          ]
-        }
-      ],
-      "assets_title": "İndirilebilir görseller",
-      "games_title": "Oyunlar",
-      "contact_title": "İletişim",
-      "contact": "Basın, iş birliği ve içerik üreticisi talepleri için support@exclusivellm.app adresine yaz. Genellikle 1–2 iş günü içinde yanıt veririz."
-    },
-    "en": {
-      "title": "Press Kit: Logo, Images and Game Facts | Exclusive LLM",
-      "description": "Exclusive LLM press kit: studio facts, game descriptions, high-resolution logo, icons, feature graphics and contact details.",
-      "crumb": "Press kit",
-      "eyebrow": "Press and creators",
-      "h1": "Press kit",
-      "lead": "Everything you need to write about, review or feature our games in a video.",
-      "intro": "Exclusive LLM is an independent studio building calm, user-friendly games and apps for Android. Our motto: Games & Apps Made With Care. Measured ads, clean design and respect for your privacy are the foundation of every game we make. Feel free to use the images and texts on this page in articles, reviews and videos about our games.",
-      "sections": [
-        {
-          "h": "Fact sheet",
-          "items": [
-            "Studio: Exclusive LLM (independent developer)",
-            "Platform: Android (Google Play)",
-            "Focus: relaxing puzzle and skill games",
-            "Website: exclusivellm.app",
-            "Contact: support@exclusivellm.app"
-          ]
-        },
-        {
-          "h": "Terms of use",
-          "items": [
-            "Images may be used in news, reviews, lists and videos featuring our games.",
-            "Please do not recolor, crop or alter the logo and icons.",
-            "Where possible, link to the game's Google Play page or to exclusivellm.app.",
-            "Email us for review codes, extra assets or interviews."
-          ]
-        }
-      ],
-      "assets_title": "Downloadable assets",
-      "games_title": "Games",
-      "contact_title": "Contact",
-      "contact": "For press, partnership and creator requests, write to support@exclusivellm.app. We usually reply within 1–2 business days."
-    },
-    "assets": [
-      {
-        "file": "press/exclusive-llm-logo-512.png",
-        "label": "Exclusive LLM logo",
-        "size": "512×512 PNG"
-      },
-      {
-        "file": "press/blockfour-icon-512.png",
-        "label": "BlockFour icon",
-        "size": "512×512 PNG"
-      },
-      {
-        "file": "press/blocknest-icon-512.png",
-        "label": "BlockNest icon",
-        "size": "512×512 PNG"
-      },
-      {
-        "file": "press/woodoraclassic-icon-512.png",
-        "label": "Woodora Classic icon",
-        "size": "512×512 PNG"
-      },
-      {
-        "file": "blockfour-feature.jpg",
-        "label": "BlockFour feature graphic",
-        "size": "1024×500 JPG"
-      },
-      {
-        "file": "blocknest-feature.jpg",
-        "label": "BlockNest feature graphic",
-        "size": "1024×500 JPG"
-      },
-      {
-        "file": "woodoraclassic-feature.jpg",
-        "label": "Woodora Classic feature graphic",
-        "size": "1024×500 JPG"
-      }
+  "en": {
+   "title": "Block Puzzle Games: Free and Offline | Exclusive LLM",
+   "description": "Wood block puzzles, 8×8 and 10×10 boards, 2048 and color sort. Compare Exclusive LLM's free block puzzle games that play offline with no account.",
+   "crumb": "Block puzzle games",
+   "eyebrow": "Game guide",
+   "h1": "Block puzzle games",
+   "lead": "Which block puzzle suits you? We put our three games side by side.",
+   "intro": "The goal of a block puzzle is simple: place the pieces you are given on the board, clear full rows and columns, and keep going while there is space. Board size, the number of pieces and the bonus rules change how a game feels, though. Below we compare BlockNest, Woodora Classic and BlockFour. All three are free on Google Play, play offline and need no account.",
+   "compare": {
+    "title": "Comparison",
+    "head": [
+     "Game",
+     "Board",
+     "Highlights",
+     "Best for"
     ],
-    "es": {
-      "title": "Kit de prensa: logo, imágenes y datos | Exclusive LLM",
-      "description": "Kit de prensa de Exclusive LLM: datos del estudio, descripciones de los juegos, logo en alta resolución, iconos, gráficos destacados y contacto.",
-      "crumb": "Kit de prensa",
-      "eyebrow": "Prensa y creadores",
-      "h1": "Kit de prensa",
-      "lead": "Todo lo que necesitas para escribir sobre nuestros juegos, reseñarlos o mostrarlos en un video.",
-      "intro": "Exclusive LLM es un estudio independiente que crea juegos y apps tranquilos y fáciles de usar para Android. Nuestro lema: Games & Apps Made With Care. Anuncios moderados, un diseño limpio y el respeto por tu privacidad son la base de cada juego que hacemos. Puedes usar libremente las imágenes y los textos de esta página en artículos, reseñas y videos sobre nuestros juegos.",
-      "sections": [
-        {
-          "h": "Ficha técnica",
-          "items": [
-            "Estudio: Exclusive LLM (desarrollador independiente)",
-            "Plataforma: Android (Google Play)",
-            "Enfoque: juegos de puzzle y habilidad relajantes",
-            "Sitio web: exclusivellm.app",
-            "Contacto: support@exclusivellm.app"
-          ]
-        },
-        {
-          "h": "Condiciones de uso",
-          "items": [
-            "Las imágenes pueden usarse en noticias, reseñas, listas y videos sobre nuestros juegos.",
-            "Por favor, no cambies los colores, no recortes ni modifiques el logo y los iconos.",
-            "Siempre que sea posible, enlaza a la página del juego en Google Play o a exclusivellm.app.",
-            "Escríbenos para pedir códigos para reseñas, recursos adicionales o entrevistas."
-          ]
-        }
-      ],
-      "assets_title": "Recursos descargables",
-      "games_title": "Juegos",
-      "contact_title": "Contacto",
-      "contact": "Para solicitudes de prensa, colaboraciones y creadores, escribe a support@exclusivellm.app. Solemos responder en 1–2 días hábiles."
+    "rows": [
+     [
+      "BlockNest",
+      "10×10",
+      "Back-to-back combos, 4 wood themes, 18 achievement badges",
+      "Long, calm sessions on a roomy board"
+     ],
+     [
+      "Woodora Classic",
+      "8×8",
+      "Blocks cannot rotate, clear preview, streak bonuses",
+      "Players who love planning with classic rules"
+     ],
+     [
+      "BlockFour",
+      "8×8 + 3 games",
+      "Block Route, Falling Blocks, 2048 and Color Sort in one app; Daily Route",
+      "Players who want variety"
+     ]
+    ]
+   },
+   "sections": [
+    {
+     "h": "How do block puzzles work?",
+     "items": [
+      "You get a few pieces at the bottom; drag them onto the board.",
+      "When a row or column is completely full, it clears and you score.",
+      "Clearing several lines in one move earns extra points.",
+      "The game ends when none of the remaining pieces fit."
+     ]
+    },
+    {
+     "h": "Why are they so relaxing?",
+     "items": [
+      "No time pressure: think every move through.",
+      "A game takes just a few minutes, perfect for short breaks.",
+      "Clearing a full line gives a small but satisfying sense of progress.",
+      "No internet needed, so you can play on the road, on a plane, anywhere."
+     ]
     }
+   ],
+   "faq": [
+    {
+     "q": "Are these games free?",
+     "a": "Yes. All three are free to download on Google Play. The games contain ads; watching an ad to undo or continue is optional."
+    },
+    {
+     "q": "Can I play offline?",
+     "a": "Yes. All three games work without an internet connection and need no account."
+    },
+    {
+     "q": "Which one should a beginner start with?",
+     "a": "BlockNest is a good start because its larger board is more forgiving. Pick Woodora Classic for a classic experience that rewards planning, or BlockFour to try different kinds of puzzles."
+    }
+   ]
   },
-  "guides": [
+  "es": {
+   "title": "Puzzles de bloques: gratis y sin conexión | Exclusive LLM",
+   "description": "Puzzles de bloques de madera, tableros de 8×8 y 10×10, 2048 y ordenar colores. Compara los puzzles gratis de Exclusive LLM: sin conexión y sin cuenta.",
+   "crumb": "Juegos de puzzle de bloques",
+   "eyebrow": "Guía de juegos",
+   "h1": "Juegos de puzzle de bloques",
+   "lead": "¿Qué puzzle de bloques va contigo? Comparamos nuestros tres juegos.",
+   "intro": "El objetivo de un puzzle de bloques es sencillo: coloca las piezas que recibes en el tablero, elimina filas y columnas completas y sigue jugando mientras quede espacio. Aun así, el tamaño del tablero, el número de piezas y las reglas de bonus cambian la sensación de cada juego. A continuación comparamos BlockNest, Woodora Classic y BlockFour. Los tres son gratis en Google Play, funcionan sin conexión y no necesitan cuenta.",
+   "compare": {
+    "title": "Comparativa",
+    "head": [
+     "Juego",
+     "Tablero",
+     "Lo más destacado",
+     "Ideal para"
+    ],
+    "rows": [
+     [
+      "BlockNest",
+      "10×10",
+      "Combos seguidos, 4 temas de madera, 18 insignias de logros",
+      "Partidas largas y tranquilas en un tablero amplio"
+     ],
+     [
+      "Woodora Classic",
+      "8×8",
+      "Los bloques no se pueden girar, vista previa de líneas, bonificaciones por racha",
+      "Quienes disfrutan planificando con reglas clásicas"
+     ],
+     [
+      "BlockFour",
+      "8×8 + 3 juegos",
+      "Ruta de bloques, Bloques en caída, 2048 y Ordenar colores en una app; Ruta diaria",
+      "Quienes buscan variedad"
+     ]
+    ]
+   },
+   "sections": [
     {
-      "app": "blocknest",
-      "path": "blocknest/guide/",
-      "tr": {
-        "title": "BlockNest İpuçları: Yüksek Skor ve Kombo Rehberi | Exclusive LLM",
-        "description": "BlockNest'te daha yüksek skor için ipuçları: 10×10 tahtayı açık tutma, x5 komboya ulaşma, parçaları planlama ve sık yapılan hatalar.",
-        "crumb": "İpuçları",
-        "eyebrow": "BlockNest rehberi",
-        "h1": "BlockNest ipuçları: daha yüksek skor için rehber",
-        "lead": "Geniş 10×10 tahtayı açık tut, komboyu canlı tut.",
-        "intro": "BlockNest'te puanın büyük kısmı tek tek çizgilerden değil, art arda gelen temizlemelerden ve aynı hamlede birden fazla çizgi kapatmaktan gelir. Bu rehberde tahtayı nasıl düzenli tutacağını, kombo çarpanını nasıl x5'e kadar taşıyacağını ve oyunu erken bitiren hatalardan nasıl kaçınacağını anlatıyoruz.",
-        "sections": [
-          {
-            "h": "Tahtayı açık tut",
-            "items": [
-              "Parçaları önce kenarlara ve köşelere yerleştir; ortayı büyük parçalar için boş bırak.",
-              "Tek hücrelik boşluklar bırakma: onları ancak 1×1 parça doldurabilir.",
-              "Tahtada her zaman en az bir 3×3 alan açık kalsın; büyük kare geldiğinde sıkışmazsın.",
-              "Uzun çubuklar (1×5) için bir satır ya da sütunu ayrık tut."
-            ]
-          },
-          {
-            "h": "Komboyu büyüt",
-            "items": [
-              "Art arda hamlelerde çizgi temizledikçe kombo çarpanı x5'e kadar yükselir.",
-              "Bir çizgiyi hemen kapatmak yerine, bir sonraki hamlede de temizleme yapabileceğin bir düzen kur.",
-              "Raftaki üç parçayı birlikte düşün: hangi sırayla koyarsan en çok çizgiyi temizlersin?",
-              "Aynı hamlede iki ya da üç çizgiyi birden temizlemek, tek çizgilerden çok daha fazla puan getirir."
-            ]
-          },
-          {
-            "h": "Sık yapılan hatalar",
-            "items": [
-              "Tahtanın ortasını erkenden doldurmak.",
-              "Sadece elindeki parçaya bakıp diğer iki parçayı unutmak.",
-              "Kombo uğruna tahtayı fazla doldurmak; sıkıştığında kombo da biter.",
-              "Acele etmek: BlockNest'te süre yok, her hamleyi düşünebilirsin."
-            ]
-          },
-          {
-            "h": "Ekstra imkânlar",
-            "items": [
-              "Yanlış bir hamleyi isteğe bağlı bir reklamla geri alabilirsin.",
-              "Oyun bittiğinde isteğe bağlı bir reklamla devam etme şansın olabilir.",
-              "18 başarım rozeti, oyun tarzını geliştirmen için küçük hedefler sunar.",
-              "Dört ahşap tema arasından gözünü en az yoranı seç."
-            ]
-          }
-        ]
-      },
-      "en": {
-        "title": "BlockNest Tips: High Score and Combo Guide | Exclusive LLM",
-        "description": "Tips for a higher BlockNest score: keep the 10×10 board open, build a x5 combo, plan your pieces and avoid common mistakes.",
-        "crumb": "Tips",
-        "eyebrow": "BlockNest guide",
-        "h1": "BlockNest tips: a guide to higher scores",
-        "lead": "Keep the roomy 10×10 board open and keep your combo alive.",
-        "intro": "In BlockNest most of your score comes not from single lines but from back-to-back clears and from clearing several lines in one move. This guide shows how to keep the board tidy, how to carry the combo multiplier up to x5 and how to avoid the mistakes that end a game early.",
-        "sections": [
-          {
-            "h": "Keep the board open",
-            "items": [
-              "Place pieces along the edges and corners first; leave the middle free for big pieces.",
-              "Avoid single-cell holes: only a 1×1 piece can fill them.",
-              "Always keep at least one 3×3 area open so a big square never traps you.",
-              "Keep one row or column clear for long bars (1×5)."
-            ]
-          },
-          {
-            "h": "Grow your combo",
-            "items": [
-              "Clearing lines move after move raises the combo multiplier up to x5.",
-              "Instead of closing a line right away, set up a layout that lets you clear again on the next move.",
-              "Think about all three tray pieces together: which order clears the most lines?",
-              "Clearing two or three lines in one move scores far more than single lines."
-            ]
-          },
-          {
-            "h": "Common mistakes",
-            "items": [
-              "Filling the middle of the board too early.",
-              "Looking only at the piece in hand and forgetting the other two.",
-              "Overfilling the board for a combo; once you are stuck, the combo ends too.",
-              "Rushing: BlockNest has no timer, so think every move through."
-            ]
-          },
-          {
-            "h": "Extra help",
-            "items": [
-              "Undo a wrong move with an optional ad.",
-              "When a game ends, you may get the chance to continue with an optional ad.",
-              "18 achievement badges give you small goals to sharpen your play.",
-              "Choose the wood theme from the four that is easiest on your eyes."
-            ]
-          }
-        ]
-      },
-      "es": {
-        "title": "Consejos de BlockNest: récord y combos | Exclusive LLM",
-        "description": "Consejos para sumar más puntos en BlockNest: mantén abierto el tablero de 10×10, logra un combo ×5, planifica tus piezas y evita errores comunes.",
-        "crumb": "Consejos",
-        "eyebrow": "Guía de BlockNest",
-        "h1": "Consejos de BlockNest: guía para conseguir más puntos",
-        "lead": "Mantén abierto el amplio tablero de 10×10 y no dejes que se corte tu combo.",
-        "intro": "En BlockNest, la mayor parte de tus puntos no viene de líneas sueltas, sino de eliminar líneas en jugadas seguidas y de eliminar varias líneas en una sola jugada. Esta guía te muestra cómo mantener el tablero ordenado, cómo llevar el multiplicador de combo hasta ×5 y cómo evitar los errores que terminan una partida antes de tiempo.",
-        "sections": [
-          {
-            "h": "Mantén el tablero abierto",
-            "items": [
-              "Coloca primero las piezas en los bordes y las esquinas; deja el centro libre para las piezas grandes.",
-              "Evita los huecos de una sola casilla: solo una pieza de 1×1 puede llenarlos.",
-              "Mantén siempre libre al menos una zona de 3×3 para que un cuadrado grande nunca te bloquee.",
-              "Deja una fila o columna libre para las barras largas (1×5)."
-            ]
-          },
-          {
-            "h": "Haz crecer tu combo",
-            "items": [
-              "Eliminar líneas jugada tras jugada sube el multiplicador de combo hasta ×5.",
-              "En lugar de cerrar una línea enseguida, prepara una disposición que te permita volver a eliminar en la siguiente jugada.",
-              "Piensa en las tres piezas de la bandeja a la vez: ¿qué orden elimina más líneas?",
-              "Eliminar dos o tres líneas en una sola jugada da muchos más puntos que las líneas sueltas."
-            ]
-          },
-          {
-            "h": "Errores comunes",
-            "items": [
-              "Llenar el centro del tablero demasiado pronto.",
-              "Mirar solo la pieza que tienes en la mano y olvidarte de las otras dos.",
-              "Llenar demasiado el tablero por un combo; si te quedas atascado, el combo también termina.",
-              "Tener prisa: BlockNest no tiene reloj, así que piensa bien cada jugada."
-            ]
-          },
-          {
-            "h": "Ayuda extra",
-            "items": [
-              "Deshaz una jugada equivocada con un anuncio opcional.",
-              "Cuando termina una partida, puede que tengas la opción de continuar con un anuncio opcional.",
-              "Las 18 insignias de logros te dan pequeños objetivos para mejorar tu juego.",
-              "Elige entre los cuatro temas de madera el que menos canse tu vista."
-            ]
-          }
-        ]
-      }
+     "h": "¿Cómo funcionan los puzzles de bloques?",
+     "items": [
+      "Recibes unas cuantas piezas abajo; arrástralas al tablero.",
+      "Cuando una fila o columna se llena por completo, se elimina y sumas puntos.",
+      "Eliminar varias líneas en una sola jugada da puntos extra.",
+      "La partida termina cuando ninguna de las piezas restantes cabe."
+     ]
     },
     {
-      "app": "woodora-classic",
-      "path": "woodora-classic/guide/",
-      "tr": {
-        "title": "Woodora Classic İpuçları: 8×8 Blok Bulmaca Stratejisi | Exclusive LLM",
-        "description": "Woodora Classic için strateji rehberi: döndürülemeyen blokları planlama, önizlemeyi kullanma, seri bonusları ve 8×8 tahtada yer açma.",
-        "crumb": "İpuçları",
-        "eyebrow": "Woodora Classic rehberi",
-        "h1": "Woodora Classic ipuçları: 8×8 tahtada strateji",
-        "lead": "Bloklar dönmez; o yüzden kazanan, önceden planlayan olur.",
-        "intro": "Woodora Classic'te bloklar döndürülemez ve 8×8 tahta hızla dolabilir. İyi bir skorun anahtarı, üç bloğu birlikte düşünmek ve tahtada her şekle yer bırakmaktır. Puanlama da bunu ödüllendirir: kare başına 10, sıra başına 100 puan alırsın; birden fazla sıra ve ardışık temizlemeler ek puan getirir.",
-        "sections": [
-          {
-            "h": "Üç bloğu birlikte planla",
-            "items": [
-              "Yeni bloklar ancak üçünü de yerleştirdiğinde gelir; bu yüzden en zor şekli önce yerleştir.",
-              "Bir bloğu koymadan önce diğer ikisinin de sığacağından emin ol.",
-              "Bloklar dönmediği için yatay ve dikey çubuklara ayrı ayrı yer ayır.",
-              "Köşeleri L şekilli bloklar için saklamak çoğu zaman işe yarar."
-            ]
-          },
-          {
-            "h": "Önizlemeyi kullan",
-            "items": [
-              "Bloğu bırakmadan önce oyun kaç sıranın temizleneceğini gösterir; bunu en iyi yeri bulmak için kullan.",
-              "Aynı hamlede iki sıra temizleyebiliyorsan genellikle tek sıradan daha iyidir.",
-              "Ardışık temizlemeler seri bonusu getirir; her elde en az bir sıra kapatmayı hedefle.",
-              "Dokunarak yerleştirme modu, hassas yerleşimlerde sürüklemekten daha rahat olabilir."
-            ]
-          },
-          {
-            "h": "Tahtayı temiz tut",
-            "items": [
-              "Satırları tamamen doldurmaya odaklan; yarım kalmış çok satır tahtayı kilitler.",
-              "Tek hücrelik boşluklar bırakma.",
-              "Tahtanın ortasında geniş bir alan açık tut; 3×3 kare geldiğinde çok işine yarar.",
-              "Oyun bitmeden önce isteğe bağlı bir reklamla her oyunda bir kez son hamleni geri alabilirsin."
-            ]
-          }
-        ]
-      },
-      "en": {
-        "title": "Woodora Classic Tips: 8×8 Block Puzzle Strategy | Exclusive LLM",
-        "description": "A strategy guide for Woodora Classic: plan blocks that cannot rotate, use the clear preview, earn streak bonuses and keep the 8×8 board open.",
-        "crumb": "Tips",
-        "eyebrow": "Woodora Classic guide",
-        "h1": "Woodora Classic tips: strategy on an 8×8 board",
-        "lead": "Blocks don't rotate, so the player who plans ahead wins.",
-        "intro": "In Woodora Classic blocks cannot rotate and the 8×8 board fills up fast. The key to a good score is thinking about all three blocks together and leaving room for every shape. Scoring rewards this too: 10 points per square and 100 per line, with bonuses for multiple lines and consecutive clears.",
-        "sections": [
-          {
-            "h": "Plan all three blocks",
-            "items": [
-              "New blocks only arrive once you place all three, so place the hardest shape first.",
-              "Before placing a block, make sure the other two will still fit.",
-              "Blocks don't rotate, so keep separate space for horizontal and vertical bars.",
-              "Saving corners for L-shaped blocks often pays off."
-            ]
-          },
-          {
-            "h": "Use the preview",
-            "items": [
-              "Before you drop a block, the game shows how many lines will clear; use it to find the best spot.",
-              "Clearing two lines in one move is usually better than one.",
-              "Consecutive clears earn streak bonuses; aim to clear at least one line every set.",
-              "Tap-to-place can be easier than dragging for precise placements."
-            ]
-          },
-          {
-            "h": "Keep the board clean",
-            "items": [
-              "Focus on finishing lines; many half-filled lines lock the board.",
-              "Avoid single-cell holes.",
-              "Keep a wide area open in the middle; it helps when a 3×3 square arrives.",
-              "You can undo your last move once per game with an optional ad."
-            ]
-          }
-        ]
-      },
-      "es": {
-        "title": "Consejos de Woodora Classic: estrategia 8×8 | Exclusive LLM",
-        "description": "Guía de estrategia de Woodora Classic: planifica bloques que no se giran, usa la vista previa, gana bonificaciones por racha y mantén abierto el tablero 8×8.",
-        "crumb": "Consejos",
-        "eyebrow": "Guía de Woodora Classic",
-        "h1": "Consejos de Woodora Classic: estrategia en un tablero de 8×8",
-        "lead": "Los bloques no se pueden girar, así que gana quien planifica con antelación.",
-        "intro": "En Woodora Classic los bloques no se pueden girar y el tablero de 8×8 se llena rápido. La clave para una buena puntuación es pensar en los tres bloques a la vez y dejar espacio para cada forma. La puntuación también lo premia: 10 puntos por casilla y 100 por línea, con bonificaciones por líneas múltiples y consecutivas.",
-        "sections": [
-          {
-            "h": "Planifica los tres bloques",
-            "items": [
-              "Los bloques nuevos solo llegan cuando colocas los tres, así que coloca primero la forma más difícil.",
-              "Antes de colocar un bloque, asegúrate de que los otros dos seguirán cabiendo.",
-              "Los bloques no se pueden girar, así que reserva espacios distintos para las barras horizontales y verticales.",
-              "Guardar las esquinas para los bloques en forma de L suele dar buen resultado."
-            ]
-          },
-          {
-            "h": "Usa la vista previa",
-            "items": [
-              "Antes de soltar un bloque, el juego muestra cuántas líneas se eliminarán; úsalo para encontrar el mejor sitio.",
-              "Eliminar dos líneas en una sola jugada suele ser mejor que una.",
-              "Las eliminaciones consecutivas dan bonificaciones por racha; intenta eliminar al menos una línea en cada tanda.",
-              "Tocar para colocar puede ser más fácil que arrastrar cuando necesitas precisión."
-            ]
-          },
-          {
-            "h": "Mantén el tablero limpio",
-            "items": [
-              "Céntrate en terminar líneas; muchas líneas a medio llenar bloquean el tablero.",
-              "Evita los huecos de una sola casilla.",
-              "Mantén una zona amplia libre en el centro; te ayudará cuando llegue un cuadrado de 3×3.",
-              "Puedes deshacer tu última jugada una vez por partida con un anuncio opcional."
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "app": "block-four",
-      "path": "block-four/guide/",
-      "tr": {
-        "title": "BlockFour İpuçları: Blok Rota, 2048 ve Renk Sıralama | Exclusive LLM",
-        "description": "BlockFour'daki dört oyun için ipuçları: Blok Rota'da yüksek skor, Düşen Bloklar'da hız, 2048'e ulaşma ve Renk Sıralama seviyelerini geçme.",
-        "crumb": "İpuçları",
-        "eyebrow": "BlockFour rehberi",
-        "h1": "BlockFour ipuçları: dört oyun için rehber",
-        "lead": "Her oyunun kendi stratejisi var; işte en işe yarayanlar.",
-        "intro": "BlockFour dört farklı bulmacayı tek uygulamada toplar: Blok Rota, Düşen Bloklar, Sayı Birleştirme (2048) ve Renk Sıralama. Her birinin kuralları farklı olduğu için en iyi taktikler de farklı. Bu rehberde her oyun için kısa ve uygulanabilir ipuçları bulacaksın.",
-        "sections": [
-          {
-            "h": "Blok Rota (8×8)",
-            "items": [
-              "Klasik modda acele etme; süre yok, her hamleyi düşün.",
-              "120 Saniye modunda mükemmeli arama: hızlı ve güvenli yerleşimler daha çok puan getirir.",
-              "Günlük Rota'da 30 hamlen var; her hamlenin bir çizgi temizlemesine çalış.",
-              "Aynı anda birden fazla çizgi temizlemek kombo ve büyük bonus getirir."
-            ]
-          },
-          {
-            "h": "Düşen Bloklar (10×20)",
-            "items": [
-              "Yüzeyi düz tut; derin kuyular ve çıkıntılar oyunu zorlaştırır.",
-              "Bir sütunu uzun parçalar için boş bırakıp birden fazla çizgiyi birlikte temizle.",
-              "Anında düşürme hız kazandırır ama yerleşimden emin olduğunda kullan.",
-              "Ekrandaki tuşları eline göre taşı ve boyutlandır; sağ ya da sol el düzenini seç."
-            ]
-          },
-          {
-            "h": "Sayı Birleştirme (2048)",
-            "items": [
-              "En büyük taşı bir köşede tut ve oradan ayırma.",
-              "Çoğunlukla iki yönde kaydır; dördüncü yönü yalnızca mecbur kalınca kullan.",
-              "Büyük taşın yanındaki sırayı dolu tutarak köşeyi koru.",
-              "Her oyunda 3 ücretsiz geri alma hakkın var; onları kritik anlara sakla."
-            ]
-          },
-          {
-            "h": "Renk Sıralama (50 seviye)",
-            "items": [
-              "İlk hamleden önce tüm tüplere bak ve hangi rengin en kolay toplanacağını bul.",
-              "Boş tüp en değerli kaynağındır; onu hemen doldurma.",
-              "Bir tüpü tek renge tamamlamak, diğer tüplerde yer açar.",
-              "Takılırsan geri al ya da seviyeyi yeniden başlat."
-            ]
-          }
-        ]
-      },
-      "en": {
-        "title": "BlockFour Tips: Block Route, 2048 and Color Sort | Exclusive LLM",
-        "description": "Tips for all four games in BlockFour: high scores in Block Route, speed in Falling Blocks, reaching 2048 and beating Color Sort levels.",
-        "crumb": "Tips",
-        "eyebrow": "BlockFour guide",
-        "h1": "BlockFour tips: a guide to all four games",
-        "lead": "Every game has its own strategy; here is what works best.",
-        "intro": "BlockFour brings four different puzzles together in one app: Block Route, Falling Blocks, Number Merge (2048) and Color Sort. Their rules differ, so the best tactics differ too. In this guide you will find short, practical tips for each game.",
-        "sections": [
-          {
-            "h": "Block Route (8×8)",
-            "items": [
-              "In Classic mode, take your time; there is no timer.",
-              "In 120 Seconds, don't hunt for the perfect spot: quick, safe placements score more.",
-              "Daily Route gives you 30 moves; try to make every move clear a line.",
-              "Clearing several lines at once earns combos and big bonuses."
-            ]
-          },
-          {
-            "h": "Falling Blocks (10×20)",
-            "items": [
-              "Keep the surface flat; deep wells and spikes make the game harder.",
-              "Leave one column empty for long pieces and clear several lines together.",
-              "Hard drop saves time, but use it only when you are sure of the placement.",
-              "Move and resize the on-screen buttons to fit your hand, and pick a left- or right-handed layout."
-            ]
-          },
-          {
-            "h": "Number Merge (2048)",
-            "items": [
-              "Keep your biggest tile in one corner and never move it out.",
-              "Swipe mostly in two directions; use the fourth only when you must.",
-              "Keep the row next to your biggest tile full to protect the corner.",
-              "You get 3 free undos per game; save them for critical moments."
-            ]
-          },
-          {
-            "h": "Color Sort (50 levels)",
-            "items": [
-              "Before your first move, look at every tube and find the easiest color to collect.",
-              "An empty tube is your most valuable resource; don't fill it right away.",
-              "Completing one tube with a single color frees up space in the others.",
-              "If you get stuck, undo or restart the level."
-            ]
-          }
-        ]
-      },
-      "es": {
-        "title": "Consejos de BlockFour: bloques, 2048 y colores | Exclusive LLM",
-        "description": "Consejos para los cuatro juegos de BlockFour: récords en Ruta de bloques, velocidad en Bloques en caída, llegar a 2048 y superar Ordenar colores.",
-        "crumb": "Consejos",
-        "eyebrow": "Guía de BlockFour",
-        "h1": "Consejos de BlockFour: guía de los cuatro juegos",
-        "lead": "Cada juego tiene su propia estrategia; esto es lo que mejor funciona.",
-        "intro": "BlockFour reúne cuatro puzzles distintos en una sola app: Ruta de bloques, Bloques en caída, Fusionar números (2048) y Ordenar colores. Sus reglas son diferentes, así que las mejores tácticas también lo son. En esta guía encontrarás consejos breves y prácticos para cada juego.",
-        "sections": [
-          {
-            "h": "Ruta de bloques (8×8)",
-            "items": [
-              "En el modo Clásico, tómate tu tiempo; no hay reloj.",
-              "En 120 segundos, no busques el sitio perfecto: las colocaciones rápidas y seguras suman más puntos.",
-              "Ruta diaria te da 30 movimientos; intenta que cada movimiento elimine una línea.",
-              "Eliminar varias líneas a la vez da combos y grandes bonus."
-            ]
-          },
-          {
-            "h": "Bloques en caída (10×20)",
-            "items": [
-              "Mantén la superficie plana; los pozos profundos y los picos complican la partida.",
-              "Deja una columna vacía para las piezas largas y elimina varias líneas a la vez.",
-              "La caída rápida ahorra tiempo, pero úsala solo cuando estés seguro de la posición.",
-              "Mueve los botones en pantalla y cambia su tamaño para adaptarlos a tu mano, y elige una disposición para diestros o zurdos."
-            ]
-          },
-          {
-            "h": "Fusionar números (2048)",
-            "items": [
-              "Mantén tu ficha más grande en una esquina y no la saques nunca de ahí.",
-              "Desliza sobre todo en dos direcciones; usa la cuarta solo cuando no quede otra.",
-              "Mantén llena la fila junto a tu ficha más grande para proteger la esquina.",
-              "Tienes 3 movimientos para deshacer gratis por partida; guárdalos para los momentos críticos."
-            ]
-          },
-          {
-            "h": "Ordenar colores (50 niveles)",
-            "items": [
-              "Antes del primer movimiento, mira todos los tubos y busca el color más fácil de reunir.",
-              "Un tubo vacío es tu recurso más valioso; no lo llenes enseguida.",
-              "Completar un tubo con un solo color libera espacio en los demás.",
-              "Si te atascas, deshaz o reinicia el nivel."
-            ]
-          }
-        ]
-      }
+     "h": "¿Por qué son tan relajantes?",
+     "items": [
+      "Sin presión de tiempo: piensa bien cada jugada.",
+      "Una partida dura solo unos minutos, ideal para descansos cortos.",
+      "Eliminar una línea completa da una pequeña pero satisfactoria sensación de avance.",
+      "No necesitas internet, así que puedes jugar de viaje, en un avión o donde sea."
+     ]
     }
-  ]
+   ],
+   "faq": [
+    {
+     "q": "¿Estos juegos son gratis?",
+     "a": "Sí. Los tres se descargan gratis en Google Play. Los juegos contienen anuncios; ver un anuncio para deshacer o continuar es opcional."
+    },
+    {
+     "q": "¿Puedo jugar sin conexión?",
+     "a": "Sí. Los tres juegos funcionan sin conexión a internet y no necesitan cuenta."
+    },
+    {
+     "q": "¿Con cuál debería empezar un principiante?",
+     "a": "BlockNest es un buen comienzo porque su tablero más grande perdona más los errores. Elige Woodora Classic para una experiencia clásica que premia la planificación, o BlockFour para probar distintos tipos de puzzles."
+    }
+   ]
+  }
+ },
+ "press": {
+  "path": "press/",
+  "image": "blockfour-feature.jpg",
+  "tr": {
+   "title": "Basın Kiti: Logo, Görseller ve Oyun Bilgileri | Exclusive LLM",
+   "description": "Exclusive LLM basın kiti: stüdyo bilgisi, oyun açıklamaları, yüksek çözünürlüklü logo, simge, tanıtım görselleri ve iletişim.",
+   "crumb": "Basın kiti",
+   "eyebrow": "Basın ve içerik üreticileri",
+   "h1": "Basın kiti",
+   "lead": "Oyunlarımızı yazmak, incelemek ya da videoda göstermek için ihtiyacın olan her şey.",
+   "intro": "Exclusive LLM, Android için sakin ve kullanıcı dostu oyunlar ve uygulamalar geliştiren bağımsız bir stüdyodur. Sloganımız: Games & Apps Made With Care. Ölçülü reklam, sade tasarım ve gizliliğe saygı her oyunumuzun temelidir. Bu sayfadaki görselleri ve metinleri oyunlarımızdan bahseden yazı, inceleme ve videolarda serbestçe kullanabilirsin.",
+   "sections": [
+    {
+     "h": "Kısa bilgiler",
+     "items": [
+      "Stüdyo: Exclusive LLM (bağımsız geliştirici)",
+      "Platform: Android (Google Play)",
+      "Odak: rahatlatıcı bulmaca ve beceri oyunları",
+      "Web sitesi: exclusivellm.app",
+      "İletişim: support@exclusivellm.app"
+     ]
+    },
+    {
+     "h": "Kullanım koşulları",
+     "items": [
+      "Görseller oyunlarımızı tanıtan haber, inceleme, liste ve videolarda kullanılabilir.",
+      "Logoyu ve simgeleri yeniden renklendirme, kırpma ya da değiştirme.",
+      "Mümkünse oyunun Google Play sayfasına ya da exclusivellm.app'e bağlantı ver.",
+      "İnceleme kodu, ek görsel ya da röportaj için bize e-posta gönder."
+     ]
+    }
+   ],
+   "assets_title": "İndirilebilir görseller",
+   "games_title": "Oyunlar",
+   "contact_title": "İletişim",
+   "contact": "Basın, iş birliği ve içerik üreticisi talepleri için support@exclusivellm.app adresine yaz. Genellikle 1–2 iş günü içinde yanıt veririz."
+  },
+  "en": {
+   "title": "Press Kit: Logo, Images and Game Facts | Exclusive LLM",
+   "description": "Exclusive LLM press kit: studio facts, game descriptions, high-resolution logo, icons, feature graphics and contact details.",
+   "crumb": "Press kit",
+   "eyebrow": "Press and creators",
+   "h1": "Press kit",
+   "lead": "Everything you need to write about, review or feature our games in a video.",
+   "intro": "Exclusive LLM is an independent studio building calm, user-friendly games and apps for Android. Our motto: Games & Apps Made With Care. Measured ads, clean design and respect for your privacy are the foundation of every game we make. Feel free to use the images and texts on this page in articles, reviews and videos about our games.",
+   "sections": [
+    {
+     "h": "Fact sheet",
+     "items": [
+      "Studio: Exclusive LLM (independent developer)",
+      "Platform: Android (Google Play)",
+      "Focus: relaxing puzzle and skill games",
+      "Website: exclusivellm.app",
+      "Contact: support@exclusivellm.app"
+     ]
+    },
+    {
+     "h": "Terms of use",
+     "items": [
+      "Images may be used in news, reviews, lists and videos featuring our games.",
+      "Please do not recolor, crop or alter the logo and icons.",
+      "Where possible, link to the game's Google Play page or to exclusivellm.app.",
+      "Email us for review codes, extra assets or interviews."
+     ]
+    }
+   ],
+   "assets_title": "Downloadable assets",
+   "games_title": "Games",
+   "contact_title": "Contact",
+   "contact": "For press, partnership and creator requests, write to support@exclusivellm.app. We usually reply within 1–2 business days."
+  },
+  "assets": [
+   {
+    "file": "press/exclusive-llm-logo-512.png",
+    "label": "Exclusive LLM logo",
+    "size": "512×512 PNG"
+   },
+   {
+    "file": "press/blockfour-icon-512.png",
+    "label": "BlockFour icon",
+    "size": "512×512 PNG"
+   },
+   {
+    "file": "press/blocknest-icon-512.png",
+    "label": "BlockNest icon",
+    "size": "512×512 PNG"
+   },
+   {
+    "file": "press/woodoraclassic-icon-512.png",
+    "label": "Woodora Classic icon",
+    "size": "512×512 PNG"
+   },
+   {
+    "file": "blockfour-feature.jpg",
+    "label": "BlockFour feature graphic",
+    "size": "1024×500 JPG"
+   },
+   {
+    "file": "blocknest-feature.jpg",
+    "label": "BlockNest feature graphic",
+    "size": "1024×500 JPG"
+   },
+   {
+    "file": "woodoraclassic-feature.jpg",
+    "label": "Woodora Classic feature graphic",
+    "size": "1024×500 JPG"
+   }
+  ],
+  "es": {
+   "title": "Kit de prensa: logo, imágenes y datos | Exclusive LLM",
+   "description": "Kit de prensa de Exclusive LLM: datos del estudio, descripciones de los juegos, logo en alta resolución, iconos, gráficos destacados y contacto.",
+   "crumb": "Kit de prensa",
+   "eyebrow": "Prensa y creadores",
+   "h1": "Kit de prensa",
+   "lead": "Todo lo que necesitas para escribir sobre nuestros juegos, reseñarlos o mostrarlos en un video.",
+   "intro": "Exclusive LLM es un estudio independiente que crea juegos y apps tranquilos y fáciles de usar para Android. Nuestro lema: Games & Apps Made With Care. Anuncios moderados, un diseño limpio y el respeto por tu privacidad son la base de cada juego que hacemos. Puedes usar libremente las imágenes y los textos de esta página en artículos, reseñas y videos sobre nuestros juegos.",
+   "sections": [
+    {
+     "h": "Ficha técnica",
+     "items": [
+      "Estudio: Exclusive LLM (desarrollador independiente)",
+      "Plataforma: Android (Google Play)",
+      "Enfoque: juegos de puzzle y habilidad relajantes",
+      "Sitio web: exclusivellm.app",
+      "Contacto: support@exclusivellm.app"
+     ]
+    },
+    {
+     "h": "Condiciones de uso",
+     "items": [
+      "Las imágenes pueden usarse en noticias, reseñas, listas y videos sobre nuestros juegos.",
+      "Por favor, no cambies los colores, no recortes ni modifiques el logo y los iconos.",
+      "Siempre que sea posible, enlaza a la página del juego en Google Play o a exclusivellm.app.",
+      "Escríbenos para pedir códigos para reseñas, recursos adicionales o entrevistas."
+     ]
+    }
+   ],
+   "assets_title": "Recursos descargables",
+   "games_title": "Juegos",
+   "contact_title": "Contacto",
+   "contact": "Para solicitudes de prensa, colaboraciones y creadores, escribe a support@exclusivellm.app. Solemos responder en 1–2 días hábiles."
+  }
+ },
+ "guides": [
+  {
+   "app": "blocknest",
+   "path": "blocknest/guide/",
+   "tr": {
+    "title": "BlockNest İpuçları: Yüksek Skor ve Kombo Rehberi | Exclusive LLM",
+    "description": "BlockNest'te daha yüksek skor için ipuçları: 10×10 tahtayı açık tutma, x5 komboya ulaşma, parçaları planlama ve sık yapılan hatalar.",
+    "crumb": "İpuçları",
+    "eyebrow": "BlockNest rehberi",
+    "h1": "BlockNest ipuçları: daha yüksek skor için rehber",
+    "lead": "Geniş 10×10 tahtayı açık tut, komboyu canlı tut.",
+    "intro": "BlockNest'te puanın büyük kısmı tek tek çizgilerden değil, art arda gelen temizlemelerden ve aynı hamlede birden fazla çizgi kapatmaktan gelir. Bu rehberde tahtayı nasıl düzenli tutacağını, kombo çarpanını nasıl x5'e kadar taşıyacağını ve oyunu erken bitiren hatalardan nasıl kaçınacağını anlatıyoruz.",
+    "sections": [
+     {
+      "h": "Tahtayı açık tut",
+      "items": [
+       "Parçaları önce kenarlara ve köşelere yerleştir; ortayı büyük parçalar için boş bırak.",
+       "Tek hücrelik boşluklar bırakma: onları ancak 1×1 parça doldurabilir.",
+       "Tahtada her zaman en az bir 3×3 alan açık kalsın; büyük kare geldiğinde sıkışmazsın.",
+       "Uzun çubuklar (1×5) için bir satır ya da sütunu ayrık tut."
+      ]
+     },
+     {
+      "h": "Komboyu büyüt",
+      "items": [
+       "Art arda hamlelerde çizgi temizledikçe kombo çarpanı x5'e kadar yükselir.",
+       "Bir çizgiyi hemen kapatmak yerine, bir sonraki hamlede de temizleme yapabileceğin bir düzen kur.",
+       "Raftaki üç parçayı birlikte düşün: hangi sırayla koyarsan en çok çizgiyi temizlersin?",
+       "Aynı hamlede iki ya da üç çizgiyi birden temizlemek, tek çizgilerden çok daha fazla puan getirir."
+      ]
+     },
+     {
+      "h": "Sık yapılan hatalar",
+      "items": [
+       "Tahtanın ortasını erkenden doldurmak.",
+       "Sadece elindeki parçaya bakıp diğer iki parçayı unutmak.",
+       "Kombo uğruna tahtayı fazla doldurmak; sıkıştığında kombo da biter.",
+       "Acele etmek: BlockNest'te süre yok, her hamleyi düşünebilirsin."
+      ]
+     },
+     {
+      "h": "Ekstra imkânlar",
+      "items": [
+       "Yanlış bir hamleyi isteğe bağlı bir reklamla geri alabilirsin.",
+       "Oyun bittiğinde isteğe bağlı bir reklamla devam etme şansın olabilir.",
+       "18 başarım rozeti, oyun tarzını geliştirmen için küçük hedefler sunar.",
+       "Dört ahşap tema arasından gözünü en az yoranı seç."
+      ]
+     }
+    ]
+   },
+   "en": {
+    "title": "BlockNest Tips: High Score and Combo Guide | Exclusive LLM",
+    "description": "Tips for a higher BlockNest score: keep the 10×10 board open, build a x5 combo, plan your pieces and avoid common mistakes.",
+    "crumb": "Tips",
+    "eyebrow": "BlockNest guide",
+    "h1": "BlockNest tips: a guide to higher scores",
+    "lead": "Keep the roomy 10×10 board open and keep your combo alive.",
+    "intro": "In BlockNest most of your score comes not from single lines but from back-to-back clears and from clearing several lines in one move. This guide shows how to keep the board tidy, how to carry the combo multiplier up to x5 and how to avoid the mistakes that end a game early.",
+    "sections": [
+     {
+      "h": "Keep the board open",
+      "items": [
+       "Place pieces along the edges and corners first; leave the middle free for big pieces.",
+       "Avoid single-cell holes: only a 1×1 piece can fill them.",
+       "Always keep at least one 3×3 area open so a big square never traps you.",
+       "Keep one row or column clear for long bars (1×5)."
+      ]
+     },
+     {
+      "h": "Grow your combo",
+      "items": [
+       "Clearing lines move after move raises the combo multiplier up to x5.",
+       "Instead of closing a line right away, set up a layout that lets you clear again on the next move.",
+       "Think about all three tray pieces together: which order clears the most lines?",
+       "Clearing two or three lines in one move scores far more than single lines."
+      ]
+     },
+     {
+      "h": "Common mistakes",
+      "items": [
+       "Filling the middle of the board too early.",
+       "Looking only at the piece in hand and forgetting the other two.",
+       "Overfilling the board for a combo; once you are stuck, the combo ends too.",
+       "Rushing: BlockNest has no timer, so think every move through."
+      ]
+     },
+     {
+      "h": "Extra help",
+      "items": [
+       "Undo a wrong move with an optional ad.",
+       "When a game ends, you may get the chance to continue with an optional ad.",
+       "18 achievement badges give you small goals to sharpen your play.",
+       "Choose the wood theme from the four that is easiest on your eyes."
+      ]
+     }
+    ]
+   },
+   "es": {
+    "title": "Consejos de BlockNest: récord y combos | Exclusive LLM",
+    "description": "Consejos para sumar más puntos en BlockNest: mantén abierto el tablero de 10×10, logra un combo ×5, planifica tus piezas y evita errores comunes.",
+    "crumb": "Consejos",
+    "eyebrow": "Guía de BlockNest",
+    "h1": "Consejos de BlockNest: guía para conseguir más puntos",
+    "lead": "Mantén abierto el amplio tablero de 10×10 y no dejes que se corte tu combo.",
+    "intro": "En BlockNest, la mayor parte de tus puntos no viene de líneas sueltas, sino de eliminar líneas en jugadas seguidas y de eliminar varias líneas en una sola jugada. Esta guía te muestra cómo mantener el tablero ordenado, cómo llevar el multiplicador de combo hasta ×5 y cómo evitar los errores que terminan una partida antes de tiempo.",
+    "sections": [
+     {
+      "h": "Mantén el tablero abierto",
+      "items": [
+       "Coloca primero las piezas en los bordes y las esquinas; deja el centro libre para las piezas grandes.",
+       "Evita los huecos de una sola casilla: solo una pieza de 1×1 puede llenarlos.",
+       "Mantén siempre libre al menos una zona de 3×3 para que un cuadrado grande nunca te bloquee.",
+       "Deja una fila o columna libre para las barras largas (1×5)."
+      ]
+     },
+     {
+      "h": "Haz crecer tu combo",
+      "items": [
+       "Eliminar líneas jugada tras jugada sube el multiplicador de combo hasta ×5.",
+       "En lugar de cerrar una línea enseguida, prepara una disposición que te permita volver a eliminar en la siguiente jugada.",
+       "Piensa en las tres piezas de la bandeja a la vez: ¿qué orden elimina más líneas?",
+       "Eliminar dos o tres líneas en una sola jugada da muchos más puntos que las líneas sueltas."
+      ]
+     },
+     {
+      "h": "Errores comunes",
+      "items": [
+       "Llenar el centro del tablero demasiado pronto.",
+       "Mirar solo la pieza que tienes en la mano y olvidarte de las otras dos.",
+       "Llenar demasiado el tablero por un combo; si te quedas atascado, el combo también termina.",
+       "Tener prisa: BlockNest no tiene reloj, así que piensa bien cada jugada."
+      ]
+     },
+     {
+      "h": "Ayuda extra",
+      "items": [
+       "Deshaz una jugada equivocada con un anuncio opcional.",
+       "Cuando termina una partida, puede que tengas la opción de continuar con un anuncio opcional.",
+       "Las 18 insignias de logros te dan pequeños objetivos para mejorar tu juego.",
+       "Elige entre los cuatro temas de madera el que menos canse tu vista."
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "app": "woodora-classic",
+   "path": "woodora-classic/guide/",
+   "tr": {
+    "title": "Woodora Classic İpuçları: 8×8 Blok Bulmaca Stratejisi | Exclusive LLM",
+    "description": "Woodora Classic için strateji rehberi: döndürülemeyen blokları planlama, önizlemeyi kullanma, seri bonusları ve 8×8 tahtada yer açma.",
+    "crumb": "İpuçları",
+    "eyebrow": "Woodora Classic rehberi",
+    "h1": "Woodora Classic ipuçları: 8×8 tahtada strateji",
+    "lead": "Bloklar dönmez; o yüzden kazanan, önceden planlayan olur.",
+    "intro": "Woodora Classic'te bloklar döndürülemez ve 8×8 tahta hızla dolabilir. İyi bir skorun anahtarı, üç bloğu birlikte düşünmek ve tahtada her şekle yer bırakmaktır. Puanlama da bunu ödüllendirir: kare başına 10, sıra başına 100 puan alırsın; birden fazla sıra ve ardışık temizlemeler ek puan getirir.",
+    "sections": [
+     {
+      "h": "Üç bloğu birlikte planla",
+      "items": [
+       "Yeni bloklar ancak üçünü de yerleştirdiğinde gelir; bu yüzden en zor şekli önce yerleştir.",
+       "Bir bloğu koymadan önce diğer ikisinin de sığacağından emin ol.",
+       "Bloklar dönmediği için yatay ve dikey çubuklara ayrı ayrı yer ayır.",
+       "Köşeleri L şekilli bloklar için saklamak çoğu zaman işe yarar."
+      ]
+     },
+     {
+      "h": "Önizlemeyi kullan",
+      "items": [
+       "Bloğu bırakmadan önce oyun kaç sıranın temizleneceğini gösterir; bunu en iyi yeri bulmak için kullan.",
+       "Aynı hamlede iki sıra temizleyebiliyorsan genellikle tek sıradan daha iyidir.",
+       "Ardışık temizlemeler seri bonusu getirir; her elde en az bir sıra kapatmayı hedefle.",
+       "Dokunarak yerleştirme modu, hassas yerleşimlerde sürüklemekten daha rahat olabilir."
+      ]
+     },
+     {
+      "h": "Tahtayı temiz tut",
+      "items": [
+       "Satırları tamamen doldurmaya odaklan; yarım kalmış çok satır tahtayı kilitler.",
+       "Tek hücrelik boşluklar bırakma.",
+       "Tahtanın ortasında geniş bir alan açık tut; 3×3 kare geldiğinde çok işine yarar.",
+       "Oyun bitmeden önce isteğe bağlı bir reklamla her oyunda bir kez son hamleni geri alabilirsin."
+      ]
+     }
+    ]
+   },
+   "en": {
+    "title": "Woodora Classic Tips: 8×8 Block Puzzle Strategy | Exclusive LLM",
+    "description": "A strategy guide for Woodora Classic: plan blocks that cannot rotate, use the clear preview, earn streak bonuses and keep the 8×8 board open.",
+    "crumb": "Tips",
+    "eyebrow": "Woodora Classic guide",
+    "h1": "Woodora Classic tips: strategy on an 8×8 board",
+    "lead": "Blocks don't rotate, so the player who plans ahead wins.",
+    "intro": "In Woodora Classic blocks cannot rotate and the 8×8 board fills up fast. The key to a good score is thinking about all three blocks together and leaving room for every shape. Scoring rewards this too: 10 points per square and 100 per line, with bonuses for multiple lines and consecutive clears.",
+    "sections": [
+     {
+      "h": "Plan all three blocks",
+      "items": [
+       "New blocks only arrive once you place all three, so place the hardest shape first.",
+       "Before placing a block, make sure the other two will still fit.",
+       "Blocks don't rotate, so keep separate space for horizontal and vertical bars.",
+       "Saving corners for L-shaped blocks often pays off."
+      ]
+     },
+     {
+      "h": "Use the preview",
+      "items": [
+       "Before you drop a block, the game shows how many lines will clear; use it to find the best spot.",
+       "Clearing two lines in one move is usually better than one.",
+       "Consecutive clears earn streak bonuses; aim to clear at least one line every set.",
+       "Tap-to-place can be easier than dragging for precise placements."
+      ]
+     },
+     {
+      "h": "Keep the board clean",
+      "items": [
+       "Focus on finishing lines; many half-filled lines lock the board.",
+       "Avoid single-cell holes.",
+       "Keep a wide area open in the middle; it helps when a 3×3 square arrives.",
+       "You can undo your last move once per game with an optional ad."
+      ]
+     }
+    ]
+   },
+   "es": {
+    "title": "Consejos de Woodora Classic: estrategia 8×8 | Exclusive LLM",
+    "description": "Guía de estrategia de Woodora Classic: planifica bloques que no se giran, usa la vista previa, gana bonificaciones por racha y mantén abierto el tablero 8×8.",
+    "crumb": "Consejos",
+    "eyebrow": "Guía de Woodora Classic",
+    "h1": "Consejos de Woodora Classic: estrategia en un tablero de 8×8",
+    "lead": "Los bloques no se pueden girar, así que gana quien planifica con antelación.",
+    "intro": "En Woodora Classic los bloques no se pueden girar y el tablero de 8×8 se llena rápido. La clave para una buena puntuación es pensar en los tres bloques a la vez y dejar espacio para cada forma. La puntuación también lo premia: 10 puntos por casilla y 100 por línea, con bonificaciones por líneas múltiples y consecutivas.",
+    "sections": [
+     {
+      "h": "Planifica los tres bloques",
+      "items": [
+       "Los bloques nuevos solo llegan cuando colocas los tres, así que coloca primero la forma más difícil.",
+       "Antes de colocar un bloque, asegúrate de que los otros dos seguirán cabiendo.",
+       "Los bloques no se pueden girar, así que reserva espacios distintos para las barras horizontales y verticales.",
+       "Guardar las esquinas para los bloques en forma de L suele dar buen resultado."
+      ]
+     },
+     {
+      "h": "Usa la vista previa",
+      "items": [
+       "Antes de soltar un bloque, el juego muestra cuántas líneas se eliminarán; úsalo para encontrar el mejor sitio.",
+       "Eliminar dos líneas en una sola jugada suele ser mejor que una.",
+       "Las eliminaciones consecutivas dan bonificaciones por racha; intenta eliminar al menos una línea en cada tanda.",
+       "Tocar para colocar puede ser más fácil que arrastrar cuando necesitas precisión."
+      ]
+     },
+     {
+      "h": "Mantén el tablero limpio",
+      "items": [
+       "Céntrate en terminar líneas; muchas líneas a medio llenar bloquean el tablero.",
+       "Evita los huecos de una sola casilla.",
+       "Mantén una zona amplia libre en el centro; te ayudará cuando llegue un cuadrado de 3×3.",
+       "Puedes deshacer tu última jugada una vez por partida con un anuncio opcional."
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "app": "block-four",
+   "path": "block-four/guide/",
+   "tr": {
+    "title": "BlockFour İpuçları: Blok Rota, 2048 ve Renk Sıralama | Exclusive LLM",
+    "description": "BlockFour'daki dört oyun için ipuçları: Blok Rota'da yüksek skor, Düşen Bloklar'da hız, 2048'e ulaşma ve Renk Sıralama seviyelerini geçme.",
+    "crumb": "İpuçları",
+    "eyebrow": "BlockFour rehberi",
+    "h1": "BlockFour ipuçları: dört oyun için rehber",
+    "lead": "Her oyunun kendi stratejisi var; işte en işe yarayanlar.",
+    "intro": "BlockFour dört farklı bulmacayı tek uygulamada toplar: Blok Rota, Düşen Bloklar, Sayı Birleştirme (2048) ve Renk Sıralama. Her birinin kuralları farklı olduğu için en iyi taktikler de farklı. Bu rehberde her oyun için kısa ve uygulanabilir ipuçları bulacaksın.",
+    "sections": [
+     {
+      "h": "Blok Rota (8×8)",
+      "items": [
+       "Klasik modda acele etme; süre yok, her hamleyi düşün.",
+       "120 Saniye modunda mükemmeli arama: hızlı ve güvenli yerleşimler daha çok puan getirir.",
+       "Günlük Rota'da 30 hamlen var; her hamlenin bir çizgi temizlemesine çalış.",
+       "Aynı anda birden fazla çizgi temizlemek kombo ve büyük bonus getirir."
+      ]
+     },
+     {
+      "h": "Düşen Bloklar (10×20)",
+      "items": [
+       "Yüzeyi düz tut; derin kuyular ve çıkıntılar oyunu zorlaştırır.",
+       "Bir sütunu uzun parçalar için boş bırakıp birden fazla çizgiyi birlikte temizle.",
+       "Anında düşürme hız kazandırır ama yerleşimden emin olduğunda kullan.",
+       "Ekrandaki tuşları eline göre taşı ve boyutlandır; sağ ya da sol el düzenini seç."
+      ]
+     },
+     {
+      "h": "Sayı Birleştirme (2048)",
+      "items": [
+       "En büyük taşı bir köşede tut ve oradan ayırma.",
+       "Çoğunlukla iki yönde kaydır; dördüncü yönü yalnızca mecbur kalınca kullan.",
+       "Büyük taşın yanındaki sırayı dolu tutarak köşeyi koru.",
+       "Her oyunda 3 ücretsiz geri alma hakkın var; onları kritik anlara sakla."
+      ]
+     },
+     {
+      "h": "Renk Sıralama (50 seviye)",
+      "items": [
+       "İlk hamleden önce tüm tüplere bak ve hangi rengin en kolay toplanacağını bul.",
+       "Boş tüp en değerli kaynağındır; onu hemen doldurma.",
+       "Bir tüpü tek renge tamamlamak, diğer tüplerde yer açar.",
+       "Takılırsan geri al ya da seviyeyi yeniden başlat."
+      ]
+     }
+    ]
+   },
+   "en": {
+    "title": "BlockFour Tips: Block Route, 2048 and Color Sort | Exclusive LLM",
+    "description": "Tips for all four games in BlockFour: high scores in Block Route, speed in Falling Blocks, reaching 2048 and beating Color Sort levels.",
+    "crumb": "Tips",
+    "eyebrow": "BlockFour guide",
+    "h1": "BlockFour tips: a guide to all four games",
+    "lead": "Every game has its own strategy; here is what works best.",
+    "intro": "BlockFour brings four different puzzles together in one app: Block Route, Falling Blocks, Number Merge (2048) and Color Sort. Their rules differ, so the best tactics differ too. In this guide you will find short, practical tips for each game.",
+    "sections": [
+     {
+      "h": "Block Route (8×8)",
+      "items": [
+       "In Classic mode, take your time; there is no timer.",
+       "In 120 Seconds, don't hunt for the perfect spot: quick, safe placements score more.",
+       "Daily Route gives you 30 moves; try to make every move clear a line.",
+       "Clearing several lines at once earns combos and big bonuses."
+      ]
+     },
+     {
+      "h": "Falling Blocks (10×20)",
+      "items": [
+       "Keep the surface flat; deep wells and spikes make the game harder.",
+       "Leave one column empty for long pieces and clear several lines together.",
+       "Hard drop saves time, but use it only when you are sure of the placement.",
+       "Move and resize the on-screen buttons to fit your hand, and pick a left- or right-handed layout."
+      ]
+     },
+     {
+      "h": "Number Merge (2048)",
+      "items": [
+       "Keep your biggest tile in one corner and never move it out.",
+       "Swipe mostly in two directions; use the fourth only when you must.",
+       "Keep the row next to your biggest tile full to protect the corner.",
+       "You get 3 free undos per game; save them for critical moments."
+      ]
+     },
+     {
+      "h": "Color Sort (50 levels)",
+      "items": [
+       "Before your first move, look at every tube and find the easiest color to collect.",
+       "An empty tube is your most valuable resource; don't fill it right away.",
+       "Completing one tube with a single color frees up space in the others.",
+       "If you get stuck, undo or restart the level."
+      ]
+     }
+    ]
+   },
+   "es": {
+    "title": "Consejos de BlockFour: bloques, 2048 y colores | Exclusive LLM",
+    "description": "Consejos para los cuatro juegos de BlockFour: récords en Ruta de bloques, velocidad en Bloques en caída, llegar a 2048 y superar Ordenar colores.",
+    "crumb": "Consejos",
+    "eyebrow": "Guía de BlockFour",
+    "h1": "Consejos de BlockFour: guía de los cuatro juegos",
+    "lead": "Cada juego tiene su propia estrategia; esto es lo que mejor funciona.",
+    "intro": "BlockFour reúne cuatro puzzles distintos en una sola app: Ruta de bloques, Bloques en caída, Fusionar números (2048) y Ordenar colores. Sus reglas son diferentes, así que las mejores tácticas también lo son. En esta guía encontrarás consejos breves y prácticos para cada juego.",
+    "sections": [
+     {
+      "h": "Ruta de bloques (8×8)",
+      "items": [
+       "En el modo Clásico, tómate tu tiempo; no hay reloj.",
+       "En 120 segundos, no busques el sitio perfecto: las colocaciones rápidas y seguras suman más puntos.",
+       "Ruta diaria te da 30 movimientos; intenta que cada movimiento elimine una línea.",
+       "Eliminar varias líneas a la vez da combos y grandes bonus."
+      ]
+     },
+     {
+      "h": "Bloques en caída (10×20)",
+      "items": [
+       "Mantén la superficie plana; los pozos profundos y los picos complican la partida.",
+       "Deja una columna vacía para las piezas largas y elimina varias líneas a la vez.",
+       "La caída rápida ahorra tiempo, pero úsala solo cuando estés seguro de la posición.",
+       "Mueve los botones en pantalla y cambia su tamaño para adaptarlos a tu mano, y elige una disposición para diestros o zurdos."
+      ]
+     },
+     {
+      "h": "Fusionar números (2048)",
+      "items": [
+       "Mantén tu ficha más grande en una esquina y no la saques nunca de ahí.",
+       "Desliza sobre todo en dos direcciones; usa la cuarta solo cuando no quede otra.",
+       "Mantén llena la fila junto a tu ficha más grande para proteger la esquina.",
+       "Tienes 3 movimientos para deshacer gratis por partida; guárdalos para los momentos críticos."
+      ]
+     },
+     {
+      "h": "Ordenar colores (50 niveles)",
+      "items": [
+       "Antes del primer movimiento, mira todos los tubos y busca el color más fácil de reunir.",
+       "Un tubo vacío es tu recurso más valioso; no lo llenes enseguida.",
+       "Completar un tubo con un solo color libera espacio en los demás.",
+       "Si te atascas, deshaz o reinicia el nivel."
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "hubs": [
+  {
+   "path": "offline-games/",
+   "image": "woodoraclassic-feature.jpg",
+   "apps": [
+    "blocknest",
+    "woodora-classic",
+    "block-four"
+   ],
+   "tr": {
+    "title": "İnternetsiz Oyunlar: Telefonda Ücretsiz Çevrimdışı Bulmacalar | Exclusive LLM",
+    "description": "İnternet olmadan oynanan ücretsiz telefon oyunları: blok bulmaca, 2048 ve renk sıralama. Uçakta, yolda, kotası bitince bile oyna.",
+    "crumb": "İnternetsiz oyunlar",
+    "eyebrow": "Oyun önerileri",
+    "h1": "İnternetsiz oyunlar",
+    "lead": "Bağlantı yokken de oynayabileceğin, üyelik istemeyen sakin bulmacalar.",
+    "intro": "Uçakta, metroda, tatilde ya da mobil veri bittiğinde vakit geçirmek için internet gerektirmeyen bir oyun işe yarar. Aşağıdaki üç oyunumuz da indirildikten sonra internet olmadan oynanır, hesap açmanı istemez ve ilerlemeni telefonunda saklar. İnternete bağlıyken reklam gösterilebilir; oyunun kendisi bağlantıya ihtiyaç duymaz.",
+    "compare": {
+     "title": "Hangisi sana uygun?",
+     "head": [
+      "Oyun",
+      "Tür",
+      "Bir oyun ne kadar sürer?",
+      "Kimler için?"
+     ],
+     "rows": [
+      [
+       "BlockNest",
+       "10×10 ahşap blok bulmaca",
+       "Birkaç dakikadan uzun oturumlara",
+       "Geniş tahtada sakin, uzun oyun sevenler"
+      ],
+      [
+       "Woodora Classic",
+       "8×8 klasik blok bulmaca",
+       "Kısa ve orta",
+       "Süre baskısı olmadan plan yapmayı sevenler"
+      ],
+      [
+       "BlockFour",
+       "Blok bulmaca, düşen bloklar, 2048, renk sıralama",
+       "Oyuna göre değişir",
+       "Tek uygulamada çeşitlilik isteyenler"
+      ]
+     ]
+    },
+    "sections": [
+     {
+      "h": "İnternetsiz oyun seçerken nelere bakılmalı?",
+      "items": [
+       "Oyunun gerçekten bağlantısız açılıp oynandığı (yalnızca bazı modlar değil).",
+       "Hesap ya da giriş istemediği.",
+       "İlerlemenin telefonda kaydedildiği; kapatıp açınca kaldığın yerden devam edebildiğin.",
+       "Pili ve depolamayı yormayan, sade bir oyun olduğu."
+      ]
+     },
+     {
+      "h": "Bu oyunlar neden rahatlatıcı?",
+      "items": [
+       "Süre sınırı yok ya da isteğe bağlı: her hamleyi düşünerek yaparsın.",
+       "Kısa oturumlar molalara uyar.",
+       "Dolan satırların temizlenmesi küçük ama tatmin edici bir başarı hissi verir.",
+       "Bildirim yağmuru ve sosyal baskı yok."
+      ]
+     }
+    ],
+    "faq": [
+     {
+      "q": "Bu oyunlar internet olmadan gerçekten oynanır mı?",
+      "a": "Evet. BlockNest, Woodora Classic ve BlockFour indirildikten sonra internet bağlantısı olmadan oynanır. İnternete bağlıyken reklam gösterilebilir."
+     },
+     {
+      "q": "Ücretsiz mi?",
+      "a": "Evet, üçü de Google Play'den ücretsiz indirilir. Geri alma ya da devam etme için izlenen reklamlar isteğe bağlıdır."
+     },
+     {
+      "q": "İlerlemem kaybolur mu?",
+      "a": "Hayır. Oyunlar ilerlemeni ve rekorlarını telefonunda saklar; uygulamayı kapatıp açtığında kaldığın yerden devam edersin."
+     }
+    ]
+   },
+   "en": {
+    "title": "Offline Games: Free Phone Puzzles With No Internet | Exclusive LLM",
+    "description": "Free phone games that play without internet: block puzzles, 2048 and color sort. Play on a plane, on the road or when your data runs out.",
+    "crumb": "Offline games",
+    "eyebrow": "Game picks",
+    "h1": "Offline games",
+    "lead": "Calm puzzles you can play with no connection and no account.",
+    "intro": "On a plane, on the subway, on holiday or when your mobile data runs out, a game that needs no internet comes in handy. All three of our games below play without a connection once installed, ask for no account and keep your progress on your phone. Ads may show while you are online; the game itself does not need a connection.",
+    "compare": {
+     "title": "Which one suits you?",
+     "head": [
+      "Game",
+      "Type",
+      "Session length",
+      "Best for"
+     ],
+     "rows": [
+      [
+       "BlockNest",
+       "10×10 wood block puzzle",
+       "A few minutes to long sessions",
+       "Calm, long games on a big board"
+      ],
+      [
+       "Woodora Classic",
+       "8×8 classic block puzzle",
+       "Short to medium",
+       "Planning without a timer"
+      ],
+      [
+       "BlockFour",
+       "Block puzzle, falling blocks, 2048, color sort",
+       "Depends on the game",
+       "Variety in one app"
+      ]
+     ]
+    },
+    "sections": [
+     {
+      "h": "What to look for in an offline game",
+      "items": [
+       "It really opens and plays without a connection, not just some modes.",
+       "It asks for no account or sign-in.",
+       "Progress is saved on the phone so you can pick up where you left off.",
+       "It is light on battery and storage."
+      ]
+     },
+     {
+      "h": "Why these games feel relaxing",
+      "items": [
+       "No timer, or an optional one: you can think every move through.",
+       "Short sessions fit into breaks.",
+       "Clearing full lines gives a small, satisfying sense of progress.",
+       "No notification storms or social pressure."
+      ]
+     }
+    ],
+    "faq": [
+     {
+      "q": "Do these games really work without internet?",
+      "a": "Yes. BlockNest, Woodora Classic and BlockFour play without an internet connection once installed. Ads may show while you are online."
+     },
+     {
+      "q": "Are they free?",
+      "a": "Yes, all three are free on Google Play. Ads watched for an undo or a continue are optional."
+     },
+     {
+      "q": "Will I lose my progress?",
+      "a": "No. The games keep your progress and records on your phone, so you continue where you left off."
+     }
+    ]
+   },
+   "es": {
+    "title": "Juegos sin conexión: puzzles gratis sin internet | Exclusive LLM",
+    "description": "Juegos gratis para el móvil que funcionan sin internet: puzzles de bloques, 2048 y ordenar colores. Juega en el avión, de viaje o sin datos.",
+    "crumb": "Juegos sin conexión",
+    "eyebrow": "Recomendaciones",
+    "h1": "Juegos sin conexión",
+    "lead": "Puzzles tranquilos para jugar sin conexión y sin cuenta.",
+    "intro": "En el avión, en el metro, de vacaciones o cuando se acaban los datos, viene bien un juego que no necesita internet. Nuestros tres juegos funcionan sin conexión una vez instalados, no piden cuenta y guardan tu progreso en el móvil. Con conexión pueden mostrarse anuncios; el juego en sí no necesita internet.",
+    "compare": {
+     "title": "¿Cuál te conviene?",
+     "head": [
+      "Juego",
+      "Tipo",
+      "Duración de partida",
+      "Ideal para"
+     ],
+     "rows": [
+      [
+       "BlockNest",
+       "Puzzle de bloques de madera 10×10",
+       "De unos minutos a sesiones largas",
+       "Partidas tranquilas en un tablero grande"
+      ],
+      [
+       "Woodora Classic",
+       "Puzzle de bloques clásico 8×8",
+       "Corta a media",
+       "Planificar sin cronómetro"
+      ],
+      [
+       "BlockFour",
+       "Bloques, bloques que caen, 2048, ordenar colores",
+       "Según el juego",
+       "Variedad en una sola app"
+      ]
+     ]
+    },
+    "sections": [
+     {
+      "h": "Qué buscar en un juego sin conexión",
+      "items": [
+       "Que abra y funcione de verdad sin conexión, no solo algunos modos.",
+       "Que no pida cuenta ni inicio de sesión.",
+       "Que guarde el progreso en el móvil.",
+       "Que sea ligero para la batería y el almacenamiento."
+      ]
+     },
+     {
+      "h": "Por qué relajan",
+      "items": [
+       "Sin cronómetro, o con uno opcional: piensas cada jugada.",
+       "Partidas cortas para los descansos.",
+       "Limpiar líneas da una pequeña sensación de logro.",
+       "Sin avalancha de notificaciones ni presión social."
+      ]
+     }
+    ],
+    "faq": [
+     {
+      "q": "¿Funcionan de verdad sin internet?",
+      "a": "Sí. BlockNest, Woodora Classic y BlockFour funcionan sin conexión una vez instalados. Con conexión pueden mostrarse anuncios."
+     },
+     {
+      "q": "¿Son gratis?",
+      "a": "Sí, los tres son gratis en Google Play. Los anuncios para deshacer o continuar son opcionales."
+     },
+     {
+      "q": "¿Perderé mi progreso?",
+      "a": "No. Los juegos guardan tu progreso y récords en el móvil."
+     }
+    ]
+   }
+  }
+ ]
 }

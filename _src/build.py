@@ -141,15 +141,16 @@ UI = {
     "tr": {"home": "Ana sayfa", "games": "Oyunlar", "shots": "Ekran görüntüleri", "video": "Tanıtım videosu",
            "watch": "Videoyu oynat", "features": "Özellikler", "faq": "Sık sorulan sorular", "others": "Diğer oyunlarımız",
            "eyebrow_media": "Oyundan kareler", "eyebrow_play": "Oynanış", "eyebrow_faq": "Merak edilenler",
-           "eyebrow_more": "Exclusive LLM", "free": "Google Play'de ücretsiz"},
+           "eyebrow_more": "Exclusive LLM", "free": "Google Play'de ücretsiz",
+           "open": "Aç", "close": "Kapat", "qr": "Telefonunla tara, Google Play'de aç"},
     "en": {"home": "Home", "games": "Games", "shots": "Screenshots", "video": "Trailer",
            "watch": "Play video", "features": "Features", "faq": "Frequently asked questions", "others": "More of our games",
            "eyebrow_media": "In the game", "eyebrow_play": "Gameplay", "eyebrow_faq": "Questions", "eyebrow_more": "Exclusive LLM",
-           "free": "Free on Google Play"},
+           "free": "Free on Google Play", "open": "Open", "close": "Close", "qr": "Scan with your phone to open Google Play"},
     "es": {"home": "Inicio", "games": "Juegos", "shots": "Capturas de pantalla", "video": "Tráiler",
            "watch": "Reproducir video", "features": "Características", "faq": "Preguntas frecuentes", "others": "Más juegos nuestros",
            "eyebrow_media": "En el juego", "eyebrow_play": "Jugabilidad", "eyebrow_faq": "Preguntas", "eyebrow_more": "Exclusive LLM",
-           "free": "Gratis en Google Play"},
+           "free": "Gratis en Google Play", "open": "Abrir", "close": "Cerrar", "qr": "Escanea con tu móvil para abrir Google Play"},
 }
 
 
@@ -357,6 +358,30 @@ def shots_for(app: dict, lang: str) -> list[str]:
     return s.get(lang) or s.get("tr") or [] if isinstance(s, dict) else s
 
 
+def qr_file(app: dict, lang: str) -> str:
+    """Masaüstü ziyaretçisi için Play QR kodu (img/qr/<slug>-<dil>.svg); UTM medium=qr ile ayrı ölçülür."""
+    import segno
+    url = (f"{PLAY_PREFIX}{app['package']}&utm_source=exclusivellm_site&utm_medium=qr"
+           f"&utm_campaign=site_{app['slug']}_qr&utm_content={lang}")
+    rel = f"qr/{app['slug']}-{lang}.svg"
+    out = ROOT / "img" / rel
+    out.parent.mkdir(parents=True, exist_ok=True)
+    segno.make(url, error="m").save(str(out), kind="svg", scale=4, border=2, dark="#0b1020", light="#ffffff", xmldecl=False)
+    return rel
+
+
+def get_extras(app: dict, lang: str) -> tuple[str, str]:
+    """(QR kutusu, Android alt bandı) HTML'i. Bant yalnızca Android'de app.js ile görünür."""
+    ui, name = UI[lang], esc(app["name"])
+    qr = (f'<div class="qr-box" aria-hidden="true"><img src="/img/{qr_file(app, lang)}" alt="" width="112" height="112">'
+          f'<span>{esc(ui["qr"])}</span></div>')
+    bar = (f'<div class="getbar" id="getbar" hidden><img src="/img/{app["icon"]}" alt="" width="44" height="44">'
+           f'<span><b>{name}</b><small>{esc(ui["free"])}</small></span>'
+           f'<a class="getbar-btn" href="{PLAY_PREFIX}{app["package"]}" target="_blank" rel="noopener">{esc(ui["open"])}</a>'
+           f'<button type="button" class="getbar-x" aria-label="{esc(ui["close"])}">×</button></div>')
+    return qr, bar
+
+
 def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False) -> str:
     t, ui, base = app[lang], UI[lang], BASE[lang]
     name = esc(app["name"])
@@ -390,8 +415,9 @@ def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False) -
         for o in apps if o["slug"] != app["slug"])
     others += (f'<a class="other" href="{base}#apps"><img src="/img/favicon.png" alt="" width="56" height="56" loading="lazy">'
                f'<span><b>{esc(ui["games"])}</b><small>exclusivellm.app</small></span></a>')
+    qr, bar = get_extras(app, lang)
     return f'''
-  <main id="top" class="gp">
+  <main id="top" class="gp">{bar}
     <section class="gp-hero">
       <div class="wrap gp-grid">
         <div>
@@ -399,7 +425,7 @@ def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False) -
           <div class="head-row"><img src="/img/{app["icon"]}" alt="{name}" width="84" height="84"><div><h1>{name}</h1><div class="tags">{tags}</div></div></div>
           <p class="lead">{esc(t["tagline"])}</p>
           <p class="intro">{esc(t["intro"])}</p>
-          <div class="cta-row" id="play-slot">{guide_link}</div>
+          <div class="cta-row" id="play-slot">{guide_link}{qr}</div>
         </div>
         <div class="gp-media"><img src="/img/{app["feature"]}" alt="{name}" width="1024" height="500"></div>
       </div>
@@ -578,7 +604,8 @@ def article_ld(t: dict, url: str, image: str) -> dict:
 
 def build_content_pages(apps: list[dict], pages: dict, lang: str, out_dir: Path) -> list[str]:
     urls = []
-    specs = [("hub", pages["hub"], hub_main), ("press", pages["press"], press_main)] + [("guide", g, guide_main) for g in pages["guides"]]
+    specs = ([("hub", pages["hub"], hub_main)] + [("hub", h, hub_main) for h in pages.get("hubs", [])]
+             + [("press", pages["press"], press_main)] + [("guide", g, guide_main) for g in pages["guides"]])
     for kind, p, fn in specs:
         soup = page_soup(lang)
         path, t = p["path"], p[lang]
@@ -599,7 +626,8 @@ def build_content_pages(apps: list[dict], pages: dict, lang: str, out_dir: Path)
             image = app["feature"]
             ld = [article_ld(t, url, image), crumbs_ld(lang, [(app["name"], DOMAIN + BASE[lang] + app["slug"] + "/"), (t["crumb"], url)])]
         set_head(soup, lang, path, t["title"], t["description"], image, ld)
-        tag_play_links(soup, kind if kind != "guide" else p["app"] + "_guide", lang)
+        camp = ("hub" if p is pages["hub"] else "hub_" + p["path"].strip("/").replace("-", "_")) if kind == "hub" else kind
+        tag_play_links(soup, camp if kind != "guide" else p["app"] + "_guide", lang)
         write(out_dir / path / "index.html", soup)
         urls.append(BASE[lang] + path)
     return urls
@@ -625,7 +653,7 @@ def build() -> list[str]:
     if errors:
         raise SystemExit("SİTE ÜRETİLMEDİ — düzeltilmesi gerekenler:\n  - " + "\n  - ".join(errors))
     # Bir dilin metni yoksa İngilizcesi kullanılır (yeni oyun eklerken "es" bloğunu unutma)
-    for obj in apps + [pages["hub"], pages["press"]] + pages["guides"]:
+    for obj in apps + [pages["hub"], pages["press"]] + pages.get("hubs", []) + pages["guides"]:
         for l in LANGS:
             if l not in obj:
                 print(f"UYARI: {obj.get('slug') or obj.get('path')} için '{l}' metni yok, İngilizcesi kullanıldı")
@@ -655,6 +683,10 @@ def build() -> list[str]:
             del soup.select_one("#play-slot")["id"]
             set_head(soup, lang, app["slug"] + "/", app[lang]["title"], app[lang]["description"], app["feature"], game_ld(app, lang))
             tag_play_links(soup, app["slug"], lang)
+            gb = soup.select_one("a.getbar-btn")
+            if gb:
+                gb["href"] = gb["href"].replace(f"utm_campaign=site_{app['slug']}&", f"utm_campaign=site_{app['slug']}_banner&")
+                gb["data-page"] = app["slug"] + "_banner"
             write(out_dir / app["slug"] / "index.html", soup)
             urls.append(BASE[lang] + app["slug"] + "/")
         urls += build_content_pages(apps, pages, lang, out_dir)

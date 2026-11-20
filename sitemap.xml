@@ -121,6 +121,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/block-puzzle-games/"/>
   </url>
   <url>
+    <loc>https://exclusivellm.app/offline-games/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/offline-games/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/offline-games/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/offline-games/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/offline-games/"/>
+  </url>
+  <url>
+    <loc>https://exclusivellm.app/en/offline-games/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/offline-games/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/offline-games/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/offline-games/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/offline-games/"/>
+  </url>
+  <url>
+    <loc>https://exclusivellm.app/es/offline-games/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/offline-games/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/offline-games/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/offline-games/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/offline-games/"/>
+  </url>
+  <url>
     <loc>https://exclusivellm.app/press/</loc>
     <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/press/"/>
