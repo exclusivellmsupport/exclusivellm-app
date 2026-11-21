@@ -15,5 +15,6 @@
  "x-blockfour-en": {"package": "com.firat.blokrota", "platform": "x", "hedef": "play", "dil": "en", "not": "X genel, EN gönderi"},
  "ig-blocknest": {"package": "com.exclusivellm.blocknest", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel)"},
  "ig-woodoraclassic": {"package": "com.exclusivellm.woodoraclassic", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel)"},
- "ig-blockfour": {"package": "com.firat.blokrota", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel)"}
+ "ig-blockfour": {"package": "com.firat.blokrota", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel)"},
+ "ig-yakinda": {"package": null, "platform": "instagram", "hedef": "site", "dil": "tr", "not": "Instagram \"Yakında\" öne çıkanının kalıcı Hikâyesi (kapalı testteki oyunlar → ana sayfa Yolda bölümü), 21.11.2026"}
 }
