@@ -666,8 +666,8 @@
             "Bir kategori seç ya da tüm kategorilerden karışık oyna.",
             "Her tur 15 sorudan oluşur: 5 kolay, 5 orta, 5 zor.",
             "Her soru için 20 saniyen var; dört şıktan doğru olanı seç.",
-            "Kolay soru 100, orta 150, zor 200 puan; hızlı cevaplarsan +50'ye kadar hız bonusu.",
-            "Üst üste 3 doğru yaptığında her doğru cevaba seri bonusu eklenir.",
+            "Zor sorular daha çok puan getirir; hızlı cevap vermek de puanını artırır.",
+            "Üst üste doğru cevaplarla serini büyüt.",
             "Zorlandığında 50:50 ipucuyla iki yanlış şıkkı ele."
           ]
         },
@@ -703,7 +703,7 @@
       "faq": [
         {
           "q": "Exclusive Quiz ücretsiz mi?",
-          "a": "Evet, Google Play'den ücretsiz indirilir. Uygulama reklam içerir; her turda ilk 50:50 ipucu ücretsizdir, sonrakiler isteğe bağlı kısa bir reklamla açılır."
+          "a": "Evet, Google Play'den ücretsiz indirilir. Uygulama reklam içerir; ek 50:50 ipucu için reklam izlemek isteğe bağlıdır."
         },
         {
           "q": "İnternet olmadan oynanır mı?",
@@ -736,8 +736,8 @@
             "Pick a category or play a mixed round from all categories.",
             "Each round has 15 questions: 5 easy, 5 medium and 5 hard.",
             "You have 20 seconds per question; choose the right one of four answers.",
-            "Easy questions are worth 100 points, medium 150 and hard 200; answer quickly for a speed bonus of up to +50.",
-            "Get 3 right in a row and every correct answer adds a streak bonus.",
+            "Harder questions are worth more points, and quick answers score higher.",
+            "Answer correctly in a row to build your streak.",
             "Stuck? Use the 50:50 hint to remove two wrong answers."
           ]
         },
@@ -773,7 +773,7 @@
       "faq": [
         {
           "q": "Is Exclusive Quiz free?",
-          "a": "Yes, it is free to download on Google Play. The app contains ads; the first 50:50 hint in each round is free and more unlock with a short optional ad."
+          "a": "Yes, it is free to download on Google Play. The app contains ads; watching an ad for an extra 50:50 hint is optional."
         },
         {
           "q": "Can I play offline?",
@@ -806,8 +806,8 @@
             "Elige una categoría o juega una ronda mixta de todas las categorías.",
             "Cada ronda tiene 15 preguntas: 5 fáciles, 5 medias y 5 difíciles.",
             "Tienes 20 segundos por pregunta; elige la respuesta correcta entre cuatro.",
-            "Las preguntas fáciles valen 100 puntos, las medias 150 y las difíciles 200; responde rápido para un bonus de velocidad de hasta +50.",
-            "Acierta 3 seguidas y cada respuesta correcta suma un bonus de racha.",
+            "Las preguntas difíciles valen más puntos y las respuestas rápidas suman más.",
+            "Acierta seguidas para alargar tu racha.",
             "¿Atascado? Usa la pista 50:50 para quitar dos respuestas incorrectas."
           ]
         },
@@ -843,7 +843,7 @@
       "faq": [
         {
           "q": "¿Exclusive Quiz es gratis?",
-          "a": "Sí, se descarga gratis en Google Play. La app contiene anuncios; la primera pista 50:50 de cada ronda es gratis y las demás se desbloquean con un anuncio corto opcional."
+          "a": "Sí, se descarga gratis en Google Play. La app contiene anuncios; ver un anuncio para una pista 50:50 extra es opcional."
         },
         {
           "q": "¿Está en español?",
