@@ -77,8 +77,10 @@ header.top.scrolled { background: rgba(4,8,20,.72); backdrop-filter: blur(16px) 
 .links a.soc:hover { color: var(--text); border-color: rgba(127,178,255,.5); transform: translateY(-2px); }
 .links a.soc svg { width: 18px; height: 18px; }
 .links a.soc + a.soc { margin-left: -16px; }
-.socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 16px; }
-.socials .btn { gap: 10px; }
+.socials { display: grid; grid-template-columns: repeat(4, 210px); justify-content: center; gap: 12px; margin-top: 16px; }
+.socials .btn { gap: 10px; justify-content: center; min-width: 0; }
+@media (max-width: 900px) { .socials { grid-template-columns: repeat(2, minmax(0, 220px)); } }
+@media (max-width: 480px) { .socials { grid-template-columns: minmax(0, 260px); } }
 /* Orijinal marka renkleri — premium cam karo */
 .b-ig { --g: 214,36,159; background: radial-gradient(circle at 28% 108%, #fdf497 0%, #fdf497 6%, #fd5949 42%, #d6249f 62%, #285aeb 96%) !important; }
 .b-tt { --g: 37,244,238; background: radial-gradient(120% 120% at 30% 0%, #2a2d33 0%, #0b0b0d 55%, #000 100%) !important; }
