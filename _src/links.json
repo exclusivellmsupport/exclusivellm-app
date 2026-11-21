@@ -43,5 +43,8 @@
  "ig-quiz-1124": {"package": "com.exclusivellm.quiz", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "IG Hikâye bağlantı çıkartması (Reels C2 günü), 24.11.2026"},
  "ig-quiz-1125": {"package": "com.exclusivellm.quiz", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "IG Hikâye bağlantı çıkartması (Reels C3 günü), 25.11.2026"},
  "ig-quiz-1126": {"package": "com.exclusivellm.quiz", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "IG Hikâye bağlantı çıkartması (kaydırmalı günü), 26.11.2026"},
- "yt-toppleisles-1122-en": {"package": "com.exclusivellm.toppleisles", "platform": "youtube", "hedef": "site", "dil": "en", "not": "YouTube C EN 'Coming soon' videosu (160 bölüm, 3 yeni dünya; eski planlı B videosunun yerine), 22.11.2026"}
+ "yt-toppleisles-1122-en": {"package": "com.exclusivellm.toppleisles", "platform": "youtube", "hedef": "site", "dil": "en", "not": "YouTube C EN 'Coming soon' videosu (160 bölüm, 3 yeni dünya; eski planlı B videosunun yerine), 22.11.2026"},
+ "x-toppleisles-1122": {"package": "com.exclusivellm.toppleisles", "platform": "x", "hedef": "site", "dil": "tr", "not": "X C TR 'Yakında' ilk yanıt (160 bölüm, 8 dünya), 22.11.2026"},
+ "x-toppleisles-1122-en": {"package": "com.exclusivellm.toppleisles", "platform": "x", "hedef": "site", "dil": "en", "not": "X C EN 'Coming soon' ilk yanıt, 22.11.2026"},
+ "ig-toppleisles-1127": {"package": "com.exclusivellm.toppleisles", "platform": "instagram", "hedef": "site", "dil": "tr", "not": "IG Hikâye bağlantı çıkartması (Reels C 'Yakında' günü), 27.11.2026"}
 }
