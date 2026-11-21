@@ -101,7 +101,7 @@ def play_titles(pkg: str) -> dict[str, str]:
 
 def check_names(apps: list[dict]) -> list[str]:
     errors = []
-    texts = "\n".join((SRC / f).read_text(encoding="utf-8") for f in ("apps.json", "pages.json", "index.html", "build.py", "i18n_es.json")
+    texts = "\n".join((SRC / f).read_text(encoding="utf-8") for f in ("apps.json", "pages.json", "index.html", "build.py", "i18n_es.json", "updates.json")
                       if (SRC / f).exists())
     texts += "\n".join(f.read_text(encoding="utf-8") for f in ROOT.glob("*-privacy.html"))  # elle yazılan gizlilik sayfaları
     for a in apps:
@@ -382,7 +382,7 @@ def get_extras(app: dict, lang: str) -> tuple[str, str]:
     return qr, bar
 
 
-def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False) -> str:
+def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False, updates_html: str = "") -> str:
     t, ui, base = app[lang], UI[lang], BASE[lang]
     name = esc(app["name"])
     guide_link = (f'<a class="more" href="{base}{app["slug"]}/guide/">{esc(PAGE_UI[lang]["guide"])} <span aria-hidden="true">→</span></a>'
@@ -441,7 +441,7 @@ def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False) -
         <div class="head"><span class="eyebrow">{name}</span><h2 class="title">{esc(ui["features"])}</h2></div>
         <div class="feats">{cols}</div>
       </div>
-    </section>
+    </section>{updates_html}
     <section class="gp-sec">
       <div class="wrap">
         <div class="head center"><span class="eyebrow">{esc(ui["eyebrow_faq"])}</span><h2 class="title">{esc(ui["faq"])}</h2></div>
@@ -633,6 +633,175 @@ def build_content_pages(apps: list[dict], pages: dict, lang: str, out_dir: Path)
     return urls
 
 
+# --- Yenilikler: üretimdeki uygulamaların önemli güncellemeleri (21.11.2026) ----------------------------
+# Kaynak _src/updates.json (kurallar dosyanın başındaki "_aciklama"da). Çıktı: /updates/ (+ /en/, /es/),
+# her dilde Atom beslemesi updates/feed.xml ve her uygulama sayfasında o uygulamanın son 3 girdisi.
+UPDATES_PATH = "updates/"
+UPDATE_TYPES = ("launch", "feature", "content", "look")
+MONTHS = {
+    "tr": ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+    "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+}
+UPD_UI = {
+    "tr": {"crumb": "Yenilikler", "eyebrow": "Yenilikler", "h1": "Oyunlarımızdaki yenilikler",
+           "title": "Yenilikler: Oyunlarımızdaki Önemli Güncellemeler | Exclusive LLM",
+           "description": "BlockFour, BlockNest, Woodora Classic ve Exclusive Quiz'e gelen yeni modlar, içerikler, Google Play Oyunlar desteği ve görünüm yenilemeleri.",
+           "lead": "Google Play'deki oyunlarımıza gelen önemli güncellemeler, en yenisi en üstte.",
+           "intro": "Burada yalnızca oyunda fark edeceğin değişiklikleri yazıyoruz: yeni modlar ve içerikler, başarımlar, yeni görünümler. Güncellemeler Google Play üzerinden otomatik gelir; oyunu güncel tutman yeterli.",
+           "list": "Tüm güncellemeler", "latest": "Son güncellemeler", "all": "Tüm yenilikler", "page": "Oyun sayfası",
+           "app_title": "Yenilikler", "feed": "Atom beslemesi ile takip et", "version": "Sürüm",
+           "types": {"launch": "Yayında", "feature": "Yeni özellik", "content": "Yeni içerik", "look": "Yeni görünüm"}},
+    "en": {"crumb": "What's new", "eyebrow": "What's new", "h1": "What's new in our games",
+           "title": "What's New: Major Updates to Our Games | Exclusive LLM",
+           "description": "New modes, new content, Google Play Games support and fresh looks in BlockFour, BlockNest, Woodora Classic and Exclusive Quiz.",
+           "lead": "Major updates to our games on Google Play, newest first.",
+           "intro": "We only list changes you will notice in the game: new modes and content, achievements and new looks. Updates arrive automatically through Google Play; just keep the game up to date.",
+           "list": "All updates", "latest": "Latest updates", "all": "All updates", "page": "Game page",
+           "app_title": "What's new", "feed": "Follow with the Atom feed", "version": "Version",
+           "types": {"launch": "Now on Google Play", "feature": "New feature", "content": "New content", "look": "New look"}},
+    "es": {"crumb": "Novedades", "eyebrow": "Novedades", "h1": "Novedades de nuestros juegos",
+           "title": "Novedades: actualizaciones importantes de nuestros juegos | Exclusive LLM",
+           "description": "Nuevos modos, nuevo contenido, Google Play Juegos y nuevos diseños en BlockFour, BlockNest, Woodora Classic y Exclusive Quiz.",
+           "lead": "Las actualizaciones importantes de nuestros juegos en Google Play, primero las más recientes.",
+           "intro": "Aquí solo contamos los cambios que notarás en el juego: nuevos modos y contenido, logros y nuevos diseños. Las actualizaciones llegan solas desde Google Play; solo mantén el juego actualizado.",
+           "list": "Todas las actualizaciones", "latest": "Últimas actualizaciones", "all": "Todas las novedades", "page": "Página del juego",
+           "app_title": "Novedades", "feed": "Síguelas con el feed Atom", "version": "Versión",
+           "types": {"launch": "Ya en Google Play", "feature": "Nueva función", "content": "Nuevo contenido", "look": "Nuevo diseño"}},
+}
+
+
+def load_updates(apps: list[dict]) -> tuple[list[dict], list[str]]:
+    path = SRC / "updates.json"
+    data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"entries": []}
+    slugs = {a["slug"] for a in apps}
+    errors, seen, out = [], set(), []
+    for e in data.get("entries", []):
+        uid = f"{e.get('app')}-{e.get('version')}"
+        if e.get("app") not in slugs:
+            errors.append(f"updates.json '{uid}': '{e.get('app')}' üretimde değil (apps.json'da yok)")
+            continue
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(e.get("date", ""))):
+            errors.append(f"updates.json '{uid}': date YYYY-MM-DD olmalı")
+            continue
+        if e.get("type") not in UPDATE_TYPES:
+            errors.append(f"updates.json '{uid}': type {UPDATE_TYPES} değerlerinden biri olmalı")
+            continue
+        if uid in seen:
+            errors.append(f"updates.json '{uid}': aynı uygulama + sürüm iki kez yazılmış")
+            continue
+        seen.add(uid)
+        for l in LANGS:
+            if l not in e:
+                if "en" not in e:
+                    errors.append(f"updates.json '{uid}': '{l}' ve 'en' metni yok")
+                    break
+                print(f"UYARI: updates.json '{uid}' için '{l}' metni yok, İngilizcesi kullanıldı")
+                e[l] = e["en"]
+            elif not e[l].get("title") or not e[l].get("items"):
+                errors.append(f"updates.json '{uid}': '{l}' için title ve items gerekli")
+        e["id"] = re.sub(r"[^a-z0-9-]", "-", uid.lower())
+        out.append(e)
+    out.sort(key=lambda e: (e["date"], e["version"]), reverse=True)
+    return out, errors
+
+
+def fmt_date(d: str, lang: str) -> str:
+    y, m, day = (int(x) for x in d.split("-"))
+    mon = MONTHS[lang][m - 1]
+    return {"tr": f"{day} {mon} {y}", "en": f"{mon} {day}, {y}", "es": f"{day} de {mon} de {y}"}[lang]
+
+
+def update_cards(entries: list[dict], lang: str, apps: list[dict], play: dict[str, str] | None, show_app: bool = True) -> str:
+    by = {a["slug"]: a for a in apps}
+    ui, base = UPD_UI[lang], BASE[lang]
+    out = []
+    for e in entries:
+        app, t = by[e["app"]], e[lang]
+        head = ""
+        if show_app:
+            head = (f'<a class="upd-app" href="{base}{app["slug"]}/"><img src="/img/{app["icon"]}" alt="" width="44" height="44" loading="lazy">'
+                    f'<b>{esc(app["name"])}</b></a>')
+        cta = ""
+        if play is not None:
+            cta = (f'<div class="cta-row">{play[app["package"]]}'
+                   f'<a class="more" href="{base}{app["slug"]}/">{esc(ui["page"])} <span aria-hidden="true">→</span></a></div>')
+        out.append(
+            f'<article class="upd" id="{e["id"]}">{head}'
+            f'<div class="upd-meta"><span class="tag upd-{e["type"]}">{esc(ui["types"][e["type"]])}</span>'
+            f'<time datetime="{e["date"]}">{fmt_date(e["date"], lang)}</time><span>{esc(ui["version"])} {esc(e["version"])}</span></div>'
+            f'<h3>{esc(t["title"])}</h3><ul>{"".join(f"<li>{esc(i)}</li>" for i in t["items"])}</ul>{cta}</article>')
+    return f'<div class="upds">{"".join(out)}</div>'
+
+
+def app_updates_section(app: dict, lang: str, entries: list[dict], apps: list[dict]) -> str:
+    mine = [e for e in entries if e["app"] == app["slug"]][:3]
+    if not mine:
+        return ""
+    ui = UPD_UI[lang]
+    more = f'<p class="upd-more"><a class="more" href="{BASE[lang]}{UPDATES_PATH}">{esc(ui["all"])} <span aria-hidden="true">→</span></a></p>'
+    return sec(app["name"], ui["app_title"], update_cards(mine, lang, apps, None, show_app=False) + more)
+
+
+def updates_main(entries: list[dict], lang: str, apps: list[dict], play: dict[str, str]) -> str:
+    ui = UPD_UI[lang]
+    feed = f'<a class="more" href="{BASE[lang]}{UPDATES_PATH}feed.xml">{esc(ui["feed"])} <span aria-hidden="true">→</span></a>'
+    hero = page_hero(ui, lang, [(ui["crumb"], "")], "blockfour-feature.jpg", feed)
+    # Genel sayfa: tek bir oyunun grafiği yerine, en son güncellenen sıradaki uygulamaların simgeleri (o uygulamanın son girdisine gider)
+    order = list(dict.fromkeys(e["app"] for e in entries)) + [a["slug"] for a in apps]
+    by = {a["slug"]: a for a in apps}
+    tiles = "".join(
+        f'<a class="upd-tile" href="#{next(e["id"] for e in entries if e["app"] == s)}"><img src="/img/{by[s]["icon"]}" alt="" width="64" height="64">'
+        f'<b>{esc(by[s]["name"])}</b><small>{fmt_date(next(e["date"] for e in entries if e["app"] == s), lang)}</small></a>'
+        for s in dict.fromkeys(order) if any(e["app"] == s for e in entries))
+    hero = re.sub(r'<div class="gp-media">.*?</div>', f'<div class="gp-media upd-tiles">{tiles}</div>', hero, flags=re.S)
+    return ('\n  <main id="top" class="gp">' + hero
+            + sec(ui["eyebrow"], ui["list"], update_cards(entries, lang, apps, play)) + "\n  </main>\n")
+
+
+def write_updates_feed(entries: list[dict], lang: str, apps: list[dict], out_dir: Path) -> None:
+    by, ui = {a["slug"]: a for a in apps}, UPD_UI[lang]
+    page = DOMAIN + BASE[lang] + UPDATES_PATH
+    updated = (entries[0]["date"] if entries else "2026-11-21") + "T12:00:00Z"
+    items = []
+    for e in entries[:30]:
+        app, t = by[e["app"]], e[lang]
+        body = "<ul>" + "".join(f"<li>{esc(i)}</li>" for i in t["items"]) + "</ul>"
+        items.append(
+            f"  <entry>\n    <title>{esc(app['name'] + ' ' + e['version'] + ': ' + t['title'])}</title>\n"
+            f'    <link href="{page}#{e["id"]}"/>\n    <id>{page}#{e["id"]}</id>\n'
+            f"    <updated>{e['date']}T12:00:00Z</updated>\n"
+            f'    <category term="{esc(app["name"])}"/>\n'
+            f'    <content type="html">{esc(body)}</content>\n  </entry>')
+    xml = (f'<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{lang}">\n'
+           f"  <title>{esc('Exclusive LLM — ' + ui['h1'])}</title>\n  <subtitle>{esc(ui['lead'])}</subtitle>\n"
+           f'  <link href="{page}"/>\n  <link rel="self" href="{page}feed.xml"/>\n  <id>{page}</id>\n'
+           f"  <updated>{updated}</updated>\n  <author><name>Exclusive LLM</name><email>support@exclusivellm.app</email></author>\n"
+           + "\n".join(items) + "\n</feed>\n")
+    p = out_dir / UPDATES_PATH / "feed.xml"
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(xml, encoding="utf-8")
+
+
+def build_updates_page(entries: list[dict], lang: str, apps: list[dict], out_dir: Path) -> str:
+    ui = UPD_UI[lang]
+    soup = page_soup(lang)
+    set_lang_switch(soup, lang, UPDATES_PATH)
+    for a in soup.select("header a[href^='#'], footer a[href^='#']"):
+        a["href"] = BASE[lang] + a["href"]
+    play = play_html_map(soup, apps)
+    soup.find("main").replace_with(BeautifulSoup(updates_main(entries, lang, apps, play), "html.parser"))
+    url = DOMAIN + BASE[lang] + UPDATES_PATH
+    set_head(soup, lang, UPDATES_PATH, ui["title"], ui["description"], "blockfour-feature.jpg",
+             [crumbs_ld(lang, [(ui["crumb"], url)])])
+    soup.head.append(BeautifulSoup(f'<link rel="alternate" type="application/atom+xml" title="{esc(ui["h1"])}" href="{url}feed.xml">',
+                                   "html.parser"))
+    tag_play_links(soup, "updates", lang)
+    write(out_dir / UPDATES_PATH / "index.html", soup)
+    write_updates_feed(entries, lang, apps, out_dir)
+    return BASE[lang] + UPDATES_PATH
+
+
 def games_json(apps: list[dict]) -> None:
     """Oyun içi 'Diğer oyunlarımız' ekranı bu dosyayı okur (yalnızca üretimdeki oyunlar)."""
     data = {"version": 1, "updated": date.today().isoformat(), "site": DOMAIN + "/", "games": [
@@ -729,7 +898,8 @@ def build() -> list[str]:
     apps = json.loads((SRC / "apps.json").read_text(encoding="utf-8"))
     pages = json.loads((SRC / "pages.json").read_text(encoding="utf-8"))
     go, go_errors = go_targets(apps)
-    errors = check_features() + check_names(apps) + go_errors
+    updates, upd_errors = load_updates(apps)
+    errors = check_features() + check_names(apps) + go_errors + upd_errors
     if errors:
         raise SystemExit("SİTE ÜRETİLMEDİ — düzeltilmesi gerekenler:\n  - " + "\n  - ".join(errors))
     # Bir dilin metni yoksa İngilizcesi kullanılır (yeni oyun eklerken "es" bloğunu unutma)
@@ -758,7 +928,8 @@ def build() -> list[str]:
             btn = play_button(soup, app["package"])
             main = soup.find("main")
             has_guide = any(g["app"] == app["slug"] for g in pages["guides"])
-            main.replace_with(BeautifulSoup(game_main(app, lang, apps, has_guide), "html.parser"))
+            main.replace_with(BeautifulSoup(game_main(app, lang, apps, has_guide, app_updates_section(app, lang, updates, apps)),
+                                            "html.parser"))
             soup.select_one("#play-slot").insert(0, btn)
             del soup.select_one("#play-slot")["id"]
             set_head(soup, lang, app["slug"] + "/", app[lang]["title"], app[lang]["description"], app["feature"], game_ld(app, lang))
@@ -770,6 +941,7 @@ def build() -> list[str]:
             write(out_dir / app["slug"] / "index.html", soup)
             urls.append(BASE[lang] + app["slug"] + "/")
         urls += build_content_pages(apps, pages, lang, out_dir)
+        urls.append(build_updates_page(updates, lang, apps, out_dir))
     games_json(apps)
     write_go_pages(go)  # sitemap'e girmez; noindex (önizleme kartı için tarayıcı botlarına açık)
     # sitemap + robots

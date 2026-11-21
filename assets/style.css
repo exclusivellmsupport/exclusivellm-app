@@ -635,3 +635,25 @@ body.has-getbar { padding-bottom: 72px; }
 .testcard h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
 .soon-pill { font: 700 11px/1 "Inter", sans-serif; letter-spacing: .06em; padding: 5px 9px; border-radius: 999px; white-space: nowrap;
   background: rgba(251,191,36,.14); color: #fcd34d; box-shadow: inset 0 0 0 1px rgba(251,191,36,.38); }
+
+/* Yenilikler (updates/) — 21.11.2026 */
+.upds { display: grid; gap: 18px; }
+.upd { padding: 24px; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); scroll-margin-top: 100px; }
+.upd:target { border-color: rgba(56,214,255,.55); box-shadow: 0 20px 60px -30px var(--glow); }
+.upd-app { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.upd-app img { width: 44px; height: 44px; border-radius: 12px; }
+.upd-app:hover b { color: var(--cyan); }
+.upd-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; color: var(--muted); font-size: 14px; }
+.upd-meta .tag.upd-launch { border-color: rgba(52,211,153,.45); color: var(--green); }
+.upd-meta .tag.upd-feature { border-color: rgba(56,214,255,.45); color: var(--cyan); }
+.upd-meta .tag.upd-look, .upd-meta .tag.upd-content { border-color: rgba(183,155,255,.45); color: #c9b8ff; }
+.upd h3 { margin: 12px 0 10px; font-size: 20px; }
+.upd ul { margin: 0; padding-left: 20px; color: var(--muted); display: grid; gap: 6px; }
+.upd .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 18px; }
+.upd-more { margin: 18px 0 0; }
+@media (max-width: 640px) { .upd { padding: 18px; } }
+.upd-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.upd-tile { display: grid; justify-items: center; gap: 6px; padding: 22px 12px; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); text-align: center; transition: border-color .2s, transform .2s; }
+.upd-tile:hover { border-color: rgba(56,214,255,.45); transform: translateY(-3px); }
+.upd-tile img { width: 64px; height: 64px; border-radius: 16px; box-shadow: 0 12px 30px rgba(0,0,0,.4); }
+.upd-tile small { color: var(--muted); font-size: 13px; }

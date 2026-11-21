@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="tr">
+  <title>Exclusive LLM — Oyunlarımızdaki yenilikler</title>
+  <subtitle>Google Play&#x27;deki oyunlarımıza gelen önemli güncellemeler, en yenisi en üstte.</subtitle>
+  <link href="https://exclusivellm.app/updates/"/>
+  <link rel="self" href="https://exclusivellm.app/updates/feed.xml"/>
+  <id>https://exclusivellm.app/updates/</id>
+  <updated>2026-11-21T12:00:00Z</updated>
+  <author><name>Exclusive LLM</name><email>support@exclusivellm.app</email></author>
+  <entry>
+    <title>Exclusive Quiz 2.8.4: Exclusive Quiz Google Play&#x27;de</title>
+    <link href="https://exclusivellm.app/updates/#exclusive-quiz-2-8-4"/>
+    <id>https://exclusivellm.app/updates/#exclusive-quiz-2-8-4</id>
+    <updated>2026-11-21T12:00:00Z</updated>
+    <category term="Exclusive Quiz"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;10 kategoride Türkçe ve İngilizce genel kültür soruları, her doğru cevapta kısa bir açıklama&lt;/li&gt;&lt;li&gt;Günlük yarışma, Ani ölüm ve Zamana karşı modları&lt;/li&gt;&lt;li&gt;Yanlışlarım: kaçırdığın sorular seni bekliyor&lt;/li&gt;&lt;li&gt;Google Play Oyunlar ile skor tabloları ve başarımlar&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>BlockFour 2.4.3: Google Play Oyunlar: başarımlar ve skor tabloları</title>
+    <link href="https://exclusivellm.app/updates/#block-four-2-4-3"/>
+    <id>https://exclusivellm.app/updates/#block-four-2-4-3</id>
+    <updated>2026-11-15T12:00:00Z</updated>
+    <category term="BlockFour"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;12 başarım: dört oyunda da açılacak hedefler&lt;/li&gt;&lt;li&gt;Dört oyunun her biri için ayrı skor tablosu&lt;/li&gt;&lt;li&gt;Rekorlar ekranından tek dokunuşla aç&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>BlockNest 1.2.0: Google Play Oyunlar: 18 başarım ve skor tablosu</title>
+    <link href="https://exclusivellm.app/updates/#blocknest-1-2-0"/>
+    <id>https://exclusivellm.app/updates/#blocknest-1-2-0</id>
+    <updated>2026-11-15T12:00:00Z</updated>
+    <category term="BlockNest"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;18 başarım rozeti açılmayı bekliyor&lt;/li&gt;&lt;li&gt;Klasik mod için en iyi skor tablosu&lt;/li&gt;&lt;li&gt;Rekorlar ekranından tek dokunuşla aç&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Woodora Classic 1.0.16: Google Play Oyunlar: başarımlar ve skor tablosu</title>
+    <link href="https://exclusivellm.app/updates/#woodora-classic-1-0-16"/>
+    <id>https://exclusivellm.app/updates/#woodora-classic-1-0-16</id>
+    <updated>2026-11-15T12:00:00Z</updated>
+    <category term="Woodora Classic"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;10 başarım açılmayı bekliyor&lt;/li&gt;&lt;li&gt;En iyi skor tablosu: rekorunu herkesle karşılaştır&lt;/li&gt;&lt;li&gt;Oyun menüsünden tek dokunuşla aç&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>BlockFour 2.4.0: Yeni premium görünüm</title>
+    <link href="https://exclusivellm.app/updates/#block-four-2-4-0"/>
+    <id>https://exclusivellm.app/updates/#block-four-2-4-0</id>
+    <updated>2026-11-14T12:00:00Z</updated>
+    <category term="BlockFour"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;Mücevher gibi parlayan bloklar, ışıltı ve parçacık efektleri: dört oyunda ve menüde&lt;/li&gt;&lt;li&gt;Düşen Bloklar&amp;#x27;da satır temizlerken patlama animasyonu&lt;/li&gt;&lt;li&gt;Hızlı düşüşte parçayı yerleştirmeden önce kısa bir kaydırma payı&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Woodora Classic 1.0.15: Woodora Classic Google Play&#x27;de</title>
+    <link href="https://exclusivellm.app/updates/#woodora-classic-1-0-15"/>
+    <id>https://exclusivellm.app/updates/#woodora-classic-1-0-15</id>
+    <updated>2026-11-14T12:00:00Z</updated>
+    <category term="Woodora Classic"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;Klasik ahşap tasarım ve 8×8 tahta&lt;/li&gt;&lt;li&gt;Bırakmadan önce kaç sıra temizleneceğini gösteren önizleme&lt;/li&gt;&lt;li&gt;Çoklu temizleme ve seri bonusları, otomatik kayıt&lt;/li&gt;&lt;li&gt;Türkçe, İngilizce, İspanyolca ve Arapça&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+</feed>

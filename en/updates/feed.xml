@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Exclusive LLM — What&#x27;s new in our games</title>
+  <subtitle>Major updates to our games on Google Play, newest first.</subtitle>
+  <link href="https://exclusivellm.app/en/updates/"/>
+  <link rel="self" href="https://exclusivellm.app/en/updates/feed.xml"/>
+  <id>https://exclusivellm.app/en/updates/</id>
+  <updated>2026-11-21T12:00:00Z</updated>
+  <author><name>Exclusive LLM</name><email>support@exclusivellm.app</email></author>
+  <entry>
+    <title>Exclusive Quiz 2.8.4: Exclusive Quiz is on Google Play</title>
+    <link href="https://exclusivellm.app/en/updates/#exclusive-quiz-2-8-4"/>
+    <id>https://exclusivellm.app/en/updates/#exclusive-quiz-2-8-4</id>
+    <updated>2026-11-21T12:00:00Z</updated>
+    <category term="Exclusive Quiz"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;General knowledge questions in English and Turkish across 10 categories, with a short explanation for every right answer&lt;/li&gt;&lt;li&gt;Daily challenge, Sudden death and Time attack modes&lt;/li&gt;&lt;li&gt;My mistakes: the questions you missed wait for you&lt;/li&gt;&lt;li&gt;Leaderboards and achievements with Google Play Games&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>BlockFour 2.4.3: Google Play Games: achievements and leaderboards</title>
+    <link href="https://exclusivellm.app/en/updates/#block-four-2-4-3"/>
+    <id>https://exclusivellm.app/en/updates/#block-four-2-4-3</id>
+    <updated>2026-11-15T12:00:00Z</updated>
+    <category term="BlockFour"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;12 achievements to unlock across all four games&lt;/li&gt;&lt;li&gt;A separate leaderboard for each of the four games&lt;/li&gt;&lt;li&gt;Open them in one tap from the Records screen&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>BlockNest 1.2.0: Google Play Games: 18 achievements and a leaderboard</title>
+    <link href="https://exclusivellm.app/en/updates/#blocknest-1-2-0"/>
+    <id>https://exclusivellm.app/en/updates/#blocknest-1-2-0</id>
+    <updated>2026-11-15T12:00:00Z</updated>
+    <category term="BlockNest"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;18 achievement badges to unlock&lt;/li&gt;&lt;li&gt;A best-score leaderboard for Classic mode&lt;/li&gt;&lt;li&gt;Open them in one tap from the Records screen&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Woodora Classic 1.0.16: Google Play Games: achievements and a leaderboard</title>
+    <link href="https://exclusivellm.app/en/updates/#woodora-classic-1-0-16"/>
+    <id>https://exclusivellm.app/en/updates/#woodora-classic-1-0-16</id>
+    <updated>2026-11-15T12:00:00Z</updated>
+    <category term="Woodora Classic"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;10 achievements to unlock&lt;/li&gt;&lt;li&gt;A best-score leaderboard to compare your record&lt;/li&gt;&lt;li&gt;Open them in one tap from the game menu&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>BlockFour 2.4.0: A new premium look</title>
+    <link href="https://exclusivellm.app/en/updates/#block-four-2-4-0"/>
+    <id>https://exclusivellm.app/en/updates/#block-four-2-4-0</id>
+    <updated>2026-11-14T12:00:00Z</updated>
+    <category term="BlockFour"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;Gem-like glossy blocks, sparkles and particle effects in all four games and the menu&lt;/li&gt;&lt;li&gt;A burst animation when you clear lines in Falling Blocks&lt;/li&gt;&lt;li&gt;A short moment to slide the piece after a fast drop, before it locks&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Woodora Classic 1.0.15: Woodora Classic is on Google Play</title>
+    <link href="https://exclusivellm.app/en/updates/#woodora-classic-1-0-15"/>
+    <id>https://exclusivellm.app/en/updates/#woodora-classic-1-0-15</id>
+    <updated>2026-11-14T12:00:00Z</updated>
+    <category term="Woodora Classic"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;Classic wooden design and an 8×8 board&lt;/li&gt;&lt;li&gt;A preview that shows how many lines a placement will clear&lt;/li&gt;&lt;li&gt;Multi-line and streak bonuses, plus auto-save&lt;/li&gt;&lt;li&gt;English, Turkish, Spanish and Arabic&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+</feed>

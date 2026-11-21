@@ -11,6 +11,11 @@ Değişiklikten sonra `python _src/build.py` çalıştır; `index.html`, `en/`, 
 - `games.json`: üretimdeki oyunların listesi; oyunlardaki "Diğer oyunlarımız" ekranı okur. `apps.json`'dan üretilir.
 - Ölçüm: Cloudflare Web Analytics (çerezsiz, `CF_TOKEN` build.py'de). Play linkleri `utm_source=exclusivellm_site` taşır.
 
+## Yenilikler (21.11.2026)
+- Üretimdeki uygulamaların **önemli** güncellemeleri `_src/updates.json`'a yazılır; `python _src/build.py` şunları üretir: `/updates/` (+ `/en/`, `/es/`), her dilde Atom beslemesi `updates/feed.xml` ve her uygulama sayfasında o uygulamanın son 3 girdisi ("Yenilikler" bölümü, Özellikler ile SSS arasında). Üst menüde ve altbilgide "Yenilikler" bağlantısı var.
+- Girdi: `app` (apps.json slug, yalnızca üretimdekiler), `version`, `date` (üretimde yayına girdiği gün), `type` (`launch` | `feature` | `content` | `look`), `tr`/`en`/`es` → `title` + `items`. Yalnızca oyuncunun fark edeceği değişiklikler yazılır; reklam ayarı, kütüphane, imza, iç düzeltme yazılmaz. Kurallar dosyanın başındaki `_aciklama`da; build hatalı girdide siteyi üretmez.
+- Bir uygulama üretime geçtiğinde `launch` girdisi eklenir. Girdinin bağlantısı `/updates/#<app>-<sürüm>`; yayına giren girdinin uygulama + sürümü değiştirilmez.
+
 ## "Yolda" kartları (20.11.2026)
 Kapalı testteki uygulamanın kartında görselin üstüne rozet konmaz (görseldeki yazıyla çakışıyordu). Etiket uygulama adının yanında durur:
 `<h3>Uygulama Adı <span class="soon-pill"><span class="tr">YAKINDA</span><span class="en">COMING SOON</span></span></h3>` (ES: `PRÓXIMAMENTE`, `i18n_es.json`).

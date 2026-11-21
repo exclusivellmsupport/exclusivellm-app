@@ -1,0 +1,198 @@
+{
+ "_aciklama": [
+  "exclusivellm.app 'Yenilikler' (/updates/, /en/updates/, /es/updates/ + Atom beslemesi feed.xml; her uygulama sayfasında son 3 girdi).",
+  "Yalnızca ÜRETİMDEKİ uygulamalar (app = apps.json slug) ve yalnızca ÖNEMLİ, oyuncunun fark edeceği değişiklikler: yeni mod/oyun, yeni içerik (bölüm, soru, tema), Play Games, yeni görünüm, büyük kolaylıklar, ilk yayın.",
+  "Yazılmayanlar: reklam ayarları, kütüphane/SDK, imza, iç düzeltmeler, 'küçük iyileştirmeler', değerlendirme istemi, çapraz tanıtım şeridi.",
+  "date = sürümün üretimde yayına girdiği gün (YYYY-MM-DD). type: launch | feature | content | look. Sıra önemsiz, build tarihe göre dizer.",
+  "Uygulama adı canlı Play adıyla yazılır (build.py denetler). Yayına giren girdinin app+version'ı değişmez (bağlantı #<app>-<version>).",
+  "Kapalı testteki uygulama buraya girmez; üretime geçtiği gün 'launch' girdisiyle eklenir."
+ ],
+ "entries": [
+  {
+   "app": "exclusive-quiz",
+   "version": "2.8.4",
+   "date": "2026-11-21",
+   "type": "launch",
+   "tr": {
+    "title": "Exclusive Quiz Google Play'de",
+    "items": [
+     "10 kategoride Türkçe ve İngilizce genel kültür soruları, her doğru cevapta kısa bir açıklama",
+     "Günlük yarışma, Ani ölüm ve Zamana karşı modları",
+     "Yanlışlarım: kaçırdığın sorular seni bekliyor",
+     "Google Play Oyunlar ile skor tabloları ve başarımlar"
+    ]
+   },
+   "en": {
+    "title": "Exclusive Quiz is on Google Play",
+    "items": [
+     "General knowledge questions in English and Turkish across 10 categories, with a short explanation for every right answer",
+     "Daily challenge, Sudden death and Time attack modes",
+     "My mistakes: the questions you missed wait for you",
+     "Leaderboards and achievements with Google Play Games"
+    ]
+   },
+   "es": {
+    "title": "Exclusive Quiz ya está en Google Play",
+    "items": [
+     "Preguntas de cultura general en inglés y turco en 10 categorías, con una breve explicación en cada acierto",
+     "Modos Desafío diario, Muerte súbita y Contrarreloj",
+     "Mis errores: las preguntas que fallaste te esperan",
+     "Clasificaciones y logros con Google Play Juegos"
+    ]
+   }
+  },
+  {
+   "app": "block-four",
+   "version": "2.4.3",
+   "date": "2026-11-15",
+   "type": "feature",
+   "tr": {
+    "title": "Google Play Oyunlar: başarımlar ve skor tabloları",
+    "items": [
+     "12 başarım: dört oyunda da açılacak hedefler",
+     "Dört oyunun her biri için ayrı skor tablosu",
+     "Rekorlar ekranından tek dokunuşla aç"
+    ]
+   },
+   "en": {
+    "title": "Google Play Games: achievements and leaderboards",
+    "items": [
+     "12 achievements to unlock across all four games",
+     "A separate leaderboard for each of the four games",
+     "Open them in one tap from the Records screen"
+    ]
+   },
+   "es": {
+    "title": "Google Play Juegos: logros y clasificaciones",
+    "items": [
+     "12 logros para desbloquear en los cuatro juegos",
+     "Una clasificación propia para cada uno de los cuatro juegos",
+     "Ábrelos con un toque desde la pantalla de récords"
+    ]
+   }
+  },
+  {
+   "app": "blocknest",
+   "version": "1.2.0",
+   "date": "2026-11-15",
+   "type": "feature",
+   "tr": {
+    "title": "Google Play Oyunlar: 18 başarım ve skor tablosu",
+    "items": [
+     "18 başarım rozeti açılmayı bekliyor",
+     "Klasik mod için en iyi skor tablosu",
+     "Rekorlar ekranından tek dokunuşla aç"
+    ]
+   },
+   "en": {
+    "title": "Google Play Games: 18 achievements and a leaderboard",
+    "items": [
+     "18 achievement badges to unlock",
+     "A best-score leaderboard for Classic mode",
+     "Open them in one tap from the Records screen"
+    ]
+   },
+   "es": {
+    "title": "Google Play Juegos: 18 logros y una clasificación",
+    "items": [
+     "18 insignias de logro por desbloquear",
+     "Una clasificación de mejores puntuaciones para el modo Clásico",
+     "Ábrelos con un toque desde la pantalla de récords"
+    ]
+   }
+  },
+  {
+   "app": "woodora-classic",
+   "version": "1.0.16",
+   "date": "2026-11-15",
+   "type": "feature",
+   "tr": {
+    "title": "Google Play Oyunlar: başarımlar ve skor tablosu",
+    "items": [
+     "10 başarım açılmayı bekliyor",
+     "En iyi skor tablosu: rekorunu herkesle karşılaştır",
+     "Oyun menüsünden tek dokunuşla aç"
+    ]
+   },
+   "en": {
+    "title": "Google Play Games: achievements and a leaderboard",
+    "items": [
+     "10 achievements to unlock",
+     "A best-score leaderboard to compare your record",
+     "Open them in one tap from the game menu"
+    ]
+   },
+   "es": {
+    "title": "Google Play Juegos: logros y una clasificación",
+    "items": [
+     "10 logros por desbloquear",
+     "Una clasificación de mejores puntuaciones para comparar tu récord",
+     "Ábrelos con un toque desde el menú del juego"
+    ]
+   }
+  },
+  {
+   "app": "block-four",
+   "version": "2.4.0",
+   "date": "2026-11-14",
+   "type": "look",
+   "tr": {
+    "title": "Yeni premium görünüm",
+    "items": [
+     "Mücevher gibi parlayan bloklar, ışıltı ve parçacık efektleri: dört oyunda ve menüde",
+     "Düşen Bloklar'da satır temizlerken patlama animasyonu",
+     "Hızlı düşüşte parçayı yerleştirmeden önce kısa bir kaydırma payı"
+    ]
+   },
+   "en": {
+    "title": "A new premium look",
+    "items": [
+     "Gem-like glossy blocks, sparkles and particle effects in all four games and the menu",
+     "A burst animation when you clear lines in Falling Blocks",
+     "A short moment to slide the piece after a fast drop, before it locks"
+    ]
+   },
+   "es": {
+    "title": "Un nuevo aspecto premium",
+    "items": [
+     "Bloques brillantes como gemas, destellos y partículas en los cuatro juegos y en el menú",
+     "Una animación de explosión al completar líneas en Bloques en caída",
+     "Un breve margen para deslizar la pieza tras una caída rápida, antes de que se fije"
+    ]
+   }
+  },
+  {
+   "app": "woodora-classic",
+   "version": "1.0.15",
+   "date": "2026-11-14",
+   "type": "launch",
+   "tr": {
+    "title": "Woodora Classic Google Play'de",
+    "items": [
+     "Klasik ahşap tasarım ve 8×8 tahta",
+     "Bırakmadan önce kaç sıra temizleneceğini gösteren önizleme",
+     "Çoklu temizleme ve seri bonusları, otomatik kayıt",
+     "Türkçe, İngilizce, İspanyolca ve Arapça"
+    ]
+   },
+   "en": {
+    "title": "Woodora Classic is on Google Play",
+    "items": [
+     "Classic wooden design and an 8×8 board",
+     "A preview that shows how many lines a placement will clear",
+     "Multi-line and streak bonuses, plus auto-save",
+     "English, Turkish, Spanish and Arabic"
+    ]
+   },
+   "es": {
+    "title": "Woodora Classic ya está en Google Play",
+    "items": [
+     "Diseño clásico de madera y tablero de 8×8",
+     "Una vista previa que muestra cuántas líneas eliminará cada colocación",
+     "Bonificaciones por varias líneas y por racha, con guardado automático",
+     "Inglés, turco, español y árabe"
+    ]
+   }
+  }
+ ]
+}
