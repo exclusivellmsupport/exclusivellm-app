@@ -126,15 +126,15 @@ def check_names(apps: list[dict]) -> list[str]:
 HOME = {
     "tr": {
         "title": "Exclusive LLM Oyunları: Rahatlatıcı Mobil Oyunlar ve Uygulamalar",
-        "description": "Exclusive LLM, Android için sakin oyunlar ve uygulamalar yapar: ölçülü reklam, sade tasarım. BlockFour, BlockNest ve Woodora Classic Google Play'de ücretsiz.",
+        "description": "Exclusive LLM, Android için sakin oyunlar ve uygulamalar yapar: ölçülü reklam, sade tasarım. BlockFour, BlockNest, Woodora Classic ve Exclusive Quiz Google Play'de ücretsiz.",
     },
     "en": {
         "title": "Exclusive LLM Games: Relaxing Mobile Games & Apps",
-        "description": "Exclusive LLM makes calm Android games and apps with measured ads and clean design. BlockFour, BlockNest and Woodora Classic are free on Google Play.",
+        "description": "Exclusive LLM makes calm Android games and apps with measured ads and clean design. BlockFour, BlockNest, Woodora Classic and Exclusive Quiz are free on Google Play.",
     },
     "es": {
         "title": "Juegos de Exclusive LLM: juegos y apps móviles relajantes",
-        "description": "Exclusive LLM crea juegos y apps tranquilos para Android, con anuncios moderados y diseño limpio. BlockFour, BlockNest y Woodora Classic, gratis en Google Play.",
+        "description": "Exclusive LLM crea juegos y apps tranquilos para Android, con anuncios moderados y diseño limpio. BlockFour, BlockNest, Woodora Classic y Exclusive Quiz, gratis en Google Play.",
     },
 }
 UI = {

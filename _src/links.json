@@ -16,6 +16,11 @@
  "ig-blocknest": {"package": "com.exclusivellm.blocknest", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel)"},
  "ig-woodoraclassic": {"package": "com.exclusivellm.woodoraclassic", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel)"},
  "ig-blockfour": {"package": "com.firat.blokrota", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel)"},
+ "yt-quiz": {"package": "com.exclusivellm.quiz", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel (uzun video açıklaması / sabit yorum / oynatma listesi), 21.11.2026"},
+ "yt-quiz-en": {"package": "com.exclusivellm.quiz", "platform": "youtube", "hedef": "play", "dil": "en", "not": "YouTube genel, EN video, 21.11.2026"},
+ "x-quiz": {"package": "com.exclusivellm.quiz", "platform": "x", "hedef": "play", "dil": "tr", "not": "X genel (ilk yanıt), 21.11.2026"},
+ "x-quiz-en": {"package": "com.exclusivellm.quiz", "platform": "x", "hedef": "play", "dil": "en", "not": "X genel, EN gönderi, 21.11.2026"},
+ "ig-quiz": {"package": "com.exclusivellm.quiz", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel; Exclusive Quiz öne çıkanı), 21.11.2026"},
  "ig-yakinda": {"package": null, "platform": "instagram", "hedef": "site", "dil": "tr", "not": "Instagram \"Yakında\" öne çıkanının kalıcı Hikâyesi (kapalı testteki oyunlar → ana sayfa Yolda bölümü), 21.11.2026"},
  "yt-yakinda": {"package": null, "platform": "youtube", "hedef": "site", "dil": "tr", "not": "YouTube \"Yakında: Yeni Oyunlarımız\" oynatma listesi açıklaması (kapalı testteki oyunlar), 21.11.2026"}
 }

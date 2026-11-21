@@ -1,126 +1,138 @@
 {
  "block-four/guide/index.html": {
-  "date": "2026-11-20",
-  "hash": "d65d011b639d998f4a7ae1eb5e680308d669a761"
+  "date": "2026-11-21",
+  "hash": "899e5a92a88d65a615bda2d4f46bf0d9bc164885"
  },
  "block-four/index.html": {
-  "date": "2026-11-20",
-  "hash": "cb4db7ba765da66a1b135f0432161aff49c16575"
+  "date": "2026-11-21",
+  "hash": "2c3e7b639efac73f3028d28673086a3db394eb8b"
  },
  "block-puzzle-games/index.html": {
   "date": "2026-11-20",
   "hash": "4210e6899fc0f1b724fed77f66fb9f7615082eb2"
  },
  "blocknest/guide/index.html": {
-  "date": "2026-11-20",
-  "hash": "def57cc68c4e476b516e463be0557caaa2d23634"
+  "date": "2026-11-21",
+  "hash": "070ffb5177a6784d6cb8ce7ca8af4ca8a5c4a3ea"
  },
  "blocknest/index.html": {
-  "date": "2026-11-20",
-  "hash": "6dc73a1e4d07b2a9bf5fbddc1f5f04c3ad536d0f"
+  "date": "2026-11-21",
+  "hash": "1a609f7662bd2dff1307378e2d0981044108c5d1"
  },
  "en/block-four/guide/index.html": {
-  "date": "2026-11-20",
-  "hash": "8a4dd41d72f733f16dd86e78c543b5e2feebc220"
+  "date": "2026-11-21",
+  "hash": "b624775910358b23697a8347d22509dfafabc480"
  },
  "en/block-four/index.html": {
-  "date": "2026-11-20",
-  "hash": "ed4725a511442bc94a1574277896e19ff24981a7"
+  "date": "2026-11-21",
+  "hash": "539d8d78aaf62636f2054c05b4941e913eab90c3"
  },
  "en/block-puzzle-games/index.html": {
   "date": "2026-11-20",
   "hash": "ed8686fa1be42273b9a1690915112e156376ea17"
  },
  "en/blocknest/guide/index.html": {
-  "date": "2026-11-20",
-  "hash": "d0d621b1e480eb5c9a82bd05e36afd1af6cfd5e9"
+  "date": "2026-11-21",
+  "hash": "151e0bc0848a173023d2c04dcab8e925bd72d3ca"
  },
  "en/blocknest/index.html": {
-  "date": "2026-11-20",
-  "hash": "14310dd8bcd04e26a22e8684cf0381fccb390778"
+  "date": "2026-11-21",
+  "hash": "5e4389ae33c816d78702ec557b88b14e0cbb8c8c"
+ },
+ "en/exclusive-quiz/index.html": {
+  "date": "2026-11-21",
+  "hash": "892078116a056d2d639611af46171eb878391b17"
  },
  "en/index.html": {
-  "date": "2026-11-20",
-  "hash": "e55bf6e49a4e4b13de334c421e089625f8bd2472"
+  "date": "2026-11-21",
+  "hash": "783329d74270e8b2b0d452bad618fd99bdd10642"
  },
  "en/offline-games/index.html": {
   "date": "2026-11-20",
   "hash": "fe00262163ff5a481dbddb97332696344a778c1f"
  },
  "en/press/index.html": {
-  "date": "2026-11-20",
-  "hash": "a26380b74f00a19ff3d4e5354800b94983af6b6e"
+  "date": "2026-11-21",
+  "hash": "ea2b1475a2accce7d6e321ab6bfadeb106765a76"
  },
  "en/woodora-classic/guide/index.html": {
-  "date": "2026-11-20",
-  "hash": "408bf5a53bba309e867a5923c5fd2e5cd41c742d"
+  "date": "2026-11-21",
+  "hash": "4646308c6481fa7223a3b71433a5418099224723"
  },
  "en/woodora-classic/index.html": {
-  "date": "2026-11-20",
-  "hash": "846efdab42976435aa2ff19159ad6d4182574249"
+  "date": "2026-11-21",
+  "hash": "665271dfbb5bfb3c7b3e9036c1f66ce9c22cc145"
  },
  "es/block-four/guide/index.html": {
-  "date": "2026-11-20",
-  "hash": "888c8fafbdec1eb327cb9fcba4676eec35ed07ed"
+  "date": "2026-11-21",
+  "hash": "e23423cdeb58073b6217991dad59365b58d656d4"
  },
  "es/block-four/index.html": {
-  "date": "2026-11-20",
-  "hash": "6bcc8a6b9883e8bf39b1efad17433e89fa221b78"
+  "date": "2026-11-21",
+  "hash": "5d4397be92e9669f741bafd2514d8c5043902bbd"
  },
  "es/block-puzzle-games/index.html": {
   "date": "2026-11-20",
   "hash": "dd40a5914c60fae5db296b8799873aa496eda827"
  },
  "es/blocknest/guide/index.html": {
-  "date": "2026-11-20",
-  "hash": "d5b62abd013f612ff6094690e550624ae687f0b6"
+  "date": "2026-11-21",
+  "hash": "f39e8921ed6d4c3ad1ea10389f381625375a3f0c"
  },
  "es/blocknest/index.html": {
-  "date": "2026-11-20",
-  "hash": "7bc7c2ec1b26d0b0eca3c12f7cc78c512d2156b5"
+  "date": "2026-11-21",
+  "hash": "df4cad13a78ee0f75938bf24544459c8f8c7f785"
+ },
+ "es/exclusive-quiz/index.html": {
+  "date": "2026-11-21",
+  "hash": "b8494568c1f87272af465e7b723ad376a3500c70"
  },
  "es/index.html": {
-  "date": "2026-11-20",
-  "hash": "5bed8e686347fbab2850fa42198e3af003c91d5e"
+  "date": "2026-11-21",
+  "hash": "8da671d9907ed6547ecfb80abebb1d7bb6043069"
  },
  "es/offline-games/index.html": {
   "date": "2026-11-20",
   "hash": "a9ad69d0e51df2c495d232449443885d558c554f"
  },
  "es/press/index.html": {
-  "date": "2026-11-20",
-  "hash": "2efa9cd4318029596013aed7da7a651bd31ca1fc"
+  "date": "2026-11-21",
+  "hash": "9dfff66e121679097268e23ac7a1418825a42409"
  },
  "es/woodora-classic/guide/index.html": {
-  "date": "2026-11-20",
-  "hash": "023f19d260540802d730da3c01d67e0e31fd0d6a"
+  "date": "2026-11-21",
+  "hash": "16797cfca68e3d7dcb50f3666f00a6c02386bd1a"
  },
  "es/woodora-classic/index.html": {
-  "date": "2026-11-20",
-  "hash": "6e7f759b52b7f616b794714270851da932f73644"
+  "date": "2026-11-21",
+  "hash": "7b7011a42b3586206fc660266d06c8dd6463a37a"
+ },
+ "exclusive-quiz/index.html": {
+  "date": "2026-11-21",
+  "hash": "febf7c3185e03d8ef5f18b1fe3ead7a63ef0fde0"
  },
  "games.json": {
-  "date": "2026-11-20",
-  "hash": "2b8d4ff6df98e7522594d88a272b9a6551673c9d"
+  "date": "2026-11-21",
+  "hash": "e321cda85d305917555e35a3bfa97adc163a8754"
  },
  "index.html": {
-  "date": "2026-11-20",
-  "hash": "6f81d07427a25cc03224d9ab4652403e45264d3f"
+  "date": "2026-11-21",
+  "hash": "d9f6faee84595f6564206f70b1064e7c62129a3c"
  },
  "offline-games/index.html": {
   "date": "2026-11-20",
   "hash": "08e9a52bb9a94bfae4612554a5089f8654f8a285"
  },
  "press/index.html": {
-  "date": "2026-11-20",
-  "hash": "e8ee591800e596147edd7e140fa5cb86e3b9d865"
+  "date": "2026-11-21",
+  "hash": "e75ac4c7dce3588ebaa54861129e5586e12d4e09"
  },
  "woodora-classic/guide/index.html": {
-  "date": "2026-11-20",
-  "hash": "3d5ec60528dd7b060772684fdd9a1009d9c0d715"
+  "date": "2026-11-21",
+  "hash": "29811723f24a36d2012bf82240da2ed2e808b9ac"
  },
  "woodora-classic/index.html": {
-  "date": "2026-11-20",
-  "hash": "0360b1d3a312f46d73375c18c343a962bd4b36d2"
+  "date": "2026-11-21",
+  "hash": "503189647bbe7e498a77600bd68eeb3fecc5284d"
  }
 }

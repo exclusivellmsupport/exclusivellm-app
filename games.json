@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-20",
+ "updated": "2026-11-21",
  "site": "https://exclusivellm.app/",
  "games": [
   {
@@ -70,6 +70,29 @@
     "tr": "https://exclusivellm.app/woodora-classic/",
     "en": "https://exclusivellm.app/en/woodora-classic/",
     "es": "https://exclusivellm.app/es/woodora-classic/"
+   }
+  },
+  {
+   "slug": "exclusive-quiz",
+   "name": "Exclusive Quiz",
+   "package": "com.exclusivellm.quiz",
+   "icon": "https://exclusivellm.app/img/quiz.png",
+   "icon512": "https://exclusivellm.app/img/quiz.png",
+   "feature": "https://exclusivellm.app/img/quiz-feature.jpg",
+   "features": {
+    "tr": "https://exclusivellm.app/img/quiz-feature-tr.jpg",
+    "en": "https://exclusivellm.app/img/quiz-feature.jpg",
+    "es": "https://exclusivellm.app/img/quiz-feature.jpg"
+   },
+   "tagline": {
+    "tr": "Hızlı cevapla, rekorunu kır.",
+    "en": "Answer fast, beat your record.",
+    "es": "Responde rápido, supera tu récord."
+   },
+   "page": {
+    "tr": "https://exclusivellm.app/exclusive-quiz/",
+    "en": "https://exclusivellm.app/en/exclusive-quiz/",
+    "es": "https://exclusivellm.app/es/exclusive-quiz/"
    }
   }
  ]

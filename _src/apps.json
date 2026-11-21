@@ -603,5 +603,261 @@
         }
       ]
     }
+  },
+  {
+    "slug": "exclusive-quiz",
+    "name": "Exclusive Quiz",
+    "package": "com.exclusivellm.quiz",
+    "category": "TriviaGame",
+    "icon": "quiz.png",
+    "feature": "quiz-feature.jpg",
+    "shots": {
+      "tr": [
+        "quiz-tr-1.webp",
+        "quiz-tr-2.webp",
+        "quiz-tr-3.webp",
+        "quiz-tr-4.webp",
+        "quiz-tr-5.webp",
+        "quiz-tr-6.webp",
+        "quiz-tr-7.webp"
+      ],
+      "en": [
+        "quiz-en-1.webp",
+        "quiz-en-2.webp",
+        "quiz-en-3.webp",
+        "quiz-en-4.webp",
+        "quiz-en-5.webp",
+        "quiz-en-6.webp",
+        "quiz-en-7.webp"
+      ],
+      "es": [
+        "quiz-en-1.webp",
+        "quiz-en-2.webp",
+        "quiz-en-3.webp",
+        "quiz-en-4.webp",
+        "quiz-en-5.webp",
+        "quiz-en-6.webp",
+        "quiz-en-7.webp"
+      ]
+    },
+    "video": {
+      "tr": "T-8PpnDItUk",
+      "en": "zWzLtXconRo",
+      "es": "zWzLtXconRo"
+    },
+    "languages": [
+      "tr",
+      "en"
+    ],
+    "tr": {
+      "title": "Exclusive Quiz: Genel Kültür Bilgi Yarışması | Exclusive LLM",
+      "description": "10 kategoride genel kültür bilgi yarışması: coğrafya, tarih, bilim, sinema ve daha fazlası. Günlük yarışma, ani ölüm ve zamana karşı modları. Google Play'de ücretsiz.",
+      "tagline": "Hızlı cevapla, rekorunu kır.",
+      "intro": "Exclusive Quiz, genel kültürünü sınayan hızlı ve eğlenceli bir bilgi yarışması. Coğrafyadan tarihe, sinemadan teknolojiye 10 kategoride sorular seni bekliyor. Her turda kolaydan zora 15 soru, her soru için 20 saniye var. Doğru cevabı bul, seriyi bozma ve rekorunu kır.",
+      "tags": [
+        "Bilgi yarışması",
+        "10 kategori",
+        "Genel kültür"
+      ],
+      "sections": [
+        {
+          "h": "Nasıl oynanır?",
+          "items": [
+            "Bir kategori seç ya da tüm kategorilerden karışık oyna.",
+            "Her tur 15 sorudan oluşur: 5 kolay, 5 orta, 5 zor.",
+            "Her soru için 20 saniyen var; dört şıktan doğru olanı seç.",
+            "Kolay soru 100, orta 150, zor 200 puan; hızlı cevaplarsan +50'ye kadar hız bonusu.",
+            "Üst üste 3 doğru yaptığında her doğru cevaba seri bonusu eklenir.",
+            "Zorlandığında 50:50 ipucuyla iki yanlış şıkkı ele."
+          ]
+        },
+        {
+          "h": "Oyun modları",
+          "items": [
+            "Günlük yarışma: her gün herkese aynı 15 soru; günlük serini büyüt.",
+            "Ani ölüm: tek hata oyunu bitirir; kaç soruyu üst üste bilebilirsin?",
+            "Zamana karşı: 60 saniyede olabildiğince çok doğru cevap.",
+            "Yanlışlarım: yanlış cevapladığın soruları tekrar çöz, eksiklerini kapat."
+          ]
+        },
+        {
+          "h": "Kategoriler",
+          "items": [
+            "Coğrafya, Bilim, Tarih ve Doğa",
+            "Spor, Genel kültür ve Sinema",
+            "Müzik, Edebiyat ve Teknoloji",
+            "Karışık: tüm kategorilerden rastgele sorular"
+          ]
+        }
+      ],
+      "features": [
+        "Türkçe ve İngilizce sorular; dili oyun içinden değiştir",
+        "Doğru bildiğin her sorunun kısa bir açıklaması",
+        "Aynı sorular arka arkaya gelmez",
+        "Google Play Oyunlar ile 14 skor tablosu ve 10 başarım",
+        "Kategori bazında kişisel rekorlar ve en uzun seri",
+        "İnternetsiz oynanır, üyelik gerekmez",
+        "Karanlık tema ve ayarlanabilir yazı boyutu",
+        "Hatalı bulduğun soruyu tek dokunuşla bildir"
+      ],
+      "faq": [
+        {
+          "q": "Exclusive Quiz ücretsiz mi?",
+          "a": "Evet, Google Play'den ücretsiz indirilir. Uygulama reklam içerir; her turda ilk 50:50 ipucu ücretsizdir, sonrakiler isteğe bağlı kısa bir reklamla açılır."
+        },
+        {
+          "q": "İnternet olmadan oynanır mı?",
+          "a": "Evet. Sorular internet bağlantısı olmadan da oynanabilir ve üyelik gerekmez."
+        },
+        {
+          "q": "Hangi kategoriler var?",
+          "a": "Coğrafya, Bilim, Tarih, Doğa, Spor, Genel kültür, Sinema, Müzik, Edebiyat ve Teknoloji; ayrıca hepsinden karışık sorular."
+        },
+        {
+          "q": "Hangi dilleri destekliyor?",
+          "a": "Türkçe ve İngilizce. Dili oyunun içinden tek dokunuşla değiştirebilirsin."
+        }
+      ]
+    },
+    "en": {
+      "title": "Exclusive Quiz: Trivia Game in 10 Categories | Exclusive LLM",
+      "description": "A general knowledge trivia game in 10 categories: geography, history, science, film and more. Daily challenge, sudden death and time attack modes. Free on Google Play.",
+      "tagline": "Answer fast, beat your record.",
+      "intro": "Exclusive Quiz is a fast, fun trivia game that puts your general knowledge to the test. From geography and history to film and technology, questions in 10 categories are waiting for you. Every round has 15 questions that climb from easy to hard, with 20 seconds for each. Find the right answer, keep your streak alive and beat your record.",
+      "tags": [
+        "Trivia",
+        "10 categories",
+        "General knowledge"
+      ],
+      "sections": [
+        {
+          "h": "How to play",
+          "items": [
+            "Pick a category or play a mixed round from all categories.",
+            "Each round has 15 questions: 5 easy, 5 medium and 5 hard.",
+            "You have 20 seconds per question; choose the right one of four answers.",
+            "Easy questions are worth 100 points, medium 150 and hard 200; answer quickly for a speed bonus of up to +50.",
+            "Get 3 right in a row and every correct answer adds a streak bonus.",
+            "Stuck? Use the 50:50 hint to remove two wrong answers."
+          ]
+        },
+        {
+          "h": "Game modes",
+          "items": [
+            "Daily challenge: the same 15 questions for everyone, every day; grow your daily streak.",
+            "Sudden death: one mistake ends the run; how many can you get right in a row?",
+            "Time attack: as many right answers as you can in 60 seconds.",
+            "My mistakes: retry the questions you got wrong and close the gaps."
+          ]
+        },
+        {
+          "h": "Categories",
+          "items": [
+            "Geography, Science, History and Nature",
+            "Sports, General knowledge and Film",
+            "Music, Literature and Technology",
+            "Mixed: random questions from every category"
+          ]
+        }
+      ],
+      "features": [
+        "Questions in English and Turkish; switch language in the game",
+        "A short explanation for every question you get right",
+        "No back-to-back repeats",
+        "14 leaderboards and 10 achievements with Google Play Games",
+        "Personal bests for every category and your longest streak",
+        "Plays offline, no account needed",
+        "Dark mode and adjustable text size",
+        "Report any question you think is wrong in one tap"
+      ],
+      "faq": [
+        {
+          "q": "Is Exclusive Quiz free?",
+          "a": "Yes, it is free to download on Google Play. The app contains ads; the first 50:50 hint in each round is free and more unlock with a short optional ad."
+        },
+        {
+          "q": "Can I play offline?",
+          "a": "Yes. The questions work without an internet connection and no account is needed."
+        },
+        {
+          "q": "Which categories are there?",
+          "a": "Geography, Science, History, Nature, Sports, General knowledge, Film, Music, Literature and Technology, plus mixed rounds from all of them."
+        },
+        {
+          "q": "Which languages does it support?",
+          "a": "English and Turkish. You can switch language in the game with one tap."
+        }
+      ]
+    },
+    "es": {
+      "title": "Exclusive Quiz: juego de preguntas en 10 categorías | Exclusive LLM",
+      "description": "Un juego de preguntas de cultura general en 10 categorías: geografía, historia, ciencia, cine y más. Modos desafío diario, muerte súbita y contrarreloj. Gratis en Google Play.",
+      "tagline": "Responde rápido, supera tu récord.",
+      "intro": "Exclusive Quiz es un juego de preguntas rápido y divertido que pone a prueba tu cultura general. De la geografía y la historia al cine y la tecnología, te esperan preguntas en 10 categorías. Cada ronda tiene 15 preguntas que van de fácil a difícil, con 20 segundos para cada una. El juego está en inglés y turco.",
+      "tags": [
+        "Preguntas",
+        "10 categorías",
+        "Cultura general"
+      ],
+      "sections": [
+        {
+          "h": "Cómo se juega",
+          "items": [
+            "Elige una categoría o juega una ronda mixta de todas las categorías.",
+            "Cada ronda tiene 15 preguntas: 5 fáciles, 5 medias y 5 difíciles.",
+            "Tienes 20 segundos por pregunta; elige la respuesta correcta entre cuatro.",
+            "Las preguntas fáciles valen 100 puntos, las medias 150 y las difíciles 200; responde rápido para un bonus de velocidad de hasta +50.",
+            "Acierta 3 seguidas y cada respuesta correcta suma un bonus de racha.",
+            "¿Atascado? Usa la pista 50:50 para quitar dos respuestas incorrectas."
+          ]
+        },
+        {
+          "h": "Modos de juego",
+          "items": [
+            "Desafío diario: las mismas 15 preguntas para todos, cada día.",
+            "Muerte súbita: un error termina la partida.",
+            "Contrarreloj: tantas respuestas correctas como puedas en 60 segundos.",
+            "Mis errores: vuelve a las preguntas que fallaste."
+          ]
+        },
+        {
+          "h": "Categorías",
+          "items": [
+            "Geografía, Ciencia, Historia y Naturaleza",
+            "Deportes, Cultura general y Cine",
+            "Música, Literatura y Tecnología",
+            "Mixto: preguntas al azar de todas las categorías"
+          ]
+        }
+      ],
+      "features": [
+        "Preguntas en inglés y turco; cambia el idioma en el juego",
+        "Una breve explicación por cada pregunta que aciertas",
+        "Sin preguntas repetidas seguidas",
+        "14 clasificaciones y 10 logros con Google Play Juegos",
+        "Récords personales por categoría y tu racha más larga",
+        "Se juega sin conexión y sin cuenta",
+        "Modo oscuro y tamaño de texto ajustable",
+        "Reporta en un toque una pregunta que creas incorrecta"
+      ],
+      "faq": [
+        {
+          "q": "¿Exclusive Quiz es gratis?",
+          "a": "Sí, se descarga gratis en Google Play. La app contiene anuncios; la primera pista 50:50 de cada ronda es gratis y las demás se desbloquean con un anuncio corto opcional."
+        },
+        {
+          "q": "¿Está en español?",
+          "a": "No por ahora. El juego está en inglés y turco."
+        },
+        {
+          "q": "¿Se puede jugar sin conexión?",
+          "a": "Sí. Las preguntas funcionan sin conexión a internet y no hace falta cuenta."
+        },
+        {
+          "q": "¿Qué categorías hay?",
+          "a": "Geografía, Ciencia, Historia, Naturaleza, Deportes, Cultura general, Cine, Música, Literatura y Tecnología, además de rondas mixtas."
+        }
+      ]
+    }
   }
 ]
