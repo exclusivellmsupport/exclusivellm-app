@@ -824,7 +824,10 @@ def games_json(apps: list[dict]) -> None:
 # Kaynak _src/links.json: {"<kod>": {"package": "...", "platform": "youtube|x|instagram|tiktok",
 #                                     "hedef": "play|site", "dil": "tr|en", "not": "..."}}
 # Kod yayına girdikten sonra silinmez/değiştirilmez (eski paylaşımlardaki link kırılır); sayfa da silinmez.
-GO_PLATFORMS = {"youtube", "x", "instagram", "tiktok", "deneme"}
+GO_PLATFORMS = {"youtube", "x", "instagram", "tiktok", "deneme", "app"}
+# "app" = uygulama içi "Arkadaşına gönder" (23.11.2026). Bu kodların hedefi "otomatik": uygulama apps.json'da
+# (üretimde) ise UTM'li Play sayfası (utm_medium=share), değilse site. Kod uygulamaya gömülü olduğu için hiç
+# değişmez; üretime geçince hedef kendiliğinden Play olur (yalnızca siteyi yeniden üretmek yeter).
 GO_TEXT = {"tr": ("Google Play açılıyor…", "Site açılıyor…", "Açılmazsa dokun"),
            "en": ("Opening Google Play…", "Opening the site…", "Tap if nothing happens")}
 
@@ -842,16 +845,19 @@ def go_targets(apps: list[dict]) -> tuple[dict[str, dict], list[str]]:
             errors.append(f"links.json '{code}': kod yalnızca küçük harf, rakam ve tire olmalı (≤48)")
             continue
         plat, hedef, lang, pkg = l.get("platform"), l.get("hedef", "play"), l.get("dil", "tr"), l.get("package")
-        if plat not in GO_PLATFORMS or hedef not in ("play", "site") or lang not in GO_TEXT:
+        if plat not in GO_PLATFORMS or hedef not in ("play", "site", "otomatik") or lang not in GO_TEXT:
             errors.append(f"links.json '{code}': platform/hedef/dil geçersiz")
             continue
         app = by_pkg.get(pkg)
+        if hedef == "otomatik":
+            hedef = "play" if app else "site"
         if hedef == "play":
             if not app:
                 errors.append(f"links.json '{code}': {pkg} üretimde değil (apps.json'da yok); kapalı testteki uygulamada hedef 'site' olmalı")
                 continue
+            medium = "share" if plat == "app" else "social"
             target = (f"https://play.google.com/store/apps/details?id={pkg}"
-                      f"&utm_source={plat}&utm_medium=social&utm_campaign={code}")
+                      f"&utm_source={plat}&utm_medium={medium}&utm_campaign={code}")
         else:
             base = "/" if lang == "tr" else f"/{lang}/"
             target = DOMAIN + base + (app["slug"] + "/" if app else "")

@@ -1,5 +1,5 @@
 {
- "_aciklama": "Paylaşım başına kısa linkler: exclusivellm.app/go/<kod>/ (build.py go_targets). Kod biçimi <platform>-<uygulama>[-<AAGG>][-en]: yt / x / ig / tt. Platform: youtube|x|instagram|tiktok. hedef: play (yalnız üretimdeki uygulama, apps.json) | site. dil: tr|en. Yayına giren kod SİLİNMEZ, DEĞİŞTİRİLMEZ. Yeni paylaşım = yeni kod + panel kaydında link_code; sonra python _src/build.py ve site deposuna gönder.",
+ "_aciklama": "Paylaşım başına kısa linkler: exclusivellm.app/go/<kod>/ (build.py go_targets). Kod biçimi <platform>-<uygulama>[-<AAGG>][-en]: yt / x / ig / tt. Platform: youtube|x|instagram|tiktok. hedef: play (yalnız üretimdeki uygulama, apps.json) | site. dil: tr|en. Yayına giren kod SİLİNMEZ, DEĞİŞTİRİLMEZ. Yeni paylaşım = yeni kod + panel kaydında link_code; sonra python _src/build.py ve site deposuna gönder. Uygulama içi paylaşım (23.11.2026): kod app-<uygulama>[-en], platform app, hedef otomatik (üretimdeyse Play+UTM utm_medium=share, değilse site); uygulamaya gömülüdür, asla değiştirilmez.",
  "deneme": {"package": null, "platform": "deneme", "hedef": "site", "dil": "tr", "not": "ölçüm denemesi (21.11.2026); raporlarda sayılmaz"},
  "yt-blocknest": {"package": "com.exclusivellm.blocknest", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel (uzun video açıklaması / sabit yorum)"},
  "yt-woodoraclassic": {"package": "com.exclusivellm.woodoraclassic", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel"},
@@ -46,5 +46,9 @@
  "yt-toppleisles-1122-en": {"package": "com.exclusivellm.toppleisles", "platform": "youtube", "hedef": "site", "dil": "en", "not": "YouTube C EN 'Coming soon' videosu (160 bölüm, 3 yeni dünya; eski planlı B videosunun yerine), 22.11.2026"},
  "x-toppleisles-1122": {"package": "com.exclusivellm.toppleisles", "platform": "x", "hedef": "site", "dil": "tr", "not": "X C TR 'Yakında' ilk yanıt (160 bölüm, 8 dünya), 22.11.2026"},
  "x-toppleisles-1122-en": {"package": "com.exclusivellm.toppleisles", "platform": "x", "hedef": "site", "dil": "en", "not": "X C EN 'Coming soon' ilk yanıt, 22.11.2026"},
- "ig-toppleisles-1127": {"package": "com.exclusivellm.toppleisles", "platform": "instagram", "hedef": "site", "dil": "tr", "not": "IG Hikâye bağlantı çıkartması (Reels C 'Yakında' günü), 27.11.2026"}
+ "ig-toppleisles-1127": {"package": "com.exclusivellm.toppleisles", "platform": "instagram", "hedef": "site", "dil": "tr", "not": "IG Hikâye bağlantı çıkartması (Reels C 'Yakında' günü), 27.11.2026"},
+ "app-sudora": {"package": "com.exclusivellm.sudora", "platform": "app", "hedef": "otomatik", "dil": "tr", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
+ "app-sudora-en": {"package": "com.exclusivellm.sudora", "platform": "app", "hedef": "otomatik", "dil": "en", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
+ "app-wordsky": {"package": "com.exclusivellm.wordsky", "platform": "app", "hedef": "otomatik", "dil": "tr", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
+ "app-wordsky-en": {"package": "com.exclusivellm.wordsky", "platform": "app", "hedef": "otomatik", "dil": "en", "not": "uygulama içi Arkadaşına gönder (ayarlar)"}
 }
