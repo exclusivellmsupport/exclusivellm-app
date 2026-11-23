@@ -51,6 +51,8 @@
  "app-sudora-en": {"package": "com.exclusivellm.sudora", "platform": "app", "hedef": "otomatik", "dil": "en", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
  "app-wordsky": {"package": "com.exclusivellm.wordsky", "platform": "app", "hedef": "otomatik", "dil": "tr", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
  "app-wordsky-en": {"package": "com.exclusivellm.wordsky", "platform": "app", "hedef": "otomatik", "dil": "en", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
+ "app-cooktour": {"package": "com.exclusivellm.dishtrotter", "platform": "app", "hedef": "otomatik", "dil": "tr", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
+ "app-cooktour-en": {"package": "com.exclusivellm.dishtrotter", "platform": "app", "hedef": "otomatik", "dil": "en", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
  "fb-studyo-1123": {"package": null, "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 23.11.2026"},
  "fb-exclusivequiz-1123": {"package": "com.exclusivellm.quiz", "platform": "facebook", "hedef": "play", "dil": "tr", "not": "Facebook Sayfası gönderisi, 23.11.2026"},
  "fb-exclusivequiz-1123b": {"package": "com.exclusivellm.quiz", "platform": "facebook", "hedef": "play", "dil": "tr", "not": "Facebook Sayfası gönderisi, 23.11.2026"},
