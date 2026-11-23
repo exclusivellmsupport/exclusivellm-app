@@ -286,7 +286,8 @@ def org_ld() -> dict:
     return {"@context": "https://schema.org", "@type": "Organization", "name": "Exclusive LLM", "url": DOMAIN + "/",
             "logo": DOMAIN + "/img/logo.png", "email": "support@exclusivellm.app",
             "sameAs": ["https://www.instagram.com/exclusive.llm/", "https://www.tiktok.com/@exclusivellm",
-                       "https://www.youtube.com/@Exclusivellm", "https://x.com/exclusivellm"]}
+                       "https://www.youtube.com/@Exclusivellm", "https://x.com/exclusivellm",
+                       "https://www.facebook.com/exclusivellm"]}
 
 
 def website_ld(lang: str) -> dict:
