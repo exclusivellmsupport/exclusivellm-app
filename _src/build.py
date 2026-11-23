@@ -821,10 +821,10 @@ def games_json(apps: list[dict]) -> None:
 # sorgu dizgesini (utm_…) kaydetmez, yalnızca yolu kaydeder; bu yüzden her paylaşımın kendi yolu var.
 # Sayfa açılır → Cloudflare sayar → hedefe yönlenir (Play hedefinde UTM'li link: Play Console edinme raporu da görür).
 # Yönlendirme, Cloudflare'in sayım isteği (XHR /cdn-cgi/rum, yüklemeden hemen sonra) bitince yapılır; engellenirse 2,5 sn.
-# Kaynak _src/links.json: {"<kod>": {"package": "...", "platform": "youtube|x|instagram|tiktok",
+# Kaynak _src/links.json: {"<kod>": {"package": "...", "platform": "youtube|x|instagram|tiktok|facebook",
 #                                     "hedef": "play|site", "dil": "tr|en", "not": "..."}}
 # Kod yayına girdikten sonra silinmez/değiştirilmez (eski paylaşımlardaki link kırılır); sayfa da silinmez.
-GO_PLATFORMS = {"youtube", "x", "instagram", "tiktok", "deneme", "app"}
+GO_PLATFORMS = {"youtube", "x", "instagram", "tiktok", "facebook", "deneme", "app"}  # facebook: 23.11.2026
 # "app" = uygulama içi "Arkadaşına gönder" (23.11.2026). Bu kodların hedefi "otomatik": uygulama apps.json'da
 # (üretimde) ise UTM'li Play sayfası (utm_medium=share), değilse site. Kod uygulamaya gömülü olduğu için hiç
 # değişmez; üretime geçince hedef kendiliğinden Play olur (yalnızca siteyi yeniden üretmek yeter).

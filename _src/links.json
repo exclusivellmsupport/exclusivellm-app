@@ -1,5 +1,5 @@
 {
- "_aciklama": "Paylaşım başına kısa linkler: exclusivellm.app/go/<kod>/ (build.py go_targets). Kod biçimi <platform>-<uygulama>[-<AAGG>][-en]: yt / x / ig / tt. Platform: youtube|x|instagram|tiktok. hedef: play (yalnız üretimdeki uygulama, apps.json) | site. dil: tr|en. Yayına giren kod SİLİNMEZ, DEĞİŞTİRİLMEZ. Yeni paylaşım = yeni kod + panel kaydında link_code; sonra python _src/build.py ve site deposuna gönder. Uygulama içi paylaşım (23.11.2026): kod app-<uygulama>[-en], platform app, hedef otomatik (üretimdeyse Play+UTM utm_medium=share, değilse site); uygulamaya gömülüdür, asla değiştirilmez.",
+ "_aciklama": "Paylaşım başına kısa linkler: exclusivellm.app/go/<kod>/ (build.py go_targets). Kod biçimi <platform>-<uygulama>[-<AAGG>][-en]: yt / x / ig / tt / fb. Platform: youtube|x|instagram|tiktok|facebook. hedef: play (yalnız üretimdeki uygulama, apps.json) | site. dil: tr|en. Yayına giren kod SİLİNMEZ, DEĞİŞTİRİLMEZ. Yeni paylaşım = yeni kod + panel kaydında link_code; sonra python _src/build.py ve site deposuna gönder. Uygulama içi paylaşım (23.11.2026): kod app-<uygulama>[-en], platform app, hedef otomatik (üretimdeyse Play+UTM utm_medium=share, değilse site); uygulamaya gömülüdür, asla değiştirilmez.",
  "deneme": {"package": null, "platform": "deneme", "hedef": "site", "dil": "tr", "not": "ölçüm denemesi (21.11.2026); raporlarda sayılmaz"},
  "yt-blocknest": {"package": "com.exclusivellm.blocknest", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel (uzun video açıklaması / sabit yorum)"},
  "yt-woodoraclassic": {"package": "com.exclusivellm.woodoraclassic", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel"},
@@ -50,5 +50,21 @@
  "app-sudora": {"package": "com.exclusivellm.sudora", "platform": "app", "hedef": "otomatik", "dil": "tr", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
  "app-sudora-en": {"package": "com.exclusivellm.sudora", "platform": "app", "hedef": "otomatik", "dil": "en", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
  "app-wordsky": {"package": "com.exclusivellm.wordsky", "platform": "app", "hedef": "otomatik", "dil": "tr", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
- "app-wordsky-en": {"package": "com.exclusivellm.wordsky", "platform": "app", "hedef": "otomatik", "dil": "en", "not": "uygulama içi Arkadaşına gönder (ayarlar)"}
+ "app-wordsky-en": {"package": "com.exclusivellm.wordsky", "platform": "app", "hedef": "otomatik", "dil": "en", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
+ "fb-studyo-1123": {"package": null, "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 23.11.2026"},
+ "fb-exclusivequiz-1123": {"package": "com.exclusivellm.quiz", "platform": "facebook", "hedef": "play", "dil": "tr", "not": "Facebook Sayfası gönderisi, 23.11.2026"},
+ "fb-exclusivequiz-1123b": {"package": "com.exclusivellm.quiz", "platform": "facebook", "hedef": "play", "dil": "tr", "not": "Facebook Sayfası gönderisi, 23.11.2026"},
+ "fb-legioncharge-1124": {"package": "com.exclusivellm.legioncharge", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 24.11.2026"},
+ "fb-exclusivequiz-1124": {"package": "com.exclusivellm.quiz", "platform": "facebook", "hedef": "play", "dil": "tr", "not": "Facebook Sayfası gönderisi, 24.11.2026"},
+ "fb-exclusivequiz-1124b": {"package": "com.exclusivellm.quiz", "platform": "facebook", "hedef": "play", "dil": "tr", "not": "Facebook Sayfası gönderisi, 24.11.2026"},
+ "fb-neonecogrid-1125": {"package": "com.exclusivellm.neonecogrid", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 25.11.2026"},
+ "fb-toppleisles-1125": {"package": "com.exclusivellm.toppleisles", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 25.11.2026"},
+ "fb-exclusivequiz-1125": {"package": "com.exclusivellm.quiz", "platform": "facebook", "hedef": "play", "dil": "tr", "not": "Facebook Sayfası gönderisi, 25.11.2026"},
+ "fb-wordsky-1126": {"package": "com.exclusivellm.wordsky", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 26.11.2026"},
+ "fb-legioncharge-1126": {"package": "com.exclusivellm.legioncharge", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 26.11.2026"},
+ "fb-exclusivequiz-1126": {"package": "com.exclusivellm.quiz", "platform": "facebook", "hedef": "play", "dil": "tr", "not": "Facebook Sayfası gönderisi, 26.11.2026"},
+ "fb-neonecogrid-1127": {"package": "com.exclusivellm.neonecogrid", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 27.11.2026"},
+ "fb-exstudio-1127": {"package": "com.exclusivellm.mediastudio", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 27.11.2026"},
+ "fb-toppleisles-1127": {"package": "com.exclusivellm.toppleisles", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 27.11.2026"},
+ "fb-wordsky-1128": {"package": "com.exclusivellm.wordsky", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 28.11.2026"}
 }
