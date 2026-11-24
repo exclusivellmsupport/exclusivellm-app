@@ -125,16 +125,16 @@ def check_names(apps: list[dict]) -> list[str]:
 
 HOME = {
     "tr": {
-        "title": "Exclusive LLM Oyunları: Rahatlatıcı Mobil Oyunlar ve Uygulamalar",
-        "description": "Exclusive LLM, Android için sakin oyunlar ve uygulamalar yapar: ölçülü reklam, sade tasarım. BlockFour, BlockNest, Woodora Classic ve Exclusive Quiz Google Play'de ücretsiz.",
+        "title": "Exclusive LLM: Ücretsiz Bulmaca ve Zekâ Oyunları (Android)",
+        "description": "Android için ücretsiz bulmaca ve zekâ oyunları: BlockFour, BlockNest, Woodora Classic ve Exclusive Quiz. İnternetsiz oynanır, ölçülü reklam, sade tasarım.",
     },
     "en": {
-        "title": "Exclusive LLM Games: Relaxing Mobile Games & Apps",
-        "description": "Exclusive LLM makes calm Android games and apps with measured ads and clean design. BlockFour, BlockNest, Woodora Classic and Exclusive Quiz are free on Google Play.",
+        "title": "Exclusive LLM: Free Puzzle & Brain Games for Android",
+        "description": "Free puzzle and brain games for Android: BlockFour, BlockNest, Woodora Classic and Exclusive Quiz. Play offline, measured ads, clean design.",
     },
     "es": {
-        "title": "Juegos de Exclusive LLM: juegos y apps móviles relajantes",
-        "description": "Exclusive LLM crea juegos y apps tranquilos para Android, con anuncios moderados y diseño limpio. BlockFour, BlockNest, Woodora Classic y Exclusive Quiz, gratis en Google Play.",
+        "title": "Exclusive LLM: juegos de puzles gratis para Android",
+        "description": "Juegos de puzles y de lógica gratis para Android: BlockFour, BlockNest, Woodora Classic y Exclusive Quiz. Sin internet, anuncios moderados.",
     },
 }
 UI = {
@@ -283,7 +283,7 @@ def set_head(soup: BeautifulSoup, lang: str, path: str, title: str, desc: str, i
 
 
 def org_ld() -> dict:
-    return {"@context": "https://schema.org", "@type": "Organization", "name": "Exclusive LLM", "url": DOMAIN + "/",
+    return {"@context": "https://schema.org", "@type": "Organization", "@id": DOMAIN + "/#org", "name": "Exclusive LLM", "url": DOMAIN + "/",
             "logo": DOMAIN + "/img/logo.png", "email": "support@exclusivellm.app",
             "sameAs": ["https://www.instagram.com/exclusive.llm/", "https://www.tiktok.com/@exclusivellm",
                        "https://www.youtube.com/@Exclusivellm", "https://x.com/exclusivellm",
@@ -331,7 +331,9 @@ def write(path: Path, soup: BeautifulSoup) -> None:
         add_beacon(soup)
     path.parent.mkdir(parents=True, exist_ok=True)
     text = "<!doctype html>\n" + str(soup).replace("<!DOCTYPE html>", "").replace("<!doctype html>", "").lstrip()
-    d = stable_date(path.relative_to(ROOT).as_posix(), text)
+    main = soup.find("main")  # 24.11.2026: ortak menü/altbilgi değişikliği tüm sayfaların lastmod'unu oynatmasın
+    key_text = (str(main) if main else text) + (soup.title.string if soup.title else "") + str(soup.find("meta", attrs={"name": "description"}))
+    d = stable_date(path.relative_to(ROOT).as_posix(), key_text)
     text = text.replace(f'"dateModified": "{date.today().isoformat()}"', f'"dateModified": "{d}"')
     path.write_text(text, encoding="utf-8")
 
@@ -383,7 +385,19 @@ def get_extras(app: dict, lang: str) -> tuple[str, str]:
     return qr, bar
 
 
-def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False, updates_html: str = "") -> str:
+PRIVACY_LABEL = {"tr": "Gizlilik politikası", "en": "Privacy policy", "es": "Política de privacidad"}
+
+
+def h1_sub(app: dict, lang: str) -> str:
+    """H1'deki anahtar kelimeli alt başlık (24.11.2026): apps.json "h1_sub", yoksa başlığın ':' ile ' | ' arası."""
+    t = app[lang]
+    if t.get("h1_sub"):
+        return t["h1_sub"]
+    title = t["title"].split(" | ")[0]
+    return title.split(":", 1)[1].strip() if ":" in title else t["tagline"]
+
+
+def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False, updates_html: str = "", related_html: str = "") -> str:
     t, ui, base = app[lang], UI[lang], BASE[lang]
     name = esc(app["name"])
     guide_link = (f'<a class="more" href="{base}{app["slug"]}/guide/">{esc(PAGE_UI[lang]["guide"])} <span aria-hidden="true">→</span></a>'
@@ -400,7 +414,7 @@ def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False, u
       <div class="wrap">
         <div class="head center"><span class="eyebrow">{esc(ui["eyebrow_play"])}</span><h2 class="title">{esc(ui["video"])}</h2></div>
         <div class="yt" data-id="{vid}" data-title="{name}" role="button" tabindex="0" aria-label="{esc(ui["watch"])}">
-          <img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt="{name} {esc(ui["video"].lower())}" loading="lazy">
+          <img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt="{name} {esc(ui["video"].lower())}" loading="lazy" width="480" height="360">
           <button type="button" aria-label="{esc(ui["watch"])}"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
         </div>
       </div>
@@ -417,18 +431,20 @@ def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False, u
     others += (f'<a class="other" href="{base}#apps"><img src="/img/favicon.png" alt="" width="56" height="56" loading="lazy">'
                f'<span><b>{esc(ui["games"])}</b><small>exclusivellm.app</small></span></a>')
     qr, bar = get_extras(app, lang)
+    privacy = (f'<p class="intro" style="text-align:center;margin-top:18px"><a href="/{app["slug"]}-privacy.html">{esc(PRIVACY_LABEL[lang])}</a></p>'
+               if (ROOT / f'{app["slug"]}-privacy.html').exists() else "")
     return f'''
   <main id="top" class="gp">{bar}
     <section class="gp-hero">
       <div class="wrap gp-grid">
         <div>
           <nav class="crumb" aria-label="breadcrumb"><a href="{base}">{esc(ui["home"])}</a><span>›</span><a href="{base}#apps">{esc(ui["games"])}</a><span>›</span><span>{name}</span></nav>
-          <div class="head-row"><img src="/img/{app["icon"]}" alt="{name}" width="84" height="84"><div><h1>{name}</h1><div class="tags">{tags}</div></div></div>
+          <div class="head-row"><img src="/img/{app["icon"]}" alt="{name}" width="84" height="84"><div><h1>{name}<span class="h1-sub">{esc(h1_sub(app, lang))}</span></h1><div class="tags">{tags}</div></div></div>
           <p class="lead">{esc(t["tagline"])}</p>
           <p class="intro">{esc(t["intro"])}</p>
           <div class="cta-row" id="play-slot">{guide_link}{qr}</div>
         </div>
-        <div class="gp-media"><img src="/img/{app["feature"]}" alt="{name}" width="1024" height="500"></div>
+        <div class="gp-media"><img src="/img/{app["feature"]}" alt="{name}" width="1024" height="500" fetchpriority="high"></div>
       </div>
     </section>
     <section class="gp-sec">
@@ -442,11 +458,12 @@ def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False, u
         <div class="head"><span class="eyebrow">{name}</span><h2 class="title">{esc(ui["features"])}</h2></div>
         <div class="feats">{cols}</div>
       </div>
-    </section>{updates_html}
+    </section>{updates_html}{related_html}
     <section class="gp-sec">
       <div class="wrap">
         <div class="head center"><span class="eyebrow">{esc(ui["eyebrow_faq"])}</span><h2 class="title">{esc(ui["faq"])}</h2></div>
         <div class="faq">{faq}</div>
+        {privacy}
       </div>
     </section>
     <section class="gp-sec">
@@ -470,12 +487,13 @@ def game_ld(app: dict, lang: str) -> list[dict]:
          "inLanguage": app["languages"], "image": DOMAIN + "/img/" + app["feature"],
          "screenshot": [DOMAIN + "/img/shots/" + s for s in shots_for(app, lang)], "installUrl": play, "downloadUrl": play,
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-         "publisher": {"@type": "Organization", "name": "Exclusive LLM", "url": DOMAIN + "/"}},
+         "publisher": {"@type": "Organization", "@id": DOMAIN + "/#org", "name": "Exclusive LLM", "url": DOMAIN + "/"}},
         {"@context": "https://schema.org", "@type": "FAQPage",
          "mainEntity": [{"@type": "Question", "name": q["q"], "acceptedAnswer": {"@type": "Answer", "text": q["a"]}} for q in t["faq"]]},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": UI[lang]["home"], "item": DOMAIN + BASE[lang]},
-            {"@type": "ListItem", "position": 2, "name": app["name"], "item": url}]},
+            {"@type": "ListItem", "position": 2, "name": UI[lang]["games"], "item": DOMAIN + BASE[lang] + "#apps"},
+            {"@type": "ListItem", "position": 3, "name": app["name"], "item": url}]},
     ]
 
 
@@ -518,9 +536,12 @@ def page_hero(t: dict, lang: str, crumbs: list[tuple[str, str]], image: str, cta
           <p class="intro">{esc(t["intro"])}</p>
           {f'<div class="cta-row">{cta}</div>' if cta else ""}
         </div>
-        <div class="gp-media"><img src="/img/{image}" alt="" width="1024" height="500"></div>
+        <div class="gp-media"><img src="/img/{image}" alt="" width="1024" height="500" fetchpriority="high"></div>
       </div>
     </section>'''
+
+
+GUIDE_APPS: set[str] = set()  # build() doldurur: rehberi olan oyunlar (24.11.2026: Quiz'in olmayan rehberine 404 bağlantı vardı)
 
 
 def app_cards(apps: list[dict], lang: str, play_html: dict[str, str]) -> str:
@@ -530,7 +551,9 @@ def app_cards(apps: list[dict], lang: str, play_html: dict[str, str]) -> str:
         cards.append(
             f'<div class="card-game"><a class="other" href="{base}{a["slug"]}/"><img src="/img/{a["icon"]}" alt="" width="56" height="56" loading="lazy">'
             f'<span><b>{esc(a["name"])}</b><small>{esc(a[lang]["tagline"])}</small></span></a>'
-            f'<div class="cta-row">{play_html[a["package"]]}<a class="more" href="{base}{a["slug"]}/guide/">{esc(pu["guide"])} <span aria-hidden="true">→</span></a></div></div>')
+            f'<div class="cta-row">{play_html[a["package"]]}'
+            + (f'<a class="more" href="{base}{a["slug"]}/guide/">{esc(pu["guide"])} <span aria-hidden="true">→</span></a>' if a["slug"] in GUIDE_APPS else "")
+            + '</div></div>')
     return f'<div class="game-cards">{"".join(cards)}</div>'
 
 
@@ -570,7 +593,7 @@ def hub_main(p: dict, lang: str, apps: list[dict], play: dict[str, str]) -> str:
 def press_main(p: dict, lang: str, apps: list[dict], play: dict[str, str]) -> str:
     t = p[lang]
     assets = '<div class="assets">' + "".join(
-        f'<a class="asset" href="/img/{a["file"]}" download><img src="/img/{a["file"]}" alt="{esc(a["label"])}" loading="lazy">'
+        f'<a class="asset" href="/img/{a["file"]}" download><img src="/img/{a.get("thumb", a["file"])}" alt="{esc(a["label"])}" loading="lazy" width="144" height="144">'
         f'<span><b>{esc(a["label"])}</b><small>{esc(a["size"])} · {esc(PAGE_UI[lang]["download"])}</small></span></a>'
         for a in p["assets"]) + "</div>"
     games = '<div class="feats">' + "".join(
@@ -586,6 +609,75 @@ def press_main(p: dict, lang: str, apps: list[dict], play: dict[str, str]) -> st
             + sec(t["eyebrow"], t["contact_title"], contact) + "\n  </main>\n")
 
 
+GUIDES_UI = {
+    "tr": {"crumb": "Rehberler", "eyebrow": "Rehberler ve ipuçları", "h1": "Oyun rehberleri ve ipuçları",
+           "title": "Oyun Rehberleri: Blok Bulmaca, 2048 ve Bilgi Yarışması",
+           "description": "Blok bulmaca, 2048, renk sıralama, düşen bloklar ve bilgi yarışması için kurallar, taktikler ve ipuçları. Oyunlarımızın rehberleri tek sayfada.",
+           "lead": "Kurallar, taktikler ve daha yüksek skor için ipuçları.",
+           "intro": "Oyunlarımızı daha iyi oynamak ya da bir türü ilk kez öğrenmek için hazırladığımız rehberler burada. Her rehber kısa bölümlerden oluşur ve ilgili oyuna bağlanır.",
+           "related": "Bu oyunla ilgili rehberler", "read": "Oku"},
+    "en": {"crumb": "Guides", "eyebrow": "Guides and tips", "h1": "Game guides and tips",
+           "title": "Game Guides: Block Puzzle, 2048, Trivia Tips | Exclusive LLM",
+           "description": "Rules, strategies and tips for block puzzle, 2048, color sort, falling blocks and trivia. All of our game guides on one page.",
+           "lead": "Rules, strategies and tips for higher scores.",
+           "intro": "Here are the guides we wrote to help you play our games better or learn a game type for the first time. Each guide is split into short sections and links to the game it covers.",
+           "related": "Guides for this game", "read": "Read"},
+    "es": {"crumb": "Guías", "eyebrow": "Guías y consejos", "h1": "Guías y consejos de juegos",
+           "title": "Guías de juegos: bloques, 2048 y preguntas | Exclusive LLM",
+           "description": "Reglas, estrategias y consejos para puzzles de bloques, 2048, ordenar colores, bloques que caen y juegos de preguntas. Todas nuestras guías.",
+           "lead": "Reglas, estrategias y consejos para lograr más puntos.",
+           "intro": "Aquí están las guías que escribimos para jugar mejor a nuestros juegos o aprender un tipo de juego por primera vez. Cada guía tiene secciones cortas y enlaza al juego correspondiente.",
+           "related": "Guías de este juego", "read": "Leer"},
+}
+GUIDES_PATH = "guides/"
+
+
+def content_list(pages: dict) -> list[dict]:
+    """Rehber dizinine giren sayfalar: kategori/hub sayfaları + rehberler (basın kiti hariç)."""
+    return [pages["hub"]] + pages.get("hubs", []) + pages["guides"]
+
+
+def link_cards(items: list[dict], lang: str) -> str:
+    base, ui = BASE[lang], GUIDES_UI[lang]
+    return '<div class="feats">' + "".join(
+        f'<div class="col"><h3><a href="{base}{it["path"]}">{esc(it[lang]["h1"])}</a></h3><p>{esc(it[lang]["description"])}</p>'
+        f'<p><a class="more" href="{base}{it["path"]}">{esc(ui["read"])} <span aria-hidden="true">→</span></a></p></div>'
+        for it in items) + "</div>"
+
+
+def related_section(slug: str, lang: str, pages: dict) -> str:
+    items = [it for it in content_list(pages) if it.get("app") == slug or slug in it.get("apps", [])]
+    if not items:
+        return ""
+    ui = GUIDES_UI[lang]
+    return sec(ui["eyebrow"], ui["related"], link_cards(items, lang))
+
+
+def guides_index_main(pages: dict, lang: str) -> str:
+    ui = GUIDES_UI[lang]
+    t = {"eyebrow": ui["eyebrow"], "h1": ui["h1"], "lead": ui["lead"], "intro": ui["intro"]}
+    return ('\n  <main id="top" class="gp">' + page_hero(t, lang, [(ui["crumb"], "")], "blockfour-feature.jpg")
+            + sec(ui["eyebrow"], ui["crumb"], link_cards(content_list(pages), lang)) + "\n  </main>\n")
+
+
+def build_guides_index(pages: dict, lang: str, out_dir: Path) -> str:
+    soup = page_soup(lang)
+    set_lang_switch(soup, lang, GUIDES_PATH)
+    for a in soup.select("header a[href^='#'], footer a[href^='#']"):
+        a["href"] = BASE[lang] + a["href"]
+    soup.find("main").replace_with(BeautifulSoup(guides_index_main(pages, lang), "html.parser"))
+    url = DOMAIN + BASE[lang] + GUIDES_PATH
+    ui = GUIDES_UI[lang]
+    ld = [crumbs_ld(lang, [(ui["crumb"], url)]),
+          {"@context": "https://schema.org", "@type": "ItemList", "name": ui["h1"], "itemListElement": [
+              {"@type": "ListItem", "position": i + 1, "name": it[lang]["h1"], "url": DOMAIN + BASE[lang] + it["path"]}
+              for i, it in enumerate(content_list(pages))]}]
+    set_head(soup, lang, GUIDES_PATH, ui["title"], ui["description"], "blockfour-feature.jpg", ld)
+    tag_play_links(soup, "guides", lang)
+    write(out_dir / GUIDES_PATH / "index.html", soup)
+    return BASE[lang] + GUIDES_PATH
+
+
 def guide_main(g: dict, lang: str, apps: list[dict], play: dict[str, str]) -> str:
     t, app = g[lang], next(a for a in apps if a["slug"] == g["app"])
     base = BASE[lang]
@@ -593,6 +685,7 @@ def guide_main(g: dict, lang: str, apps: list[dict], play: dict[str, str]) -> st
     others = [a for a in apps if a["slug"] != app["slug"]]
     return ('\n  <main id="top" class="gp">' + page_hero(t, lang, [(app["name"], f'{base}{app["slug"]}/'), (t["crumb"], "")], app["feature"], cta)
             + sec(t["eyebrow"], t["crumb"], f'<div class="feats">{section_cols(t["sections"])}</div>')
+            + (sec(UI[lang]["eyebrow_faq"], PAGE_UI[lang]["faq"], faq_html(t["faq"]), True) if t.get("faq") else "")
             + sec(UI[lang]["eyebrow_more"], UI[lang]["others"], app_cards(others, lang, play)) + "\n  </main>\n")
 
 
@@ -626,9 +719,13 @@ def build_content_pages(apps: list[dict], pages: dict, lang: str, out_dir: Path)
             app = next(a for a in apps if a["slug"] == p["app"])
             image = app["feature"]
             ld = [article_ld(t, url, image), crumbs_ld(lang, [(app["name"], DOMAIN + BASE[lang] + app["slug"] + "/"), (t["crumb"], url)])]
+            if t.get("faq"):
+                ld.append(faq_ld(t["faq"]))
         set_head(soup, lang, path, t["title"], t["description"], image, ld)
         camp = ("hub" if p is pages["hub"] else "hub_" + p["path"].strip("/").replace("-", "_")) if kind == "hub" else kind
-        tag_play_links(soup, camp if kind != "guide" else p["app"] + "_guide", lang)
+        if kind == "guide":
+            camp = p["app"] + "_guide" if path == p["app"] + "/guide/" else "page_" + path.strip("/").replace("/", "_").replace("-", "_")
+        tag_play_links(soup, camp, lang)
         write(out_dir / path / "index.html", soup)
         urls.append(BASE[lang] + path)
     return urls
@@ -662,7 +759,7 @@ UPD_UI = {
            "app_title": "What's new", "feed": "Follow with the Atom feed", "version": "Version",
            "types": {"launch": "Now on Google Play", "feature": "New feature", "content": "New content", "look": "New look"}},
     "es": {"crumb": "Novedades", "eyebrow": "Novedades", "h1": "Novedades de nuestros juegos",
-           "title": "Novedades: actualizaciones importantes de nuestros juegos | Exclusive LLM",
+           "title": "Novedades de nuestros juegos | Exclusive LLM",
            "description": "Nuevos modos, nuevo contenido, Google Play Juegos y nuevos diseños en BlockFour, BlockNest, Woodora Classic y Exclusive Quiz.",
            "lead": "Las actualizaciones importantes de nuestros juegos en Google Play, primero las más recientes.",
            "intro": "Aquí solo contamos los cambios que notarás en el juego: nuevos modos y contenido, logros y nuevos diseños. Las actualizaciones llegan solas desde Google Play; solo mantén el juego actualizado.",
@@ -904,6 +1001,7 @@ setTimeout(g,2500)}})();</script>
 def build() -> list[str]:
     apps = json.loads((SRC / "apps.json").read_text(encoding="utf-8"))
     pages = json.loads((SRC / "pages.json").read_text(encoding="utf-8"))
+    GUIDE_APPS.update(g["app"] for g in pages["guides"] if g["path"] == g["app"] + "/guide/")
     go, go_errors = go_targets(apps)
     updates, upd_errors = load_updates(apps)
     errors = check_features() + check_names(apps) + go_errors + upd_errors
@@ -934,8 +1032,9 @@ def build() -> list[str]:
                 a["href"] = BASE[lang] + a["href"]
             btn = play_button(soup, app["package"])
             main = soup.find("main")
-            has_guide = any(g["app"] == app["slug"] for g in pages["guides"])
-            main.replace_with(BeautifulSoup(game_main(app, lang, apps, has_guide, app_updates_section(app, lang, updates, apps)),
+            has_guide = app["slug"] in GUIDE_APPS
+            main.replace_with(BeautifulSoup(game_main(app, lang, apps, has_guide, app_updates_section(app, lang, updates, apps),
+                                                      related_section(app["slug"], lang, pages)),
                                             "html.parser"))
             soup.select_one("#play-slot").insert(0, btn)
             del soup.select_one("#play-slot")["id"]
@@ -948,6 +1047,7 @@ def build() -> list[str]:
             write(out_dir / app["slug"] / "index.html", soup)
             urls.append(BASE[lang] + app["slug"] + "/")
         urls += build_content_pages(apps, pages, lang, out_dir)
+        urls.append(build_guides_index(pages, lang, out_dir))
         urls.append(build_updates_page(updates, lang, apps, out_dir))
     games_json(apps)
     write_go_pages(go)  # sitemap'e girmez; noindex (önizleme kartı için tarayıcı botlarına açık)

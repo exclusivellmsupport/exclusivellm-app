@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"/>
+  <title>Oyun Rehberleri: Blok Bulmaca, 2048 ve Bilgi Yarışması</title>
+  <meta content="Blok bulmaca, 2048, renk sıralama, düşen bloklar ve bilgi yarışması için kurallar, taktikler ve ipuçları. Oyunlarımızın rehberleri tek sayfada." name="description"/>
+  <link href="https://exclusivellm.app/guides/" rel="canonical"/>
+  <link href="https://exclusivellm.app/guides/" hreflang="tr" rel="alternate"/>
+  <link href="https://exclusivellm.app/en/guides/" hreflang="en" rel="alternate"/>
+  <link href="https://exclusivellm.app/es/guides/" hreflang="es" rel="alternate"/>
+  <link href="https://exclusivellm.app/en/guides/" hreflang="x-default" rel="alternate"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Exclusive LLM" property="og:site_name"/>
+  <meta content="tr_TR" property="og:locale"/>
+  <meta content="Oyun Rehberleri: Blok Bulmaca, 2048 ve Bilgi Yarışması" property="og:title"/>
+  <meta content="Blok bulmaca, 2048, renk sıralama, düşen bloklar ve bilgi yarışması için kurallar, taktikler ve ipuçları. Oyunlarımızın rehberleri tek sayfada." property="og:description"/>
+  <meta content="https://exclusivellm.app/img/blockfour-feature.jpg" property="og:image"/>
+  <meta content="https://exclusivellm.app/guides/" property="og:url"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+  <link href="/img/favicon.png" rel="icon" type="image/png"/>
+  <meta content="#040814" name="theme-color"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="/assets/style.css?v=17" rel="stylesheet"/>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://exclusivellm.app/"}, {"@type": "ListItem", "position": 2, "name": "Rehberler", "item": "https://exclusivellm.app/guides/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Oyun rehberleri ve ipuçları", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Blok bulmaca ve blok yerleştirme oyunları", "url": "https://exclusivellm.app/block-puzzle-games/"}, {"@type": "ListItem", "position": 2, "name": "İnternetsiz oyunlar", "url": "https://exclusivellm.app/offline-games/"}, {"@type": "ListItem", "position": 3, "name": "Blok bulmaca nasıl oynanır? Kurallar ve rekor ipuçları", "url": "https://exclusivellm.app/how-to-play-block-puzzle/"}, {"@type": "ListItem", "position": 4, "name": "8x8 ve 10x10 blok bulmaca: hangi tahta boyutu sana uygun?", "url": "https://exclusivellm.app/8x8-vs-10x10-block-puzzle/"}, {"@type": "ListItem", "position": 5, "name": "Yaşlılar için telefon oyunları: sakin ve anlaşılır zekâ oyunları", "url": "https://exclusivellm.app/games-for-seniors/"}, {"@type": "ListItem", "position": 6, "name": "Uçakta oynanacak internetsiz oyunlar: uçuştan önce kontrol listesi", "url": "https://exclusivellm.app/airplane-games/"}, {"@type": "ListItem", "position": 7, "name": "BlockNest ipuçları: daha yüksek skor için rehber", "url": "https://exclusivellm.app/blocknest/guide/"}, {"@type": "ListItem", "position": 8, "name": "Woodora Classic ipuçları: 8×8 tahtada strateji", "url": "https://exclusivellm.app/woodora-classic/guide/"}, {"@type": "ListItem", "position": 9, "name": "BlockFour ipuçları: dört oyun için rehber", "url": "https://exclusivellm.app/block-four/guide/"}, {"@type": "ListItem", "position": 10, "name": "2048 nasıl oynanır? Kurallar ve kazandıran taktikler", "url": "https://exclusivellm.app/how-to-play-2048/"}, {"@type": "ListItem", "position": 11, "name": "Renk sıralama oyunu ipuçları: seviyeleri nasıl geçersin?", "url": "https://exclusivellm.app/color-sort-tips/"}, {"@type": "ListItem", "position": 12, "name": "Düşen blok oyunu rehberi: satır temizleme taktikleri", "url": "https://exclusivellm.app/falling-blocks-guide/"}, {"@type": "ListItem", "position": 13, "name": "Exclusive Quiz ipuçları: bilgi yarışması nasıl oynanır?", "url": "https://exclusivellm.app/exclusive-quiz/guide/"}, {"@type": "ListItem", "position": 14, "name": "Genel kültür soruları ve cevapları: 10 kategoride 30 şıklı soru", "url": "https://exclusivellm.app/general-knowledge-questions/"}, {"@type": "ListItem", "position": 15, "name": "Genel kültür nasıl geliştirilir? Günde 10 dakikalık bir yöntem", "url": "https://exclusivellm.app/improve-general-knowledge/"}]}</script>
+</head>
+<body data-lang="tr">
+<div aria-hidden="true" class="aurora"></div>
+<canvas aria-hidden="true" id="neural"></canvas>
+<div aria-hidden="true" class="grain"></div>
+<div aria-hidden="true" class="spot"></div>
+<header class="top">
+<div class="wrap nav">
+<a class="brand" href="/#top"><img alt="" height="50" src="/img/favicon.png" width="50"/> Exclusive LLM</a>
+<nav class="links">
+<a href="/#promise"><span class="tr">Felsefemiz</span></a>
+<a href="/#apps"><span class="tr">Oyunlar</span></a>
+<a href="/updates/"><span class="tr">Yenilikler</span></a>
+<a href="/#contact"><span class="tr">İletişim</span></a>
+<a aria-label="Instagram" class="soc b-ig" href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" fill="#fff"></path></svg></a>
+<a aria-label="TikTok" class="soc b-tt" href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#25F4EE" transform="translate(-.8 -.6)"></path><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#FE2C55" transform="translate(.8 .6)"></path><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#fff"></path></svg></a>
+<a aria-label="YouTube" class="soc b-yt" href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M9.6 7.4v9.2l7.8-4.6z" fill="#fff"></path></svg></a>
+<a aria-label="X" class="soc b-x" href="https://x.com/exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" fill="#fff"></path></svg></a>
+<a aria-label="Facebook" class="soc b-fb" href="https://www.facebook.com/exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" fill="#fff"></path></svg></a>
+<div aria-label="Language" class="lang" role="group"><a aria-current="page" class="on" href="/guides/" hreflang="tr" lang="tr">TR</a><a href="/en/guides/" hreflang="en" lang="en">EN</a><a href="/es/guides/" hreflang="es" lang="es">ES</a></div>
+</nav>
+</div>
+</header>
+
+<main class="gp" id="top">
+<section class="gp-hero">
+<div class="wrap gp-grid">
+<div>
+<nav aria-label="breadcrumb" class="crumb"><a href="/">Ana sayfa</a><span>›</span><span>Rehberler</span></nav>
+<span class="eyebrow">Rehberler ve ipuçları</span>
+<h1>Oyun rehberleri ve ipuçları</h1>
+<p class="lead">Kurallar, taktikler ve daha yüksek skor için ipuçları.</p>
+<p class="intro">Oyunlarımızı daha iyi oynamak ya da bir türü ilk kez öğrenmek için hazırladığımız rehberler burada. Her rehber kısa bölümlerden oluşur ve ilgili oyuna bağlanır.</p>
+</div>
+<div class="gp-media"><img alt="" fetchpriority="high" height="500" src="/img/blockfour-feature.jpg" width="1024"/></div>
+</div>
+</section>
+<section class="gp-sec">
+<div class="wrap">
+<div class="head"><span class="eyebrow">Rehberler ve ipuçları</span><h2 class="title">Rehberler</h2></div>
+<div class="feats"><div class="col"><h3><a href="/block-puzzle-games/">Blok bulmaca ve blok yerleştirme oyunları</a></h3><p>Ahşap blok bulmaca, 8×8 ve 10×10 tahtalar, 2048 ve renk sıralama. Exclusive LLM'in internetsiz, üyeliksiz blok bulmaca oyunlarını karşılaştır.</p><p><a class="more" href="/block-puzzle-games/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/offline-games/">İnternetsiz oyunlar</a></h3><p>İnternet olmadan oynanan ücretsiz telefon oyunları: blok bulmaca, 2048 ve renk sıralama. Uçakta, yolda, kotası bitince bile oyna.</p><p><a class="more" href="/offline-games/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/how-to-play-block-puzzle/">Blok bulmaca nasıl oynanır? Kurallar ve rekor ipuçları</a></h3><p>Blok bulmaca nasıl oynanır: temel kurallar, puan ve kombo mantığı, rekor için 10 ipucu ve tahtanın kilitlenmesini önlemenin yolları.</p><p><a class="more" href="/how-to-play-block-puzzle/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/8x8-vs-10x10-block-puzzle/">8x8 ve 10x10 blok bulmaca: hangi tahta boyutu sana uygun?</a></h3><p>8x8 ve 10x10 blok bulmaca arasındaki farklar: zorluk, hata payı, kombo şansı ve oyun süresi. Hangi tahta boyutu sana daha uygun?</p><p><a class="more" href="/8x8-vs-10x10-block-puzzle/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/games-for-seniors/">Yaşlılar için telefon oyunları: sakin ve anlaşılır zekâ oyunları</a></h3><p>Yaşlılar için telefon oyunları seçerken nelere bakmalı? Süresiz, okunaklı, internetsiz ve üyeliksiz oyunlar ile kurulum ve ayar için adım adım yardım.</p><p><a class="more" href="/games-for-seniors/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/airplane-games/">Uçakta oynanacak internetsiz oyunlar: uçuştan önce kontrol listesi</a></h3><p>Uçakta oynanacak internetsiz oyunlar için uçuştan önce yapılacak 5 kontrol, kısa ve uzun uçuş önerileri ve oyunlarımızda internetsiz neyin çalıştığı.</p><p><a class="more" href="/airplane-games/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/blocknest/guide/">BlockNest ipuçları: daha yüksek skor için rehber</a></h3><p>BlockNest'te daha yüksek skor için ipuçları: 10×10 tahtayı açık tutma, x5 komboya ulaşma, parçaları planlama ve sık yapılan hatalar.</p><p><a class="more" href="/blocknest/guide/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/woodora-classic/guide/">Woodora Classic ipuçları: 8×8 tahtada strateji</a></h3><p>Woodora Classic için strateji rehberi: döndürülemeyen blokları planlama, önizlemeyi kullanma, seri bonusları ve 8×8 tahtada yer açma.</p><p><a class="more" href="/woodora-classic/guide/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/block-four/guide/">BlockFour ipuçları: dört oyun için rehber</a></h3><p>BlockFour'daki dört oyun için ipuçları: Blok Rota'da yüksek skor, Düşen Bloklar'da hız, 2048'e ulaşma ve Renk Sıralama seviyelerini geçme.</p><p><a class="more" href="/block-four/guide/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/how-to-play-2048/">2048 nasıl oynanır? Kurallar ve kazandıran taktikler</a></h3><p>2048 nasıl oynanır, nasıl kazanılır? Kurallar ve örnek hamle, adım adım köşe taktiği, sık yapılan hatalar, rekor ipuçları ve hile sorusunun cevabı.</p><p><a class="more" href="/how-to-play-2048/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/color-sort-tips/">Renk sıralama oyunu ipuçları: seviyeleri nasıl geçersin?</a></h3><p>Renk sıralama oyununda takıldın mı? Kurallar, boş tüpü doğru kullanma, hangi tüple başlamalı, geri alma ve zor seviyeleri geçmek için ipuçları.</p><p><a class="more" href="/color-sort-tips/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/falling-blocks-guide/">Düşen blok oyunu rehberi: satır temizleme taktikleri</a></h3><p>Düşen blok oyununda daha uzun dayanmak için: kurallar, düz yüzey, uzun parça için kuyu, hız seviyeleri ve BlockFour'daki Düşen Bloklar tuşları.</p><p><a class="more" href="/falling-blocks-guide/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/exclusive-quiz/guide/">Exclusive Quiz ipuçları: bilgi yarışması nasıl oynanır?</a></h3><p>Exclusive Quiz'de bilgi yarışması nasıl oynanır, puan nasıl hesaplanır? Modlar, Yanlışlarım ile öğrenme ve 50:50 ipucunu doğru anda kullanma.</p><p><a class="more" href="/exclusive-quiz/guide/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/general-knowledge-questions/">Genel kültür soruları ve cevapları: 10 kategoride 30 şıklı soru</a></h3><p>Şıklı genel kültür soruları ve cevapları: 10 kategoride kolaydan zora 30 soru, her birinin kısa açıklamasıyla. Exclusive Quiz soru bankasından.</p><p><a class="more" href="/general-knowledge-questions/">Oku <span aria-hidden="true">→</span></a></p></div><div class="col"><h3><a href="/improve-general-knowledge/">Genel kültür nasıl geliştirilir? Günde 10 dakikalık bir yöntem</a></h3><p>Genel kültür nasıl geliştirilir? Aralıklı tekrar, dengeli kategoriler, hatalardan öğrenme ve okuma alışkanlığıyla günde 10 dakikalık pratik bir yöntem.</p><p><a class="more" href="/improve-general-knowledge/">Oku <span aria-hidden="true">→</span></a></p></div></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap foot">
+<a class="brand" href="/#top"><img alt="" height="50" src="/img/favicon.png" width="50"/> Exclusive LLM</a>
+<nav>
+<a href="/#promise"><span class="tr">Felsefemiz</span></a>
+<a href="/#apps"><span class="tr">Oyunlar</span></a>
+<a href="/updates/"><span class="tr">Yenilikler</span></a>
+<a href="/block-puzzle-games/"><span class="tr">Blok bulmaca oyunları</span></a>
+<a href="/offline-games/"><span class="tr">İnternetsiz oyunlar</span></a>
+<a href="/guides/"><span class="tr">Rehberler ve ipuçları</span></a>
+<a href="/press/"><span class="tr">Basın kiti</span></a>
+<a href="mailto:support@exclusivellm.app"><span class="tr">Destek</span></a>
+<a href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank">TikTok</a>
+<a href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank">YouTube</a>
+<a href="https://x.com/exclusivellm" rel="noopener" target="_blank">X</a>
+<a href="https://www.facebook.com/exclusivellm" rel="noopener" target="_blank">Facebook</a>
+</nav>
+<span>© <span id="yr">2026</span> Exclusive LLM</span>
+</div>
+</footer>
+<script defer="" src="/assets/app.js?v=10"></script>
+<script data-cf-beacon='{"token": "077ef39b685d4709a8f59845f57dfc06"}' defer src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+</body>
+</html>

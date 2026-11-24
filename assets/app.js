@@ -125,14 +125,19 @@
   function resize() {
     DPR = Math.min(devicePixelRatio || 1, 2);
     W = cv.width = innerWidth * DPR; H = cv.height = innerHeight * DPR;
-    const n = Math.round(Math.min(110, (innerWidth * innerHeight) / 14000));
+    lastW = innerWidth;
+    // 24.11.2026: mobilde daha az düğüm (O(n²) çizgi döngüsü, INP/pil)
+    const n = Math.round(Math.min(innerWidth < 760 ? 36 : 90, (innerWidth * innerHeight) / 14000));
     nodes = Array.from({ length: n }, () => ({
       x: Math.random() * W, y: Math.random() * H,
       vx: (Math.random() - 0.5) * 0.25 * DPR, vy: (Math.random() - 0.5) * 0.25 * DPR,
       r: (Math.random() * 1.6 + 0.8) * DPR, hue: Math.random() < 0.18 ? 265 : 205 + Math.random() * 25,
     }));
   }
-  resize(); addEventListener("resize", resize);
+  let lastW = 0;
+  resize();
+  // mobilde adres çubuğu açılıp kapanınca yükseklik değişir: yalnızca genişlik değişince yeniden kur
+  addEventListener("resize", () => { if (innerWidth !== lastW) resize(); else { H = cv.height = innerHeight * DPR; } });
   const LINK = 140;
   function tick() {
     ctx.clearRect(0, 0, W, H);
@@ -177,8 +182,10 @@
       ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, 7 * DPR, 0, 7); ctx.fill();
       return s.t < 1;
     });
-    requestAnimationFrame(tick);
+    if (!document.hidden) requestAnimationFrame(tick); else paused = true;
   }
+  let paused = false;
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && paused) { paused = false; requestAnimationFrame(tick); } });
   requestAnimationFrame(tick);
 
   /* ---------- hero phone: rotating app scenes (≈10 s each) ----------

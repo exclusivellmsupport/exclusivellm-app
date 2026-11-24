@@ -24,7 +24,7 @@
       "es"
     ],
     "tr": {
-      "title": "BlockFour: Blok Bulmaca, 2048 ve Renk Sıralama | Exclusive LLM",
+      "title": "BlockFour: Blok Bulmaca, 2048, Renk Sıralama, Düşen Bloklar",
       "description": "Blok bulmaca, düşen bloklar, 2048 ve renk sıralama: 4 zekâ oyunu tek uygulamada. Üyelik yok, internetsiz oynanır. Google Play'de ücretsiz.",
       "tagline": "Dört bulmaca oyunu, tek uygulama.",
       "intro": "BlockFour, dört klasik bulmaca oyununu tek uygulamada buluşturuyor: Blok Rota, Düşen Bloklar, Sayı Birleştirme ve Renk Sıralama. İki dakikalık bir molada da, uzun bir akşamda da ruh haline uygun bir bulmaca seni bekliyor. Üyelik yok, kayıt yok; tüm oyunlar internetsiz oynanabilir.",
@@ -94,7 +94,7 @@
       ]
     },
     "en": {
-      "title": "BlockFour: Block Puzzle, 2048 & Color Sort | Exclusive LLM",
+      "title": "BlockFour: Block Puzzle, 2048, Color Sort & Falling Blocks",
       "description": "Block puzzle, falling blocks, 2048 and color sort: 4 brain games in one app. No account, play offline. Free on Google Play.",
       "tagline": "Four puzzle games, one app.",
       "intro": "BlockFour brings four classic puzzle games together in one app: Block Route, Falling Blocks, Number Merge and Color Sort. Whether you have two minutes or a whole evening, there is always a puzzle that fits your mood. No account, no sign-up, and every game can be played offline.",
@@ -164,7 +164,7 @@
       ]
     },
     "es": {
-      "title": "BlockFour: Bloques, 2048 y ordenar colores | Exclusive LLM",
+      "title": "BlockFour: puzzle de bloques, 2048 y ordenar colores",
       "description": "Puzzle de bloques, bloques que caen, 2048 y ordenar colores: 4 juegos de lógica en una app. Sin cuenta, sin conexión. Gratis en Google Play.",
       "tagline": "Cuatro juegos de puzzle, una sola app.",
       "intro": "BlockFour reúne cuatro juegos de puzzle clásicos en una sola app: Ruta de bloques, Bloques en caída, Fusionar números y Ordenar colores. Tengas dos minutos o toda la tarde, siempre hay un puzzle que encaja con tu estado de ánimo. Sin cuenta, sin registro, y todos los juegos se pueden jugar sin conexión.",
@@ -242,9 +242,30 @@
     "icon": "blocknest.png",
     "feature": "blocknest-feature.jpg",
     "shots": {
-      "tr": ["blocknest-tr-1.webp", "blocknest-tr-2.webp", "blocknest-tr-3.webp", "blocknest-tr-4.webp", "blocknest-tr-5.webp", "blocknest-tr-6.webp"],
-      "en": ["blocknest-en-1.webp", "blocknest-en-2.webp", "blocknest-en-3.webp", "blocknest-en-4.webp", "blocknest-en-5.webp", "blocknest-en-6.webp"],
-      "es": ["blocknest-es-1.webp", "blocknest-es-2.webp", "blocknest-es-3.webp", "blocknest-es-4.webp", "blocknest-es-5.webp", "blocknest-es-6.webp"]
+      "tr": [
+        "blocknest-tr-1.webp",
+        "blocknest-tr-2.webp",
+        "blocknest-tr-3.webp",
+        "blocknest-tr-4.webp",
+        "blocknest-tr-5.webp",
+        "blocknest-tr-6.webp"
+      ],
+      "en": [
+        "blocknest-en-1.webp",
+        "blocknest-en-2.webp",
+        "blocknest-en-3.webp",
+        "blocknest-en-4.webp",
+        "blocknest-en-5.webp",
+        "blocknest-en-6.webp"
+      ],
+      "es": [
+        "blocknest-es-1.webp",
+        "blocknest-es-2.webp",
+        "blocknest-es-3.webp",
+        "blocknest-es-4.webp",
+        "blocknest-es-5.webp",
+        "blocknest-es-6.webp"
+      ]
     },
     "video": {
       "tr": "xZOWLNhrnRI",
@@ -257,7 +278,7 @@
       "ar"
     ],
     "tr": {
-      "title": "BlockNest: Ahşap Blok Bulmaca, İnternetsiz | Exclusive LLM",
+      "title": "BlockNest: 10×10 Ahşap Blok Bulmaca Oyunu, İnternetsiz",
       "description": "Rahatlatıcı ahşap blok bulmaca. 10×10 tahtada satır temizle, kombo yap, internetsiz oyna. Süre yok, üyelik yok. Google Play'de ücretsiz.",
       "tagline": "Sıcak ahşap tonlarında sakin bir blok bulmacası.",
       "intro": "BlockNest, sıcak ahşap görünümlü, rahatlatıcı bir blok bulmaca oyunu. Ahşap blokları 10×10 tahtaya yerleştir, dolu satır ve sütunları temizle, kombolar yap ve rekorunu kır. Süre yok, acele yok: istediğin an internetsiz oynayabileceğin sakin bir zekâ oyunu.",
@@ -307,7 +328,7 @@
       ]
     },
     "en": {
-      "title": "BlockNest: Wood Block Puzzle, Play Offline | Exclusive LLM",
+      "title": "BlockNest: 10×10 Wood Block Puzzle Game, Offline",
       "description": "A relaxing wood block puzzle. Clear lines on a 10×10 board, chain combos and play offline. No timer, no account. Free on Google Play.",
       "tagline": "A calm block puzzle in warm wooden tones.",
       "intro": "BlockNest is a relaxing wood block puzzle with a warm, handcrafted look. Place wooden blocks on the 10×10 board, clear full rows and columns, chain combos and beat your best score. No timer, no pressure: just a calm brain game you can play offline, anytime.",
@@ -357,7 +378,7 @@
       ]
     },
     "es": {
-      "title": "BlockNest: Puzzle de bloques de madera | Exclusive LLM",
+      "title": "BlockNest: puzzle de bloques de madera sin internet",
       "description": "Puzzle de bloques de madera relajante. Elimina líneas en un tablero de 10×10, encadena combos y juega sin conexión. Sin reloj ni cuenta. Gratis en Google Play.",
       "tagline": "Un puzzle de bloques tranquilo en cálidos tonos de madera.",
       "intro": "BlockNest es un puzzle de bloques de madera relajante con un cálido aspecto artesanal. Coloca bloques de madera en el tablero de 10×10, elimina filas y columnas completas, encadena combos y supera tu récord. Sin reloj ni presión: solo un juego de lógica tranquilo para jugar sin conexión, cuando quieras.",
@@ -451,7 +472,7 @@
       "ar"
     ],
     "tr": {
-      "title": "Woodora Classic: 8×8 Ahşap Blok Bulmaca | Exclusive LLM",
+      "title": "Woodora Classic: 8×8 Ahşap Blok Bulmaca Oyunu",
       "description": "Klasik ahşap blok bulmaca. Üç bloğu 8×8 tahtaya yerleştir, satır ve sütunları temizle. Süre yok, üyelik yok, internetsiz. Google Play'de ücretsiz.",
       "tagline": "Düşün, yerleştir, rahatla.",
       "intro": "Woodora Classic, sade ahşap görünümlü klasik bir blok bulmacası. Sana verilen üç ahşap bloğu 8×8 tahtaya yerleştir, dolan satır ve sütunları temizle, rekorunu geliştir. Bloklar döndürülemez; süre sınırı da yok. Doğru parçayı doğru yere koymak için acele etmeden planla.",
@@ -502,7 +523,7 @@
       ]
     },
     "en": {
-      "title": "Woodora Classic: 8×8 Wood Block Puzzle | Exclusive LLM",
+      "title": "Woodora Classic: 8×8 Wood Block Puzzle, Offline",
       "description": "A classic wood block puzzle. Place three blocks on an 8×8 board and clear rows and columns. No timer, no account, plays offline. Free on Google Play.",
       "tagline": "Think. Place. Unwind.",
       "intro": "Woodora Classic is a classic block puzzle with a clean wooden look. Place the three wooden blocks you are given on the 8×8 board, clear full rows and columns and improve your best score. Blocks cannot rotate and there is no time limit, so plan where each piece goes without any rush.",
@@ -553,7 +574,7 @@
       ]
     },
     "es": {
-      "title": "Woodora Classic: Puzzle de bloques de madera 8×8 | Exclusive LLM",
+      "title": "Woodora Classic: puzzle de bloques de madera 8×8",
       "description": "Puzzle clásico de bloques de madera. Coloca tres bloques en un tablero de 8×8 y elimina filas y columnas. Sin reloj ni cuenta, offline. Gratis en Google Play.",
       "tagline": "Piensa. Coloca. Relájate.",
       "intro": "Woodora Classic es un puzzle de bloques clásico con un limpio aspecto de madera. Coloca los tres bloques de madera que recibes en el tablero de 8×8, elimina filas y columnas completas y mejora tu récord. Los bloques no se pueden girar y no hay límite de tiempo, así que planifica dónde va cada pieza sin ninguna prisa.",
@@ -650,8 +671,8 @@
       "en"
     ],
     "tr": {
-      "title": "Exclusive Quiz: Genel Kültür Bilgi Yarışması | Exclusive LLM",
-      "description": "10 kategoride genel kültür bilgi yarışması: coğrafya, tarih, bilim, sinema ve daha fazlası. Günlük yarışma, ani ölüm ve zamana karşı modları. Google Play'de ücretsiz.",
+      "title": "Exclusive Quiz: İnternetsiz Genel Kültür Bilgi Yarışması",
+      "description": "10 kategoride şıklı, açıklamalı genel kültür bilgi yarışması. Günlük yarışma, ani ölüm ve zamana karşı modları. İnternetsiz, Google Play'de ücretsiz.",
       "tagline": "Hızlı cevapla, rekorunu kır.",
       "intro": "Exclusive Quiz, genel kültürünü sınayan hızlı ve eğlenceli bir bilgi yarışması. Coğrafyadan tarihe, sinemadan teknolojiye 10 kategoride sorular seni bekliyor. Her turda kolaydan zora 15 soru, her soru için 20 saniye var. Doğru cevabı bul, seriyi bozma ve rekorunu kır.",
       "tags": [
@@ -720,8 +741,8 @@
       ]
     },
     "en": {
-      "title": "Exclusive Quiz: Trivia Game in 10 Categories | Exclusive LLM",
-      "description": "A general knowledge trivia game in 10 categories: geography, history, science, film and more. Daily challenge, sudden death and time attack modes. Free on Google Play.",
+      "title": "Exclusive Quiz: Offline Trivia Game, 10 Categories",
+      "description": "Offline trivia game with 10 categories: geography, history, science, film and more. Daily challenge, sudden death and time attack. Free on Google Play.",
       "tagline": "Answer fast, beat your record.",
       "intro": "Exclusive Quiz is a fast, fun trivia game that puts your general knowledge to the test. From geography and history to film and technology, questions in 10 categories are waiting for you. Every round has 15 questions that climb from easy to hard, with 20 seconds for each. Find the right answer, keep your streak alive and beat your record.",
       "tags": [
@@ -790,8 +811,8 @@
       ]
     },
     "es": {
-      "title": "Exclusive Quiz: juego de preguntas en 10 categorías | Exclusive LLM",
-      "description": "Un juego de preguntas de cultura general en 10 categorías: geografía, historia, ciencia, cine y más. Modos desafío diario, muerte súbita y contrarreloj. Gratis en Google Play.",
+      "title": "Exclusive Quiz: juego de preguntas de cultura general",
+      "description": "Juego de preguntas de cultura general en 10 categorías. Desafío diario, muerte súbita y contrarreloj. Sin internet y gratis en Google Play.",
       "tagline": "Responde rápido, supera tu récord.",
       "intro": "Exclusive Quiz es un juego de preguntas rápido y divertido que pone a prueba tu cultura general. De la geografía y la historia al cine y la tecnología, te esperan preguntas en 10 categorías. Cada ronda tiene 15 preguntas que van de fácil a difícil, con 20 segundos para cada una. El juego está en inglés y turco.",
       "tags": [

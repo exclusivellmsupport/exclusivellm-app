@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"/>
+  <title>Blok Bulmaca Nasıl Oynanır? Kurallar ve Rekor İpuçları</title>
+  <meta content="Blok bulmaca nasıl oynanır: temel kurallar, puan ve kombo mantığı, rekor için 10 ipucu ve tahtanın kilitlenmesini önlemenin yolları." name="description"/>
+  <link href="https://exclusivellm.app/how-to-play-block-puzzle/" rel="canonical"/>
+  <link href="https://exclusivellm.app/how-to-play-block-puzzle/" hreflang="tr" rel="alternate"/>
+  <link href="https://exclusivellm.app/en/how-to-play-block-puzzle/" hreflang="en" rel="alternate"/>
+  <link href="https://exclusivellm.app/es/how-to-play-block-puzzle/" hreflang="es" rel="alternate"/>
+  <link href="https://exclusivellm.app/en/how-to-play-block-puzzle/" hreflang="x-default" rel="alternate"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Exclusive LLM" property="og:site_name"/>
+  <meta content="tr_TR" property="og:locale"/>
+  <meta content="Blok Bulmaca Nasıl Oynanır? Kurallar ve Rekor İpuçları" property="og:title"/>
+  <meta content="Blok bulmaca nasıl oynanır: temel kurallar, puan ve kombo mantığı, rekor için 10 ipucu ve tahtanın kilitlenmesini önlemenin yolları." property="og:description"/>
+  <meta content="https://exclusivellm.app/img/blocknest-feature-tr.jpg" property="og:image"/>
+  <meta content="https://exclusivellm.app/how-to-play-block-puzzle/" property="og:url"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+  <link href="/img/favicon.png" rel="icon" type="image/png"/>
+  <meta content="#040814" name="theme-color"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="/assets/style.css?v=17" rel="stylesheet"/>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Bloklar döndürülebilir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Oyuna göre değişir. BlockNest, Woodora Classic ve BlockFour'daki Blok Rota'da bloklar döndürülemez; her şekil gördüğün yönle yerleşir. BlockFour'daki Düşen Bloklar ise ayrı bir türdür ve orada bloklar döndürülür."}}, {"@type": "Question", "name": "Blok oyunu ne zaman biter?", "acceptedAnswer": {"@type": "Answer", "text": "Elinde kalan blokların hiçbiri tahtada uygun bir yere sığmadığında. BlockFour'un Günlük Rota modunda ise oyun 30 hamlenin sonunda biter."}}, {"@type": "Question", "name": "Kombo nedir, nasıl bozulur?", "acceptedAnswer": {"@type": "Answer", "text": "Art arda hamlelerde çizgi temizlediğinde oluşan seridir. Çizgi temizlemeyen bir hamle seriyi sıfırlar. BlockNest'te ve Blok Rota'da kombo çizgi puanını ×5'e kadar katlar, Woodora Classic'te her ardışık temizleme seri bonusu ekler."}}, {"@type": "Question", "name": "Süre sınırı var mı?", "acceptedAnswer": {"@type": "Answer", "text": "BlockNest ve Woodora Classic'te süre yoktur. BlockFour'da Blok Rota'nın Klasik modu süresizdir; 120 Saniye modu ise zamana karşı oynanır."}}, {"@type": "Question", "name": "Oynamak için internet gerekir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Üç oyun da internet olmadan oynanır ve hesap istemez. Reklamla açılan seçenekler ve Google Play Games lider tabloları ise bağlantı ister."}}, {"@type": "Question", "name": "Yeni başlayan için hangi tahta daha kolay?", "acceptedAnswer": {"@type": "Answer", "text": "Çoğu oyuncu için 10×10. Daha fazla boş alan, bir hatayı telafi etme şansı verir. 8×8 tahta daha çabuk dolar ve her hamleyi daha önemli kılar."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://exclusivellm.app/"}, {"@type": "ListItem", "position": 2, "name": "Blok bulmaca rehberi", "item": "https://exclusivellm.app/how-to-play-block-puzzle/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Oyunlar", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "BlockNest", "url": "https://exclusivellm.app/blocknest/"}, {"@type": "ListItem", "position": 2, "name": "Woodora Classic", "url": "https://exclusivellm.app/woodora-classic/"}, {"@type": "ListItem", "position": 3, "name": "BlockFour", "url": "https://exclusivellm.app/block-four/"}]}</script>
+</head>
+<body data-lang="tr">
+<div aria-hidden="true" class="aurora"></div>
+<canvas aria-hidden="true" id="neural"></canvas>
+<div aria-hidden="true" class="grain"></div>
+<div aria-hidden="true" class="spot"></div>
+<header class="top">
+<div class="wrap nav">
+<a class="brand" href="/#top"><img alt="" height="50" src="/img/favicon.png" width="50"/> Exclusive LLM</a>
+<nav class="links">
+<a href="/#promise"><span class="tr">Felsefemiz</span></a>
+<a href="/#apps"><span class="tr">Oyunlar</span></a>
+<a href="/updates/"><span class="tr">Yenilikler</span></a>
+<a href="/#contact"><span class="tr">İletişim</span></a>
+<a aria-label="Instagram" class="soc b-ig" href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" fill="#fff"></path></svg></a>
+<a aria-label="TikTok" class="soc b-tt" href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#25F4EE" transform="translate(-.8 -.6)"></path><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#FE2C55" transform="translate(.8 .6)"></path><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="#fff"></path></svg></a>
+<a aria-label="YouTube" class="soc b-yt" href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M9.6 7.4v9.2l7.8-4.6z" fill="#fff"></path></svg></a>
+<a aria-label="X" class="soc b-x" href="https://x.com/exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" fill="#fff"></path></svg></a>
+<a aria-label="Facebook" class="soc b-fb" href="https://www.facebook.com/exclusivellm" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" fill="#fff"></path></svg></a>
+<div aria-label="Language" class="lang" role="group"><a aria-current="page" class="on" href="/how-to-play-block-puzzle/" hreflang="tr" lang="tr">TR</a><a href="/en/how-to-play-block-puzzle/" hreflang="en" lang="en">EN</a><a href="/es/how-to-play-block-puzzle/" hreflang="es" lang="es">ES</a></div>
+</nav>
+</div>
+</header>
+
+<main class="gp" id="top">
+<section class="gp-hero">
+<div class="wrap gp-grid">
+<div>
+<nav aria-label="breadcrumb" class="crumb"><a href="/">Ana sayfa</a><span>›</span><span>Blok bulmaca rehberi</span></nav>
+<span class="eyebrow">Oyun rehberi</span>
+<h1>Blok bulmaca nasıl oynanır? Kurallar ve rekor ipuçları</h1>
+<p class="lead">Kuralları iki dakikada öğren, rekoru planlamayla kır.</p>
+<p class="intro">Blok bulmaca nasıl oynanır sorusunun cevabı kısa: sana verilen blokları kare bir tahtaya yerleştirir, dolan satır ve sütunları temizler, tahtada uygun yer kalmayana kadar puan toplarsın. Kurallar basit olsa da yüksek skor, blokları hangi sırayla ve nereye koyduğuna bağlıdır. Bu rehberde blok yerleştirme oyunlarının ortak kurallarını, puan ve kombo mantığını, rekor için 10 ipucunu ve tahtanın kilitlenmesini önlemenin yollarını bulacaksın. Tek bir oyuna özel taktikler için her oyunun kendi ipucu sayfası da var.</p>
+</div>
+<div class="gp-media"><img alt="" fetchpriority="high" height="500" src="/img/blocknest-feature-tr.jpg" width="1024"/></div>
+</div>
+</section>
+<section class="gp-sec">
+<div class="wrap">
+<div class="head"><span class="eyebrow">Exclusive LLM</span><h2 class="title">Oyunlar</h2></div>
+<div class="game-cards"><div class="card-game"><a class="other" href="/blocknest/"><img alt="" height="56" loading="lazy" src="/img/blocknest.png" width="56"/><span><b>BlockNest</b><small>Sıcak ahşap tonlarında sakin bir blok bulmacası.</small></span></a><div class="cta-row"><a class="play" data-page="hub_how_to_play_block_puzzle" data-play="com.exclusivellm.blocknest" href="https://play.google.com/store/apps/details?id=com.exclusivellm.blocknest&amp;utm_source=exclusivellm_site&amp;utm_medium=website&amp;utm_campaign=site_hub_how_to_play_block_puzzle&amp;utm_content=tr" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z" fill="#34A853"></path><path d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z" fill="#FBBC04"></path><path d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z" fill="#EA4335"></path><path d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z" fill="#4285F4"></path></svg>
+<span><small><span class="tr">HEMEN İNDİR</span></small><b>Google Play</b></span>
+</a><a class="more" href="/blocknest/guide/">İpuçları ve rehber <span aria-hidden="true">→</span></a></div></div><div class="card-game"><a class="other" href="/woodora-classic/"><img alt="" height="56" loading="lazy" src="/img/woodoraclassic.png" width="56"/><span><b>Woodora Classic</b><small>Düşün, yerleştir, rahatla.</small></span></a><div class="cta-row"><a class="play" data-page="hub_how_to_play_block_puzzle" data-play="com.exclusivellm.woodoraclassic" href="https://play.google.com/store/apps/details?id=com.exclusivellm.woodoraclassic&amp;utm_source=exclusivellm_site&amp;utm_medium=website&amp;utm_campaign=site_hub_how_to_play_block_puzzle&amp;utm_content=tr" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z" fill="#34A853"></path><path d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z" fill="#FBBC04"></path><path d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z" fill="#EA4335"></path><path d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z" fill="#4285F4"></path></svg>
+<span><small><span class="tr">HEMEN İNDİR</span></small><b>Google Play</b></span>
+</a><a class="more" href="/woodora-classic/guide/">İpuçları ve rehber <span aria-hidden="true">→</span></a></div></div><div class="card-game"><a class="other" href="/block-four/"><img alt="" height="56" loading="lazy" src="/img/blockfour.png" width="56"/><span><b>BlockFour</b><small>Dört bulmaca oyunu, tek uygulama.</small></span></a><div class="cta-row"><a class="play" data-page="hub_how_to_play_block_puzzle" data-play="com.firat.blokrota" href="https://play.google.com/store/apps/details?id=com.firat.blokrota&amp;utm_source=exclusivellm_site&amp;utm_medium=website&amp;utm_campaign=site_hub_how_to_play_block_puzzle&amp;utm_content=tr" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z" fill="#34A853"></path><path d="m17.2 15.4-3.4-3.4 3.4-3.4 3.9 2.2c1.1.6 1.1 1.8 0 2.4z" fill="#FBBC04"></path><path d="M17.2 15.4 13.8 12 3.6 22.2c.4.2.9.2 1.4-.1z" fill="#EA4335"></path><path d="M17.2 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.8 12z" fill="#4285F4"></path></svg>
+<span><small><span class="tr">HEMEN İNDİR</span></small><b>Google Play</b></span>
+</a><a class="more" href="/block-four/guide/">İpuçları ve rehber <span aria-hidden="true">→</span></a></div></div></div>
+</div>
+</section>
+<section class="gp-sec">
+<div class="wrap">
+<div class="head"><span class="eyebrow">Oyun rehberi</span><h2 class="title">Oyunlarımızda kurallar bir bakışta</h2></div>
+<div class="cmp-wrap"><table class="cmp"><thead><tr><th>Oyun</th><th>Tahta</th><th>Blok döndürme</th><th>Süre</th><th>Puanlamada öne çıkan</th></tr></thead><tbody><tr><td>BlockNest</td><td>10×10</td><td>Yok</td><td>Yok</td><td>Kombo ×5'e kadar, tahta tamamen boşalırsa +300</td></tr><tr><td>Woodora Classic</td><td>8×8</td><td>Yok</td><td>Yok</td><td>Çoklu sıra ve seri bonusu, temizleme önizlemesi</td></tr><tr><td>BlockFour</td><td>8×8 (Blok Rota)</td><td>Yok</td><td>Klasik'te yok, 120 Saniye modunda var</td><td>Kombo ×5'e kadar, 2-3-4 çizgi bonusu</td></tr></tbody></table></div>
+</div>
+</section>
+<section class="gp-sec">
+<div class="wrap">
+<div class="head"><span class="eyebrow">Oyun rehberi</span><h2 class="title">Blok bulmaca nasıl oynanır? Kurallar ve rekor ipuçları</h2></div>
+<div class="feats"><div class="col"><h3>Blok bulmaca kuralları</h3><p>Blok yerleştirme oyunlarında tahta karelere bölünmüştür; en yaygın boyutlar 8×8 ve 10×10'dur. Ekranın altında genellikle üç blok bekler. Blokları sürükleyip tahtadaki boş karelere bırakırsın. Bloklar düşmez, kaymaz; nereye koyarsan orada kalır. Oyunun bütün derinliği bu basit kuraldan çıkar: bir kez koyduğun blok, sen bir çizgiyi tamamlayana kadar orada durur.</p><ul><li>Bir satır ya da sütun baştan sona dolduğunda temizlenir ve o kareler yeniden boşalır.</li><li>Aynı hamlede hem satır hem sütun dolarsa hepsi birlikte silinir.</li><li>Üç bloğun hepsini yerleştirdiğinde yeni üç blok gelir; bir bloğu atlayıp yenisini isteyemezsin.</li><li>Elinde kalan blokların hiçbiri tahtaya sığmıyorsa oyun biter.</li><li>Oyunlarımızda bloklar döndürülemez; her blok ekranda gördüğün yönle yerleşir.</li></ul></div><div class="col"><h3>Blok oyunu puanlaması ve kombo</h3><p>Bu türdeki neredeyse her oyunda puan iki kaynaktan gelir: yerleştirdiğin kareler ve temizlediğin çizgiler. Çizgi puanı yerleştirme puanından çok daha yüksektir; bu yüzden asıl hedef blok koymak değil, çizgi kapatmaktır. Aynı hamlede birden fazla çizgi temizlemek ek bonus getirir. Kombo ya da seri ise art arda gelen hamlelerde çizgi temizlemeyi ödüllendirir; çizgi temizlemeyen bir hamle seriyi sıfırlar.</p><p>Oyunlarımızda sayılar şöyle:</p><ul><li>BlockNest: kare başına 10, çizgi başına 100 puan. Aynı hamlede 2 çizgi +100, 3 çizgi +250, 4 ve üzeri +500 bonus getirir. Art arda temizlemeler çizgi puanını ×5'e kadar katlar; tahta tamamen boşalırsa +300.</li><li>Woodora Classic: kare başına 10, sıra başına 100 puan. Aynı hamledeki her ek sıra +50 getirir; art arda temizlemelerde seri bonusu her seferinde 25 puan büyür (ikinci temizlemede +25, üçüncüde +50).</li><li>BlockFour'daki Blok Rota: kare başına 10, çizgi başına 100 puan; kombo bu çizgi puanını ×5'e kadar katlar. Çoklu çizgide ek çizgi başına +50 ve 2, 3, 4 çizgi için +100, +250, +500 bonus vardır.</li></ul></div><div class="col"><h3>Blok bulmacada rekor için 10 ipucu</h3><ul><li>Önce üç bloğa birlikte bak: hangisini önce koyarsan diğer ikisi de sığar, onu bul.</li><li>En zor şekli (büyük kare, uzun çubuk, büyük L) yer varken erkenden yerleştir; küçük parçaları sona sakla.</li><li>Tahtayı kafanda bölgelere ayır: bir köşeyi kare bloklara, bir kenarı uzun çubuklara ayırmak her elde yer aramayı kısaltır.</li><li>İlk birkaç oyunda puana değil, tahtayı düzenli tutmaya odaklan; düzen oturunca puan kendiliğinden gelir.</li><li>Oyun bittiğinde son tahtaya bir bak: seni hangi şekil bitirdi, ona neden yer kalmadı? Bir sonraki oyunda o şekle erkenden yer ayır.</li><li>Bloklar dönmediği için yatay ve dikey uzun çubuklara ayrı ayrı yer ayır.</li><li>Yarım dolu çok sayıda çizgi yerine birkaç çizgiyi bitirmeye odaklan.</li><li>Kesişen bir satırla sütunu aynı hamlede tamamlayacak yerleşimler ara; tek hamlede iki çizgi genellikle daha çok puan getirir ve tahtayı daha hızlı açar.</li><li>Komboyu sürdürmek için birkaç çizgiyi birer kare eksik hazırla ve sonraki hamlelerde sırayla kapat.</li><li>Acele etme: süresiz modlarda her hamleyi istediğin kadar düşünebilirsin; özensiz tek bir yerleştirme bütün oyunu bitirebilir.</li></ul></div><div class="col"><h3>Tahtanın kilitlenmesini önlemek</h3><p>Oyun çoğu zaman tahta dolduğu için değil, elindeki şekillere uygun yer kalmadığı için biter. Tahtanın yarısı boşken bile dağınık küçük boşluklar yüzünden kaybedebilirsin. Kilitlenmeyi önlemenin yolu boş alanı tek parça ve düzgün tutmaktır.</p><ul><li>Her hamleden sonra kendine sor: şimdi büyük kare gelse nereye koyardım? Yatay ve dikey 5'lik çubuk nereye girer?</li><li>Boş alanı ikiye bölen yerleşimlerden kaçın; iki küçük boşluk, bir büyük boşluktan çok daha az şekil alır.</li><li>Tahta yarıdan fazla dolduysa puan peşini bırak, önce yer açacak çizgileri kapat.</li><li>Aynı şeklin farklı yönleri farklı bloklar sayılır; 'nasılsa döndürürüm' diye yer bırakma.</li><li>Kenarda kalan tek sıralık uzun boşluklar tehlikelidir; onları uzun çubuklarla ya da küçük bloklarla erken kapat.</li></ul></div><div class="col"><h3>Hangi oyunumuzla başlamalı?</h3><p>Aşağıdaki üç oyun da Exclusive LLM olarak bizim geliştirdiğimiz, Google Play'de ücretsiz blok bulmacalardır. Üçünde de reklam vardır; geri alma ya da devam etme için izlenen reklamlar isteğe bağlıdır.</p><p>Kuralları yeni öğreniyorsan BlockNest'le başla: 10×10 tahta geniştir, bir hata yaptığında toparlanacak yer kalır ve süre yoktur. Her gün herkesin aynı tahta ve aynı blok sırasıyla oynadığı Günlük Meydan Okuma da sana küçük bir hedef verir.</p><p>Daha çok düşünmeyi seviyorsan Woodora Classic'e geç: 8×8 tahta daha çabuk dolar ve her yerleşim daha önemlidir. Bloğu bırakmadan önce kaç sıranın temizleneceğini gösteren önizleme, iyi yerleri öğrenmeyi kolaylaştırır.</p><p>Çeşitlilik istiyorsan BlockFour'u dene: içindeki Blok Rota 8×8 tahtada oynanır; süresiz Klasik, zamana karşı 120 Saniye ve her gün yenilenen 30 hamlelik Günlük Rota modları vardır. Aynı uygulamada düşen bloklar, 2048 ve renk sıralama da seni bekler.</p></div></div>
+</div>
+</section>
+<section class="gp-sec">
+<div class="wrap">
+<div class="head center"><span class="eyebrow">Merak edilenler</span><h2 class="title">Sık sorulan sorular</h2></div>
+<div class="faq"><details><summary>Bloklar döndürülebilir mi?</summary><p>Oyuna göre değişir. BlockNest, Woodora Classic ve BlockFour'daki Blok Rota'da bloklar döndürülemez; her şekil gördüğün yönle yerleşir. BlockFour'daki Düşen Bloklar ise ayrı bir türdür ve orada bloklar döndürülür.</p></details><details><summary>Blok oyunu ne zaman biter?</summary><p>Elinde kalan blokların hiçbiri tahtada uygun bir yere sığmadığında. BlockFour'un Günlük Rota modunda ise oyun 30 hamlenin sonunda biter.</p></details><details><summary>Kombo nedir, nasıl bozulur?</summary><p>Art arda hamlelerde çizgi temizlediğinde oluşan seridir. Çizgi temizlemeyen bir hamle seriyi sıfırlar. BlockNest'te ve Blok Rota'da kombo çizgi puanını ×5'e kadar katlar, Woodora Classic'te her ardışık temizleme seri bonusu ekler.</p></details><details><summary>Süre sınırı var mı?</summary><p>BlockNest ve Woodora Classic'te süre yoktur. BlockFour'da Blok Rota'nın Klasik modu süresizdir; 120 Saniye modu ise zamana karşı oynanır.</p></details><details><summary>Oynamak için internet gerekir mi?</summary><p>Hayır. Üç oyun da internet olmadan oynanır ve hesap istemez. Reklamla açılan seçenekler ve Google Play Games lider tabloları ise bağlantı ister.</p></details><details><summary>Yeni başlayan için hangi tahta daha kolay?</summary><p>Çoğu oyuncu için 10×10. Daha fazla boş alan, bir hatayı telafi etme şansı verir. 8×8 tahta daha çabuk dolar ve her hamleyi daha önemli kılar.</p></details></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap foot">
+<a class="brand" href="/#top"><img alt="" height="50" src="/img/favicon.png" width="50"/> Exclusive LLM</a>
+<nav>
+<a href="/#promise"><span class="tr">Felsefemiz</span></a>
+<a href="/#apps"><span class="tr">Oyunlar</span></a>
+<a href="/updates/"><span class="tr">Yenilikler</span></a>
+<a href="/block-puzzle-games/"><span class="tr">Blok bulmaca oyunları</span></a>
+<a href="/offline-games/"><span class="tr">İnternetsiz oyunlar</span></a>
+<a href="/guides/"><span class="tr">Rehberler ve ipuçları</span></a>
+<a href="/press/"><span class="tr">Basın kiti</span></a>
+<a href="mailto:support@exclusivellm.app"><span class="tr">Destek</span></a>
+<a href="https://www.instagram.com/exclusive.llm/" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@exclusivellm" rel="noopener" target="_blank">TikTok</a>
+<a href="https://www.youtube.com/@Exclusivellm" rel="noopener" target="_blank">YouTube</a>
+<a href="https://x.com/exclusivellm" rel="noopener" target="_blank">X</a>
+<a href="https://www.facebook.com/exclusivellm" rel="noopener" target="_blank">Facebook</a>
+</nav>
+<span>© <span id="yr">2026</span> Exclusive LLM</span>
+</div>
+</footer>
+<script defer="" src="/assets/app.js?v=10"></script>
+<script data-cf-beacon='{"token": "077ef39b685d4709a8f59845f57dfc06"}' defer src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+</body>
+</html>
