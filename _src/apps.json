@@ -38,7 +38,7 @@
           "h": "Blok Rota: 8×8 blok bulmaca",
           "items": [
             "Blokları 8×8 tahtaya sürükle, dolu satır ve sütunları temizle.",
-            "Aynı anda birden fazla çizgi temizleyerek kombo ve büyük bonuslar kazan.",
+            "Aynı anda birden fazla çizgi temizleyerek kombo yap, ek puan topla.",
             "Üç mod: süre sınırı olmayan Klasik, zamana karşı 120 Saniye ve her gün yenilenen 30 hamlelik Günlük Rota."
           ]
         },
@@ -108,7 +108,7 @@
           "h": "Block Route: 8×8 block puzzle",
           "items": [
             "Drag blocks onto the 8×8 board and clear full rows and columns.",
-            "Clear several lines at once for combos and big bonuses.",
+            "Clear several rows or columns at once for combos and bonus points.",
             "Three modes: Classic with no time limit, 120 Seconds against the clock, and Daily Route, a new 30-move challenge every day."
           ]
         },
@@ -178,7 +178,7 @@
           "h": "Ruta de bloques: puzzle de bloques 8×8",
           "items": [
             "Arrastra bloques al tablero de 8×8 y elimina filas y columnas completas.",
-            "Elimina varias líneas a la vez para lograr combos y grandes bonus.",
+            "Elimina varias líneas a la vez para lograr combos y puntos extra.",
             "Tres modos: Clásico sin límite de tiempo, 120 segundos contra el reloj y Ruta diaria, un nuevo desafío de 30 movimientos cada día."
           ]
         },
