@@ -82,5 +82,20 @@
  "fb-neonecogrid-1127": {"package": "com.exclusivellm.neonecogrid", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 27.11.2026"},
  "fb-exstudio-1127": {"package": "com.exclusivellm.mediastudio", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 27.11.2026"},
  "fb-toppleisles-1127": {"package": "com.exclusivellm.toppleisles", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 27.11.2026"},
- "fb-wordsky-1128": {"package": "com.exclusivellm.wordsky", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 28.11.2026"}
+ "fb-wordsky-1128": {"package": "com.exclusivellm.wordsky", "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 28.11.2026"},
+ "yt-dustora-1126": {"package": "com.exclusivellm.dustora", "platform": "youtube", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (once_sonra), 26.11.2026"},
+ "yt-dustora-1126-en": {"package": "com.exclusivellm.dustora", "platform": "youtube", "hedef": "site", "dil": "en", "not": "Dustora Kapı 4 Yakında videosu (once_sonra), 26.11.2026"},
+ "x-dustora-1126": {"package": "com.exclusivellm.dustora", "platform": "x", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (once_sonra), 26.11.2026"},
+ "x-dustora-1126-en": {"package": "com.exclusivellm.dustora", "platform": "x", "hedef": "site", "dil": "en", "not": "Dustora Kapı 4 Yakında videosu (once_sonra), 26.11.2026"},
+ "ig-dustora-1126": {"package": "com.exclusivellm.dustora", "platform": "instagram", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (once_sonra), 26.11.2026"},
+ "yt-dustora-1127": {"package": "com.exclusivellm.dustora", "platform": "youtube", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (tasma), 27.11.2026"},
+ "yt-dustora-1127-en": {"package": "com.exclusivellm.dustora", "platform": "youtube", "hedef": "site", "dil": "en", "not": "Dustora Kapı 4 Yakında videosu (tasma), 27.11.2026"},
+ "x-dustora-1127": {"package": "com.exclusivellm.dustora", "platform": "x", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (tasma), 27.11.2026"},
+ "x-dustora-1127-en": {"package": "com.exclusivellm.dustora", "platform": "x", "hedef": "site", "dil": "en", "not": "Dustora Kapı 4 Yakında videosu (tasma), 27.11.2026"},
+ "ig-dustora-1127": {"package": "com.exclusivellm.dustora", "platform": "instagram", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (tasma), 27.11.2026"},
+ "yt-dustora-1128": {"package": "com.exclusivellm.dustora", "platform": "youtube", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (siralama), 28.11.2026"},
+ "yt-dustora-1128-en": {"package": "com.exclusivellm.dustora", "platform": "youtube", "hedef": "site", "dil": "en", "not": "Dustora Kapı 4 Yakında videosu (siralama), 28.11.2026"},
+ "x-dustora-1128": {"package": "com.exclusivellm.dustora", "platform": "x", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (siralama), 28.11.2026"},
+ "x-dustora-1128-en": {"package": "com.exclusivellm.dustora", "platform": "x", "hedef": "site", "dil": "en", "not": "Dustora Kapı 4 Yakında videosu (siralama), 28.11.2026"},
+ "ig-dustora-1128": {"package": "com.exclusivellm.dustora", "platform": "instagram", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (siralama), 28.11.2026"}
 }
