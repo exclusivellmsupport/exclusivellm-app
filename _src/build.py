@@ -287,7 +287,7 @@ def org_ld() -> dict:
             "logo": DOMAIN + "/img/logo.png", "email": "support@exclusivellm.app",
             "sameAs": ["https://www.instagram.com/exclusive.llm/", "https://www.tiktok.com/@exclusivellm",
                        "https://www.youtube.com/@Exclusivellm", "https://x.com/exclusivellm",
-                       "https://www.facebook.com/exclusivellm"]}
+                       "https://www.facebook.com/profile.php?id=61597099824655"]}
 
 
 def website_ld(lang: str) -> dict:
