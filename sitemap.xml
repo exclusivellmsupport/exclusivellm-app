@@ -552,4 +552,28 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/updates/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/updates/"/>
   </url>
+  <url>
+    <loc>https://exclusivellm.app/indir/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/indir/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/indir/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/indir/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/indir/"/>
+  </url>
+  <url>
+    <loc>https://exclusivellm.app/en/indir/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/indir/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/indir/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/indir/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/indir/"/>
+  </url>
+  <url>
+    <loc>https://exclusivellm.app/es/indir/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/indir/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/indir/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/indir/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/indir/"/>
+  </url>
 </urlset>

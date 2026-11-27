@@ -900,6 +900,51 @@ def build_updates_page(entries: list[dict], lang: str, apps: list[dict], out_dir
     return BASE[lang] + UPDATES_PATH
 
 
+# --- /indir/ : sosyal medya profillerindeki tek "İndir" adresi (27.11.2026, kullanıcı kararı) -----------------
+# Sosyal medyada "nereden indirebilirim?" sorusunun cevabı: kısa, elle yazılabilen exclusivellm.app/indir.
+# Profil linkleri /go/<plat>-bio/ (hedef "indir") üzerinden buraya gelir; videoların bitiş kartında da bu adres yazar.
+# Üstte Exclusive Quiz (en çok tanıtılan), sonra diğer üretimdeki uygulamalar; altta ana sayfanın "Yakında" bölümü
+# (kapalı testteki uygulamalara Play linki verilmez).
+INDIR_PATH = "indir/"
+INDIR_FIRST = ["exclusive-quiz"]
+INDIR_UI = {
+    "tr": {"title": "İndir: Exclusive LLM oyunları Google Play'de", "crumb": "İndir", "eyebrow": "Ücretsiz indir",
+           "h1": "Oyunlarımızı indir", "lead": "Videoda gördüğün oyun burada. Düğmeye dokun, Google Play'de aç.",
+           "description": "Exclusive Quiz, BlockFour, BlockNest ve Woodora Classic: Exclusive LLM'in Google Play'deki ücretsiz oyunları tek sayfada."},
+    "en": {"title": "Download: Exclusive LLM games on Google Play", "crumb": "Download", "eyebrow": "Free download",
+           "h1": "Download our games", "lead": "The game from the video is right here. Tap the button to open it on Google Play.",
+           "description": "Exclusive Quiz, BlockFour, BlockNest and Woodora Classic: Exclusive LLM's free games on Google Play, on one page."},
+    "es": {"title": "Descargar: juegos de Exclusive LLM en Google Play", "crumb": "Descargar", "eyebrow": "Descarga gratis",
+           "h1": "Descarga nuestros juegos", "lead": "El juego del vídeo está aquí. Toca el botón para abrirlo en Google Play.",
+           "description": "Exclusive Quiz, BlockFour, BlockNest y Woodora Classic: los juegos gratis de Exclusive LLM en Google Play."},
+}
+
+
+def build_indir_page(apps: list[dict], lang: str, out_dir: Path) -> str:
+    ui = INDIR_UI[lang]
+    soup = page_soup(lang)
+    set_lang_switch(soup, lang, INDIR_PATH)
+    for a in soup.select("header a[href^='#'], footer a[href^='#']"):
+        a["href"] = BASE[lang] + a["href"]
+    soon = next((s for s in soup.find_all("section") if s.select_one("div.soon")), None)
+    soon_html = str(soon) if soon else ""
+    ordered = [a for s in INDIR_FIRST for a in apps if a["slug"] == s] + [a for a in apps if a["slug"] not in INDIR_FIRST]
+    play = play_html_map(soup, ordered)
+    trail = f'<a href="{BASE[lang]}">{esc(UI[lang]["home"])}</a><span>›</span><span>{esc(ui["crumb"])}</span>'
+    main = (f'\n  <main id="top" class="gp">\n    <section class="gp-hero"><div class="wrap">'
+            f'<nav class="crumb" aria-label="breadcrumb">{trail}</nav>'
+            f'<span class="eyebrow">{esc(ui["eyebrow"])}</span><h1>{esc(ui["h1"])}</h1>'
+            f'<p class="lead">{esc(ui["lead"])}</p>'
+            f'<div style="margin-top:22px">{app_cards(ordered, lang, play)}</div></div></section>'
+            + soon_html + "\n  </main>\n")
+    soup.find("main").replace_with(BeautifulSoup(main, "html.parser"))
+    set_head(soup, lang, INDIR_PATH, ui["title"], ui["description"], ordered[0]["feature"],
+             [crumbs_ld(lang, [(ui["crumb"], DOMAIN + BASE[lang] + INDIR_PATH)])])
+    tag_play_links(soup, "indir", lang)
+    write(out_dir / INDIR_PATH / "index.html", soup)
+    return BASE[lang] + INDIR_PATH
+
+
 def games_json(apps: list[dict]) -> None:
     """Oyun içi 'Diğer oyunlarımız' ekranı bu dosyayı okur (yalnızca üretimdeki oyunlar)."""
     data = {"version": 1, "updated": date.today().isoformat(), "site": DOMAIN + "/", "games": [
@@ -942,13 +987,16 @@ def go_targets(apps: list[dict]) -> tuple[dict[str, dict], list[str]]:
             errors.append(f"links.json '{code}': kod yalnızca küçük harf, rakam ve tire olmalı (≤48)")
             continue
         plat, hedef, lang, pkg = l.get("platform"), l.get("hedef", "play"), l.get("dil", "tr"), l.get("package")
-        if plat not in GO_PLATFORMS or hedef not in ("play", "site", "otomatik") or lang not in GO_TEXT:
+        if plat not in GO_PLATFORMS or hedef not in ("play", "site", "otomatik", "indir") or lang not in GO_TEXT:
             errors.append(f"links.json '{code}': platform/hedef/dil geçersiz")
             continue
         app = by_pkg.get(pkg)
         if hedef == "otomatik":
             hedef = "play" if app else "site"
-        if hedef == "play":
+        if hedef == "indir":  # profil linki (27.11.2026): /indir/ sayfası, uygulama yok
+            target = DOMAIN + ("/" if lang == "tr" else f"/{lang}/") + INDIR_PATH
+            app = None
+        elif hedef == "play":
             if not app:
                 errors.append(f"links.json '{code}': {pkg} üretimde değil (apps.json'da yok); kapalı testteki uygulamada hedef 'site' olmalı")
                 continue
@@ -1049,6 +1097,7 @@ def build() -> list[str]:
         urls += build_content_pages(apps, pages, lang, out_dir)
         urls.append(build_guides_index(pages, lang, out_dir))
         urls.append(build_updates_page(updates, lang, apps, out_dir))
+        urls.append(build_indir_page(apps, lang, out_dir))
     games_json(apps)
     write_go_pages(go)  # sitemap'e girmez; noindex (önizleme kartı için tarayıcı botlarına açık)
     # sitemap + robots

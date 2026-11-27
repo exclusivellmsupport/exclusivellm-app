@@ -103,6 +103,10 @@
   "date": "2026-11-26",
   "hash": "3787d68116b5fc2541ee8723c59f5fa2b1440d8d"
  },
+ "en/indir/index.html": {
+  "date": "2026-11-27",
+  "hash": "bc24ec248026a685da2d335a10991c64d6c52941"
+ },
  "en/offline-games/index.html": {
   "date": "2026-11-24",
   "hash": "8148dff5be5e6a0624fe464e1ff1dae237c4d7a3"
@@ -195,6 +199,10 @@
   "date": "2026-11-26",
   "hash": "80a44c8f454bdfd40740e8ef5a9dfe290327e7c0"
  },
+ "es/indir/index.html": {
+  "date": "2026-11-27",
+  "hash": "d92e5d79d250cf6f56caa763f7f298b4f47dae73"
+ },
  "es/offline-games/index.html": {
   "date": "2026-11-24",
   "hash": "7dbe81637e0ad5c01a5c590adb12a49dd80bf4f7"
@@ -258,6 +266,10 @@
  "index.html": {
   "date": "2026-11-26",
   "hash": "7d29509573d162e11bca06d48fa1d4c99f243b26"
+ },
+ "indir/index.html": {
+  "date": "2026-11-27",
+  "hash": "351aa26c99623547fea0a8f779d5fc9557c156c2"
  },
  "offline-games/index.html": {
   "date": "2026-11-24",

@@ -99,5 +99,19 @@
  "yt-dustora-1128-en": {"package": "com.exclusivellm.dustora", "platform": "youtube", "hedef": "site", "dil": "en", "not": "Dustora Kapı 4 Yakında videosu (siralama), 28.11.2026"},
  "x-dustora-1128": {"package": "com.exclusivellm.dustora", "platform": "x", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (siralama), 28.11.2026"},
  "x-dustora-1128-en": {"package": "com.exclusivellm.dustora", "platform": "x", "hedef": "site", "dil": "en", "not": "Dustora Kapı 4 Yakında videosu (siralama), 28.11.2026"},
- "ig-dustora-1128": {"package": "com.exclusivellm.dustora", "platform": "instagram", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (siralama), 28.11.2026"}
+ "ig-dustora-1128": {"package": "com.exclusivellm.dustora", "platform": "instagram", "hedef": "site", "dil": "tr", "not": "Dustora Kapı 4 Yakında videosu (siralama), 28.11.2026"},
+ "ig-bio": {"package": null, "platform": "instagram", "hedef": "indir", "dil": "tr", "not": "Instagram profil (bio) linki; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "tt-bio": {"package": null, "platform": "tiktok", "hedef": "indir", "dil": "tr", "not": "TikTok profil linki (1000 takipçiden sonra); 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "x-bio": {"package": null, "platform": "x", "hedef": "indir", "dil": "tr", "not": "X profil web sitesi alanı; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "x-bio-en": {"package": null, "platform": "x", "hedef": "indir", "dil": "en", "not": "X, İngilizce gönderilerin ilk yanıtındaki genel indir linki; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "yt-bio": {"package": null, "platform": "youtube", "hedef": "indir", "dil": "tr", "not": "YouTube kanal bağlantısı; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "yt-bio-en": {"package": null, "platform": "youtube", "hedef": "indir", "dil": "en", "not": "YouTube kanal bağlantısı (EN); 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "fb-bio": {"package": null, "platform": "facebook", "hedef": "indir", "dil": "tr", "not": "Facebook Sayfası web sitesi / profil linki; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "ig-dm": {"package": null, "platform": "instagram", "hedef": "indir", "dil": "tr", "not": "Instagram yorum→DM otomatik mesajındaki link; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "fb-dm": {"package": null, "platform": "facebook", "hedef": "indir", "dil": "tr", "not": "Facebook yorum→DM otomatik mesajındaki link; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "yt-yanit": {"package": null, "platform": "youtube", "hedef": "indir", "dil": "tr", "not": "Yorum ajanı: YouTube 'nereden indiririm' yanıtı; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "yt-yanit-en": {"package": null, "platform": "youtube", "hedef": "indir", "dil": "en", "not": "Yorum ajanı: YouTube 'where to download' yanıtı; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "x-yanit": {"package": null, "platform": "x", "hedef": "indir", "dil": "tr", "not": "Yorum ajanı: X 'nereden indiririm' yanıtı; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "x-yanit-en": {"package": null, "platform": "x", "hedef": "indir", "dil": "en", "not": "Yorum ajanı: X 'where to download' yanıtı; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
+ "fb-yanit": {"package": null, "platform": "facebook", "hedef": "indir", "dil": "tr", "not": "Yorum ajanı: Facebook 'nereden indiririm' yanıtı; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"}
 }
