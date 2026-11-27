@@ -570,7 +570,7 @@ body[data-lang="en"] .tr, body[data-lang="tr"] .en { display: none !important; }
 .gp-grid .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .gp-grid .lead { margin: 0 0 16px; color: var(--text); font-weight: 600; }
 .gp-grid p.intro { color: var(--muted); margin: 0 0 28px; font-size: 16.5px; }
-.gp-media img { width: 100%; border-radius: 26px; border: 1px solid var(--line); box-shadow: 0 40px 90px -40px var(--glow); display: block; }
+.gp-media img { width: 100%; height: auto; border-radius: 26px; border: 1px solid var(--line); box-shadow: 0 40px 90px -40px var(--glow); display: block; }
 .gp section, .gp-sec { padding: 70px 0; }
 .shots { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; }
 .shots img { height: 460px; width: auto; border-radius: 20px; border: 1px solid var(--line); scroll-snap-align: start; flex: none; background: var(--surface); }
