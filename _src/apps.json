@@ -4,7 +4,7 @@
     "name": "BlockFour",
     "package": "com.firat.blokrota",
     "category": "PuzzleGame",
-    "icon": "blockfour.png",
+    "icon": "blockfour-v2.png",
     "feature": "blockfour-feature.jpg",
     "shots": [
       "blockfour-1.webp",

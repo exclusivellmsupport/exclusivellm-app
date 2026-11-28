@@ -1,14 +1,14 @@
 {
  "version": 1,
- "updated": "2026-11-21",
+ "updated": "2026-11-28",
  "site": "https://exclusivellm.app/",
  "games": [
   {
    "slug": "block-four",
    "name": "BlockFour",
    "package": "com.firat.blokrota",
-   "icon": "https://exclusivellm.app/img/blockfour.png",
-   "icon512": "https://exclusivellm.app/img/press/blockfour-icon-512.png",
+   "icon": "https://exclusivellm.app/img/blockfour-v2.png",
+   "icon512": "https://exclusivellm.app/img/press/blockfour-v2-icon-512.png",
    "feature": "https://exclusivellm.app/img/blockfour-feature.jpg",
    "features": {
     "tr": "https://exclusivellm.app/img/blockfour-feature.jpg",
