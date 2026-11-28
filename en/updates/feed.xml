@@ -5,8 +5,16 @@
   <link href="https://exclusivellm.app/en/updates/"/>
   <link rel="self" href="https://exclusivellm.app/en/updates/feed.xml"/>
   <id>https://exclusivellm.app/en/updates/</id>
-  <updated>2026-11-21T12:00:00Z</updated>
+  <updated>2026-11-28T12:00:00Z</updated>
   <author><name>Exclusive LLM</name><email>support@exclusivellm.app</email></author>
+  <entry>
+    <title>ExStudio 1.2.12: ExStudio is on Google Play</title>
+    <link href="https://exclusivellm.app/en/updates/#exstudio-1-2-12"/>
+    <id>https://exclusivellm.app/en/updates/#exstudio-1-2-12</id>
+    <updated>2026-11-28T12:00:00Z</updated>
+    <category term="ExStudio"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;Video editor: merging, speed, 14 transitions, titles and music; export up to 4K&lt;/li&gt;&lt;li&gt;Voice changer with 21 presets, karaoke and acapella, remixes and audio clean-up&lt;/li&gt;&lt;li&gt;Photo editor: one-tap background remover, filters and sharp upscaling&lt;/li&gt;&lt;li&gt;No account, no watermark; English, Turkish, Spanish and Arabic&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Exclusive Quiz 2.8.4: Exclusive Quiz is on Google Play</title>
     <link href="https://exclusivellm.app/en/updates/#exclusive-quiz-2-8-4"/>

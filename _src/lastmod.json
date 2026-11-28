@@ -8,12 +8,12 @@
   "hash": "ee22cd292ee8bcaf2377bc11a2ed95899292c2b2"
  },
  "block-four/guide/index.html": {
-  "date": "2026-11-26",
-  "hash": "812b13372b27490f8daac862bf6c467bc16ac894"
+  "date": "2026-11-28",
+  "hash": "80694e1e6409e7b60bc3c2849e9da5f81994aefc"
  },
  "block-four/index.html": {
   "date": "2026-11-28",
-  "hash": "3989bd445a3e6df3ba4f2a0d95deb8db866a9c05"
+  "hash": "4bbb49c93059e1ce5a0a0a5b601a160ee7261ab0"
  },
  "block-puzzle-games/index.html": {
   "date": "2026-11-28",
@@ -21,15 +21,15 @@
  },
  "blocknest/guide/index.html": {
   "date": "2026-11-28",
-  "hash": "f80f5f6dd5a4a7d1e6410a6457eb4ab2ee39c175"
+  "hash": "c89df28d00bfdf07c07559579266a9dc9779f02e"
  },
  "blocknest/index.html": {
   "date": "2026-11-28",
-  "hash": "44c97891934143554ea8eae7de1e8810b29433f2"
+  "hash": "ab9e344ccc465dacb2e84df573600eaccd0e4f0e"
  },
  "color-sort-tips/index.html": {
-  "date": "2026-11-24",
-  "hash": "7ffbc34e487068d21128211197ff43ab594791f2"
+  "date": "2026-11-28",
+  "hash": "f9f1fd529d727d4de87c6b9b7300805dd77afac8"
  },
  "en/8x8-vs-10x10-block-puzzle/index.html": {
   "date": "2026-11-28",
@@ -40,12 +40,12 @@
   "hash": "2c66ef4241aaff0efd538e5f7b4d45c07972e973"
  },
  "en/block-four/guide/index.html": {
-  "date": "2026-11-26",
-  "hash": "9f2d8ef2d4f322806833f6e7198dcc0e25e01ff9"
+  "date": "2026-11-28",
+  "hash": "bb8676d957e48d9d44766799acc6ff3556101499"
  },
  "en/block-four/index.html": {
   "date": "2026-11-28",
-  "hash": "1b368a023cf641729377df804ea74bb2db5941b8"
+  "hash": "d54d6a8a8fba4719fea1cd11cccb4abc64119d3d"
  },
  "en/block-puzzle-games/index.html": {
   "date": "2026-11-28",
@@ -53,27 +53,31 @@
  },
  "en/blocknest/guide/index.html": {
   "date": "2026-11-28",
-  "hash": "cb81dcf10916240451b99d2490460d8e0eca527c"
+  "hash": "dc777ab8e537c1454c2f0eaefa2119d154d0547a"
  },
  "en/blocknest/index.html": {
   "date": "2026-11-28",
-  "hash": "2808339b2ba604240b5157d2d3fd0b81176da84e"
+  "hash": "7ab5ff6c4108fb3712d39b702c7da9ea347e7dbf"
  },
  "en/color-sort-tips/index.html": {
-  "date": "2026-11-24",
-  "hash": "6baf86692504c0cfce7cb440c0ce4985e92cdd1f"
+  "date": "2026-11-28",
+  "hash": "07cc55546a16548604a9f5241c46a649d0f42758"
  },
  "en/exclusive-quiz/guide/index.html": {
   "date": "2026-11-28",
-  "hash": "903c582157d44cf586051f52dab4ee7e51cf8d14"
+  "hash": "63db3937ee66d57a0fcf5e4cdd0576b1e43b32ad"
  },
  "en/exclusive-quiz/index.html": {
   "date": "2026-11-28",
-  "hash": "af58b44e94caecf6e87942c9da646f9886616d90"
+  "hash": "bb968efa3f9c8801c26c90eef34d4b43dac11a13"
+ },
+ "en/exstudio/index.html": {
+  "date": "2026-11-28",
+  "hash": "544b55a2b16c8123d267db093ba3a2061096e35f"
  },
  "en/falling-blocks-guide/index.html": {
-  "date": "2026-11-24",
-  "hash": "ae4fa004bdb6e76152b4092e94a1d72c188c0ebf"
+  "date": "2026-11-28",
+  "hash": "b5bee1e3f88782ececc225dd617a3fe04b9c290e"
  },
  "en/games-for-seniors/index.html": {
   "date": "2026-11-28",
@@ -81,15 +85,15 @@
  },
  "en/general-knowledge-questions/index.html": {
   "date": "2026-11-28",
-  "hash": "406a8538a0569233b4d2c79af0a767dde02fb69e"
+  "hash": "5e8fcd620f3ccce16d406085a9a95a7428a30480"
  },
  "en/guides/index.html": {
   "date": "2026-11-24",
   "hash": "5d810daeaeb42626048835ab0868a9294757affa"
  },
  "en/how-to-play-2048/index.html": {
-  "date": "2026-11-24",
-  "hash": "a95bc0533a8aac54d2b0a0ce2449e51d9c8e9467"
+  "date": "2026-11-28",
+  "hash": "480450bcd4561dc5b72f04d47f952a6e8db9c874"
  },
  "en/how-to-play-block-puzzle/index.html": {
   "date": "2026-11-28",
@@ -97,15 +101,15 @@
  },
  "en/improve-general-knowledge/index.html": {
   "date": "2026-11-28",
-  "hash": "fdd266c48026e0927c3f9653fdd2c044ee429662"
+  "hash": "cb26a5d595c9e9c3a7c45a989ff20dcf9cdecf7e"
  },
  "en/index.html": {
-  "date": "2026-11-26",
-  "hash": "3787d68116b5fc2541ee8723c59f5fa2b1440d8d"
+  "date": "2026-11-28",
+  "hash": "75d74173a9ca0b413717e8d1af66de56983181e0"
  },
  "en/indir/index.html": {
   "date": "2026-11-28",
-  "hash": "ec1db3d46457cca9b4d0c20fd5efb5b861e2482f"
+  "hash": "5a441adbd8e1fa66f8f1ad3f4f56129e87164991"
  },
  "en/offline-games/index.html": {
   "date": "2026-11-28",
@@ -113,19 +117,19 @@
  },
  "en/press/index.html": {
   "date": "2026-11-28",
-  "hash": "89a1c7ce46357bff758713d4c1b7ddfb60c52629"
+  "hash": "71611c9f68eaf1943d489ca229ff77a1f7c55054"
  },
  "en/updates/index.html": {
   "date": "2026-11-28",
-  "hash": "004a2ae2550dc5aeba07de8e6a3e3f52497de70b"
+  "hash": "f2ebcfe010317a8118c997a257a2940cef4fba1c"
  },
  "en/woodora-classic/guide/index.html": {
   "date": "2026-11-28",
-  "hash": "77533fd66772f301a8ad7db99d9365c87a85b977"
+  "hash": "1de5c1c3e8674eb053b0e8e324b24f40b968dabe"
  },
  "en/woodora-classic/index.html": {
   "date": "2026-11-28",
-  "hash": "0b0201c9a35c8016d4cd5dd7c62a9ca7a300e2af"
+  "hash": "de5dc71766aa6bbacd5d0e9737f20b73fc3c976e"
  },
  "es/8x8-vs-10x10-block-puzzle/index.html": {
   "date": "2026-11-28",
@@ -136,12 +140,12 @@
   "hash": "02ed5999cfe1ba0dceb7c35ec0ec25968b6da0b8"
  },
  "es/block-four/guide/index.html": {
-  "date": "2026-11-26",
-  "hash": "e96069081f5c7a7931f37d29c9811dfb9df8fa38"
+  "date": "2026-11-28",
+  "hash": "b3cc88c7d18a66c469880e2a373064c225a231bb"
  },
  "es/block-four/index.html": {
   "date": "2026-11-28",
-  "hash": "11d84a65592636704ded0fa61c021a3b7b5d4f08"
+  "hash": "a41a8e96bca8ecd547cfd5788781d8218d4349d2"
  },
  "es/block-puzzle-games/index.html": {
   "date": "2026-11-28",
@@ -149,27 +153,31 @@
  },
  "es/blocknest/guide/index.html": {
   "date": "2026-11-28",
-  "hash": "e4bde889e43268c8c95daa63aba84ac2dae76a67"
+  "hash": "a53f59d00c08ff4f800d4314b509ca187cc9a911"
  },
  "es/blocknest/index.html": {
   "date": "2026-11-28",
-  "hash": "68477eeffaf90d2a287c9ca273affb350fe4335d"
+  "hash": "a9f48c2484e459e5804811565a55b4d74d027150"
  },
  "es/color-sort-tips/index.html": {
-  "date": "2026-11-24",
-  "hash": "c60dcdfaf62060e911b1c8dff46a7d4e56d37e5f"
+  "date": "2026-11-28",
+  "hash": "fbf5265de6f0ea0c54dbba10ced3c8ad127bdd2a"
  },
  "es/exclusive-quiz/guide/index.html": {
   "date": "2026-11-28",
-  "hash": "2bd8fe1ab83aa9b6b3aefda75bd2cecd09c8630e"
+  "hash": "5d982924bfcf546ebb76bcb5971efb1da279a6e9"
  },
  "es/exclusive-quiz/index.html": {
   "date": "2026-11-28",
-  "hash": "85ab31f36d5286ef787cb5f5f10862b8c630e7b2"
+  "hash": "6f7033bb4b964ea0cbe9447ca1c6e69d0adc6288"
+ },
+ "es/exstudio/index.html": {
+  "date": "2026-11-28",
+  "hash": "5c7a987c74eb263f69ae0a3e884bdabd6305c4cf"
  },
  "es/falling-blocks-guide/index.html": {
-  "date": "2026-11-24",
-  "hash": "4629d11cac2cf7fe40a0ac31596c286ed8a69878"
+  "date": "2026-11-28",
+  "hash": "79459bc43ccef4921b92777521b1ff051b63ee46"
  },
  "es/games-for-seniors/index.html": {
   "date": "2026-11-28",
@@ -177,15 +185,15 @@
  },
  "es/general-knowledge-questions/index.html": {
   "date": "2026-11-28",
-  "hash": "312ca2e2ac17c505b6e894a6d4d9a0fd12a1af76"
+  "hash": "267237cb930d5a9097861eef0587e40f8caffcef"
  },
  "es/guides/index.html": {
   "date": "2026-11-24",
   "hash": "2ba2f937a791933b2988f74f99aec65cf26ebf49"
  },
  "es/how-to-play-2048/index.html": {
-  "date": "2026-11-24",
-  "hash": "88240d96f78a9e95c31baf7fac826e73f8eed3e2"
+  "date": "2026-11-28",
+  "hash": "11b4e395832e2274690adedf7676b05d91e37522"
  },
  "es/how-to-play-block-puzzle/index.html": {
   "date": "2026-11-28",
@@ -193,15 +201,15 @@
  },
  "es/improve-general-knowledge/index.html": {
   "date": "2026-11-28",
-  "hash": "d32cd2f72d4881b79b26dd8a0030add0ed8ab823"
+  "hash": "56aac2f2f3d21a4909bb079c14cd2e61aeb6d486"
  },
  "es/index.html": {
-  "date": "2026-11-26",
-  "hash": "80a44c8f454bdfd40740e8ef5a9dfe290327e7c0"
+  "date": "2026-11-28",
+  "hash": "6a0203fad386e5f8968c89dbb1e9aa666740d1ad"
  },
  "es/indir/index.html": {
   "date": "2026-11-28",
-  "hash": "766570a9b802e0fc83e5c4a7aed14794e4a6423c"
+  "hash": "b731692f415bb04c2b278ba3ada35e141010bac8"
  },
  "es/offline-games/index.html": {
   "date": "2026-11-28",
@@ -209,31 +217,35 @@
  },
  "es/press/index.html": {
   "date": "2026-11-28",
-  "hash": "aff811f76a56dfdf70e3c8f7fe72be280431deb7"
+  "hash": "11f009c5768d6661aec8609d4fccca4a8a292663"
  },
  "es/updates/index.html": {
   "date": "2026-11-28",
-  "hash": "209d0a8e4ac5138d30f5f5ca007db2fb4a6c63e9"
+  "hash": "5858bc84c54a8971bcb1c7ff7d54005e5b90754a"
  },
  "es/woodora-classic/guide/index.html": {
   "date": "2026-11-28",
-  "hash": "a3a32874b59bf609cd36678a616f4a93db31b4be"
+  "hash": "f49f9d497778aa604d7cfb518083cf9a7f7ac16f"
  },
  "es/woodora-classic/index.html": {
   "date": "2026-11-28",
-  "hash": "814f3ccb5306e7700c3301b61f77e368b5977730"
+  "hash": "86089a508b57ac369f18337a2b541be70322257e"
  },
  "exclusive-quiz/guide/index.html": {
   "date": "2026-11-28",
-  "hash": "1d3da744243743a7b62b5f012714323aad4896ce"
+  "hash": "07c0c336477861fe7cd87f479404bb44b1da7b59"
  },
  "exclusive-quiz/index.html": {
   "date": "2026-11-28",
-  "hash": "7b21c9638caed05969b6fb58cf23921dc08b4e2a"
+  "hash": "aa233a4f20343cbcd3944602983761152641700a"
+ },
+ "exstudio/index.html": {
+  "date": "2026-11-28",
+  "hash": "a41e767cfb871c276c80c8c3c71b34d322a216eb"
  },
  "falling-blocks-guide/index.html": {
-  "date": "2026-11-24",
-  "hash": "e5ab124b1466746d004a8913ef63b7763c3936e9"
+  "date": "2026-11-28",
+  "hash": "fa9cfedc103fcb31c845b6fd90ae6500f67aeb48"
  },
  "games-for-seniors/index.html": {
   "date": "2026-11-28",
@@ -241,19 +253,19 @@
  },
  "games.json": {
   "date": "2026-11-28",
-  "hash": "702784c6eed6c269547d6580057d105150aaf90d"
+  "hash": "b16528161727309cee4a73361dba632e7bdf7da8"
  },
  "general-knowledge-questions/index.html": {
   "date": "2026-11-28",
-  "hash": "5e849858309c9ccab0f68d24d7db123604d9d6a0"
+  "hash": "af13cec4aa8e8bcdbb28758d15c786abb8b825d2"
  },
  "guides/index.html": {
   "date": "2026-11-24",
   "hash": "16d769d2279ac152338c13a7f01bf0acf4490c52"
  },
  "how-to-play-2048/index.html": {
-  "date": "2026-11-24",
-  "hash": "b3ae291e5f13436a2243c28164bebcff5b1de79e"
+  "date": "2026-11-28",
+  "hash": "61b7f547dc09aee780d60ed18e52ae27241a6d18"
  },
  "how-to-play-block-puzzle/index.html": {
   "date": "2026-11-28",
@@ -261,15 +273,15 @@
  },
  "improve-general-knowledge/index.html": {
   "date": "2026-11-28",
-  "hash": "4aba1635412379dee16c9ee1e633caba318b60cb"
+  "hash": "ee6553f87fed72eb0949e517f1ce6e8c8ad9d551"
  },
  "index.html": {
-  "date": "2026-11-26",
-  "hash": "7d29509573d162e11bca06d48fa1d4c99f243b26"
+  "date": "2026-11-28",
+  "hash": "03f6255c167fa2fccecae4af1412b7bc862d04a5"
  },
  "indir/index.html": {
   "date": "2026-11-28",
-  "hash": "9ab310217adef451eb598ae63b031affaa77bc84"
+  "hash": "a9ffd6e843ef2af37028adf45db27afabc2c7a17"
  },
  "offline-games/index.html": {
   "date": "2026-11-28",
@@ -277,18 +289,18 @@
  },
  "press/index.html": {
   "date": "2026-11-28",
-  "hash": "2af5d6c41b52d3fd9ae6599426868d46020957f1"
+  "hash": "3213521396f9c1142387a87b76d6e9cdc6a818ed"
  },
  "updates/index.html": {
   "date": "2026-11-28",
-  "hash": "e0e02d30abe8bad38921bba6b209310a5e10e6b6"
+  "hash": "31ec96821916d5b922e5d51cba335827d28770db"
  },
  "woodora-classic/guide/index.html": {
   "date": "2026-11-28",
-  "hash": "ec4d7779e883bd23f5208eb4a29c730e6b757e43"
+  "hash": "45beac78f6f2de17a1574c16baa7969401b50d56"
  },
  "woodora-classic/index.html": {
   "date": "2026-11-28",
-  "hash": "b1b900bc5ee6a316dcff64d6128f31f2bc19cc7e"
+  "hash": "6368d9111bd9b582f9a511a0a6b29c885994198b"
  }
 }

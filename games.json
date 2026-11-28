@@ -94,6 +94,29 @@
     "en": "https://exclusivellm.app/en/exclusive-quiz/",
     "es": "https://exclusivellm.app/es/exclusive-quiz/"
    }
+  },
+  {
+   "slug": "exstudio",
+   "name": "ExStudio",
+   "package": "com.exclusivellm.mediastudio",
+   "icon": "https://exclusivellm.app/img/exstudio.png",
+   "icon512": "https://exclusivellm.app/img/exstudio.png",
+   "feature": "https://exclusivellm.app/img/exstudio-feature.jpg",
+   "features": {
+    "tr": "https://exclusivellm.app/img/exstudio-feature-tr.jpg",
+    "en": "https://exclusivellm.app/img/exstudio-feature.jpg",
+    "es": "https://exclusivellm.app/img/exstudio-feature-es.jpg"
+   },
+   "tagline": {
+    "tr": "Video, ses ve fotoğraf tek uygulamada.",
+    "en": "Video, audio and photo in one app.",
+    "es": "Vídeo, audio y foto en una sola app."
+   },
+   "page": {
+    "tr": "https://exclusivellm.app/exstudio/",
+    "en": "https://exclusivellm.app/en/exstudio/",
+    "es": "https://exclusivellm.app/es/exstudio/"
+   }
   }
  ]
 }

@@ -126,15 +126,15 @@ def check_names(apps: list[dict]) -> list[str]:
 HOME = {
     "tr": {
         "title": "Exclusive LLM: Ücretsiz Bulmaca ve Zekâ Oyunları (Android)",
-        "description": "Android için ücretsiz bulmaca ve zekâ oyunları: BlockFour, BlockNest, Woodora Classic ve Exclusive Quiz. İnternetsiz oynanır, ölçülü reklam, sade tasarım.",
+        "description": "Android için ücretsiz bulmaca ve zekâ oyunları: BlockFour, BlockNest, Woodora Classic, Exclusive Quiz; video, ses ve fotoğraf için ExStudio. Ölçülü reklam, sade tasarım.",
     },
     "en": {
         "title": "Exclusive LLM: Free Puzzle & Brain Games for Android",
-        "description": "Free puzzle and brain games for Android: BlockFour, BlockNest, Woodora Classic and Exclusive Quiz. Play offline, measured ads, clean design.",
+        "description": "Free puzzle and brain games for Android: BlockFour, BlockNest, Woodora Classic and Exclusive Quiz, plus ExStudio for video, audio and photo. Measured ads, clean design.",
     },
     "es": {
         "title": "Exclusive LLM: juegos de puzles gratis para Android",
-        "description": "Juegos de puzles y de lógica gratis para Android: BlockFour, BlockNest, Woodora Classic y Exclusive Quiz. Sin internet, anuncios moderados.",
+        "description": "Juegos de puzles y de lógica gratis para Android: BlockFour, BlockNest, Woodora Classic y Exclusive Quiz, y ExStudio para vídeo, audio y fotos.",
     },
 }
 UI = {
@@ -156,6 +156,15 @@ UI = {
 
 GENRE = {"PuzzleGame": "Puzzle", "StrategyGame": "Strategy", "ArcadeGame": "Arcade", "TriviaGame": "Trivia",
          "CasualGame": "Casual", "ActionGame": "Action", "BoardGame": "Board"}
+# Oyun olmayan uygulamalar (28.11.2026, ExStudio): apps.json "category" GENRE'de yoksa uygulama sayılır;
+# JSON-LD VideoGame değil SoftwareApplication olur, sayfadaki "Oyundan kareler / Oynanış" etiketleri uygulamaya göre yazılır.
+APP_UI = {"tr": {"eyebrow_media": "Uygulamadan kareler", "eyebrow_play": "Tanıtım"},
+          "en": {"eyebrow_media": "In the app", "eyebrow_play": "Overview"},
+          "es": {"eyebrow_media": "En la app", "eyebrow_play": "Presentación"}}
+
+
+def is_game(app: dict) -> bool:
+    return app["category"] in GENRE
 
 
 def esc(s: str) -> str:
@@ -399,6 +408,8 @@ def h1_sub(app: dict, lang: str) -> str:
 
 def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False, updates_html: str = "", related_html: str = "") -> str:
     t, ui, base = app[lang], UI[lang], BASE[lang]
+    if not is_game(app):
+        ui = {**ui, **APP_UI[lang]}
     name = esc(app["name"])
     guide_link = (f'<a class="more" href="{base}{app["slug"]}/guide/">{esc(PAGE_UI[lang]["guide"])} <span aria-hidden="true">→</span></a>'
                   if has_guide else "")
@@ -479,15 +490,21 @@ def game_main(app: dict, lang: str, apps: list[dict], has_guide: bool = False, u
 def game_ld(app: dict, lang: str) -> list[dict]:
     t, url = app[lang], DOMAIN + BASE[lang] + app["slug"] + "/"
     play = f"https://play.google.com/store/apps/details?id={app['package']}"
-    return [
+    common = {"name": app["name"], "url": url, "description": t["description"], "operatingSystem": "Android",
+              "inLanguage": app["languages"], "image": DOMAIN + "/img/" + app["feature"],
+              "screenshot": [DOMAIN + "/img/shots/" + s for s in shots_for(app, lang)], "installUrl": play, "downloadUrl": play,
+              "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+              "publisher": {"@type": "Organization", "@id": DOMAIN + "/#org", "name": "Exclusive LLM", "url": DOMAIN + "/"}}
+    if is_game(app):
         # Google: oyunlar VideoGame + SoftwareApplication birlikte işaretlenir
-        {"@context": "https://schema.org", "@type": ["VideoGame", "SoftwareApplication"], "name": app["name"], "url": url,
-         "description": t["description"], "applicationCategory": "GameApplication", "applicationSubCategory": app["category"],
-         "operatingSystem": "Android", "gamePlatform": "Android", "genre": GENRE.get(app["category"], app["category"]),
-         "inLanguage": app["languages"], "image": DOMAIN + "/img/" + app["feature"],
-         "screenshot": [DOMAIN + "/img/shots/" + s for s in shots_for(app, lang)], "installUrl": play, "downloadUrl": play,
-         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-         "publisher": {"@type": "Organization", "@id": DOMAIN + "/#org", "name": "Exclusive LLM", "url": DOMAIN + "/"}},
+        main = {"@context": "https://schema.org", "@type": ["VideoGame", "SoftwareApplication"], **common,
+                "applicationCategory": "GameApplication", "applicationSubCategory": app["category"],
+                "gamePlatform": "Android", "genre": GENRE.get(app["category"], app["category"])}
+    else:
+        main = {"@context": "https://schema.org", "@type": "SoftwareApplication", **common,
+                "applicationCategory": app["category"]}
+    return [
+        main,
         {"@context": "https://schema.org", "@type": "FAQPage",
          "mainEntity": [{"@type": "Question", "name": q["q"], "acceptedAnswer": {"@type": "Answer", "text": q["a"]}} for q in t["faq"]]},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -1067,7 +1084,7 @@ def build() -> list[str]:
         # ana sayfa
         soup = page_soup(lang)
         set_lang_switch(soup, lang, "")
-        set_head(soup, lang, "", HOME[lang]["title"], HOME[lang]["description"], "blockfour-feature.jpg",
+        set_head(soup, lang, "", HOME[lang]["title"], HOME[lang]["description"], "og-exclusivellm.jpg",
                  [org_ld(), website_ld(lang), games_ld(apps, lang)])
         tag_play_links(soup, "home", lang)
         write(out_dir / "index.html", soup)

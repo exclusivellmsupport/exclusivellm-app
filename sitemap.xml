@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://exclusivellm.app/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/"/>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/en/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/"/>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/es/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/"/>
@@ -119,6 +119,30 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/exclusive-quiz/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/exclusive-quiz/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/exclusive-quiz/"/>
+  </url>
+  <url>
+    <loc>https://exclusivellm.app/exstudio/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/exstudio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/exstudio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/exstudio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/exstudio/"/>
+  </url>
+  <url>
+    <loc>https://exclusivellm.app/en/exstudio/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/exstudio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/exstudio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/exstudio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/exstudio/"/>
+  </url>
+  <url>
+    <loc>https://exclusivellm.app/es/exstudio/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/exstudio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/exstudio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/exstudio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://exclusivellm.app/en/exstudio/"/>
   </url>
   <url>
     <loc>https://exclusivellm.app/block-puzzle-games/</loc>
@@ -338,7 +362,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/block-four/guide/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/block-four/guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/block-four/guide/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/block-four/guide/"/>
@@ -346,7 +370,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/en/block-four/guide/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/block-four/guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/block-four/guide/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/block-four/guide/"/>
@@ -354,7 +378,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/es/block-four/guide/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/block-four/guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/block-four/guide/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/block-four/guide/"/>
@@ -362,7 +386,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/how-to-play-2048/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/how-to-play-2048/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/how-to-play-2048/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/how-to-play-2048/"/>
@@ -370,7 +394,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/en/how-to-play-2048/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/how-to-play-2048/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/how-to-play-2048/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/how-to-play-2048/"/>
@@ -378,7 +402,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/es/how-to-play-2048/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/how-to-play-2048/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/how-to-play-2048/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/how-to-play-2048/"/>
@@ -386,7 +410,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/color-sort-tips/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/color-sort-tips/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/color-sort-tips/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/color-sort-tips/"/>
@@ -394,7 +418,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/en/color-sort-tips/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/color-sort-tips/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/color-sort-tips/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/color-sort-tips/"/>
@@ -402,7 +426,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/es/color-sort-tips/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/color-sort-tips/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/color-sort-tips/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/color-sort-tips/"/>
@@ -410,7 +434,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/falling-blocks-guide/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/falling-blocks-guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/falling-blocks-guide/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/falling-blocks-guide/"/>
@@ -418,7 +442,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/en/falling-blocks-guide/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/falling-blocks-guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/falling-blocks-guide/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/falling-blocks-guide/"/>
@@ -426,7 +450,7 @@
   </url>
   <url>
     <loc>https://exclusivellm.app/es/falling-blocks-guide/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://exclusivellm.app/falling-blocks-guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://exclusivellm.app/en/falling-blocks-guide/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://exclusivellm.app/es/falling-blocks-guide/"/>

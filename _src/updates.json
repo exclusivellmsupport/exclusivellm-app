@@ -9,6 +9,39 @@
  ],
  "entries": [
   {
+   "app": "exstudio",
+   "version": "1.2.12",
+   "date": "2026-11-28",
+   "type": "launch",
+   "tr": {
+    "title": "ExStudio Google Play'de",
+    "items": [
+     "Video düzenleyici: birleştirme, hız, 14 geçiş efekti, yazı ve müzik; 4K'ya kadar dışa aktarma",
+     "21 hazır sesle ses değiştirici, karaoke ve akapella, remiks ve ses temizleme",
+     "Fotoğraf düzenleyici: tek dokunuşla arka plan silme, filtreler ve netleştirerek büyütme",
+     "Hesap yok, filigran yok; Türkçe, İngilizce, İspanyolca ve Arapça"
+    ]
+   },
+   "en": {
+    "title": "ExStudio is on Google Play",
+    "items": [
+     "Video editor: merging, speed, 14 transitions, titles and music; export up to 4K",
+     "Voice changer with 21 presets, karaoke and acapella, remixes and audio clean-up",
+     "Photo editor: one-tap background remover, filters and sharp upscaling",
+     "No account, no watermark; English, Turkish, Spanish and Arabic"
+    ]
+   },
+   "es": {
+    "title": "ExStudio ya está en Google Play",
+    "items": [
+     "Editor de vídeo: unir clips, velocidad, 14 transiciones, títulos y música; exporta hasta 4K",
+     "Cambiador de voz con 21 voces, karaoke y acapella, remezclas y limpieza de audio",
+     "Editor de fotos: quita el fondo con un toque, filtros y ampliación nítida",
+     "Sin cuenta ni marca de agua; español, inglés, turco y árabe"
+    ]
+   }
+  },
+  {
    "app": "exclusive-quiz",
    "version": "2.8.4",
    "date": "2026-11-21",

@@ -880,5 +880,284 @@
         }
       ]
     }
+  },
+  {
+    "slug": "exstudio",
+    "name": "ExStudio",
+    "package": "com.exclusivellm.mediastudio",
+    "category": "MultimediaApplication",
+    "icon": "exstudio.png",
+    "feature": "exstudio-feature.jpg",
+    "shots": {
+      "tr": [
+        "exstudio-tr-1.webp",
+        "exstudio-tr-2.webp",
+        "exstudio-tr-3.webp",
+        "exstudio-tr-4.webp",
+        "exstudio-tr-5.webp",
+        "exstudio-tr-6.webp",
+        "exstudio-tr-7.webp",
+        "exstudio-tr-8.webp"
+      ],
+      "en": [
+        "exstudio-en-1.webp",
+        "exstudio-en-2.webp",
+        "exstudio-en-3.webp",
+        "exstudio-en-4.webp",
+        "exstudio-en-5.webp",
+        "exstudio-en-6.webp",
+        "exstudio-en-7.webp",
+        "exstudio-en-8.webp"
+      ],
+      "es": [
+        "exstudio-es-1.webp",
+        "exstudio-es-2.webp",
+        "exstudio-es-3.webp",
+        "exstudio-es-4.webp",
+        "exstudio-es-5.webp",
+        "exstudio-es-6.webp",
+        "exstudio-es-7.webp",
+        "exstudio-es-8.webp"
+      ]
+    },
+    "video": {
+      "tr": "fMMjhZJN2rE",
+      "en": "HVFRwcxVorM",
+      "es": "HVFRwcxVorM"
+    },
+    "languages": [
+      "tr",
+      "en",
+      "es",
+      "ar"
+    ],
+    "tr": {
+      "title": "ExStudio: Video Düzenleyici, Ses Değiştirici, Fotoğraf",
+      "description": "Video düzenleyici, ses değiştirici, karaoke ve fotoğraf arka planı silme tek uygulamada. Hesap yok, filigran yok, dosyalar telefonunda kalır. Google Play'de ücretsiz.",
+      "h1_sub": "Video, ses ve fotoğraf düzenleyici",
+      "tagline": "Video, ses ve fotoğraf tek uygulamada.",
+      "intro": "ExStudio videolarını, seslerini ve fotoğraflarını tek bir yerde düzenlemen için hazırlanmış bir medya stüdyosu. Klipleri birleştir, sesini değiştir, şarkılardan karaoke yap, fotoğrafın arka planını sil. Bütün işlemler telefonunda yapılır: dosyaların hiçbir sunucuya yüklenmez, hesap açman gerekmez ve kaydettiğin işlerde filigran yoktur.",
+      "tags": [
+        "Video düzenleyici",
+        "Ses değiştirici",
+        "Fotoğraf düzenleyici"
+      ],
+      "sections": [
+        {
+          "h": "Video düzenleyici",
+          "items": [
+            "Klipleri ve fotoğrafları birleştir, kısalt, böl, çoğalt ve sırala.",
+            "0,25x ile 4x arası hız; ses doğal tonunu korur.",
+            "14 geçiş efekti, filtreler, renk ayarları, kırpma ve döndürme.",
+            "Animasyonlu yazılar, arka plan müziği, otomatik müzik kısma ve dış ses kaydı.",
+            "Reels, Shorts ve TikTok için 9:16, YouTube için 16:9.",
+            "720p'den 4K'ya kadar dışa aktarma, HEVC seçeneği."
+          ]
+        },
+        {
+          "h": "Ses araçları",
+          "items": [
+            "21 hazır ses: robot, sincap, canavar, uzaylı, eski radyo ve daha fazlası.",
+            "Karaoke ve akapella: vokali kaldır ya da yalnızca vokali ayır.",
+            "Cover söyle: şarkının üzerine sesini kaydet.",
+            "Remiks: slowed + reverb, nightcore, 8D ses, lo-fi, bas güçlendirme.",
+            "Gürültü ve uğultu giderme, podcast sesi, eski kayıtları canlandırma.",
+            "Çok kanallı ses stüdyosu ve 30 efektli efekt laboratuvarı."
+          ]
+        },
+        {
+          "h": "Fotoğraf düzenleyici",
+          "items": [
+            "Tek dokunuşla arka plan silme; şeffaf, bulanık ya da renkli arka plan.",
+            "Netleştirerek büyütme.",
+            "18 filtre ve 18 ayar, kırpma, yazı, çizim ve çıkartmalar.",
+            "Orijinal fotoğrafın hiçbir zaman değişmez."
+          ]
+        }
+      ],
+      "features": [
+        "Bütün işlemler telefonda, dosyalar hiçbir sunucuya yüklenmez",
+        "Hesap gerekmez, kayıtlarda filigran yok",
+        "Ses kaydedici, ses kesme ve zil sesi yapma",
+        "Videodan ses çıkarma, videoyu GIF'e çevirme ve sıkıştırma",
+        "BPM ve ton algılama, ses seviyesi eşitleme",
+        "Başka uygulamalardan \"Paylaş\" ile doğrudan ExStudio'ya gönder",
+        "Türkçe, İngilizce, İspanyolca ve Arapça"
+      ],
+      "faq": [
+        {
+          "q": "ExStudio ücretsiz mi?",
+          "a": "Evet, Google Play'den ücretsiz indirilir. Düzenleme her zaman sınırsızdır. Her gün ilk kayıtların reklamsızdır; sonrasında kaydetmek için kısa bir video reklam izlemen yeterlidir."
+        },
+        {
+          "q": "Dosyalarım bir sunucuya yükleniyor mu?",
+          "a": "Hayır. Bütün işlemler telefonunda yapılır; dosyaların hiçbir sunucuya yüklenmez ve hesap açman gerekmez."
+        },
+        {
+          "q": "Kaydettiğim videolarda filigran var mı?",
+          "a": "Hayır, ExStudio ile kaydettiğin işlerde filigran yoktur."
+        },
+        {
+          "q": "Şarkıdan vokali kaldırabilir miyim?",
+          "a": "Evet. Karaoke ve akapella aracıyla şarkıdaki vokali kaldırabilir ya da yalnızca vokali ayırabilirsin."
+        },
+        {
+          "q": "Hangi dilleri destekliyor?",
+          "a": "Türkçe, İngilizce, İspanyolca ve Arapça."
+        }
+      ]
+    },
+    "en": {
+      "title": "ExStudio: Video Editor, Voice Changer & Photo Editor",
+      "description": "Video editor, voice changer, karaoke and photo background remover in one app. No account, no watermark, your files stay on your phone. Free on Google Play.",
+      "h1_sub": "Video, audio and photo editor",
+      "tagline": "Video, audio and photo in one app.",
+      "intro": "ExStudio is a media studio for editing your videos, audio and photos in one place. Merge clips, change your voice, make karaoke from songs and remove photo backgrounds. Everything is processed on your phone: your files are never uploaded, you need no account, and there is no watermark on anything you save.",
+      "tags": [
+        "Video editor",
+        "Voice changer",
+        "Photo editor"
+      ],
+      "sections": [
+        {
+          "h": "Video editor",
+          "items": [
+            "Merge clips and photos, trim, split, duplicate and reorder them.",
+            "Speed from 0.25x to 4x; the sound keeps its natural pitch.",
+            "14 transitions, filters, colour adjustments, crop and rotate.",
+            "Animated titles, background music, auto-ducking and voice-over recording.",
+            "9:16 for Reels, Shorts and TikTok, 16:9 for YouTube.",
+            "Export from 720p up to 4K, with an HEVC option."
+          ]
+        },
+        {
+          "h": "Audio tools",
+          "items": [
+            "21 voice presets: robot, chipmunk, monster, alien, old radio and more.",
+            "Karaoke and acapella: remove the vocals from a song or isolate them.",
+            "Sing a cover: record your voice over any song.",
+            "Remixes: slowed + reverb, nightcore, 8D audio, lo-fi, bass boosted.",
+            "Noise and hum removal, podcast sound, restore old recordings.",
+            "Multitrack audio studio and an effects lab with 30 effects."
+          ]
+        },
+        {
+          "h": "Photo editor",
+          "items": [
+            "One-tap background remover; transparent, blurred or coloured background.",
+            "Sharp upscaling.",
+            "18 filters and 18 adjustments, crop, text, drawing and stickers.",
+            "Your original photo is never changed."
+          ]
+        }
+      ],
+      "features": [
+        "Everything is processed on your phone, files are never uploaded",
+        "No account needed, no watermark on saves",
+        "Voice recorder, audio cutter and ringtone maker",
+        "Video to audio, video to GIF and video compression",
+        "BPM and key detection, loudness normalisation",
+        "Share from other apps straight into ExStudio",
+        "English, Turkish, Spanish and Arabic"
+      ],
+      "faq": [
+        {
+          "q": "Is ExStudio free?",
+          "a": "Yes, it is free to download on Google Play. Editing is always unlimited. Your first saves every day need no ad; after that, a short video ad lets you save."
+        },
+        {
+          "q": "Are my files uploaded to a server?",
+          "a": "No. Everything is processed on your phone; your files are never uploaded and you need no account."
+        },
+        {
+          "q": "Is there a watermark on my videos?",
+          "a": "No, there is no watermark on anything you save with ExStudio."
+        },
+        {
+          "q": "Can I remove the vocals from a song?",
+          "a": "Yes. The karaoke and acapella tool removes the vocals from a song or isolates them."
+        },
+        {
+          "q": "Which languages does it support?",
+          "a": "English, Turkish, Spanish and Arabic."
+        }
+      ]
+    },
+    "es": {
+      "title": "ExStudio: editor de vídeo, cambiador de voz y fotos",
+      "description": "Editor de vídeo, cambiador de voz, karaoke y quitar fondos de fotos en una app. Sin cuenta, sin marca de agua y tus archivos se quedan en tu teléfono. Gratis en Google Play.",
+      "h1_sub": "Editor de vídeo, audio y fotos",
+      "tagline": "Vídeo, audio y foto en una sola app.",
+      "intro": "ExStudio es un estudio multimedia para editar tus vídeos, audios y fotos en un solo lugar. Une clips, cambia tu voz, haz karaoke con canciones y quita el fondo de tus fotos. Todo se procesa en tu teléfono: tus archivos nunca se suben, no necesitas cuenta y lo que guardas no lleva marca de agua.",
+      "tags": [
+        "Editor de vídeo",
+        "Cambiador de voz",
+        "Editor de fotos"
+      ],
+      "sections": [
+        {
+          "h": "Editor de vídeo",
+          "items": [
+            "Une clips y fotos, acórtalos, divídelos, duplícalos y reordénalos.",
+            "Velocidad de 0,25x a 4x; el sonido mantiene su tono natural.",
+            "14 transiciones, filtros, ajustes de color, recortar y girar.",
+            "Títulos animados, música de fondo, atenuación automática y voz en off.",
+            "9:16 para Reels, Shorts y TikTok, 16:9 para YouTube.",
+            "Exporta desde 720p hasta 4K, con opción HEVC."
+          ]
+        },
+        {
+          "h": "Herramientas de audio",
+          "items": [
+            "21 voces: robot, ardilla, monstruo, alienígena, radio antigua y más.",
+            "Karaoke y acapella: quita la voz de una canción o aíslala.",
+            "Canta un cover: graba tu voz sobre cualquier canción.",
+            "Remezclas: slowed + reverb, nightcore, audio 8D, lo-fi, bajos potenciados.",
+            "Quita ruido y zumbido, sonido de pódcast, restaura grabaciones antiguas.",
+            "Estudio de audio multipista y laboratorio con 30 efectos."
+          ]
+        },
+        {
+          "h": "Editor de fotos",
+          "items": [
+            "Quita el fondo con un toque; fondo transparente, desenfocado o de color.",
+            "Ampliación nítida.",
+            "18 filtros y 18 ajustes, recortar, texto, dibujo y pegatinas.",
+            "Tu foto original nunca se modifica."
+          ]
+        }
+      ],
+      "features": [
+        "Todo se procesa en tu teléfono, tus archivos nunca se suben",
+        "Sin cuenta y sin marca de agua al guardar",
+        "Grabadora de voz, cortador de audio y creador de tonos",
+        "Vídeo a audio, vídeo a GIF y compresión de vídeo",
+        "Detección de BPM y tonalidad, normalización de volumen",
+        "Comparte desde otras apps directamente a ExStudio",
+        "Español, inglés, turco y árabe"
+      ],
+      "faq": [
+        {
+          "q": "¿ExStudio es gratis?",
+          "a": "Sí, se descarga gratis en Google Play. Editar es siempre ilimitado. Tus primeros guardados de cada día no necesitan anuncio; después, un vídeo corto te permite guardar."
+        },
+        {
+          "q": "¿Se suben mis archivos a un servidor?",
+          "a": "No. Todo se procesa en tu teléfono; tus archivos nunca se suben y no necesitas cuenta."
+        },
+        {
+          "q": "¿Mis vídeos llevan marca de agua?",
+          "a": "No, lo que guardas con ExStudio no lleva marca de agua."
+        },
+        {
+          "q": "¿Puedo quitar la voz de una canción?",
+          "a": "Sí. La herramienta de karaoke y acapella quita la voz de una canción o la aísla."
+        },
+        {
+          "q": "¿Está en español?",
+          "a": "Sí. ExStudio está en español, inglés, turco y árabe."
+        }
+      ]
+    }
   }
 ]
