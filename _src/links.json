@@ -118,5 +118,11 @@
  "fb-yanit": {"package": null, "platform": "facebook", "hedef": "indir", "dil": "tr", "not": "Yorum ajanı: Facebook 'nereden indiririm' yanıtı; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
  "ig-exstudio": {"package": "com.exclusivellm.mediastudio", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel; ExStudio öne çıkanı), 28.11.2026"},
  "yt-exstudio": {"package": "com.exclusivellm.mediastudio", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel (uzun video açıklaması / sabit yorum / oynatma listesi), 28.11.2026"},
- "yt-exstudio-en": {"package": "com.exclusivellm.mediastudio", "platform": "youtube", "hedef": "play", "dil": "en", "not": "YouTube genel, EN video (HVFRwcxVorM açıklaması), 28.11.2026"}
+ "yt-exstudio-en": {"package": "com.exclusivellm.mediastudio", "platform": "youtube", "hedef": "play", "dil": "en", "not": "YouTube genel, EN video (HVFRwcxVorM açıklaması), 28.11.2026"},
+ "yt-exstudio-1128": {"package": "com.exclusivellm.mediastudio", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "ExStudio dikey üretim tanıtımı (short, Google Play), 28.11.2026"},
+ "yt-exstudio-1128-en": {"package": "com.exclusivellm.mediastudio", "platform": "youtube", "hedef": "play", "dil": "en", "not": "ExStudio dikey üretim tanıtımı (short, Google Play), 28.11.2026"},
+ "x-exstudio-1128": {"package": "com.exclusivellm.mediastudio", "platform": "x", "hedef": "play", "dil": "tr", "not": "ExStudio dikey üretim tanıtımı (short, Google Play), 28.11.2026"},
+ "x-exstudio-1128-en": {"package": "com.exclusivellm.mediastudio", "platform": "x", "hedef": "play", "dil": "en", "not": "ExStudio dikey üretim tanıtımı (short, Google Play), 28.11.2026"},
+ "ig-exstudio-1128": {"package": "com.exclusivellm.mediastudio", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "ExStudio dikey üretim tanıtımı (short, Google Play), 28.11.2026"},
+ "fb-exstudio-1128": {"package": "com.exclusivellm.mediastudio", "platform": "facebook", "hedef": "play", "dil": "tr", "not": "ExStudio dikey üretim tanıtımı (short, Google Play), 28.11.2026"}
 }
