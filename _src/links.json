@@ -117,5 +117,6 @@
  "x-yanit-en": {"package": null, "platform": "x", "hedef": "indir", "dil": "en", "not": "Yorum ajanı: X 'where to download' yanıtı; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
  "fb-yanit": {"package": null, "platform": "facebook", "hedef": "indir", "dil": "tr", "not": "Yorum ajanı: Facebook 'nereden indiririm' yanıtı; 27.11.2026: 'nereden indirebilirim' çözümü, /indir/ sayfasına gider"},
  "ig-exstudio": {"package": "com.exclusivellm.mediastudio", "platform": "instagram", "hedef": "play", "dil": "tr", "not": "Instagram Hikâye bağlantı çıkartması (genel; ExStudio öne çıkanı), 28.11.2026"},
- "yt-exstudio": {"package": "com.exclusivellm.mediastudio", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel (uzun video açıklaması / sabit yorum / oynatma listesi), 28.11.2026"}
+ "yt-exstudio": {"package": "com.exclusivellm.mediastudio", "platform": "youtube", "hedef": "play", "dil": "tr", "not": "YouTube genel (uzun video açıklaması / sabit yorum / oynatma listesi), 28.11.2026"},
+ "yt-exstudio-en": {"package": "com.exclusivellm.mediastudio", "platform": "youtube", "hedef": "play", "dil": "en", "not": "YouTube genel, EN video (HVFRwcxVorM açıklaması), 28.11.2026"}
 }
