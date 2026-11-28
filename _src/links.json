@@ -66,6 +66,8 @@
  "app-topple-en": {"package": "com.exclusivellm.toppleisles", "platform": "app", "hedef": "otomatik", "dil": "en", "not": "uygulama içi Arkadaşına gönder (ayarlar)"},
  "app-topple-ios": {"package": "com.exclusivellm.toppleisles", "platform": "app", "hedef": "site", "dil": "tr", "not": "iOS sürümünde Arkadaşına gönder (ayarlar); App Store'a çıkınca hedef App Store olacak, 24.11.2026"},
  "app-topple-ios-en": {"package": "com.exclusivellm.toppleisles", "platform": "app", "hedef": "site", "dil": "en", "not": "iOS sürümünde Arkadaşına gönder (ayarlar); App Store'a çıkınca hedef App Store olacak, 24.11.2026"},
+ "app-blocknest-ios": {"package": "com.exclusivellm.blocknest", "platform": "app", "hedef": "site", "dil": "tr", "not": "iOS sürümünde Arkadaşına gönder (ayarlar; 1.0.0 incelemede); App Store'a çıkınca hedef App Store olacak, 28.11.2026"},
+ "app-blocknest-ios-en": {"package": "com.exclusivellm.blocknest", "platform": "app", "hedef": "site", "dil": "en", "not": "iOS sürümünde Arkadaşına gönder (ayarlar; 1.0.0 incelemede); App Store'a çıkınca hedef App Store olacak, 28.11.2026"},
  "app-quiz": {"package": "com.exclusivellm.quiz", "platform": "app", "hedef": "otomatik", "dil": "tr", "not": "uygulama içi Arkadaşına meydan oku (sonuç ekranı, 2.9.0), 26.11.2026"},
  "app-quiz-en": {"package": "com.exclusivellm.quiz", "platform": "app", "hedef": "otomatik", "dil": "en", "not": "uygulama içi Arkadaşına meydan oku (sonuç ekranı, 2.9.0), 26.11.2026"},
  "fb-studyo-1123": {"package": null, "platform": "facebook", "hedef": "site", "dil": "tr", "not": "Facebook Sayfası gönderisi, 23.11.2026"},
